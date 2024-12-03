@@ -1,3 +1,11 @@
+import { MainSliderData } from '@/constants/main';
+
+import { SliderHeader } from '@/templates/common';
+
 export default function Home() {
-  return <div>Main</div>;
+  return (
+    <>
+      <SliderHeader sliderData={MainSliderData} />
+    </>
+  );
 }
