@@ -1,6 +1,11 @@
+import { Header } from '@/components/layout';
+
 import type { Metadata } from 'next';
 
 import './globals.css';
+
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,8 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body>{children}</body>
+    <html lang='ko'>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
