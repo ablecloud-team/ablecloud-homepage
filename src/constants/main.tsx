@@ -3,7 +3,7 @@ import { HeaderData } from '@/types/header';
 export const MainSliderData: HeaderData[] = [
   {
     title: {
-      mainText: 'ABLESTACK',
+      mainText: <span className='break-all'>ABLESTACK</span>,
       subText: '4.0v',
     },
     description: (
@@ -54,7 +54,7 @@ export const MainSliderData: HeaderData[] = [
     button: {
       text: '자세히보기',
       href: '/',
-      className: 'text-[#202020] bg-white',
+      className: '!text-[#202020] !bg-white',
     },
   },
   {
@@ -73,7 +73,7 @@ export const MainSliderData: HeaderData[] = [
     button: {
       text: '자세히보기',
       href: '/',
-      className: 'text-[#202020] bg-white',
+      className: '!text-[#202020] !bg-white',
     },
   },
   {
@@ -92,7 +92,7 @@ export const MainSliderData: HeaderData[] = [
     button: {
       text: '자세히보기',
       href: '/',
-      className: 'text-[#202020] bg-white',
+      className: '!text-[#202020] !bg-white',
     },
   },
 ];

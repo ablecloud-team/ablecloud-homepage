@@ -51,7 +51,7 @@ export function SliderHeader({ sliderData }: SliderHeaderProps) {
 
   return (
     <div className='relative'>
-      <div className='flex gap-4 absolute px-6 pb-3 z-50 bottom-[48px] left-1/2 transform -translate-x-1/2'>
+      <div className='flex gap-4 absolute px-6 pb-3 z-50 bottom-[48px] left-0 sm:left-1/2 sm:transform sm:-translate-x-1/2'>
         <ArrowLeft onClick={sliderPrev} />
         <ArrowRight onClick={sliderNext} />
         {isPause ? (

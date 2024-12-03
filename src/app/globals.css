@@ -41,3 +41,7 @@ body {
   font-family: "Pretendard", sans-serif !important;
   color: #202020;
 }
+
+.slick-arrow {
+  display: none !important;
+}
