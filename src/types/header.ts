@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 
+import { ButtonData } from '@/types/ui';
+
 export interface HeaderData {
   title: {
     mainText: string | ReactNode;
@@ -8,9 +10,5 @@ export interface HeaderData {
   description: string | ReactNode;
   bgClassName: string;
   heightClassName: string;
-  button?: {
-    text: string;
-    href?: string;
-    className?: string;
-  };
+  buttonData?: ButtonData;
 }

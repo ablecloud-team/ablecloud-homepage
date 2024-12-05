@@ -1,11 +1,12 @@
 'use client';
 
+import Link from 'next/link';
+
 import { useEffect, useMemo, useState } from 'react';
 
+import Ablestack from '@/public/icons/common/ablestack.svg';
 import Close from '@/public/icons/common/close.svg';
 import Hamburger from '@/public/icons/common/hamburger.svg';
-import Logo from '@/public/icons/common/logo.svg';
-import Link from 'next/link';
 
 const menuItems = [
   { title: '제품', href: '/' },
@@ -57,7 +58,7 @@ export function Header() {
       className={`fixed flex flex-col z-50 w-full items-center ${isMenuOpen ? 'bg-white text-black' : 'text-white bg-[#202020]'} ${bgStyle}`}>
       <div
         className={`flex max-w-page-full w-full items-center ${isMenuOpen ? 'justify-end' : 'justify-between'} px-[19px] py-[15px]`}>
-        {!isMenuOpen && <Logo />}
+        {!isMenuOpen && <Ablestack />}
         <div className='gap-5 px-[10px] font-bold hidden md:flex'>
           {menuItems.map((v, index) => (
             <Link href={v.href} key={index}>

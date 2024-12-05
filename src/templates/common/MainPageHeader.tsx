@@ -3,7 +3,7 @@ import { Button } from '@/components/ui';
 import { HeaderData } from '@/types/header';
 
 export function MainPageHeader({ headerData }: { headerData: HeaderData }) {
-  const { title, description, bgClassName, heightClassName, button } = headerData;
+  const { title, description, bgClassName, heightClassName, buttonData } = headerData;
 
   return (
     <div
@@ -20,9 +20,7 @@ export function MainPageHeader({ headerData }: { headerData: HeaderData }) {
         <div className='mt-[12px] font-medium text-[16px] leading-[24px] lg:text-[20px] lg:leading-[30px] '>
           {description}
         </div>
-        {button && (
-          <Button text={button.text} href={button.href} className={`mt-6 ${button.className}`} />
-        )}
+        {buttonData && <Button buttonData={buttonData} />}
       </div>
     </div>
   );

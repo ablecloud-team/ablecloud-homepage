@@ -45,3 +45,15 @@ body {
 .slick-arrow {
   display: none !important;
 }
+
+@layer utilities {
+  .hover-pause {
+    animation-play-state: running;
+  }
+  .hover-pause:hover {
+    animation-play-state: paused;
+  }
+  .hover-pause:hover > div > .banner {
+    animation-play-state: paused;
+  }
+}

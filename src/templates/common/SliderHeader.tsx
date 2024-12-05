@@ -2,14 +2,16 @@
 
 import React, { useRef, useState } from 'react';
 
+import { MainPageHeader } from '@/templates/common';
+
 import { HeaderData } from '@/types/header';
 
-import ArrowLeft from '@/public/icons/common/arrow-left.svg';
-import ArrowRight from '@/public/icons/common/arrow-right.svg';
+import ChevronLeft from '@/public/icons/common/chevron-left.svg';
+import ChevronRight from '@/public/icons/common/chevron-right.svg';
 import Pause from '@/public/icons/common/pause.svg';
-import Slider from 'react-slick';
+import Start from '@/public/icons/common/start.svg';
 
-import { MainPageHeader } from './MainPageHeader';
+import Slider from 'react-slick';
 
 const settings = {
   infinite: true,
@@ -51,11 +53,15 @@ export function SliderHeader({ sliderData }: SliderHeaderProps) {
 
   return (
     <div className='relative'>
-      <div className='flex gap-4 absolute px-6 pb-3 z-50 bottom-[48px] left-0 sm:left-1/2 sm:transform sm:-translate-x-1/2'>
-        <ArrowLeft onClick={sliderPrev} />
-        <ArrowRight onClick={sliderNext} />
+      <div className='flex items-center gap-4 absolute px-6 pb-3 z-10 bottom-[48px] left-0 sm:left-1/2 sm:transform sm:-translate-x-1/2 [&>svg]:cursor-pointer [&>svg]:text-white'>
+        <ChevronLeft width={36} onClick={sliderPrev} />
+        <ChevronRight width={36} onClick={sliderNext} />
         {isPause ? (
-          <div onClick={sliderPlayControl}>play</div>
+          <div
+            onClick={sliderPlayControl}
+            className='w-9 h-9 flex items-center justify-center cursor-pointer'>
+            <Start />
+          </div>
         ) : (
           <Pause onClick={sliderPlayControl} />
         )}

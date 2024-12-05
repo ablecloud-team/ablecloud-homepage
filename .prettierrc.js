@@ -13,6 +13,7 @@ const tsOption = {
   plugins: ['@trivago/prettier-plugin-sort-imports'],
   importOrder: [
     'use client',
+    '^next(.*)$',
     '^react$',
     '^@/hooks(.*)$',
     '^@/util(.*)$',
@@ -21,8 +22,9 @@ const tsOption = {
     '^@/components(.*)$',
     '^@/app(.*)$',
     '^@/assets(.*)$',
-    '^@/type(.*)$',
+    '^@/types(.*)$',
     '^@/styles(.*)$',
+    '^@/public(.*)$',
     '<THIRD_PARTY_MODULES>',
     '^[./]',
     '^(.*)(?:.css)$',

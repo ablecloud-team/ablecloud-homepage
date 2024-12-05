@@ -19,8 +19,31 @@ const config: Config = {
       'home-mobile-header-3': "url('/images/home/mobile-header-3.png')",
       'home-mobile-header-4': "url('/images/home/mobile-header-4.png')",
       'home-mobile-header-5': "url('/images/home/mobile-header-5.png')",
+      'home-main-card-1': "url('/images/home/main-card-1.png')",
+      'home-main-card-2': "url('/images/home/main-card-2.png')",
+      'home-main-card-3': "url('/images/home/main-card-3.png')",
+      'home-solution-1': "url('/images/home/solution-1.png')",
+      'home-solution-2': "url('/images/home/solution-2.png')",
+      'home-solution-3': "url('/images/home/solution-3.png')",
+      'home-solution-4': "url('/images/home/solution-4.png')",
+      'home-solution-5': "url('/images/home/solution-5.png')",
     },
     extend: {
+      animation: {
+        bannermovetoleft: 'bannermovetoleft 15s linear infinite',
+        bannermovetoright: 'bannermovetoright 15s linear infinite',
+      },
+      keyframes: {
+        bannermovetoleft: {
+          '0%': { transform: 'translateX(var(--start-x, 0px))' },
+          '100%': { transform: 'translateX(var(--end-x, 0px))' },
+        },
+        bannermovetoright: {
+          '0%': { transform: 'translateX(var(--start-x, 0px))' },
+          '100%': { transform: 'translateX(var(--end-x, 0px))' },
+        },
+      },
+
       screens: {
         sm: '640px',
         md: '768px', // ~ mobile
@@ -29,6 +52,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 };
 export default config;

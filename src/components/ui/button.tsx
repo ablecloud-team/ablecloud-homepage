@@ -1,17 +1,21 @@
 import Link from 'next/link';
 
+import { ButtonData } from '@/types/ui';
+
 interface ButtonProps {
-  text: string;
-  href?: string;
-  className?: string;
+  buttonData: ButtonData;
 }
 
-export function Button({ text, href, className }: ButtonProps) {
+export function Button({ buttonData }: ButtonProps) {
+  const { text, className, color, href } = buttonData;
+
+  const colorClassName = color === 'white' ? 'bg-white text-[#202020]' : 'bg-[#202020] text-white';
+
   if (href) {
     return (
       <Link href={href}>
         <div
-          className={`${className} bg-[#202020] text-white text-sm font-bold py-[14px] px-[34px] rounded-full transition duration-300 select-none cursor-pointer hover:brightness-90`}>
+          className={`${colorClassName} text-sm font-bold py-[14px] px-[34px] rounded-full transition duration-300 select-none cursor-pointer hover:brightness-90 ${className}`}>
           {text}
         </div>
       </Link>
@@ -19,7 +23,7 @@ export function Button({ text, href, className }: ButtonProps) {
   }
   return (
     <div
-      className={`${className} bg-[#202020] text-white text-sm font-bold py-[14px] px-[34px] rounded-full transition duration-300 select-none cursor-pointer hover:brightness-90`}>
+      className={`${colorClassName} text-sm font-bold py-[14px] px-[34px] rounded-full transition duration-300 select-none cursor-pointer hover:brightness-90 ${className}`}>
       {text}
     </div>
   );
