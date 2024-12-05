@@ -36,7 +36,7 @@ export const homeSliderData: HeaderData[] = [
       </>
     ),
     bgClassName: 'bg-home-mobile-header-1 lg:bg-home-header-1',
-    heightClassName: 'min-h-[450px] lg:min-h-[720px]',
+    heightClassName: 'min-h-[450px] lg:min-h-[506px]',
     buttonData: {
       text: '자세히보기',
       href: '/',
@@ -54,7 +54,7 @@ export const homeSliderData: HeaderData[] = [
       </>
     ),
     bgClassName: 'bg-home-mobile-header-2 lg:bg-home-header-2',
-    heightClassName: 'min-h-[450px] lg:min-h-[720px]',
+    heightClassName: 'min-h-[450px] lg:min-h-[506px]',
     buttonData: {
       text: '자세히보기',
       href: '/',
@@ -72,7 +72,7 @@ export const homeSliderData: HeaderData[] = [
       </>
     ),
     bgClassName: 'bg-home-mobile-header-3 lg:bg-home-header-3',
-    heightClassName: 'min-h-[450px] lg:min-h-[720px]',
+    heightClassName: 'min-h-[450px] lg:min-h-[506px]',
     buttonData: {
       text: '자세히보기',
       href: '/',
@@ -91,7 +91,7 @@ export const homeSliderData: HeaderData[] = [
       </>
     ),
     bgClassName: 'bg-home-mobile-header-4 lg:bg-home-header-4',
-    heightClassName: 'min-h-[450px] lg:min-h-[720px]',
+    heightClassName: 'min-h-[450px] lg:min-h-[506px]',
     buttonData: {
       text: '자세히보기',
       href: '/',
@@ -110,7 +110,7 @@ export const homeSliderData: HeaderData[] = [
       </>
     ),
     bgClassName: 'bg-home-mobile-header-5 lg:bg-home-header-5',
-    heightClassName: 'min-h-[450px] lg:min-h-[720px]',
+    heightClassName: 'min-h-[450px] lg:min-h-[506px]',
     buttonData: {
       text: '자세히보기',
       href: '/',

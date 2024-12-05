@@ -57,8 +57,12 @@ export function Header() {
     <div
       className={`fixed flex flex-col z-50 w-full items-center ${isMenuOpen ? 'bg-white text-black' : 'text-white bg-[#202020]'} ${bgStyle}`}>
       <div
-        className={`flex max-w-page-full w-full items-center ${isMenuOpen ? 'justify-end' : 'justify-between'} px-[19px] py-[15px]`}>
-        {!isMenuOpen && <Ablestack />}
+        className={`flex max-w-[1440px] w-full items-center ${isMenuOpen ? 'justify-end' : 'justify-between'} px-[19px] py-[15px]`}>
+        {!isMenuOpen && (
+          <Link href={'/'}>
+            <Ablestack />
+          </Link>
+        )}
         <div className='gap-5 px-[10px] font-bold hidden md:flex'>
           {menuItems.map((v, index) => (
             <Link href={v.href} key={index}>

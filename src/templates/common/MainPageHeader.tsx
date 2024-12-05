@@ -20,7 +20,14 @@ export function MainPageHeader({ headerData }: { headerData: HeaderData }) {
         <div className='mt-[12px] font-medium text-[16px] leading-[24px] lg:text-[20px] lg:leading-[30px] '>
           {description}
         </div>
-        {buttonData && <Button buttonData={buttonData} />}
+        {buttonData && (
+          <Button
+            buttonData={{
+              ...buttonData,
+              className: `mt-6 ${buttonData.className ?? ''}`,
+            }}
+          />
+        )}
       </div>
     </div>
   );
