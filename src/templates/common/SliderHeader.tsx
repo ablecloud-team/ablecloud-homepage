@@ -53,7 +53,7 @@ export function SliderHeader({ sliderData }: SliderHeaderProps) {
 
   return (
     <div className='relative'>
-      <div className='flex items-center gap-4 absolute px-6 pb-3 z-10 bottom-[48px] left-0 sm:left-1/2 sm:transform sm:-translate-x-1/2 [&>svg]:cursor-pointer [&>svg]:text-white'>
+      <div className='flex items-center gap-4 absolute px-6 pb-3 z-10 bottom-[28px] left-0 sm:left-1/2 sm:transform sm:-translate-x-1/2 [&>svg]:cursor-pointer [&>svg]:text-white'>
         <ChevronLeft width={36} onClick={sliderPrev} />
         <ChevronRight width={36} onClick={sliderNext} />
         {isPause ? (

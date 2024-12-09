@@ -7,7 +7,7 @@ export function MainPageHeader({ headerData }: { headerData: HeaderData }) {
 
   return (
     <div
-      className={`!flex items-center justify-center px-4 bg-cover bg-no-repeat bg-center text-white text-center break-keep mt-[62px] md:mt-0 ${bgClassName} ${heightClassName}`}>
+      className={`flex items-center justify-center px-4 bg-cover bg-no-repeat bg-center text-white text-center break-keep md:pt-[60px] ${bgClassName} ${heightClassName}`}>
       <div className='flex flex-col items-center'>
         <div className='text-[28px] leading-[36px] font-bold lg:text-[48px] lg:leading-[57.6px]'>
           {title.mainText}

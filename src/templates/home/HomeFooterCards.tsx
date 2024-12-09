@@ -1,9 +1,9 @@
 import { Button } from '@/components/ui';
 
-import { HomeFooterCardsData } from '@/types/home';
+import { HomeFooterCardData } from '@/types/home';
 
 interface HomeFooterCardsProps {
-  cardsData: HomeFooterCardsData[];
+  cardsData: HomeFooterCardData[];
 }
 
 export function HomeFooterCards({ cardsData }: HomeFooterCardsProps) {

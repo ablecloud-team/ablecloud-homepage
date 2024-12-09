@@ -14,7 +14,7 @@ export interface HomeMainCardData {
   bgClassName: string;
 }
 
-export interface HomeFooterCardsData {
+export interface HomeFooterCardData {
   category: string;
   bgColor: string;
   text: string | ReactNode;

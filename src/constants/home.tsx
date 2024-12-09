@@ -1,5 +1,5 @@
 import { HeaderData } from '@/types/header';
-import { HomeMainCardData, HomeSolutionCardData } from '@/types/home';
+import { HomeFooterCardData, HomeMainCardData, HomeSolutionCardData } from '@/types/home';
 
 import Army from '@/public/icons/home/army.svg';
 import Cnuh from '@/public/icons/home/cnuh.svg';
@@ -25,7 +25,7 @@ import Ycg from '@/public/icons/home/ycg.svg';
 export const homeSliderData: HeaderData[] = [
   {
     title: {
-      mainText: <span className='break-all'>ABLESTACK</span>,
+      mainText: 'ABLESTACK',
       subText: '4.0v',
     },
     description: (
@@ -236,7 +236,7 @@ export const homeSolutionIcons2 = [
   <Kacpta />,
 ];
 
-export const homeFooterCardsData = [
+export const homeFooterCardsData: HomeFooterCardData[] = [
   {
     category: 'Partner',
     bgColor: 'bg-[#117CE9]',

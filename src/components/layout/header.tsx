@@ -9,7 +9,7 @@ import Close from '@/public/icons/common/close.svg';
 import Hamburger from '@/public/icons/common/hamburger.svg';
 
 const menuItems = [
-  { title: '제품', href: '/' },
+  { title: '제품', href: '/products/ablestack' },
   { title: '솔루션', href: '/' },
   { title: '성공사례', href: '/' },
   { title: '파트너', href: '/' },
@@ -27,7 +27,7 @@ export function Header() {
       const currentScrollPos = window.pageYOffset;
       if (currentScrollPos === 0) {
         setScrollPosition('top');
-      } else if (currentScrollPos < 660) {
+      } else if (currentScrollPos < 446) {
         setScrollPosition('middle');
       } else {
         setScrollPosition('bottom');
@@ -55,9 +55,9 @@ export function Header() {
 
   return (
     <div
-      className={`fixed flex flex-col z-50 w-full items-center ${isMenuOpen ? 'bg-white text-black' : 'text-white bg-[#202020]'} ${bgStyle}`}>
+      className={`flex flex-col z-50 w-full items-center ${isMenuOpen ? 'bg-white text-black' : 'text-white bg-[#202020]'} md:fixed ${bgStyle}`}>
       <div
-        className={`flex max-w-[1440px] w-full items-center ${isMenuOpen ? 'justify-end' : 'justify-between'} px-[19px] py-[15px]`}>
+        className={`flex max-w-[1440px] w-full items-center ${isMenuOpen ? 'justify-end' : 'justify-between'} px-[19px] h-[60px]`}>
         {!isMenuOpen && (
           <Link href={'/'}>
             <Ablestack />
@@ -70,7 +70,7 @@ export function Header() {
             </Link>
           ))}
         </div>
-        <div className='cursor-pointer select-none border px-[17px] py-[7.5px] text-[13px] leading-[13px] rounded-md hidden lg:flex'>
+        <div className='cursor-pointer h-[30px] items-center select-none border px-[17px] text-[13px] rounded-md hidden lg:flex'>
           Contact Us
         </div>
         <div

@@ -12,3 +12,11 @@ export interface HeaderData {
   heightClassName: string;
   buttonData?: ButtonData;
 }
+
+export interface ProductHeaderData {
+  title: string | ReactNode;
+  description: string | ReactNode;
+  descriptionMaxWidth: string;
+  bgClassName: string;
+  contentMaxWidth?: string;
+}

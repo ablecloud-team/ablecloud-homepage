@@ -20,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang='ko'>
       <body>
-        <Header />
-        {children}
+        <div className='min-h-screen'>
+          <Header />
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

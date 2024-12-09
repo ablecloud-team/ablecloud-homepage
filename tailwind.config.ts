@@ -9,6 +9,7 @@ const config: Config = {
   ],
   theme: {
     backgroundImage: {
+      //home
       'home-header-1': "url('/images/home/header-1.png')",
       'home-header-2': "url('/images/home/header-2.png')",
       'home-header-3': "url('/images/home/header-3.png')",
@@ -27,8 +28,24 @@ const config: Config = {
       'home-solution-3': "url('/images/home/solution-3.png')",
       'home-solution-4': "url('/images/home/solution-4.png')",
       'home-solution-5': "url('/images/home/solution-5.png')",
+      //products
+      'products-header-ablestack': "url('/images/products/header-ablestack.png')",
+      'products-header-cube': "url('/images/products/header-cube.png')",
+      'products-header-cell': "url('/images/products/header-cell.png')",
+      'products-header-glue': "url('/images/products/header-glue.png')",
+      'products-header-mold': "url('/images/products/header-mold.png')",
+      'products-header-track': "url('/images/products/header-track.png')",
+      'products-header-wall': "url('/images/products/header-wall.png')",
+      'products-header-koral': "url('/images/products/header-koral.png')",
+      'products-header-genie': "url('/images/products/header-genie.png')",
+      'products-header-silo': "url('/images/products/header-silo.png')",
+      'products-header-over': "url('/images/products/header-over.png')",
+      'products-header-link': "url('/images/products/header-link.png')",
     },
     extend: {
+      scale: {
+        '102': '1.02',
+      },
       animation: {
         bannermovetoleft: 'bannermovetoleft 15s linear infinite',
         bannermovetoright: 'bannermovetoright 15s linear infinite',
@@ -43,12 +60,12 @@ const config: Config = {
           '100%': { transform: 'translateX(var(--end-x, 0px))' },
         },
       },
-
       screens: {
         sm: '640px',
         md: '768px', // ~ mobile
         lg: '960px', // ~ tablet
         xl: '1260px', // ~ pc
+        max: '1440px', // maxSize
       },
     },
   },
