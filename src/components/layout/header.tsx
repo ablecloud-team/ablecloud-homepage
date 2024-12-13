@@ -13,7 +13,7 @@ const menuItems = [
   { title: '적용분야', href: '/applications' },
   { title: '성공사례', href: '/' },
   { title: '파트너', href: '/' },
-  { title: '리소스', href: '/' },
+  { title: '리소스', href: '/resource/blog' },
   { title: '제품문의', href: '/' },
   { title: '회사소개', href: '/' },
 ];

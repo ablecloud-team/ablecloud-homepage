@@ -43,6 +43,8 @@ const config: Config = {
       'products-header-link': "url('/images/products/header-link.png')",
       //application
       'application-header': "url('/images/applications/header-application.png')",
+      //resource
+      'resource-header': "url('/images/resource/header-resource.png')",
     },
     extend: {
       scale: {
@@ -51,7 +53,9 @@ const config: Config = {
       animation: {
         bannermovetoleft: 'bannermovetoleft 15s linear infinite',
         bannermovetoright: 'bannermovetoright 15s linear infinite',
+        'fade-in': 'fade-in 0.3s ease-in-out',
       },
+
       keyframes: {
         bannermovetoleft: {
           '0%': { transform: 'translateX(var(--start-x, 0px))' },
@@ -60,6 +64,16 @@ const config: Config = {
         bannermovetoright: {
           '0%': { transform: 'translateX(var(--start-x, 0px))' },
           '100%': { transform: 'translateX(var(--end-x, 0px))' },
+        },
+        'fade-in': {
+          from: {
+            opacity: '0',
+            transform: 'translateY(5px)',
+          },
+          to: {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
         },
       },
       screens: {
