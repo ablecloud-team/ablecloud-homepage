@@ -4,11 +4,7 @@ import { AblestackListData } from '@/types/products';
 
 import ArrowUp from '@/public/icons/common/arrow-up.svg';
 
-interface AblestackListProps {
-  ablestackList: AblestackListData[];
-}
-
-export function AblestackList({ ablestackList }: AblestackListProps) {
+export function AblestackList({ ablestackList }: { ablestackList: AblestackListData[] }) {
   return (
     <div className='flex flex-col gap-[30px]'>
       {ablestackList.map((item, idx) => {
@@ -23,7 +19,7 @@ export function AblestackList({ ablestackList }: AblestackListProps) {
                 return (
                   <Link
                     key={i}
-                    href={service.href}
+                    href={`/products/ablestack/${service.path}`}
                     className='flex flex-col gap-[6px] p-4 border border-[#EEE] rounded-[10px] transform transition duration-200 hover:scale-102 hover:shadow-md'>
                     <div className='text-[14px] text-[#926CFF] font-bold leading-[22px]'>
                       {service.description}

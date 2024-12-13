@@ -5,7 +5,7 @@ import { ablestackServices } from '@/constants/products';
 export type AbleStackServices = (typeof ablestackServices)[number];
 
 export interface AblestackService {
-  href: string;
+  path: AbleStackServices;
   title: string;
   description: string;
 }

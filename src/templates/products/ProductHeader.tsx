@@ -1,6 +1,6 @@
-import { ProductsHeaderData } from '@/types/header';
+import { ProductHeaderData } from '@/types/header';
 
-export function ProductHeader({ headerData }: { headerData: ProductsHeaderData }) {
+export function ProductHeader({ headerData }: { headerData: ProductHeaderData }) {
   const {
     bgClassName,
     description,

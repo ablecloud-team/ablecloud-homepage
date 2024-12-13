@@ -1,0 +1,215 @@
+import { HeaderData } from '@/types/header';
+import { SolutionListData } from '@/types/solutions';
+
+import aiMlSrc from '@/public/images/solutions/ai-ml.png';
+import backupRecoverySrc from '@/public/images/solutions/backup-recovery.png';
+import bigDataAnalysisSrc from '@/public/images/solutions/big-data-analysis.png';
+import businessContinuitySrc from '@/public/images/solutions/business-continuity.png';
+import businessCriticalSrc from '@/public/images/solutions/business-critical.png';
+import callCenterSrc from '@/public/images/solutions/call-center.png';
+import ciCdSrc from '@/public/images/solutions/ci-cd.png';
+import cloudNativeSrc from '@/public/images/solutions/cloud-native.png';
+import databaseSrc from '@/public/images/solutions/database.png';
+import devTestSrc from '@/public/images/solutions/dev-test.png';
+import devopsOperationsSrc from '@/public/images/solutions/devops-operations.png';
+import edgeComputingSrc from '@/public/images/solutions/edge-computing.png';
+import electronicDocumentSrc from '@/public/images/solutions/electronic-document.png';
+import hybridCloudSrc from '@/public/images/solutions/hybrid-cloud.png';
+import multiCloudSrc from '@/public/images/solutions/multi-cloud.png';
+import privateCloudSrc from '@/public/images/solutions/private-cloud.png';
+import remoteOfficesSrc from '@/public/images/solutions/remote-offices.png';
+import securityInfraSrc from '@/public/images/solutions/security-infra.png';
+import serverVirtualizationSrc from '@/public/images/solutions/server-virtualization.png';
+import videoSurveillanceSrc from '@/public/images/solutions/video-surveillance.png';
+import virtualDesktopDaasSrc from '@/public/images/solutions/virtual-desktop-daas.png';
+
+export const solutionNames = [
+  'big-data-analysis',
+  'business-continuity',
+  'business-critical',
+  'hybrid-cloud',
+  'private-cloud',
+  'cloud-native',
+  'database',
+  'dev-test',
+  'devops-operations',
+  'virtual-desktop-daas',
+  'ai-ml',
+  'security-infra',
+  'multi-cloud',
+  'edge-computing',
+  'video-surveillance',
+  'electronic-document',
+  'backup-recovery',
+  'ci-cd',
+  'remote-offices',
+  'call-center',
+  'server-virtualization',
+] as const;
+
+export const solutionHeaderData: HeaderData = {
+  title: {
+    mainText: 'Solution',
+  },
+  description: (
+    <>
+      어떤 형태의 애플리케이션, 어떠한 비즈니스 워크로드 등에 상관없이 ABLESTACK이 솔루션을
+      제공합니다.
+      <br />
+      ABLESTACK은 기업의 비즈니스 및 IT혁신을 위한 필수적인 솔루션입니다.
+    </>
+  ),
+  bgClassName: 'bg-solution-header',
+  heightClassName: 'min-h-[450px] lg:min-h-[506px]',
+  buttonData: {
+    text: '개요 보러가기',
+    href: '/',
+  },
+};
+
+export const solutionList: SolutionListData[] = [
+  {
+    imgSrc: bigDataAnalysisSrc,
+    path: 'big-data-analysis',
+    title: '빅데이터 분석',
+    description:
+      '빅 데이터 애플리케이션을 위한 클라우드 HCI의 민첩성과 온프레이스 관리 편리성을 활용하십시오.',
+  },
+  {
+    imgSrc: businessContinuitySrc,
+    path: 'business-continuity',
+    title: '비즈니스 연속성/재해복구',
+    description:
+      '빅전체 데이터 백업 및 다양한 복구 옵션을 통해 연속성을 보장함함으로써 저비용으로 SLA를 충족하심시오.',
+  },
+  {
+    imgSrc: businessCriticalSrc,
+    path: 'business-critical',
+    title: '비즈니스 크리티털 앱',
+    description:
+      'HCI기반의 엔터프라이즈 클라우드를 활용하여 비용을 낮추고 단순성, 확장성, 성능을 통해 비즈니스를 가속합니다.',
+  },
+  {
+    imgSrc: hybridCloudSrc,
+    path: 'hybrid-cloud',
+    title: '하이브리드 클라우드',
+    description:
+      'ABLESTACK을 사용하여 온프레미스 인프라를 퍼블릭 클라우드로 원활하게 확장할 수 있습니다.',
+  },
+  {
+    imgSrc: privateCloudSrc,
+    path: 'private-cloud',
+    title: '프라이빗 클라우드',
+    description:
+      '필요에 따라 언제든지 확장할 수 있고 모든 앱을 실행할 수 있는 HCI 기반 클라우드로 비즈니스를 강화하십시오.',
+  },
+  {
+    imgSrc: cloudNativeSrc,
+    path: 'cloud-native',
+    title: '클라우드 네이티브',
+    description:
+      'HCI 기반의 클라우드를 통해 컨테이너 기반의 마이크로 서비스 및 견고한 자동화 서비스를 사용하십시오.',
+  },
+  {
+    imgSrc: databaseSrc,
+    path: 'database',
+    title: '데이터베이스',
+    description:
+      '다양한 상용 데이터베이스 배포를 위한 ABLESTACK 솔루션을 통해 안정적인 운영 및 통찰력을 확보하십시오.',
+  },
+  {
+    imgSrc: devTestSrc,
+    path: 'dev-test',
+    title: '개발/테스트',
+    description:
+      '효율적이고 민첩한 개발 및 테스트 환경을 통해 생산성을 높이고 출시사이클 단축을 통해 수익을 높일수 있습니다.',
+  },
+  {
+    imgSrc: devopsOperationsSrc,
+    path: 'devops-operations',
+    title: '데브옵스/IT운영',
+    description:
+      'IT 자동화 및 DevOps를 위한 모범 사례를 통해 기업 클라우드의 비용을 절감하고 IT서비스를 가속화합니다.',
+  },
+  {
+    imgSrc: virtualDesktopDaasSrc,
+    path: 'virtual-desktop-daas',
+    title: '가상데스크톱/DaaS',
+    description:
+      '회사 직원들을 위한 디지털 작업 공간을 제공하여 업무 환경에 더 큰 유연성을 제공하여 업무 생산성을 높이십시오.',
+  },
+  {
+    imgSrc: aiMlSrc,
+    path: 'ai-ml',
+    title: '인공지능/머신러닝',
+    description: '빠르고 확장이 간편한 AI 지원 인프라를 통해 AI/ML 이니셔티브를 얻으십시오.',
+  },
+  {
+    imgSrc: securityInfraSrc,
+    path: 'security-infra',
+    title: '보안 인프라',
+    description:
+      '제로 트러스트 정책을 적용하여 효과적으로 사이버 공격 및 데이터 손실을 방지 솔루션을 제공합니다.',
+  },
+  {
+    imgSrc: multiCloudSrc,
+    path: 'multi-cloud',
+    title: '멀티클라우드',
+    description:
+      '통합된 관리 환경으로 다양한 하이퍼바이저와 클라우드 환경으로의 인프라 확장을 제공합니다.',
+  },
+  {
+    imgSrc: edgeComputingSrc,
+    path: 'edge-computing',
+    title: '엣지컴퓨팅',
+    description:
+      '컴팩트한 하이퍼컨버징 기술로 엣지 사이트의 인프라를 지원하고 전문인력 지원을 경감합니다.',
+  },
+  {
+    imgSrc: videoSurveillanceSrc,
+    path: 'video-surveillance',
+    title: '영상 감시',
+    description:
+      '고성능 환경 제공을 통해 효과적으로 영상데이터를 수집하고 분석하면서도 필요 면적 및 전력, 비용을 줄여드립니다.',
+  },
+  {
+    imgSrc: electronicDocumentSrc,
+    path: 'electronic-document',
+    title: '전자문서 유통관리',
+    description:
+      '강력한 내결함성 및 원본 유지 기능을 통해 기업 내부의 중요한 전자문서의 유통 및 관리 및  중앙화를 지원합니다.',
+  },
+  {
+    imgSrc: backupRecoverySrc,
+    path: 'backup-recovery',
+    title: '백업 및 복구',
+    description: '가상환경 뿐 아니라 레거시 환경에 대한 통합 백업 및 복구를 지원합니다.',
+  },
+  {
+    imgSrc: ciCdSrc,
+    path: 'ci-cd',
+    title: 'CI/CD',
+    description:
+      'HCI 기반의 클라우드 환경을 통해 빠르게 개발환경을 지원하고 통합하여 애플리케이션 생명주기를 단축합니다.',
+  },
+  {
+    imgSrc: remoteOfficesSrc,
+    path: 'remote-offices',
+    title: '원격 및 지사 오피스',
+    description:
+      'H단일 HCI 플랫폼에서 지사의 모든 로컬 앱과 가상 데스크톱 등을 안전하게 실행하여 비용, 복잡성 등을 모두 낮춥니다.',
+  },
+  {
+    imgSrc: callCenterSrc,
+    path: 'call-center',
+    title: '콜센터 시스템',
+    description: '언제 어디서나, 어떠한 장치에서든 액세스할 수 콜센터 시스템을 구성할 수 있습니다.',
+  },
+  {
+    imgSrc: serverVirtualizationSrc,
+    path: 'server-virtualization',
+    title: '서버가상화',
+    description:
+      '기업에서 실행하는 모든 인프라와 애플리케이션을 가상화 하여 민첩성과 효율성을 극대화 하십시오.',
+  },
+];
