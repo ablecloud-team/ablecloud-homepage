@@ -1,29 +1,29 @@
+import { ApplicationListData } from '@/types/applications';
 import { HeaderData } from '@/types/header';
-import { SolutionListData } from '@/types/solutions';
 
-import aiMlSrc from '@/public/images/solutions/ai-ml.png';
-import backupRecoverySrc from '@/public/images/solutions/backup-recovery.png';
-import bigDataAnalysisSrc from '@/public/images/solutions/big-data-analysis.png';
-import businessContinuitySrc from '@/public/images/solutions/business-continuity.png';
-import businessCriticalSrc from '@/public/images/solutions/business-critical.png';
-import callCenterSrc from '@/public/images/solutions/call-center.png';
-import ciCdSrc from '@/public/images/solutions/ci-cd.png';
-import cloudNativeSrc from '@/public/images/solutions/cloud-native.png';
-import databaseSrc from '@/public/images/solutions/database.png';
-import devTestSrc from '@/public/images/solutions/dev-test.png';
-import devopsOperationsSrc from '@/public/images/solutions/devops-operations.png';
-import edgeComputingSrc from '@/public/images/solutions/edge-computing.png';
-import electronicDocumentSrc from '@/public/images/solutions/electronic-document.png';
-import hybridCloudSrc from '@/public/images/solutions/hybrid-cloud.png';
-import multiCloudSrc from '@/public/images/solutions/multi-cloud.png';
-import privateCloudSrc from '@/public/images/solutions/private-cloud.png';
-import remoteOfficesSrc from '@/public/images/solutions/remote-offices.png';
-import securityInfraSrc from '@/public/images/solutions/security-infra.png';
-import serverVirtualizationSrc from '@/public/images/solutions/server-virtualization.png';
-import videoSurveillanceSrc from '@/public/images/solutions/video-surveillance.png';
-import virtualDesktopDaasSrc from '@/public/images/solutions/virtual-desktop-daas.png';
+import aiMlSrc from '@/public/images/applications/ai-ml.png';
+import backupRecoverySrc from '@/public/images/applications/backup-recovery.png';
+import bigDataAnalysisSrc from '@/public/images/applications/big-data-analysis.png';
+import businessContinuitySrc from '@/public/images/applications/business-continuity.png';
+import businessCriticalSrc from '@/public/images/applications/business-critical.png';
+import callCenterSrc from '@/public/images/applications/call-center.png';
+import ciCdSrc from '@/public/images/applications/ci-cd.png';
+import cloudNativeSrc from '@/public/images/applications/cloud-native.png';
+import databaseSrc from '@/public/images/applications/database.png';
+import devTestSrc from '@/public/images/applications/dev-test.png';
+import devopsOperationsSrc from '@/public/images/applications/devops-operations.png';
+import edgeComputingSrc from '@/public/images/applications/edge-computing.png';
+import electronicDocumentSrc from '@/public/images/applications/electronic-document.png';
+import hybridCloudSrc from '@/public/images/applications/hybrid-cloud.png';
+import multiCloudSrc from '@/public/images/applications/multi-cloud.png';
+import privateCloudSrc from '@/public/images/applications/private-cloud.png';
+import remoteOfficesSrc from '@/public/images/applications/remote-offices.png';
+import securityInfraSrc from '@/public/images/applications/security-infra.png';
+import serverVirtualizationSrc from '@/public/images/applications/server-virtualization.png';
+import videoSurveillanceSrc from '@/public/images/applications/video-surveillance.png';
+import virtualDesktopDaasSrc from '@/public/images/applications/virtual-desktop-daas.png';
 
-export const solutionNames = [
+export const applicationNames = [
   'big-data-analysis',
   'business-continuity',
   'business-critical',
@@ -47,9 +47,9 @@ export const solutionNames = [
   'server-virtualization',
 ] as const;
 
-export const solutionHeaderData: HeaderData = {
+export const applicationHeaderData: HeaderData = {
   title: {
-    mainText: 'Solution',
+    mainText: 'Application',
   },
   description: (
     <>
@@ -59,7 +59,7 @@ export const solutionHeaderData: HeaderData = {
       ABLESTACK은 기업의 비즈니스 및 IT혁신을 위한 필수적인 솔루션입니다.
     </>
   ),
-  bgClassName: 'bg-solution-header',
+  bgClassName: 'bg-application-header',
   heightClassName: 'min-h-[450px] lg:min-h-[506px]',
   buttonData: {
     text: '개요 보러가기',
@@ -67,7 +67,7 @@ export const solutionHeaderData: HeaderData = {
   },
 };
 
-export const solutionList: SolutionListData[] = [
+export const applicationList: ApplicationListData[] = [
   {
     imgSrc: bigDataAnalysisSrc,
     path: 'big-data-analysis',

@@ -41,8 +41,8 @@ const config: Config = {
       'products-header-silo': "url('/images/products/header-silo.png')",
       'products-header-over': "url('/images/products/header-over.png')",
       'products-header-link': "url('/images/products/header-link.png')",
-      //solution
-      'solution-header': "url('/images/solutions/header-solution.png')",
+      //application
+      'application-header': "url('/images/applications/header-solution.png')",
     },
     extend: {
       scale: {

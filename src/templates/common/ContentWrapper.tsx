@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 interface ContentWrapperProps {
-  type?: 'default' | 'products' | 'solutions';
+  type?: 'default' | 'products' | 'applications';
   bgClassName?: string;
   children: ReactNode;
 }
@@ -18,7 +18,7 @@ export function ContentWrapper({
       </div>
     );
 
-  if (type === 'solutions') {
+  if (type === 'applications') {
     return (
       <div className={`flex justify-center w-full pt-[38px] pb-12 break-keep ${bgClassName}`}>
         <div className='w-full max-w-[1472px] px-4 py-3 overflow-x-hidden'>{children}</div>

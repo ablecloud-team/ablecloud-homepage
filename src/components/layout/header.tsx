@@ -10,7 +10,7 @@ import Hamburger from '@/public/icons/common/hamburger.svg';
 
 const menuItems = [
   { title: '제품', href: '/products/ablestack' },
-  { title: '솔루션', href: '/solutions' },
+  { title: '적용분야', href: '/applications' },
   { title: '성공사례', href: '/' },
   { title: '파트너', href: '/' },
   { title: '리소스', href: '/' },
