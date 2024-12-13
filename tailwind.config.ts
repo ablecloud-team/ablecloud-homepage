@@ -23,11 +23,11 @@ const config: Config = {
       'home-main-card-1': "url('/images/home/main-card-1.png')",
       'home-main-card-2': "url('/images/home/main-card-2.png')",
       'home-main-card-3': "url('/images/home/main-card-3.png')",
-      'home-solution-1': "url('/images/home/solution-1.png')",
-      'home-solution-2': "url('/images/home/solution-2.png')",
-      'home-solution-3': "url('/images/home/solution-3.png')",
-      'home-solution-4': "url('/images/home/solution-4.png')",
-      'home-solution-5': "url('/images/home/solution-5.png')",
+      'home-application-1': "url('/images/home/application-1.png')",
+      'home-application-2': "url('/images/home/application-2.png')",
+      'home-application-3': "url('/images/home/application-3.png')",
+      'home-application-4': "url('/images/home/application-4.png')",
+      'home-application-5': "url('/images/home/application-5.png')",
       //products
       'products-header-ablestack': "url('/images/products/header-ablestack.png')",
       'products-header-cube': "url('/images/products/header-cube.png')",
@@ -42,7 +42,7 @@ const config: Config = {
       'products-header-over': "url('/images/products/header-over.png')",
       'products-header-link': "url('/images/products/header-link.png')",
       //application
-      'application-header': "url('/images/applications/header-solution.png')",
+      'application-header': "url('/images/applications/header-application.png')",
     },
     extend: {
       scale: {

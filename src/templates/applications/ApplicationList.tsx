@@ -7,7 +7,7 @@ export function ApplicationList({ applicationList }: { applicationList: Applicat
   return (
     <div className='flex flex-col gap-[30px] items-center'>
       <div className='font-medium text-center text-[30px] leading-[43px] pb-5'>
-        솔루션 유즈케이스
+        적용분야 유즈케이스
       </div>
       <div className='max-w-[1200px] grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-y-6 xl:grid-cols-3 xl:gap-y-8'>
         {applicationList.map((application, idx) => {

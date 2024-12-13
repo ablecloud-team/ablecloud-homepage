@@ -1,8 +1,8 @@
 import { Button } from '@/components/ui';
 
-import { HomeSolutionCardData } from '@/types/home';
+import { HomeApplicationCardData } from '@/types/home';
 
-function HomeSolutionCard({ cardData }: { cardData: HomeSolutionCardData }) {
+function HomeApplicationCard({ cardData }: { cardData: HomeApplicationCardData }) {
   const { bgClassName, description, title } = cardData;
 
   return (
@@ -14,12 +14,12 @@ function HomeSolutionCard({ cardData }: { cardData: HomeSolutionCardData }) {
   );
 }
 
-interface HomeSolutionCardsProps {
+interface HomeApplicationCardsProps {
   title: string;
-  cardsData: HomeSolutionCardData[];
+  cardsData: HomeApplicationCardData[];
 }
 
-export function HomeSolutionCards({ cardsData, title }: HomeSolutionCardsProps) {
+export function HomeApplicationCards({ cardsData, title }: HomeApplicationCardsProps) {
   return (
     <div className='flex flex-col gap-[30px] items-center'>
       <div className='font-bold text-center text-[24px] leading-[32px] md:text-[32px] md:leading-[44.16px]'>
@@ -27,10 +27,10 @@ export function HomeSolutionCards({ cardsData, title }: HomeSolutionCardsProps) 
       </div>
       <div className='flex w-full gap-[10px] overflow-x-auto scrollbar-hide'>
         {cardsData.map((cardData, idx) => {
-          return <HomeSolutionCard key={idx} cardData={cardData} />;
+          return <HomeApplicationCard key={idx} cardData={cardData} />;
         })}
       </div>
-      <Button buttonData={{ text: '솔루션 더보기', href: '/' }} />
+      <Button buttonData={{ text: '적용분야 더보기', href: '/applications' }} />
     </div>
   );
 }

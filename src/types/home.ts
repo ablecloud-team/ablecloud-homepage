@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import { ButtonData } from '@/types/ui';
 
-export interface HomeSolutionCardData {
+export interface HomeApplicationCardData {
   title: string;
   description: string | ReactNode;
   bgClassName: string;

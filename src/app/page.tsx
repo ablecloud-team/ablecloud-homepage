@@ -1,17 +1,17 @@
 import {
+  homeApplicationCardsData,
   homeFooterCardsData,
   homeMainCardsData,
   homeSliderData,
-  homeSolutionCardsData,
 } from '@/constants/home';
 
 import { ContentWrapper, SliderHeader } from '@/templates/common';
 import {
+  HomeApplicationCards,
   HomeBlogCards,
   HomeFooterCards,
   HomeInterview,
   HomeMainCards,
-  HomeSolutionCards,
 } from '@/templates/home';
 
 export default function Home() {
@@ -20,9 +20,9 @@ export default function Home() {
       <SliderHeader sliderData={homeSliderData} />
       <ContentWrapper>
         <HomeMainCards title='에이블클라우드의 새로운 소식' cardsData={homeMainCardsData} />
-        <HomeSolutionCards
+        <HomeApplicationCards
           title='ABLESTACK을 선택해야 하는 이유'
-          cardsData={homeSolutionCardsData}
+          cardsData={homeApplicationCardsData}
         />
       </ContentWrapper>
       <ContentWrapper bgClassName='bg-[#DDE8FF]'>

@@ -1,5 +1,5 @@
 import { HeaderData } from '@/types/header';
-import { HomeFooterCardData, HomeMainCardData, HomeSolutionCardData } from '@/types/home';
+import { HomeApplicationCardData, HomeFooterCardData, HomeMainCardData } from '@/types/home';
 
 import Army from '@/public/icons/home/army.svg';
 import Cnuh from '@/public/icons/home/cnuh.svg';
@@ -152,7 +152,7 @@ export const homeMainCardsData: HomeMainCardData[] = [
   },
 ];
 
-export const homeSolutionCardsData: HomeSolutionCardData[] = [
+export const homeApplicationCardsData: HomeApplicationCardData[] = [
   {
     title: '서버가상화',
     description: (
@@ -162,7 +162,7 @@ export const homeSolutionCardsData: HomeSolutionCardData[] = [
         어플리케이션을 가상화
       </>
     ),
-    bgClassName: 'bg-home-solution-1',
+    bgClassName: 'bg-home-application-1',
   },
   {
     title: '영상 감시',
@@ -173,7 +173,7 @@ export const homeSolutionCardsData: HomeSolutionCardData[] = [
         영상 데이터 수집, 분석
       </>
     ),
-    bgClassName: 'bg-home-solution-2',
+    bgClassName: 'bg-home-application-2',
   },
   {
     title: '빅데이터 분석',
@@ -184,7 +184,7 @@ export const homeSolutionCardsData: HomeSolutionCardData[] = [
         아키텍처와 자동화 도구
       </>
     ),
-    bgClassName: 'bg-home-solution-3',
+    bgClassName: 'bg-home-application-3',
   },
   {
     title: '연속성/데이터 백업',
@@ -195,7 +195,7 @@ export const homeSolutionCardsData: HomeSolutionCardData[] = [
         옵션을 통해 연속성 보장
       </>
     ),
-    bgClassName: 'bg-home-solution-4',
+    bgClassName: 'bg-home-application-4',
   },
   {
     title: '보안 인프라',
@@ -206,11 +206,11 @@ export const homeSolutionCardsData: HomeSolutionCardData[] = [
         효과적으로 사이버 공격 방지
       </>
     ),
-    bgClassName: 'bg-home-solution-5',
+    bgClassName: 'bg-home-application-5',
   },
 ];
 
-export const homeSolutionIcons1 = [
+export const homeInterviewIcons1 = [
   <Kipo />,
   <Spo />,
   <Dapa />,
@@ -223,7 +223,7 @@ export const homeSolutionIcons1 = [
   <Datq />,
 ];
 
-export const homeSolutionIcons2 = [
+export const homeInterviewIcons2 = [
   <Ycg />,
   <Goryeong />,
   <Pyeongtaek />,
