@@ -45,6 +45,8 @@ const config: Config = {
       'application-header': "url('/images/applications/header-application.png')",
       //resource
       'resource-header': "url('/images/resource/header-resource.png')",
+      //interview
+      'interview-header': "url('/images/interview/header-interview.png')",
     },
     extend: {
       scale: {

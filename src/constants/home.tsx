@@ -1,26 +1,28 @@
+import Image from 'next/image';
+
 import { HeaderData } from '@/types/header';
 import { HomeApplicationCardData, HomeFooterCardData, HomeMainCardData } from '@/types/home';
 
-import Army from '@/public/icons/home/army.svg';
-import Cnuh from '@/public/icons/home/cnuh.svg';
-import Comwel from '@/public/icons/home/comwel.svg';
-import Coocon from '@/public/icons/home/coocon.svg';
-import Dapa from '@/public/icons/home/dapa.svg';
-import Datq from '@/public/icons/home/datq.svg';
-import Ekr from '@/public/icons/home/ekr.svg';
-import Gb from '@/public/icons/home/gb.svg';
-import Goryeong from '@/public/icons/home/goryeong.svg';
-import Gyeongnam from '@/public/icons/home/gyeongnam.svg';
-import Hc from '@/public/icons/home/hc.svg';
-import Kacpta from '@/public/icons/home/kacpta.svg';
-import Kepco from '@/public/icons/home/kepco.svg';
-import Kipo from '@/public/icons/home/kipo.svg';
-import Pyeongtaek from '@/public/icons/home/pyeongtaek.svg';
-import Sangju from '@/public/icons/home/sangju.svg';
-import Spo from '@/public/icons/home/spo.svg';
-import T3q from '@/public/icons/home/t3q.svg';
-import Usc from '@/public/icons/home/usc.svg';
-import Ycg from '@/public/icons/home/ycg.svg';
+import armySrc from '@/public/images/common/army.png';
+import cnuhSrc from '@/public/images/common/cnuh.png';
+import comwelSrc from '@/public/images/common/comwel.png';
+import cooconSrc from '@/public/images/common/coocon.png';
+import dapaSrc from '@/public/images/common/dapa.png';
+import datqSrc from '@/public/images/common/datq.png';
+import ekrSrc from '@/public/images/common/ekr.png';
+import gbSrc from '@/public/images/common/gb.png';
+import goryeongSrc from '@/public/images/common/goryeong.png';
+import gyeongnamSrc from '@/public/images/common/gyeongnam.png';
+import hcSrc from '@/public/images/common/hc.png';
+import kacptaSrc from '@/public/images/common/kacpta.png';
+import kepcoSrc from '@/public/images/common/kepco.png';
+import kipoSrc from '@/public/images/common/kipo.png';
+import pyeongtaekSrc from '@/public/images/common/pyeongtaek.png';
+import sangjuSrc from '@/public/images/common/sangju.png';
+import spoSrc from '@/public/images/common/spo.png';
+import t3qSrc from '@/public/images/common/t3q.png';
+import uscSrc from '@/public/images/common/usc.png';
+import ycgSrc from '@/public/images/common/ycg.png';
 
 export const homeSliderData: HeaderData[] = [
   {
@@ -211,29 +213,29 @@ export const homeApplicationCardsData: HomeApplicationCardData[] = [
 ];
 
 export const homeInterviewIcons1 = [
-  <Kipo />,
-  <Spo />,
-  <Dapa />,
-  <Comwel />,
-  <Ekr />,
-  <Gyeongnam />,
-  <Hc />,
-  <Sangju />,
-  <Kepco />,
-  <Datq />,
+  <Image src={kipoSrc} alt='' width={96} />,
+  <Image src={spoSrc} alt='' width={80} />,
+  <Image src={dapaSrc} alt='' width={96} />,
+  <Image src={comwelSrc} alt='' width={86} />,
+  <Image src={ekrSrc} alt='' width={137} />,
+  <Image src={gyeongnamSrc} alt='' width={114} />,
+  <Image src={hcSrc} alt='' width={85} />,
+  <Image src={sangjuSrc} alt='' width={105} />,
+  <Image src={kepcoSrc} alt='' width={120} />,
+  <Image src={datqSrc} alt='' width={62} />,
 ];
 
 export const homeInterviewIcons2 = [
-  <Ycg />,
-  <Goryeong />,
-  <Pyeongtaek />,
-  <Usc />,
-  <Gb />,
-  <Coocon />,
-  <Cnuh />,
-  <Army />,
-  <T3q />,
-  <Kacpta />,
+  <Image src={ycgSrc} alt='' width={111} />,
+  <Image src={goryeongSrc} alt='' width={102} />,
+  <Image src={pyeongtaekSrc} alt='' width={56} />,
+  <Image src={uscSrc} alt='' width={112} />,
+  <Image src={gbSrc} alt='' width={110} />,
+  <Image src={cooconSrc} alt='' width={120} />,
+  <Image src={cnuhSrc} alt='' width={120} />,
+  <Image src={armySrc} alt='' width={57} />,
+  <Image src={t3qSrc} alt='' width={100} />,
+  <Image src={kacptaSrc} alt='' width={115} />,
 ];
 
 export const homeFooterCardsData: HomeFooterCardData[] = [

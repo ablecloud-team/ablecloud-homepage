@@ -1,64 +1,36 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { useEffect, useMemo, useState } from 'react';
+
+import { headerMenu, pageHeaderHeight } from '@/constants/common';
 
 import Ablestack from '@/public/icons/common/ablestack.svg';
 import Close from '@/public/icons/common/close.svg';
 import Hamburger from '@/public/icons/common/hamburger.svg';
 
-const menuItems = [
-  {
-    title: '제품',
-    href: '/products/ablestack',
-    subMenu: [
-      { title: 'ABLESTACK VM', href: '/products/ablestack' },
-      { title: 'ABLESTACK HCI', href: '/products/ablestack' },
-    ],
-  },
-  { title: '적용분야', href: '/applications' },
-  { title: '성공사례', href: '/' },
-  {
-    title: '파트너',
-    href: '/',
-    subMenu: [
-      { title: '프로그램 소개', href: '/' },
-      { title: '파트너 현황', href: '/' },
-    ],
-  },
-  {
-    title: '리소스',
-    href: '/resource/blog',
-    subMenu: [
-      { title: '소식', href: '/resource/blog' },
-      { title: '동영상', href: '/resource/video' },
-      { title: '백서/ebook', href: '/resource/ebook' },
-    ],
-  },
-  { title: '제품문의', href: '/' },
-  {
-    title: '회사소개',
-    href: '/',
-    subMenu: [
-      { title: '회사소개 및 비전', href: '/' },
-      { title: '연혁', href: '/' },
-      { title: '인증 및 특허', href: '/' },
-      { title: '찾아오시는 길', href: '/' },
-    ],
-  },
-];
-
 export function Header() {
   const [scrollPosition, setScrollPosition] = useState<'top' | 'middle' | 'bottom'>('top');
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const pathName = usePathname();
+
+  const headerHeight = useMemo(() => {
+    if (pathName.startsWith('/interview')) return pageHeaderHeight.interview;
+    if (pathName.startsWith('/resource')) return pageHeaderHeight.resource;
+    if (pathName.startsWith('/products/ablestack/')) return pageHeaderHeight.productDetail;
+
+    return pageHeaderHeight.common;
+  }, [pathName]);
 
   useEffect(() => {
     const listener = () => {
       const currentScrollPos = window.pageYOffset;
       if (currentScrollPos === 0) {
         setScrollPosition('top');
-      } else if (currentScrollPos < 446) {
+      } else if (currentScrollPos < headerHeight - 60) {
         setScrollPosition('middle');
       } else {
         setScrollPosition('bottom');
@@ -68,7 +40,7 @@ export function Header() {
     window.addEventListener('scroll', listener);
 
     return () => window.removeEventListener('scroll', listener);
-  }, []);
+  }, [headerHeight]);
 
   const bgStyle = useMemo(() => {
     if (scrollPosition === 'top') return 'md:bg-black md:bg-opacity-10';
@@ -95,7 +67,7 @@ export function Header() {
           </Link>
         )}
         <div className='gap-5 px-[10px] font-bold hidden cursor-pointer md:flex'>
-          {menuItems.map((v, index) => (
+          {headerMenu.map((v, index) => (
             <div className='relative group' key={index}>
               <Link
                 href={v.href}
@@ -103,7 +75,7 @@ export function Header() {
                 {v.title}
               </Link>
               {v.subMenu && (
-                <div className='absolute p-[14px] rounded-lg left-1/2 -translate-x-1/2 w-[170px] bg-black text-white opacity-0 transform translate-y-4 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0'>
+                <div className='absolute p-[14px] rounded-lg left-1/2 -translate-x-1/2 w-[170px] bg-black text-white opacity-0 transform pointer-events-none group-hover:pointer-events-auto translate-y-4 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0'>
                   {v.subMenu?.map((subItem, subIndex) => (
                     <div key={subIndex}>
                       <Link
@@ -142,7 +114,7 @@ export function Header() {
               </button>
             </div>
             <div className='flex flex-col items-start'>
-              {menuItems.map((v, index) => (
+              {headerMenu.map((v, index) => (
                 <Link
                   href={v.href}
                   key={index}
