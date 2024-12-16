@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 interface ContentWrapperProps {
-  type?: 'default' | 'products' | 'applications' | 'resource' | 'interview';
+  type?: 'default' | 'products' | 'applications' | 'resource' | 'interview' | 'contact';
   bgClassName?: string;
   children: ReactNode;
 }
@@ -11,7 +11,7 @@ export function ContentWrapper({
   bgClassName = 'bg-white',
   children,
 }: ContentWrapperProps) {
-  if (type === 'products')
+  if (type === 'products' || type === 'contact')
     return (
       <div className={`flex justify-center w-full py-8 break-keep ${bgClassName}`}>
         <div className='w-full max-w-[1472px] overflow-hidden'>{children}</div>

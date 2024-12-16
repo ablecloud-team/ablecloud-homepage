@@ -26,7 +26,7 @@ export const headerMenu = [
       { title: '백서/ebook', href: '/resource/ebook' },
     ],
   },
-  { title: '제품문의', href: '/' },
+  { title: '제품문의', href: '/contact' },
   {
     title: '회사소개',
     href: '/',
@@ -46,4 +46,4 @@ export const pageHeaderHeight = {
   common: 506,
 };
 
-export const bgGrayPage = ['/interview'];
+export const bgGrayPage = ['/interview', '/contact'];
