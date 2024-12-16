@@ -40,10 +40,9 @@ export function Tabs({ tabs }: TabsProps) {
       <div className='p-2 bg-[#F6F7F8] rounded-full'>
         <div className='relative flex'>
           <div
-            className={`absolute top-0 h-full bg-[#202020] transition-all rounded-full duration-300`}
+            className={`absolute top-0 h-full bg-[#202020] transition-all rounded-full duration-300 shadow-md`}
             style={bgStyle}
           />
-
           {tabs.map((tab, idx) => (
             <Link
               key={idx}
@@ -51,7 +50,7 @@ export function Tabs({ tabs }: TabsProps) {
               className={`px-6 rounded-full ${!bgStyle && activeIndex === idx ? 'bg-[#202020]' : ''}`}>
               <div
                 ref={el => (tabRefs.current[idx] = el)}
-                className={`relative py-2 text-sm text-center transition-all duration-200 z-10 ${
+                className={`relative py-[10px] text-sm text-center transition-all duration-200 z-10 ${
                   activeIndex === idx ? 'font-bold text-white' : 'font-normal text-[#787878]'
                 }`}>
                 {tab.text}

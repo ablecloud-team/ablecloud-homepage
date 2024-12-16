@@ -2,7 +2,7 @@ import { resourceHeaderData, resourceTabs } from '@/constants/resource';
 
 import { ContentWrapper, MainPageHeader } from '@/templates/common';
 
-import { Tabs } from '@/components/layout';
+import { Tabs } from '@/components/ui';
 
 export default function ResourceLayout({
   children,

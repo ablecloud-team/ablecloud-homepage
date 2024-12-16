@@ -40,8 +40,8 @@ export const headerMenu = [
 ];
 
 export const pageHeaderHeight = {
-  resource: 374,
-  interview: 404,
+  small: 374,
+  smallMedium: 404,
   productDetail: 434,
   common: 506,
 };

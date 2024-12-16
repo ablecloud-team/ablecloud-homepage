@@ -18,8 +18,8 @@ export function Header() {
   const pathName = usePathname();
 
   const headerHeight = useMemo(() => {
-    if (pathName.startsWith('/interview')) return pageHeaderHeight.interview;
-    if (pathName.startsWith('/resource')) return pageHeaderHeight.resource;
+    if (pathName.startsWith('/resource')) return pageHeaderHeight.small;
+    if (pathName.startsWith('/interview')) return pageHeaderHeight.smallMedium;
     if (pathName.startsWith('/products/ablestack/')) return pageHeaderHeight.productDetail;
 
     return pageHeaderHeight.common;
