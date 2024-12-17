@@ -6,7 +6,7 @@ export function InterViewList({ interviewList }: { interviewList: InterviewListD
       <div className='font-bold text-center text-[24px] leading-[32px] md:text-[30px] md:leading-[43px] pb-5'>
         ABLESTACK을 통해 혁신을 이룩한 고객사례
       </div>
-      <div className='grid grid-cols-7 gap-x-3 gap-y-2'>
+      <div className='grid max-w-[1260px] w-full gap-x-3 gap-y-2 grid-cols-[repeat(auto-fit,_minmax(150px,1fr))] justify-center'>
         {interviewList.map((v, idx) => (
           <div
             key={idx}
