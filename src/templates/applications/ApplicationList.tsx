@@ -6,7 +6,7 @@ import { ApplicationListData } from '@/types/applications';
 export function ApplicationList({ applicationList }: { applicationList: ApplicationListData[] }) {
   return (
     <div className='flex flex-col gap-[30px] items-center'>
-      <div className='font-medium text-center text-[30px] leading-[43px] pb-5'>
+      <div className='font-medium text-center text-[24px] leading-[32px] md:text-[30px] md:leading-[43px] pb-5'>
         적용분야 유즈케이스
       </div>
       <div className='max-w-[1200px] grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-y-6 xl:grid-cols-3 xl:gap-y-8'>

@@ -26,6 +26,12 @@ export function Header() {
     return pageHeaderHeight.common;
   }, [pathName]);
 
+  const bgStyle = useMemo(() => {
+    if (scrollPosition === 'top') return 'md:bg-black md:bg-opacity-10';
+    if (scrollPosition === 'middle') return 'md:bg-black md:bg-opacity-10 md:backdrop-blur-2xl';
+    return 'md:bg-white md:text-black';
+  }, [scrollPosition]);
+
   useEffect(() => {
     const listener = () => {
       const currentScrollPos = window.pageYOffset;
@@ -43,12 +49,6 @@ export function Header() {
     return () => window.removeEventListener('scroll', listener);
   }, [headerHeight]);
 
-  const bgStyle = useMemo(() => {
-    if (scrollPosition === 'top') return 'md:bg-black md:bg-opacity-10';
-    if (scrollPosition === 'middle') return 'md:bg-black md:bg-opacity-10 md:backdrop-blur-2xl';
-    return 'md:bg-white md:text-black';
-  }, [scrollPosition]);
-
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -59,11 +59,11 @@ export function Header() {
 
   return (
     <div
-      className={`flex flex-col z-50 w-full items-center ${isMenuOpen ? 'bg-white text-black' : 'text-white bg-[#202020]'} md:fixed ${bgStyle}`}>
+      className={`fixed flex flex-col z-50 w-full items-center ${isMenuOpen ? 'bg-white text-black' : 'text-white bg-[#202020]'}  ${bgStyle}`}>
       <div
         className={`flex max-w-[1440px] w-full items-center ${isMenuOpen ? 'justify-end' : 'justify-between'} pl-[19px] pr-[19px] md:pr-[55px] xl:pr-[19px] h-[60px]`}>
         {!isMenuOpen && (
-          <Link href={'/'}>
+          <Link href={'/'} className='w-[130px] md:w-[160px]'>
             <Ablestack />
           </Link>
         )}
@@ -104,29 +104,19 @@ export function Header() {
       </div>
 
       {isMenuOpen && (
-        <>
-          <div
-            className='fixed top-0 left-0 w-full h-[40%] bg-black bg-opacity-50 z-40'
-            onClick={() => setIsMenuOpen(false)}></div>
-          <div className='fixed top-0 left-0 right-0 w-full max-h-[40%] bg-white z-50 flex flex-col p-6 shadow-lg'>
-            <div className='flex justify-end p-4'>
-              <button onClick={() => setIsMenuOpen(false)}>
-                <Close />
-              </button>
-            </div>
-            <div className='flex flex-col items-start'>
-              {headerMenu.map((v, index) => (
-                <Link
-                  href={v.href}
-                  key={index}
-                  className='text-[18px] leading-[27px] font-bold py-3'
-                  onClick={() => setIsMenuOpen(false)}>
-                  {v.title}
-                </Link>
-              ))}
-            </div>
+        <div className='fixed top-10 left-0 right-0 w-full h-full bg-white z-50 flex flex-col p-6 shadow-lg'>
+          <div className='flex flex-col items-start text-[#7B7B7B]'>
+            {headerMenu.map((v, index) => (
+              <Link
+                href={v.href}
+                key={index}
+                className='font-bold py-[18px] w-full border-b border-b-[#EEEEEE]'
+                onClick={() => setIsMenuOpen(false)}>
+                {v.title}
+              </Link>
+            ))}
           </div>
-        </>
+        </div>
       )}
     </div>
   );

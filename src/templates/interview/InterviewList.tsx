@@ -3,7 +3,7 @@ import { InterviewListData } from '@/types/interview';
 export function InterViewList({ interviewList }: { interviewList: InterviewListData[] }) {
   return (
     <div className='flex flex-col gap-[30px] items-center'>
-      <div className='font-bold text-center text-[30px] leading-[43px] pb-5'>
+      <div className='font-bold text-center text-[24px] leading-[32px] md:text-[30px] md:leading-[43px] pb-5'>
         ABLESTACK을 통해 혁신을 이룩한 고객사례
       </div>
       <div className='grid grid-cols-7 gap-x-3 gap-y-2'>
