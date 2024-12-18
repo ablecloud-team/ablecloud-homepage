@@ -57,15 +57,13 @@ export const getPosts = async () => {
 
 export const getPost = async (slug: string) => {
   try {
-    const title = decodeURIComponent(slug);
-
     const posts = await fs.readdir('post', 'utf-8');
 
-    const slugPost = posts.filter(v => v === `${title}.mdx`);
+    const slugPost = posts.filter(v => v === `${slug}.mdx`);
 
     if (slugPost.length === 0) return undefined;
 
-    const post = await fs.readFile(`post/${title}.mdx`, 'utf-8');
+    const post = await fs.readFile(path.join(process.cwd(), `/post/${slug}.mdx`), 'utf-8');
 
     const { data, content } = matter(post);
 
