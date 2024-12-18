@@ -6,6 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/templates/**/*.{js,ts,jsx,tsx,mdx}',
     './src/constants/**/*.{js,ts,jsx,tsx,mdx}',
+    './post/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     backgroundImage: {

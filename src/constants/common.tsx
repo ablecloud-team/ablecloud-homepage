@@ -47,3 +47,5 @@ export const pageHeaderHeight = {
 };
 
 export const bgGrayPage = ['/interview', '/contact'];
+
+export const withoutHeaderPage = ['/resource/blog/'];

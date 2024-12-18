@@ -5,32 +5,36 @@ import { usePathname } from 'next/navigation';
 
 import { useEffect, useMemo, useState } from 'react';
 
-import { headerMenu, pageHeaderHeight } from '@/constants/common';
+import { headerMenu, pageHeaderHeight, withoutHeaderPage } from '@/constants/common';
 
 import Ablestack from '@/public/icons/common/ablestack.svg';
 import Close from '@/public/icons/common/close.svg';
 import Hamburger from '@/public/icons/common/hamburger.svg';
 
 export function Header() {
+  const pathname = usePathname();
+
   const [scrollPosition, setScrollPosition] = useState<'top' | 'middle' | 'bottom'>('top');
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  const pathName = usePathname();
+  const isWithoutHeaderPage = withoutHeaderPage.findIndex(v => pathname.startsWith(v)) > -1;
 
   const headerHeight = useMemo(() => {
-    if (pathName.startsWith('/resource') || pathName.startsWith('/contact'))
+    if (pathname.startsWith('/resource') || pathname.startsWith('/contact'))
       return pageHeaderHeight.small;
-    if (pathName.startsWith('/interview')) return pageHeaderHeight.smallMedium;
-    if (pathName.startsWith('/products/ablestack/')) return pageHeaderHeight.productDetail;
+    if (pathname.startsWith('/interview')) return pageHeaderHeight.smallMedium;
+    if (pathname.startsWith('/products/ablestack/')) return pageHeaderHeight.productDetail;
 
     return pageHeaderHeight.common;
-  }, [pathName]);
+  }, [pathname]);
 
   const bgStyle = useMemo(() => {
+    if (isWithoutHeaderPage) return 'md:bg-white md:text-black';
+
     if (scrollPosition === 'top') return 'md:bg-black md:bg-opacity-10';
     if (scrollPosition === 'middle') return 'md:bg-black md:bg-opacity-10 md:backdrop-blur-2xl';
     return 'md:bg-white md:text-black';
-  }, [scrollPosition]);
+  }, [scrollPosition, isWithoutHeaderPage]);
 
   useEffect(() => {
     const listener = () => {
@@ -59,7 +63,7 @@ export function Header() {
 
   return (
     <div
-      className={`fixed flex flex-col z-50 w-full items-center ${isMenuOpen ? 'bg-white text-black' : 'text-white bg-[#202020]'}  ${bgStyle}`}>
+      className={`fixed flex flex-col z-50 w-full items-center ${isMenuOpen ? 'bg-white text-black' : 'text-white bg-[#202020]'} ${bgStyle}`}>
       <div
         className={`flex max-w-[1440px] w-full items-center ${isMenuOpen ? 'justify-end' : 'justify-between'} pl-[19px] pr-[19px] md:pr-[55px] xl:pr-[19px] h-[60px]`}>
         {!isMenuOpen && (
@@ -72,7 +76,7 @@ export function Header() {
             <div className='relative group' key={index}>
               <Link
                 href={v.href}
-                className={`${scrollPosition === 'bottom' ? 'hover:text-[#202020]' : 'hover:text-[#f5f5f5]'} py-2 block`}>
+                className={`${scrollPosition === 'bottom' || isWithoutHeaderPage ? 'hover:text-[#202020]' : 'hover:text-[#f5f5f5]'} py-2 block`}>
                 {v.title}
               </Link>
               {v.subMenu && (

@@ -81,7 +81,7 @@ export function HomeInterview({ title }: HomeInterviewProps) {
         </div>
       </div>
       <div className='flex justify-center'>
-        <Button buttonData={{ text: '성공사례 더보기', href: '/' }} />
+        <Button buttonData={{ text: '성공사례 더보기', href: '/interview' }} />
       </div>
     </div>
   );

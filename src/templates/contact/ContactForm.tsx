@@ -6,7 +6,7 @@ export function ContactForm() {
   const [state, handleSubmit] = useForm('mzzbldwk');
 
   if (state.succeeded) {
-    return <p className='px-4'>메일이 발송됐습니다.</p>;
+    return <div className='px-4'>메일이 발송됐습니다.</div>;
   }
 
   return (

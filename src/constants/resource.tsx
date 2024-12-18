@@ -1,6 +1,6 @@
 import { HeaderData } from '@/types/header';
 
-export const resourceType = ['blog', 'video', 'ebook', 'education'] as const;
+export const resourceType = ['blog', 'video', 'ebook'] as const;
 
 export const resourceHeaderData: HeaderData = {
   title: {
@@ -15,5 +15,4 @@ export const resourceTabs = [
   { text: '소식', href: '/resource/blog' },
   { text: '동영상', href: '/resource/video' },
   { text: '백서', href: '/resource/ebook' },
-  { text: '교육', href: '/resource/education' },
 ];

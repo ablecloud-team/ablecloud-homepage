@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
-  const isGrayPage = bgGrayPage.findIndex(v => v.startsWith(pathname)) > -1;
+  const isGrayPage = bgGrayPage.findIndex(v => pathname.startsWith(v)) > -1;
 
   return (
     <html lang='ko'>
