@@ -270,7 +270,7 @@ export const homeFooterCardsData: HomeFooterCardData[] = [
         <br /> 대외적인 소식을 확인해보세요.
       </>
     ),
-    buttonData: { text: '뉴스 확인하기', href: '/' },
+    buttonData: { text: '뉴스 확인하기', href: '/resource/blog' },
   },
   {
     category: '뉴스레터',

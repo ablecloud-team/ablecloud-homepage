@@ -15,12 +15,12 @@ export function HomeMainCards({ title, cardsData }: HomeMainCardsProps) {
       <div className='font-bold text-center text-[24px] leading-[32px] md:text-[32px] md:leading-[44.16px]'>
         {title}
       </div>
-      <div className='flex gap-[10px] justify-center'>
+      <div className='flex justify-center gap-[10px] xl:gap-[30px]'>
         {cardsData.map((cardData, idx) => {
           return (
             <div
               key={idx}
-              className={`${cardData.bgClassName} flex flex-col flex-1 max-w-[413px] w-full h-[413px] bg-cover bg-no-repeat bg-center rounded-[20px] px-6 py-9`}>
+              className={`${cardData.bgClassName} flex flex-col flex-1 max-w-[460px] w-full h-[250px] bg-cover bg-no-repeat bg-center rounded-[20px] px-6 py-9`}>
               <div className='flex-1 text-white font-bold text-[24px] leading-[36px]'>
                 {cardData.title}
               </div>

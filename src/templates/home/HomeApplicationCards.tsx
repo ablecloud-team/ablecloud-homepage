@@ -22,7 +22,7 @@ interface HomeApplicationCardsProps {
 export function HomeApplicationCards({ cardsData, title }: HomeApplicationCardsProps) {
   return (
     <div className='flex flex-col gap-[30px] items-center'>
-      <div className='font-bold text-center text-[24px] leading-[32px] md:text-[32px] md:leading-[44.16px]'>
+      <div className='font-bold text-center text-[24px] leading-[32px] md:text-[32px] md:leading-[44.16px] lg:pt-[40px]'>
         {title}
       </div>
       <div className='flex w-full gap-[10px] overflow-x-auto scrollbar-hide'>
@@ -30,7 +30,9 @@ export function HomeApplicationCards({ cardsData, title }: HomeApplicationCardsP
           return <HomeApplicationCard key={idx} cardData={cardData} />;
         })}
       </div>
-      <Button buttonData={{ text: '적용분야 더보기', href: '/applications' }} />
+      <Button
+        buttonData={{ text: '적용분야 더보기', href: '/applications', className: 'mt-[30px]' }}
+      />
     </div>
   );
 }

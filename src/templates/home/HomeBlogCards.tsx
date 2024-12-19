@@ -1,44 +1,33 @@
+import Link from 'next/link';
+
 import { Button } from '@/components/ui';
 
-interface HomeBlogCardsProps {}
+import { BlogData } from '@/types/resource';
 
-const exampleData = [
-  {
-    title: 'blade server',
-    date: '2024.06.28',
-  },
-  {
-    title: '에이블클라우드 ‘에이블스택’, 국정보안인증 획득',
-    date: '2024.06.28',
-  },
-  {
-    title: 'V사를 완벽하게 대체할 수 있는 플랫폼 영구 라이센스를 제공하는 ABLESTACK..',
-    date: '2024.06.28',
-  },
-  {
-    title: 'blade server',
-    date: '2024.06.28',
-  },
-];
-
-export function HomeBlogCards() {
+export function HomeBlogCards({ postsData }: { postsData: BlogData[] }) {
   return (
     <div className='flex flex-col gap-[30px] items-center'>
       <div className='font-bold text-center text-[24px] leading-[32px] md:text-[32px] md:leading-[44.16px]'>
         에이블클라우드의 새로운 소식
       </div>
-      <div className='flex gap-4'>
-        {exampleData.map((v, idx) => {
+      <div className='flex w-full gap-6 overflow-x-auto scrollbar-hide'>
+        {postsData.map(v => {
           return (
-            <div key={idx} className='w-[305px] border border-[#DADADA] rounded-[22px]'>
-              <div className='flex items-center justify-center h-[150px] border-b border-[#DADADA]'>
-                image
+            <Link
+              href={`/resource/blog/${v.metaData.id}`}
+              key={v.metaData.id}
+              className='min-w-[342px]'>
+              <img
+                src={v.metaData.mainImgSrc}
+                className='w-[342px] h-[150px] object-cover rounded-[12px] border border-[#1E1E1E1A] border-opacity-10'
+              />
+              <div className='px-3 pt-4 pb-2'>
+                <div className='flex-1 font-bold'>{v.metaData.title}</div>
+                <div className='mt-2 text-[#aaa] text-[14px] font-medium'>
+                  {v.metaData.updatedAt}
+                </div>
               </div>
-              <div className='p-[30px]'>
-                <div className='flex-1'>{v.title}</div>
-                <div>{v.date}</div>
-              </div>
-            </div>
+            </Link>
           );
         })}
       </div>
@@ -46,7 +35,7 @@ export function HomeBlogCards() {
         buttonData={{
           className: 'border border-[#202020]',
           text: '새로운 소식 더보기',
-          href: '/',
+          href: '/resource/blog',
           color: 'white',
         }}
       />
