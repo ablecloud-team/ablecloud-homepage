@@ -1,12 +1,34 @@
 'use client';
 
+import Image from 'next/image';
+
+import { Button } from '@/components/ui';
+
+import CheckSrc from '@/public/images/contact/check.png';
+
 import { ValidationError, useForm } from '@formspree/react';
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm('mzzbldwk');
 
   if (state.succeeded) {
-    return <div className='px-4'>메일이 발송됐습니다.</div>;
+    return (
+      <div className='flex flex-col items-center gap-6 px-4 text-center'>
+        <Image src={CheckSrc} alt='' />
+        <div className='font-bold text-[24px] lg:text-[32px]'>
+          고객님의 문의사항 제출이 완료되었습니다.
+        </div>
+        <div className='font-medium'>
+          고객님의 소중한 문의사항을 검토 후 연락드리겠습니다.
+          <br />
+          궁금하신 사항은 아래 메일로 추가 문의하실 수 있습니다.
+        </div>
+        <div className='font-medium text-[18px] lg:text-[20px] break-all'>
+          sales@ablestack.co.kr
+        </div>
+        <Button buttonData={{ text: '홈으로', href: '/', className: 'mt-[48px]' }} />
+      </div>
+    );
   }
 
   return (

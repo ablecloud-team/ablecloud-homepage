@@ -125,7 +125,7 @@ export function Header() {
             ))}
           </div>
 
-          <div className='flex justify-end'>
+          <div className='flex justify-end mb-4'>
             <Link
               href={'/contact'}
               onClick={() => setIsMenuOpen(false)}
