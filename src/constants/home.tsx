@@ -28,7 +28,7 @@ export const homeSliderData: HeaderData[] = [
   {
     title: {
       mainText: 'ABLESTACK',
-      subText: '4.0v',
+      subText: 'v4.0',
     },
     description: (
       <>

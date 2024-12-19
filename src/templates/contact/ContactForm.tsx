@@ -72,7 +72,34 @@ export function ContactForm() {
             />
           </div>
         </div>
-
+        <div className='flex gap-4 w-full flex-col md:flex-row'>
+          <div className='flex-1'>
+            <div className='font-medium mb-[10px]'>
+              연락처<span className='text-[#8F00FF]'>*</span>
+            </div>
+            <input
+              type='tel'
+              className='w-full border border-[#EEEEEE] px-3 h-[40px] rounded-[10px]'
+              id='tel'
+              name='tel'
+              required
+            />
+          </div>
+          <div className='flex-1'>
+            <div className='font-medium mb-[10px]'>
+              문의유형<span className='text-[#8F00FF]'>*</span>
+            </div>
+            <select
+              id='contactType'
+              name='contactType'
+              required
+              className='w-full border border-[#EEEEEE] px-3 h-[40px] rounded-[10px]'>
+              <option value='영업'>영업</option>
+              <option value='기술'>기술</option>
+              <option value='견적'>견적</option>
+            </select>
+          </div>
+        </div>
         <div className=' w-full flex-1'>
           <div className='font-medium mb-[10px]'>
             문의내용<span className='text-[#8F00FF]'>*</span>

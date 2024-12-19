@@ -11,6 +11,8 @@ import Ablestack from '@/public/icons/common/ablestack.svg';
 import Close from '@/public/icons/common/close.svg';
 import Hamburger from '@/public/icons/common/hamburger.svg';
 
+import { Button } from '../ui';
+
 export function Header() {
   const pathname = usePathname();
 
@@ -63,15 +65,15 @@ export function Header() {
 
   return (
     <div
-      className={`fixed flex flex-col z-50 w-full items-center ${isMenuOpen ? 'bg-white text-black' : 'text-white bg-[#202020]'} ${bgStyle}`}>
+      className={`flex flex-col z-50 w-full items-center ${isMenuOpen ? 'bg-white text-black' : 'text-white bg-[#202020]'} md:fixed ${bgStyle}`}>
       <div
-        className={`flex max-w-[1440px] w-full items-center ${isMenuOpen ? 'justify-end' : 'justify-between'} pl-[19px] pr-[19px] md:pr-[55px] xl:pr-[19px] h-[60px]`}>
+        className={`flex max-w-[1440px] w-full items-center ${isMenuOpen ? 'justify-end' : 'justify-between'} px-[19px] h-[60px]`}>
         {!isMenuOpen && (
-          <Link href={'/'} className='w-[130px] md:w-[160px]'>
+          <Link href={'/'} className='w-[130px] lg:w-[160px]'>
             <Ablestack />
           </Link>
         )}
-        <div className='gap-5 px-[10px] font-bold hidden cursor-pointer md:flex'>
+        <div className='gap-10 px-[10px] font-bold hidden cursor-pointer md:flex'>
           {headerMenu.map((v, index) => (
             <div className='relative group' key={index}>
               <Link
@@ -95,9 +97,11 @@ export function Header() {
             </div>
           ))}
         </div>
-        <div className='cursor-pointer h-[30px] items-center select-none border px-[17px] text-[13px] rounded-md hidden lg:flex'>
-          Contact Us
-        </div>
+        <Link
+          href={'/contact'}
+          className='cursor-pointer h-[30px] items-center select-none border px-[17px] text-[13px] rounded-md hidden md:flex transition duration-300 hover:brightness-90'>
+          문의하기
+        </Link>
         <div
           className='cursor-pointer flex md:hidden'
           onClick={() => {
@@ -108,8 +112,8 @@ export function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className='fixed top-10 left-0 right-0 w-full h-full bg-white z-50 flex flex-col p-6 shadow-lg'>
-          <div className='flex flex-col items-start text-[#7B7B7B]'>
+        <div className='fixed top-[60px] left-0 right-0 w-full h-[calc(100%-60px)] bg-white z-50 flex flex-col px-6 pb-6 overflow-auto'>
+          <div className='flex flex-col flex-1 text-[#7B7B7B]'>
             {headerMenu.map((v, index) => (
               <Link
                 href={v.href}
@@ -119,6 +123,15 @@ export function Header() {
                 {v.title}
               </Link>
             ))}
+          </div>
+
+          <div className='flex justify-end'>
+            <Link
+              href={'/contact'}
+              onClick={() => setIsMenuOpen(false)}
+              className='flex cursor-pointer h-[30px] text-black items-center select-none border px-[17px] text-[13px] rounded-md transition duration-300 hover:brightness-90'>
+              문의하기
+            </Link>
           </div>
         </div>
       )}

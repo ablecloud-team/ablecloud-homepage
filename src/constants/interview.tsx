@@ -29,7 +29,7 @@ import yitSrc from '@/public/images/common/yit.png';
 
 export const interviewHeaderData: HeaderData = {
   title: {
-    mainText: '성공사례',
+    mainText: '고객사',
   },
   description: (
     <div className='max-w-[699px]'>
