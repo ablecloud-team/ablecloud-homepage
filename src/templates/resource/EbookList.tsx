@@ -1,13 +1,33 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { ebooksData } from '@/constants/resource';
+import { useMemo, useState } from 'react';
 
-export function EbookList() {
+import { Pagination } from '@/components/ui';
+
+import { EbookData } from '@/types/resource';
+
+const LIMIT = 6;
+
+export function EbookList({ ebooksData }: { ebooksData: EbookData[] }) {
+  const [page, setPage] = useState<number>(1);
+
+  const ebookList = useMemo(() => {
+    const chunkedArray = [];
+
+    for (let i = 0; i < ebooksData.length; i += LIMIT) {
+      chunkedArray.push(ebooksData.slice(i, i + LIMIT));
+    }
+
+    return chunkedArray[page - 1];
+  }, [ebooksData, page]);
+
   return (
-    <div className='flex justify-center'>
+    <div className='flex flex-col items-center'>
       <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-        {ebooksData.map((v, idx) => {
+        {ebookList.map((v, idx) => {
           return (
             <Link
               key={idx}
@@ -24,6 +44,7 @@ export function EbookList() {
           );
         })}
       </div>
+      <Pagination count={ebooksData.length} limit={LIMIT} page={page} setPage={setPage} />
     </div>
   );
 }

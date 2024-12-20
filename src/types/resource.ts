@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 import { resourceType } from '@/constants/resource';
 
 export type ResourceType = (typeof resourceType)[number];
@@ -15,4 +17,12 @@ export interface BlogData {
     stringValue: string;
   };
   metaData: MdxMetaData;
+}
+
+export interface EbookData {
+  type: string;
+  title: string;
+  description: string;
+  href: string;
+  imgSrc: StaticImageData;
 }

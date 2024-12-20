@@ -1,4 +1,5 @@
 import { HeaderData } from '@/types/header';
+import { EbookData } from '@/types/resource';
 
 import ebook_1_Src from '@/public/images/resource/ebook/ebook_1.png';
 import ebook_2_Src from '@/public/images/resource/ebook/ebook_2.png';
@@ -33,7 +34,7 @@ export const videosData: string[] = [
   'https://www.youtube.com/embed/aYKeLLrlZ6o',
 ];
 
-export const ebooksData = [
+export const ebooksData: EbookData[] = [
   {
     type: 'ABLESTACK VS VMware',
     title: 'ABLESTACK-VMware vSphere 제품 비교',
