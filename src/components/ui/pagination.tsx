@@ -18,6 +18,8 @@ export function Pagination({ count, limit, page, setPage }: PaginationProps) {
     setPage(newPage);
   };
 
+  if (totalPages == 1) return <></>;
+
   return (
     <div className='flex items-center justify-center space-x-2 mt-4'>
       <div

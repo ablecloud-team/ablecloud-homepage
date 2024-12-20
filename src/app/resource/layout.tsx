@@ -22,7 +22,7 @@ export default function ResourceLayout({
       <MainPageHeader headerData={resourceHeaderData} />
       <ContentWrapper type='resource'>
         <Tabs tabs={resourceTabs} />
-        {children}
+        <div className='flex justify-center animate-fade-in'>{children}</div>
       </ContentWrapper>
     </>
   );

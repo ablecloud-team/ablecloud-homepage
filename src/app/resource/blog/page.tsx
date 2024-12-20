@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { getPosts } from '@/util/getPost';
 
 import { ContentWrapper } from '@/templates/common';
@@ -10,9 +8,7 @@ export default async function Blog() {
 
   return (
     <ContentWrapper type='resource'>
-      <div className='flex justify-center animate-fade-in'>
-        <BlogList postsData={postsData} />
-      </div>
+      <BlogList postsData={postsData} />
     </ContentWrapper>
   );
 }
