@@ -26,7 +26,7 @@ export function HomeMainCards({ title, cardsData }: HomeMainCardsProps) {
               </div>
               <Link href={cardData.href}>
                 <div className='flex gap-1 items-center text-white '>
-                  자세히보기 <ArrowRight />
+                  자세히보기 <ArrowRight width={24} />
                 </div>
               </Link>
             </div>

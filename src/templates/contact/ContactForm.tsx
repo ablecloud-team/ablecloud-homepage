@@ -13,7 +13,7 @@ export function ContactForm() {
 
   if (state.succeeded) {
     return (
-      <div className='flex flex-col items-center gap-6 px-4 text-center'>
+      <div className='flex flex-col items-center gap-6 text-center'>
         <Image src={CheckSrc} alt='' />
         <div className='font-bold text-[24px] lg:text-[32px]'>
           고객님의 문의사항 제출이 완료되었습니다.
@@ -32,7 +32,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className='flex justify-center px-4'>
+    <div className='flex justify-center'>
       <form
         onSubmit={handleSubmit}
         className='max-w-[616px] w-full flex flex-col items-center gap-4'>

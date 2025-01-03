@@ -11,8 +11,6 @@ import Ablestack from '@/public/icons/common/ablestack.svg';
 import Close from '@/public/icons/common/close.svg';
 import Hamburger from '@/public/icons/common/hamburger.svg';
 
-import { Button } from '../ui';
-
 export function Header() {
   const pathname = usePathname();
 
@@ -25,7 +23,7 @@ export function Header() {
     if (pathname.startsWith('/resource') || pathname.startsWith('/contact'))
       return pageHeaderHeight.small;
     if (pathname.startsWith('/interview')) return pageHeaderHeight.smallMedium;
-    if (pathname.startsWith('/products/ablestack/')) return pageHeaderHeight.productDetail;
+    if (pathname.startsWith('/products/service/')) return pageHeaderHeight.productService;
 
     return pageHeaderHeight.common;
   }, [pathname]);

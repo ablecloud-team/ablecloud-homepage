@@ -30,7 +30,8 @@ const config: Config = {
       'home-application-4': "url('/images/home/application-4.png')",
       'home-application-5': "url('/images/home/application-5.png')",
       //products
-      'products-header-ablestack': "url('/images/products/header-ablestack.png')",
+      'products-header-ablestack-hci': "url('/images/products/header-ablestack-hci.png')",
+      'products-header-ablestack-vm': "url('/images/products/header-ablestack-vm.png')",
       'products-header-cube': "url('/images/products/header-cube.png')",
       'products-header-cell': "url('/images/products/header-cell.png')",
       'products-header-glue': "url('/images/products/header-glue.png')",
@@ -42,6 +43,10 @@ const config: Config = {
       'products-header-silo': "url('/images/products/header-silo.png')",
       'products-header-over': "url('/images/products/header-over.png')",
       'products-header-link': "url('/images/products/header-link.png')",
+      'products-hci-content-wrapper': "url('/images/products/hci-content.png')",
+      'products-vm-card-1': "url('/images/products/vm-card-1.png')",
+      'products-vm-card-2': "url('/images/products/vm-card-2.png')",
+      'products-vm-card-3': "url('/images/products/vm-card-3.png')",
       //application
       'application-header': "url('/images/applications/header-application.png')",
       //resource
@@ -82,6 +87,7 @@ const config: Config = {
         },
       },
       screens: {
+        xsm: '400px',
         sm: '640px',
         md: '768px', // ~ mobile
         lg: '960px', // ~ tablet

@@ -8,7 +8,7 @@ export function ProductContent({ productContentData }: { productContentData: Pro
   const { imgSrc, subDescriptions, description } = productContentData;
 
   return (
-    <div className='flex flex-col gap-6 items-center px-6 md:py-8 lg:flex-row'>
+    <div className='flex flex-col gap-6 items-center md:py-8 lg:flex-row'>
       <div className='border border-[#DDD] bg-[#F6F7F8] px-[10px] py-4 md:px-6'>
         <Image src={imgSrc} alt={''} className='max-h-[400px] w-auto' />
       </div>

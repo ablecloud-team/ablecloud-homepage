@@ -1,10 +1,10 @@
 export const headerMenu = [
   {
     title: '제품',
-    href: '/products/ablestack',
+    href: '/products/ablestack-vm',
     subMenu: [
-      { title: 'ABLESTACK VM', href: '/products/ablestack' },
-      { title: 'ABLESTACK HCI', href: '/products/ablestack' },
+      { title: 'ABLESTACK VM', href: '/products/ablestack-vm' },
+      { title: 'ABLESTACK HCI', href: '/products/ablestack-hci' },
     ],
   },
   { title: '적용분야', href: '/applications' },
@@ -42,7 +42,7 @@ export const headerMenu = [
 export const pageHeaderHeight = {
   small: 374,
   smallMedium: 404,
-  productDetail: 434,
+  productService: 434,
   common: 506,
 };
 

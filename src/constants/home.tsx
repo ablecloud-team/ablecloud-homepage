@@ -139,7 +139,7 @@ export const homeMainCardsData: HomeMainCardData[] = [
         <br /> 클라우드 플랫폼
       </>
     ),
-    href: '/',
+    href: '/products/ablestack-hci',
     bgClassName: 'bg-home-main-card-2',
   },
   {

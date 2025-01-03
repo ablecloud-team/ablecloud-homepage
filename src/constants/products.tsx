@@ -1,6 +1,17 @@
-import { HeaderData, ProductHeaderData } from '@/types/header';
-import { AbleStackServices, AblestackListData, ProductContentData } from '@/types/products';
+import Image from 'next/image';
 
+import { HeaderData, ProductHeaderData } from '@/types/header';
+import {
+  AbleStackServices,
+  AblestackHCICardData,
+  AblestackService,
+  AblestackVMCardData,
+  ProductContentData,
+} from '@/types/products';
+
+import ArrowRight from '@/public/icons/common/arrow-right.svg';
+import AblestackHCI from '@/public/images/products/ablestack-hci-logo.png';
+import AblestackVM from '@/public/images/products/ablestack-vm-logo.png';
 import CellSrc from '@/public/images/products/cell.png';
 import CubeSrc from '@/public/images/products/cube.png';
 import GenieSrc from '@/public/images/products/genie.png';
@@ -27,93 +38,101 @@ export const ablestackServices = [
   'link',
 ] as const;
 
-export const ablestackHeaderData: HeaderData = {
+export const ablestackHciHeaderData: HeaderData = {
   title: {
-    mainText: 'ABLESTACK HCI',
+    mainText: (
+      <div className='w-full max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]'>
+        <Image src={AblestackHCI} alt='' />
+      </div>
+    ),
   },
   description: (
-    <>
-      복잡한 구조의 전통적 기업 데이터센터의 문제점을 해결하고, IT 환경의 급속한 발전으로 인해
-      발생하는
-      <br />
-      문제점을 해결하기 위해 단일 서버 구성으로 모든 인프라와 플랫폼을 실행할 수 있도록 고안된
-      <br />
-      HCI 플랫폼 입니다.
-    </>
+    <div className='mt-3 flex flex-col items-center gap-4'>
+      <div>클라우드 데이터센터 인프라를 위한 단일 HCI 플랫폼</div>
+      <div className='flex gap-[6px] items-center bg-[#202020] rounded-full px-[26px] py-2 text-[14px] leading-[17px] transition duration-300 select-none cursor-pointer hover:brightness-90'>
+        제품소개서 다운로드 <ArrowRight height={16} />
+      </div>
+    </div>
   ),
-  bgClassName: 'bg-products-header-ablestack',
+  bgClassName: 'bg-products-header-ablestack-hci',
   heightClassName: 'min-h-[450px] lg:min-h-[506px]',
-  buttonData: {
-    text: '개요 보러가기',
-    href: '/',
-  },
 };
 
-export const ablestackList: AblestackListData[] = [
+export const ablestackVmHeaderData: HeaderData = {
+  title: {
+    mainText: (
+      <div className='w-full max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]'>
+        <Image src={AblestackVM} alt='' />
+      </div>
+    ),
+  },
+  description: (
+    <div className='mt-3 flex flex-col items-center gap-4'>
+      <div>서버 가상화를 위한 최적의 솔루션</div>
+      <div className='flex gap-[6px] items-center bg-[#202020] rounded-full px-[26px] py-2 text-[14px] leading-[17px] transition duration-300 select-none cursor-pointer hover:brightness-90'>
+        제품소개서 다운로드 <ArrowRight height={16} />
+      </div>
+    </div>
+  ),
+  bgClassName: 'bg-products-header-ablestack-vm',
+  heightClassName: 'min-h-[450px] lg:min-h-[506px]',
+};
+
+export const ablestackList: AblestackService[] = [
   {
-    title: 'ABLESTACK Standard 구성요소',
-    ablestackService: [
-      {
-        path: 'cube',
-        title: 'Cube : 운영체제',
-        description: 'ABLESTACK의 모든 패키지가 포함된 Server OS',
-      },
-      {
-        path: 'cell',
-        title: 'Cell : 가상화',
-        description: '고성능을 제공하는 내장된 커널 기반 하이퍼바이저',
-      },
-      {
-        path: 'glue',
-        title: 'Glue : 스토리지',
-        description: '가상머신 기반 소프트웨어 정의 스토리지',
-      },
-      {
-        path: 'mold',
-        title: 'Mold : 관리',
-        description: '통합관리를 제공하는 클라우드 플랫폼',
-      },
-      {
-        path: 'track',
-        title: 'Track : 네트워크',
-        description: '가상머신 및 컨테이너를 위한 소프트웨어 정의 네트워크',
-      },
-      {
-        path: 'wall',
-        title: 'Wall : 모니터링',
-        description: '인프라 전체 및 애플리케이션 통합 모니터링 플랫폼',
-      },
-    ],
+    path: 'cube',
+    title: 'Cube : 운영체제',
+    description: 'ABLESTACK의 모든 패키지가 포함된 Server OS',
   },
   {
-    title: 'ABLESTACK Enterprise 구성요소',
-    ablestackService: [
-      {
-        path: 'koral',
-        title: 'Koral : K8S 컨테이너',
-        description: 'Kubernetes Cluster 배포 및 운영을 위한 K8S 플랫폼',
-      },
-      {
-        path: 'genie',
-        title: 'Genie : 구성 및 배포 자동화',
-        description: '애플리케이션 배포 및 모니터링 자동화를 위한 laC플랫폼',
-      },
-      {
-        path: 'silo',
-        title: 'Silo : 스토리지 서비스',
-        description: '다양한 스토리지 서비스를 제공하는 플랫폼',
-      },
-      {
-        path: 'over',
-        title: 'Over : 장애 및 재해 관리',
-        description: '안정성을 높이기 위한 이중화/재해복구 지원',
-      },
-      {
-        path: 'link',
-        title: 'Link : 보안 네트워크',
-        description: 'VPC, Micro Segmentation',
-      },
-    ],
+    path: 'cell',
+    title: 'Cell : 가상화',
+    description: '고성능을 제공하는 내장된 커널 기반 하이퍼바이저',
+  },
+  {
+    path: 'glue',
+    title: 'Glue : 스토리지',
+    description: '가상머신 기반 소프트웨어 정의 스토리지',
+  },
+  {
+    path: 'mold',
+    title: 'Mold : 관리',
+    description: '통합관리를 제공하는 클라우드 플랫폼',
+  },
+  {
+    path: 'track',
+    title: 'Track : 네트워크',
+    description: '가상머신 및 컨테이너를 위한 소프트웨어 정의 네트워크',
+  },
+  {
+    path: 'wall',
+    title: 'Wall : 모니터링',
+    description: '인프라 전체 및 애플리케이션 통합 모니터링 플랫폼',
+  },
+  {
+    path: 'koral',
+    title: 'Koral : K8S 컨테이너',
+    description: 'Kubernetes Cluster 배포 및 운영을 위한 K8S 플랫폼',
+  },
+  {
+    path: 'genie',
+    title: 'Genie : 구성 및 배포 자동화',
+    description: '애플리케이션 배포 및 모니터링 자동화를 위한 laC플랫폼',
+  },
+  {
+    path: 'silo',
+    title: 'Silo : 스토리지 서비스',
+    description: '다양한 스토리지 서비스를 제공하는 플랫폼',
+  },
+  {
+    path: 'over',
+    title: 'Over : 장애 및 재해 관리',
+    description: '안정성을 높이기 위한 이중화/재해복구 지원',
+  },
+  {
+    path: 'link',
+    title: 'Link : 보안 네트워크',
+    description: 'VPC, Micro Segmentation',
   },
 ];
 
@@ -311,3 +330,63 @@ export const productsContentData: { [K in AbleStackServices]: ProductContentData
     ],
   },
 };
+
+export const AblestackVMCardsData: AblestackVMCardData[] = [
+  {
+    bgClassName: 'bg-products-vm-card-1',
+    title: 'VMWare 완벽 대체',
+    description: '기존 사용 중인 데이터를 완벽하게 마이그레이션 할 수 있습니다.',
+  },
+  {
+    bgClassName: 'bg-products-vm-card-2',
+    title: '단일 라이센스, 단일 플랫폼',
+    description:
+      '단일 라이센스로 비용 부담을 최소화하고, 서버가상화, 클라우드 관리, 스토리지, 네트워크 등 모든 기능을 단일 플랫폼으로 제공합니다.',
+  },
+  {
+    bgClassName: 'bg-products-vm-card-3',
+    title: '기존 사용중인 인프라 그대로',
+    description: (
+      <>
+        기존에 사용중인 인프라가 있다면, 솔루션을 설치하고 바로 사용할 수 있습니다.
+        <br />
+        부담되는 인프라 구입 비용이 절감됩니다.
+      </>
+    ),
+  },
+];
+
+export const AblestackHCICardsData: AblestackHCICardData[] = [
+  {
+    title: '뛰어난 확장성',
+    description: '무중단, 무제한 노트 확장',
+  },
+  {
+    title: '단순한 구성',
+    description: (
+      <>
+        x86 서버로만 인프라가 구성되어
+        <br />
+        데이터센터의 복잡성 문제 해결
+      </>
+    ),
+  },
+  {
+    title: '전력 및 비용 절감',
+    description: (
+      <>
+        TCO 70% 절감,
+        <br /> 전력 비용 최대 80% 절감
+      </>
+    ),
+  },
+  {
+    title: '간편하고 빠른 배포',
+    description: (
+      <>
+        마법사를 통해 수 시간 내<br />
+        빠른 클라우드 인프라 배포 가능
+      </>
+    ),
+  },
+];
