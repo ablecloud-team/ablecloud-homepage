@@ -27,9 +27,12 @@ export function Tabs({ tabs }: TabsProps) {
         const rect = activeTab.getBoundingClientRect();
         const containerRect = container.getBoundingClientRect();
 
+        const padding = window.innerWidth >= 768 ? 24 : 16; // md 이상이면 24, 아니면 16
+        const extraWidth = window.innerWidth >= 768 ? 48 : 32;
+
         setBgStyle({
-          width: `${rect.width + 48}px`,
-          left: `${rect.left - containerRect.left - 24}px`,
+          width: `${rect.width + extraWidth}px`,
+          left: `${rect.left - containerRect.left - padding}px`,
         });
       }
     }
@@ -47,11 +50,13 @@ export function Tabs({ tabs }: TabsProps) {
             <Link
               key={idx}
               href={tab.href}
-              className={`px-6 rounded-full ${!bgStyle && activeIndex === idx ? 'bg-[#202020]' : ''}`}>
+              className={`px-4 xsm:px-6 rounded-full ${
+                !bgStyle && activeIndex === idx ? 'bg-[#202020]' : ''
+              }`}>
               <div
                 ref={el => (tabRefs.current[idx] = el)}
-                className={`relative py-[10px] text-sm text-center transition-all duration-200 z-10 ${
-                  activeIndex === idx ? 'font-bold text-white' : 'font-bold text-[#787878]'
+                className={`relative py-[10px] text-sm text-center transition-all font-bold duration-200 z-10 ${
+                  activeIndex === idx ? 'text-white' : 'text-[#787878]'
                 }`}>
                 {tab.text}
               </div>

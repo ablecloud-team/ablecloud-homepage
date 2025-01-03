@@ -6,7 +6,7 @@ import { ApplicationList } from '@/templates/applications';
 
 import { ApplicationType } from '@/types/applications';
 
-export default async function AblestackService({
+export default async function Applications({
   params,
 }: {
   params: Promise<{ applicationType: ApplicationType }>;
