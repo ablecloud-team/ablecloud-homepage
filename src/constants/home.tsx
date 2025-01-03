@@ -222,7 +222,7 @@ export const homeInterviewIcons1 = [
   <Image src={hcSrc} alt='' width={85} />,
   <Image src={sangjuSrc} alt='' width={105} />,
   <Image src={kepcoSrc} alt='' width={120} />,
-  <Image src={datqSrc} alt='' width={62} />,
+  <Image src={datqSrc} alt='' width={120} />,
 ];
 
 export const homeInterviewIcons2 = [
@@ -233,7 +233,7 @@ export const homeInterviewIcons2 = [
   <Image src={gbSrc} alt='' width={110} />,
   <Image src={cooconSrc} alt='' width={120} />,
   <Image src={cnuhSrc} alt='' width={120} />,
-  <Image src={armySrc} alt='' width={57} />,
+  <Image src={armySrc} alt='' width={120} />,
   <Image src={t3qSrc} alt='' width={100} />,
   <Image src={kacptaSrc} alt='' width={115} />,
 ];
