@@ -16,11 +16,13 @@ export function HomeBlogCards({ postsData }: { postsData: BlogData[] }) {
             <Link
               href={`/resource/blog/${v.metaData.id}`}
               key={v.metaData.id}
-              className='min-w-[342px]'>
-              <img
-                src={v.metaData.mainImgSrc}
-                className='w-[342px] h-[150px] object-cover rounded-[12px] border border-[#1E1E1E1A] border-opacity-10'
-              />
+              className='group block min-w-[342px]'>
+              <div className='relative h-[200px] w-full overflow-hidden rounded-[12px] border border-[#1E1E1E1A] border-opacity-10'>
+                <img
+                  src={v.metaData.mainImgSrc}
+                  className='h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105'
+                />
+              </div>
               <div className='px-3 pt-4 pb-2'>
                 <div className='flex-1 font-bold'>{v.metaData.title}</div>
                 <div className='mt-2 text-[#aaa] text-[14px] font-medium'>

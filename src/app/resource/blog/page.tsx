@@ -7,8 +7,8 @@ export default async function Blog() {
   const { postsData } = await getPosts();
 
   return (
-    <ContentWrapper type='resource'>
+    <div className='w-full mt-6'>
       <BlogList postsData={postsData} />
-    </ContentWrapper>
+    </div>
   );
 }

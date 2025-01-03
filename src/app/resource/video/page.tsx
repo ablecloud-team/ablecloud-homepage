@@ -5,8 +5,8 @@ import { VideoList } from '@/templates/resource';
 
 export default function Video() {
   return (
-    <ContentWrapper type='resource'>
+    <div className='w-full mt-6'>
       <VideoList videosData={videosData} />
-    </ContentWrapper>
+    </div>
   );
 }

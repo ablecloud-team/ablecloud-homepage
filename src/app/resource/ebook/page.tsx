@@ -5,8 +5,8 @@ import { EbookList } from '@/templates/resource';
 
 export default function Ebook() {
   return (
-    <ContentWrapper type='resource'>
+    <div className='w-full mt-6'>
       <EbookList ebooksData={ebooksData} />
-    </ContentWrapper>
+    </div>
   );
 }
