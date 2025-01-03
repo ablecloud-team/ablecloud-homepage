@@ -5,7 +5,7 @@ import { VideoList } from '@/templates/resource';
 
 export default function Video() {
   return (
-    <div className='w-full mt-6'>
+    <div className='flex justify-center animate-fade-in mt-6'>
       <VideoList videosData={videosData} />
     </div>
   );

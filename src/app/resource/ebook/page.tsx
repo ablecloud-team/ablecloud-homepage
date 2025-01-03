@@ -5,7 +5,7 @@ import { EbookList } from '@/templates/resource';
 
 export default function Ebook() {
   return (
-    <div className='w-full mt-6'>
+    <div className='flex justify-center animate-fade-in mt-6'>
       <EbookList ebooksData={ebooksData} />
     </div>
   );

@@ -1,6 +1,8 @@
 import { StaticImageData } from 'next/image';
 
-import { applicationNames } from '@/constants/applications';
+import { applicationNames, applicationsType } from '@/constants/applications';
+
+export type ApplicationType = (typeof applicationsType)[number];
 
 export type ApplicationNames = (typeof applicationNames)[number];
 

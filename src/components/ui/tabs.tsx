@@ -51,7 +51,7 @@ export function Tabs({ tabs }: TabsProps) {
               <div
                 ref={el => (tabRefs.current[idx] = el)}
                 className={`relative py-[10px] text-sm text-center transition-all duration-200 z-10 ${
-                  activeIndex === idx ? 'font-bold text-white' : 'font-normal text-[#787878]'
+                  activeIndex === idx ? 'font-bold text-white' : 'font-bold text-[#787878]'
                 }`}>
                 {tab.text}
               </div>

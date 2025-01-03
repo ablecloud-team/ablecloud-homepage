@@ -7,7 +7,7 @@ export const headerMenu = [
       { title: 'ABLESTACK HCI', href: '/products/ablestack-hci' },
     ],
   },
-  { title: '적용분야', href: '/applications' },
+  { title: '적용분야', href: '/applications/infra' },
   { title: '고객사', href: '/interview' },
   {
     title: '파트너',
