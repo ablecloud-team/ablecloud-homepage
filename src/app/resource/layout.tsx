@@ -6,6 +6,7 @@ import { resourceHeaderData, resourceTabs } from '@/constants/resource';
 
 import { ContentWrapper, MainPageHeader } from '@/templates/common';
 
+import { ScrollTop } from '@/components/layout';
 import { Tabs } from '@/components/ui';
 
 export default function ResourceLayout({
@@ -19,6 +20,7 @@ export default function ResourceLayout({
 
   return (
     <>
+      <ScrollTop />
       <MainPageHeader headerData={resourceHeaderData} />
       <ContentWrapper type='resource'>
         <Tabs tabs={resourceTabs} />

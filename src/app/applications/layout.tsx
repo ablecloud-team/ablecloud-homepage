@@ -2,6 +2,7 @@ import { applicationHeaderData, applicationsTabs } from '@/constants/application
 
 import { ContentWrapper, MainPageHeader } from '@/templates/common';
 
+import { ScrollTop } from '@/components/layout';
 import { Tabs } from '@/components/ui';
 
 export default function ApplicationLayout({
@@ -11,6 +12,7 @@ export default function ApplicationLayout({
 }>) {
   return (
     <>
+      <ScrollTop />
       <MainPageHeader headerData={applicationHeaderData} />
       <ContentWrapper type='applications'>
         <Tabs tabs={applicationsTabs} />
