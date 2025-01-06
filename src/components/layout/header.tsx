@@ -8,6 +8,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { headerMenu, pageHeaderHeight, withoutHeaderPage } from '@/constants/common';
 
 import Ablestack from '@/public/icons/common/ablestack.svg';
+import ArrowUp from '@/public/icons/common/arrow-up.svg';
 import Close from '@/public/icons/common/close.svg';
 import Hamburger from '@/public/icons/common/hamburger.svg';
 
@@ -16,6 +17,7 @@ export function Header() {
 
   const [scrollPosition, setScrollPosition] = useState<'top' | 'middle' | 'bottom'>('top');
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [openMenus, setOpenMenus] = useState<number[]>([]);
 
   const isWithoutHeaderPage = withoutHeaderPage.findIndex(v => pathname.startsWith(v)) > -1;
 
@@ -26,7 +28,8 @@ export function Header() {
       pathname.startsWith('/company')
     )
       return pageHeaderHeight.small;
-    if (pathname.startsWith('/interview')) return pageHeaderHeight.smallMedium;
+    if (pathname.startsWith('/interview') || pathname.startsWith('/partners'))
+      return pageHeaderHeight.smallMedium;
     if (pathname.startsWith('/products/service/')) return pageHeaderHeight.productService;
 
     return pageHeaderHeight.common;
@@ -109,25 +112,56 @@ export function Header() {
           onClick={() => {
             setIsMenuOpen(prev => !prev);
           }}>
-          {isMenuOpen ? <Close /> : <Hamburger />}
+          {isMenuOpen ? <Close className='w-[28px] md:w-[32px]' /> : <Hamburger />}
         </div>
       </div>
-
       {isMenuOpen && (
-        <div className='fixed top-[60px] left-0 right-0 w-full h-[calc(100%-60px)] bg-white z-50 flex flex-col px-6 pb-6 overflow-auto'>
+        <div className='fixed top-[60px] left-0 right-0 w-full h-[calc(100%-60px)] bg-white z-50 flex flex-col px-[19px] pb-6 overflow-auto'>
           <div className='flex flex-col flex-1 text-[#7B7B7B]'>
             {headerMenu.map((v, index) => (
-              <Link
-                href={v.href}
+              <div
                 key={index}
-                className='font-bold py-[18px] w-full border-b border-b-[#EEEEEE]'
-                onClick={() => setIsMenuOpen(false)}>
-                {v.title}
-              </Link>
+                className={`flex flex-col w-full ${index === 0 ? 'border-y border-y-[#EEEEEE]' : 'border-b border-b-[#EEEEEE]'}`}>
+                <div className='flex items-center font-bold w-full'>
+                  <Link
+                    href={v.href}
+                    className='flex-1 py-[18px]'
+                    onClick={() => setIsMenuOpen(false)}>
+                    {v.title}
+                  </Link>
+                  {v.subMenu && (
+                    <div
+                      onClick={() =>
+                        setOpenMenus(prev =>
+                          prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index],
+                        )
+                      }
+                      className='flex items-center px-4 focus:outline-none text-xl font-light'>
+                      {openMenus.includes(index) ? '-' : '+'}
+                    </div>
+                  )}
+                </div>
+                <div
+                  className={`transition-all duration-500 overflow-hidden ${
+                    openMenus.includes(index) ? 'max-h-[300px]' : 'max-h-0'
+                  }`}>
+                  <div className='flex flex-col pl-6 py-1'>
+                    {v.subMenu?.map((subItem, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        className='py-2'
+                        href={subItem.href}
+                        onClick={() => setIsMenuOpen(false)}>
+                        {subItem.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
 
-          <div className='flex justify-end mb-4'>
+          <div className='flex justify-end my-4'>
             <Link
               href={'/contact'}
               onClick={() => setIsMenuOpen(false)}
