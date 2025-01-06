@@ -259,7 +259,7 @@ export const homeFooterCardsData: HomeFooterCardData[] = [
         <br /> 알리기 위한 에이블클라우드의 목표
       </>
     ),
-    buttonData: { text: '회사소개 자세히보기', href: '/' },
+    buttonData: { text: '회사소개 자세히보기', href: '/company/about' },
   },
   {
     category: 'News',

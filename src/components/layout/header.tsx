@@ -20,7 +20,11 @@ export function Header() {
   const isWithoutHeaderPage = withoutHeaderPage.findIndex(v => pathname.startsWith(v)) > -1;
 
   const headerHeight = useMemo(() => {
-    if (pathname.startsWith('/resource') || pathname.startsWith('/contact'))
+    if (
+      pathname.startsWith('/resource') ||
+      pathname.startsWith('/contact') ||
+      pathname.startsWith('/company')
+    )
       return pageHeaderHeight.small;
     if (pathname.startsWith('/interview')) return pageHeaderHeight.smallMedium;
     if (pathname.startsWith('/products/service/')) return pageHeaderHeight.productService;

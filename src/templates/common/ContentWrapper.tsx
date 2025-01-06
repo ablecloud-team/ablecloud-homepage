@@ -1,7 +1,7 @@
 import { ReactNode, useMemo } from 'react';
 
 interface ContentWrapperProps {
-  type?: 'default' | 'products' | 'applications' | 'resource' | 'interview' | 'contact';
+  type?: 'default' | 'products' | 'applications' | 'resource' | 'interview' | 'contact' | 'company';
   isNonePaddingTop?: boolean;
   bgClassName?: string;
   children: ReactNode;
@@ -18,9 +18,9 @@ export function ContentWrapper({
 
     if (type === 'products' || type === 'contact') return 'py-8';
 
-    if (type === 'applications' || type === 'interview') return 'pt-[38px] pb-12';
+    if (type === 'interview') return 'pt-[38px] pb-12';
 
-    if (type === 'resource') return 'pt-3 pb-12';
+    if (type === 'resource' || type === 'applications' || type === 'company') return 'pt-3 pb-12';
 
     return 'py-12';
   }, [type]);

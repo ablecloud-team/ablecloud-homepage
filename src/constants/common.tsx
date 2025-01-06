@@ -11,10 +11,10 @@ export const headerMenu = [
   { title: '고객사', href: '/interview' },
   {
     title: '파트너',
-    href: '/',
+    href: '/partners',
     subMenu: [
-      { title: '프로그램 소개', href: '/' },
-      { title: '파트너 현황', href: '/' },
+      { title: '프로그램 소개', href: '/partners' },
+      { title: '파트너 현황', href: '/partners' },
     ],
   },
   {
@@ -29,9 +29,9 @@ export const headerMenu = [
   // { title: '제품문의', href: '/contact' },
   {
     title: '회사소개',
-    href: '/',
+    href: '/company/about',
     subMenu: [
-      { title: '회사소개 및 비전', href: '/' },
+      { title: '회사소개 및 비전', href: '/company/about' },
       { title: '연혁', href: '/' },
       { title: '인증 및 특허', href: '/' },
       { title: '찾아오시는 길', href: '/' },

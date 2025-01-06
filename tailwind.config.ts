@@ -55,6 +55,8 @@ const config: Config = {
       'interview-header': "url('/images/interview/header-interview.png')",
       //contact
       'contact-header': "url('/images/contact/header-contact.png')",
+      //company
+      'company-header': "url('/images/company/header-company.png')",
     },
     extend: {
       scale: {
