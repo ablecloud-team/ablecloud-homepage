@@ -13,7 +13,7 @@ export const headerMenu = [
     title: '파트너',
     href: '/partners',
     subMenu: [
-      { title: '프로그램 소개', href: '/partners' },
+      { title: '프로그램 소개', href: '/partners/program' },
       { title: '파트너 현황', href: '/partners' },
     ],
   },

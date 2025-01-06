@@ -85,3 +85,16 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.partner-program-gradient-text {
+  background: linear-gradient(
+    94deg,
+    #db00ff -6.83%,
+    #84e9fd 100.79%,
+    #5200ff 141.06%,
+    #99ff75 149.14%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

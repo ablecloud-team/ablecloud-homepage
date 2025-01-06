@@ -50,6 +50,21 @@ export const partnersHeaderData: HeaderData = {
   heightClassName: 'min-h-[350px] lg:min-h-[404px]',
 };
 
+export const partnerProgramHeaderData: HeaderData = {
+  title: {
+    mainText: 'Partnership Program',
+  },
+  description: (
+    <>
+      독자적인 기술력, 지속 가능한 수익창출. <br />
+      에이블클라우드는 ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 HCI 시장의 공동 성장을 만들어갈
+      파트너를 찾습니다.
+    </>
+  ),
+  bgClassName: 'bg-partners-header',
+  heightClassName: 'min-h-[350px] lg:min-h-[404px]',
+};
+
 export const partnersIntroduce = [
   {
     title: '판매/기술지원 파트너',
