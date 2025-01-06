@@ -72,3 +72,16 @@ body {
   border-radius: 10px;
   border: 2px solid #fff;
 }
+
+.partners-gradient-text {
+  background: linear-gradient(
+    94deg,
+    #db00ff -6.83%,
+    #84e9fd 70.38%,
+    #5200ff 141.06%,
+    #99ff75 149.14%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

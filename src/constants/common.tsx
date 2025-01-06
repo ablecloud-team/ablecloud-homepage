@@ -46,6 +46,6 @@ export const pageHeaderHeight = {
   common: 506,
 };
 
-export const bgGrayPage = ['/interview', '/contact'];
+export const bgGrayPage = ['/interview', '/contact', '/partners'];
 
 export const withoutHeaderPage = ['/resource/blog/'];
