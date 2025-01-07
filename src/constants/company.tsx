@@ -1,5 +1,11 @@
 import { HeaderData } from '@/types/header';
 
+import certificates1Src from '@/public/images/company/certificates-1.png';
+import certificates2Src from '@/public/images/company/certificates-2.png';
+import certificates3Src from '@/public/images/company/certificates-3.png';
+import certificates4Src from '@/public/images/company/certificates-4.png';
+import certificates5Src from '@/public/images/company/certificates-5.png';
+
 export const companyHeaderData: HeaderData = {
   title: {
     mainText: '회사소개',
@@ -13,7 +19,7 @@ export const companyTabs = [
   { text: '회사소개', href: '/company/about' },
   { text: '연혁', href: '/company/history' },
   { text: '인증/특허', href: '/company/certifications' },
-  { text: '위치', href: '/company/about' },
+  { text: '위치', href: '/company/location' },
 ];
 
 export const companyHistory = [
@@ -79,4 +85,34 @@ export const companyHistory = [
       { text: '에이블클라우드 연구소 설립' },
     ],
   },
+];
+
+export const companyCertifications = [
+  { imgSrc: certificates1Src, description: '소프트웨어품질인증서' },
+  { imgSrc: certificates2Src, description: '저작권 등록증' },
+  {
+    imgSrc: certificates3Src,
+    description: (
+      <>
+        HCI 부문 국내 기업 최초
+        <br />
+        가상화 관리
+        <br />
+        보안기능확인서
+      </>
+    ),
+  },
+  {
+    imgSrc: certificates4Src,
+    description: (
+      <>
+        HCI를 프로비저닝 하기 위한
+        <br />
+        시스템 및 방법
+        <br />
+        특허 획득
+      </>
+    ),
+  },
+  { imgSrc: certificates5Src, description: '기업부설연구소 인정서' },
 ];
