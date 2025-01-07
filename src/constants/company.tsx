@@ -12,7 +12,7 @@ export const companyHeaderData: HeaderData = {
 export const companyTabs = [
   { text: '회사소개', href: '/company/about' },
   { text: '연혁', href: '/company/history' },
-  { text: '인증/특허', href: '/company/about' },
+  { text: '인증/특허', href: '/company/certifications' },
   { text: '위치', href: '/company/about' },
 ];
 

@@ -32,7 +32,7 @@ export const headerMenu = [
     subMenu: [
       { title: '회사소개 및 비전', href: '/company/about' },
       { title: '연혁', href: '/company/history' },
-      { title: '인증 및 특허', href: '/' },
+      { title: '인증 및 특허', href: '/company/certifications' },
       { title: '찾아오시는 길', href: '/' },
     ],
   },

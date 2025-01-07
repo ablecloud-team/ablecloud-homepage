@@ -2,7 +2,7 @@ import { companyHistory } from '@/constants/company';
 
 export default function CompanyHistory() {
   return (
-    <div className='flex justify-center w-full'>
+    <div className='flex justify-center animate-fade-in w-full'>
       <div className='flex flex-col gap-8 md:gap-12 max-w-[470px] py-10 md:py-[60px]'>
         {companyHistory.map(v => (
           <div className='flex flex-col md:flex-row gap-5 md:gap-9' key={v.year}>
