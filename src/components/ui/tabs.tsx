@@ -50,12 +50,12 @@ export function Tabs({ tabs }: TabsProps) {
             <Link
               key={idx}
               href={tab.href}
-              className={`px-4 xsm:px-6 rounded-full ${
+              className={`flex items-center px-4 xsm:px-6 rounded-full ${
                 !bgStyle && activeIndex === idx ? 'bg-[#202020]' : ''
               }`}>
               <div
                 ref={el => (tabRefs.current[idx] = el)}
-                className={`relative py-[10px] text-sm text-center transition-all font-bold duration-200 z-10 ${
+                className={`relative py-[10px] text-sm transition-all font-bold duration-200 z-10 ${
                   activeIndex === idx ? 'text-white' : 'text-[#787878]'
                 }`}>
                 {tab.text}

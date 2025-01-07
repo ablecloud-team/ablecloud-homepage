@@ -8,7 +8,6 @@ import { useEffect, useMemo, useState } from 'react';
 import { headerMenu, pageHeaderHeight, withoutHeaderPage } from '@/constants/common';
 
 import Ablestack from '@/public/icons/common/ablestack.svg';
-import ArrowUp from '@/public/icons/common/arrow-up.svg';
 import Close from '@/public/icons/common/close.svg';
 import Hamburger from '@/public/icons/common/hamburger.svg';
 

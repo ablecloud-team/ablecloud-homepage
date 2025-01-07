@@ -11,7 +11,7 @@ export default async function BlogDetail({ params }: { params: Promise<{ title: 
   if (!post) return notFound();
 
   return (
-    <div className='flex justify-center pt-[120px] pb-20'>
+    <div className='flex justify-center pt-8 md:pt-[120px] pb-20'>
       <BlogContent post={post} />
     </div>
   );

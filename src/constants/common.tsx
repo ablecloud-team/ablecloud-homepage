@@ -26,13 +26,12 @@ export const headerMenu = [
       { title: '백서/ebook', href: '/resource/ebook' },
     ],
   },
-  // { title: '제품문의', href: '/contact' },
   {
     title: '회사소개',
     href: '/company/about',
     subMenu: [
       { title: '회사소개 및 비전', href: '/company/about' },
-      { title: '연혁', href: '/' },
+      { title: '연혁', href: '/company/history' },
       { title: '인증 및 특허', href: '/' },
       { title: '찾아오시는 길', href: '/' },
     ],
