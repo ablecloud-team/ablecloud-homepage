@@ -1,31 +1,34 @@
-'use client';
-
-import { usePathname } from 'next/navigation';
-
-import { bgGrayPage } from '@/constants/common';
+import { Metadata } from 'next';
 
 import { Footer, Header } from '@/components/layout';
+import { MainWrapper } from '@/components/ui';
 
 import './globals.css';
 
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
+export const metadata: Metadata = {
+  title: '에이블클라우드',
+  description: '에이블클라우드는 가상화 및 클라우드(HCI) 전문업체입니다.',
+  keywords: '에이블클라우드, ABLECLOUD, 에이블스택, ABLESTACK, 가상화, HCI',
+  openGraph: {
+    type: 'website',
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-  const isGrayPage = bgGrayPage.findIndex(v => pathname.startsWith(v)) > -1;
-
   return (
     <html lang='ko'>
       <body>
-        <div className={`${isGrayPage ? 'bg-[#F9F9F9]' : 'bg-white'} min-h-screen`}>
+        <MainWrapper>
           <Header />
           {children}
-        </div>
+        </MainWrapper>
         <Footer />
       </body>
     </html>
