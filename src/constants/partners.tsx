@@ -8,6 +8,7 @@ import ablestoreSrc from '@/public/images/partners/ablestor.png';
 import acornsoftSrc from '@/public/images/partners/acornsoft.png';
 import ajictSrc from '@/public/images/partners/ajict.png';
 import centecSrc from '@/public/images/partners/centec.png';
+import citrixSrc from '@/public/images/partners/citrix.png';
 import dellSrc from '@/public/images/partners/dell.png';
 import dwctsSrc from '@/public/images/partners/dwcts.png';
 import fujitsuSrc from '@/public/images/partners/fujitsu.png';
@@ -97,14 +98,15 @@ export const partnerList: PartnerListData[] = [
   { img: <Image src={ablestoreSrc} alt='' />, text: '에이블스토어' },
   { img: <Image src={dellSrc} alt='' />, text: '델 테크놀로지스' },
   { img: <Image src={hsSrc} alt='' />, text: '효성인포메이션시스템' },
+  { img: <Image src={citrixSrc} alt='' />, text: '시트릭스' },
   { img: <Image src={skshieldusSrc} alt='' />, text: 'SK쉴더스' },
   { img: <Image src={nhncrossentSrc} alt='' />, text: 'NHN크로센트(주)' },
   { img: <Image src={zungwonSrc} alt='' />, text: '정원엔시스' },
   { img: <Image src={ajictSrc} alt='' />, text: '에이제이아이씨티' },
   { img: <Image src={innogridSrc} alt='' />, text: '이노그리드' },
   { img: <Image src={acornsoftSrc} alt='' />, text: '아콘소프트' },
-  { img: <Image src={oceanSrc} alt='' />, text: '오우션테크놀로지' },
-  { img: <Image src={dwctsSrc} alt='' />, text: '대원씨티에스' },
+  { img: <Image src={oceanSrc} alt='' />, text: '오우션 테크놀로지' },
+  { img: <Image src={dwctsSrc} alt='' />, text: '대원 CTS' },
   { img: <Image src={centecSrc} alt='' />, text: '센텍정보기술' },
   { img: <Image src={fujitsuSrc} alt='' />, text: '후지쯔' },
   { img: <Image src={hpSrc} alt='' />, text: 'hp' },

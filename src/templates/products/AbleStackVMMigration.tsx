@@ -25,7 +25,7 @@ export function AbleStackVMMigration() {
           <div className='flex flex-col gap-[34px] items-center'>
             <Image src={VMMigrationSrc} alt='' />
             <div className='text-base md:text-lg xl:text-[22px] bg-black px-2 py-1'>
-              한눈에 보는 통합 모니터링 플랫폼
+              완벽한 데이터 마이그레이션
             </div>
           </div>
         </div>

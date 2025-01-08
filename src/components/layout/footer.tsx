@@ -55,7 +55,7 @@ export function Footer() {
           <div className='flex flex-col lg:flex-row'>
             <div>본사 : 서울특별시 영등포구 영신로 220 Knk디지털타워 1901호</div>
             <span className='mx-3 hidden lg:block'>|</span>
-            <div>연구소 : 대전광역시 대덕구 대화로106번길 66 펜타플렉스 810~2호</div>
+            <div>기술연구소 : 대전광역시 대덕구 대화로106번길 66 펜타플렉스 810~812호</div>
           </div>
         </div>
 
