@@ -8,7 +8,7 @@ interface HomeFooterCardsProps {
 
 export function HomeFooterCards({ cardsData }: HomeFooterCardsProps) {
   return (
-    <div className='flex w-full gap-6 overflow-x-auto scrollbar-hide'>
+    <div className='flex w-full gap-4 md:gap-6 overflow-x-auto scrollbar-hide'>
       {cardsData.map((cardData, idx) => {
         return (
           <div

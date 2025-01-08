@@ -1,6 +1,8 @@
+import { ReactNode } from 'react';
+
 export interface ButtonData {
-  text: string;
+  text: string | ReactNode;
+  href: string;
   color?: 'black' | 'white';
-  href?: string;
   className?: string;
 }

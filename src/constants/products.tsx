@@ -41,41 +41,43 @@ export const ablestackServices = [
 export const ablestackHciHeaderData: HeaderData = {
   title: {
     mainText: (
-      <div className='w-full max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]'>
+      <div className='w-full px-2 max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]'>
         <Image src={AblestackHCI} alt='' />
       </div>
     ),
   },
-  description: (
-    <div className='mt-3 flex flex-col items-center gap-4'>
-      <div>클라우드 데이터센터 인프라를 위한 단일 HCI 플랫폼</div>
-      <div className='flex gap-[6px] items-center bg-[#202020] rounded-full px-[26px] py-2 text-[14px] leading-[17px] transition duration-300 select-none cursor-pointer hover:brightness-90'>
-        제품소개서 다운로드 <ArrowRight height={16} />
-      </div>
-    </div>
-  ),
+  description: <div className='mt-3'>클라우드 데이터센터 인프라를 위한 단일 HCI 플랫폼</div>,
   bgClassName: 'bg-products-header-ablestack-hci',
   heightClassName: 'min-h-[450px] lg:min-h-[506px]',
+  buttonData: {
+    text: (
+      <div className='flex items-center gap-[6px]'>
+        제품소개서 다운로드 <ArrowRight height={16} />
+      </div>
+    ),
+    href: '/',
+  },
 };
 
 export const ablestackVmHeaderData: HeaderData = {
   title: {
     mainText: (
-      <div className='w-full max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]'>
+      <div className='w-full px-2 max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]'>
         <Image src={AblestackVM} alt='' />
       </div>
     ),
   },
-  description: (
-    <div className='mt-3 flex flex-col items-center gap-4'>
-      <div>서버 가상화를 위한 최적의 솔루션</div>
-      <div className='flex gap-[6px] items-center bg-[#202020] rounded-full px-[26px] py-2 text-[14px] leading-[17px] transition duration-300 select-none cursor-pointer hover:brightness-90'>
-        제품소개서 다운로드 <ArrowRight height={16} />
-      </div>
-    </div>
-  ),
+  description: <div className='mt-3'>서버 가상화를 위한 최적의 솔루션</div>,
   bgClassName: 'bg-products-header-ablestack-vm',
   heightClassName: 'min-h-[450px] lg:min-h-[506px]',
+  buttonData: {
+    text: (
+      <div className='flex items-center gap-[6px]'>
+        제품소개서 다운로드 <ArrowRight height={16} />
+      </div>
+    ),
+    href: '/',
+  },
 };
 
 export const ablestackList: AblestackService[] = [

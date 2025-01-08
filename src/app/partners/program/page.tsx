@@ -61,7 +61,7 @@ export default function PartnerProgram() {
           <div className='font-medium text-center text-[24px] leading-[32px] md:text-[30px] md:leading-[43px]'>
             파트너쉽 프로그램 소개
           </div>
-          <div className='partner-program-gradient-text text-center font-medium'>
+          <div className='partner-program-gradient-text text-center font-medium text-[16px] md:text-[18px]'>
             파트너사와 협력하기 위해 보다 유연하고 혁신적인 프로그램을 제안합니다.
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-4'>

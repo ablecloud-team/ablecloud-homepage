@@ -20,7 +20,7 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   pauseOnHover: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 4000,
 };
 
 interface SliderHeaderProps {
