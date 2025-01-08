@@ -11,7 +11,11 @@ import Ablestack from '@/public/icons/common/ablestack.svg';
 import Close from '@/public/icons/common/close.svg';
 import Hamburger from '@/public/icons/common/hamburger.svg';
 
-export function Header() {
+interface HeaderProps {
+  isBgBlack?: boolean;
+}
+
+export function Header({ isBgBlack }: HeaderProps) {
   const pathname = usePathname();
 
   const [scrollPosition, setScrollPosition] = useState<'top' | 'middle' | 'bottom'>('top');
@@ -35,12 +39,14 @@ export function Header() {
   }, [pathname]);
 
   const bgStyle = useMemo(() => {
+    if (isBgBlack) return 'md:bg-[#202020] md:text-white';
+
     if (isWithoutHeaderPage) return 'md:bg-white md:text-black';
 
     if (scrollPosition === 'top') return 'md:bg-black md:bg-opacity-10';
     if (scrollPosition === 'middle') return 'md:bg-black md:bg-opacity-10 md:backdrop-blur-2xl';
     return 'md:bg-white md:text-black';
-  }, [scrollPosition, isWithoutHeaderPage]);
+  }, [isBgBlack, scrollPosition, isWithoutHeaderPage]);
 
   useEffect(() => {
     const listener = () => {

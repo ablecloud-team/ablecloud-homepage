@@ -30,7 +30,10 @@ export function Footer() {
               </Link>
             </div>
           </div>
-          <Link href={'/'} className='max-w-[342px] w-full h-fit'>
+          <Link
+            href={'https://docs.ablecloud.io/'}
+            target='_blank'
+            className='max-w-[342px] w-full h-fit'>
             <div className='flex gap-2 items-center text-sm py-[10px] bg-[#999999] text-[white] px-[14px] rounded-[5px]'>
               <div className='flex-1'>에이블클라우드 기술 블로그 바로가기</div>
               <Plus />
