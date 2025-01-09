@@ -57,6 +57,9 @@ const config: Config = {
       'contact-header': "url('/images/contact/header-contact.png')",
       //company
       'company-header': "url('/images/company/header-company.png')",
+      'company-about-card-1': "url('/images/company/about-card-bg-1.png')",
+      'company-about-card-2': "url('/images/company/about-card-bg-2.png')",
+      'company-about-card-3': "url('/images/company/about-card-bg-3.png')",
       //partners
       'partners-header': "url('/images/partners/header-partners.png')",
     },

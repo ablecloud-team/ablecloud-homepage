@@ -1,5 +1,8 @@
 import { HeaderData } from '@/types/header';
 
+import aboutCard1Src from '@/public/images/company/about-card-1.png';
+import aboutCard2Src from '@/public/images/company/about-card-2.png';
+import aboutCard3Src from '@/public/images/company/about-card-3.png';
 import certificates1Src from '@/public/images/company/certificates-1.png';
 import certificates2Src from '@/public/images/company/certificates-2.png';
 import certificates3Src from '@/public/images/company/certificates-3.png';
@@ -115,4 +118,25 @@ export const companyCertifications = [
     ),
   },
   { imgSrc: certificates5Src, description: '기업부설연구소 인정서' },
+];
+
+export const companyAboutCardsData = [
+  {
+    title: '클라우드 전문가',
+    description: '가상화 및 클라우드(HCI) 분야 10년 이상의 경력을 가진 엔지니어/개발자 중심기업',
+    bgClassName: 'bg-company-about-card-1',
+    imgSrc: aboutCard1Src,
+  },
+  {
+    title: '끊임없는 R&D',
+    description: '고객 요구사항에 가장 적합한 가상화 및 엔터프라이즈 HCI 연구개발을 수행하는 기업',
+    bgClassName: 'bg-company-about-card-2',
+    imgSrc: aboutCard2Src,
+  },
+  {
+    title: '스마트한 클라우드 제품',
+    description: '제품 개발을 통해 고객과 파트너들에게 체계적인 기술 지원을 하는 기업',
+    bgClassName: 'bg-company-about-card-3',
+    imgSrc: aboutCard3Src,
+  },
 ];
