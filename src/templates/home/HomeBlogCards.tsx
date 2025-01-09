@@ -34,12 +34,10 @@ export function HomeBlogCards({ postsData }: { postsData: BlogData[] }) {
         })}
       </div>
       <Button
-        buttonData={{
-          className: 'border border-[#202020]',
-          text: '새로운 소식 더보기',
-          href: '/resource/blog',
-          color: 'white',
-        }}
+        className='border border-[#202020]'
+        text='새로운 소식 더보기'
+        href='/resource/blog'
+        color='white'
       />
     </div>
   );

@@ -26,7 +26,7 @@ export function ContactForm() {
         <div className='font-medium text-[18px] lg:text-[20px] break-all'>
           sales@ablestack.co.kr
         </div>
-        <Button buttonData={{ text: '홈으로', href: '/', className: 'mt-[48px]' }} />
+        <Button text='홈으로' href='/' className='mt-[48px]' />
       </div>
     );
   }

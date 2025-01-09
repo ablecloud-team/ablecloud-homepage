@@ -19,7 +19,7 @@ export function HomeFooterCards({ cardsData }: HomeFooterCardsProps) {
               {cardData.text}
             </div>
             <div className='flex mb-[11px]'>
-              <Button buttonData={cardData.buttonData} />
+              <Button {...cardData.buttonData} />
             </div>
           </div>
         );

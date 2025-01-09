@@ -73,9 +73,7 @@ export default function PartnerProgram() {
               </div>
             ))}
           </div>
-          <Button
-            buttonData={{ text: '문의하기', href: '/contact', className: '!bg-[#B26EFE] mt-3' }}
-          />
+          <Button text='문의하기' href='/contact' className='!bg-[#B26EFE] mt-3' />
         </div>
       </ContentWrapper>
     </>

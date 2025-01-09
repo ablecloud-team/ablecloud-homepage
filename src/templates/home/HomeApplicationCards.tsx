@@ -30,13 +30,7 @@ export function HomeApplicationCards({ cardsData, title }: HomeApplicationCardsP
           return <HomeApplicationCard key={idx} cardData={cardData} />;
         })}
       </div>
-      <Button
-        buttonData={{
-          text: '적용분야 더보기',
-          href: '/applications/infra',
-          className: 'mt-[30px]',
-        }}
-      />
+      <Button text='적용분야 더보기' href='/applications/infra' className='mt-[30px]' />
     </div>
   );
 }

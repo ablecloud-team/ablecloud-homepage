@@ -1,8 +1,11 @@
-import { ReactNode } from 'react';
+import { LinkProps } from 'next/link';
 
-export interface ButtonData {
+import { HTMLAttributeAnchorTarget, ReactNode } from 'react';
+
+export interface ButtonData extends LinkProps {
   text: string | ReactNode;
-  href: string;
+  target?: HTMLAttributeAnchorTarget;
+  download?: boolean;
   color?: 'black' | 'white';
   className?: string;
 }

@@ -15,7 +15,7 @@ export default function NotFound() {
             <Image src={notFoundSrc} alt='' />
             <div className='text-[#444] font-medium'>페이지를 찾을 수 없습니다.</div>
           </div>
-          <Button buttonData={{ href: '/', text: ' 메인 페이지로 이동', className: 'mt-[35px]' }} />
+          <Button href='/' text=' 메인 페이지로 이동' className='mt-[35px]' />
         </div>
       </div>
       <Footer />
