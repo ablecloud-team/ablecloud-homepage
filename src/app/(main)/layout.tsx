@@ -14,6 +14,14 @@ export const metadata: Metadata = {
   keywords: '에이블클라우드, ABLECLOUD, 에이블스택, ABLESTACK, 가상화, HCI',
   openGraph: {
     type: 'website',
+    images: [
+      {
+        url: '/images/common/open-graph.png',
+        width: 800,
+        height: 600,
+        alt: '에이블클라우드 이미지',
+      },
+    ],
   },
 };
 
