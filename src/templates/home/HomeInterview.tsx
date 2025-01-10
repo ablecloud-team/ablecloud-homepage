@@ -30,7 +30,7 @@ export function HomeInterview({ title }: HomeInterviewProps) {
       <div className='font-bold text-center text-[24px] leading-[32px] md:text-[32px] md:leading-[44.16px]'>
         {title}
       </div>
-      <div className='flex flex-col gap-4 hover-pause'>
+      <div className='flex flex-col gap-4'>
         <div className='w-full overflow-hidden'>
           <div
             className={`${bannerWidth.banner1Wrapper} banner flex gap-2 animate-bannermovetoleft`}
