@@ -281,6 +281,6 @@ export const homeFooterCardsData: HomeFooterCardData[] = [
         <br /> 메일로 전송해드립니다.
       </>
     ),
-    buttonData: { text: '뉴스레터 구독하기', href: '/' },
+    buttonData: { text: '뉴스레터 구독하기', href: 'https://naver.me/Gn006R6Y', target: '_blank' },
   },
 ];
