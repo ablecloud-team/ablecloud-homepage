@@ -41,7 +41,7 @@ export const homeSliderData: HeaderData[] = [
     heightClassName: 'min-h-[450px] lg:min-h-[506px]',
     buttonData: {
       text: '자세히보기',
-      href: '/',
+      href: '/resource/blog/21',
     },
   },
   {
@@ -59,7 +59,7 @@ export const homeSliderData: HeaderData[] = [
     heightClassName: 'min-h-[450px] lg:min-h-[506px]',
     buttonData: {
       text: '자세히보기',
-      href: '/',
+      href: '/products/ablestack-vm',
     },
   },
   {
@@ -77,7 +77,7 @@ export const homeSliderData: HeaderData[] = [
     heightClassName: 'min-h-[450px] lg:min-h-[506px]',
     buttonData: {
       text: '자세히보기',
-      href: '/',
+      href: '/products/ablestack-hci',
       color: 'white',
     },
   },
@@ -96,7 +96,7 @@ export const homeSliderData: HeaderData[] = [
     heightClassName: 'min-h-[450px] lg:min-h-[506px]',
     buttonData: {
       text: '자세히보기',
-      href: '/',
+      href: '/about/performance',
       color: 'white',
     },
   },
@@ -115,7 +115,7 @@ export const homeSliderData: HeaderData[] = [
     heightClassName: 'min-h-[450px] lg:min-h-[506px]',
     buttonData: {
       text: '자세히보기',
-      href: '/',
+      href: '/about/effect',
       color: 'white',
     },
   },
@@ -129,7 +129,7 @@ export const homeMainCardsData: HomeMainCardData[] = [
         <br /> 가상화 전문 기업
       </>
     ),
-    href: '/',
+    href: '/company/about',
     bgClassName: 'bg-home-main-card-1',
   },
   {
@@ -139,7 +139,7 @@ export const homeMainCardsData: HomeMainCardData[] = [
         <br /> 클라우드 플랫폼
       </>
     ),
-    href: '/products/ablestack-hci',
+    href: '/products/ablestack-vm',
     bgClassName: 'bg-home-main-card-2',
   },
   {
@@ -149,7 +149,7 @@ export const homeMainCardsData: HomeMainCardData[] = [
         <br /> 최고의 솔루션
       </>
     ),
-    href: '/',
+    href: '/products/ablestack-hci',
     bgClassName: 'bg-home-main-card-3',
   },
 ];
@@ -248,7 +248,7 @@ export const homeFooterCardsData: HomeFooterCardData[] = [
         <br /> 성장을 만들어갈 파트너를 찾습니다.
       </>
     ),
-    buttonData: { text: '파트너 신청하기', href: '/' },
+    buttonData: { text: '파트너 신청하기', href: '/contact' },
   },
   {
     category: 'About us',

@@ -55,7 +55,8 @@ export const ablestackHciHeaderData: HeaderData = {
         제품소개서 다운로드 <ArrowRight height={16} />
       </div>
     ),
-    href: '/',
+    href: '/pdf/ABLESTACK_Technical.pdf',
+    target: '_blank',
   },
 };
 
@@ -76,7 +77,8 @@ export const ablestackVmHeaderData: HeaderData = {
         제품소개서 다운로드 <ArrowRight height={16} />
       </div>
     ),
-    href: '/',
+    href: '/pdf/ABLESTACK_VMWare.pdf',
+    target: '_blank',
   },
 };
 

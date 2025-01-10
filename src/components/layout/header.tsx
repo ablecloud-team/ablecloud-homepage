@@ -28,10 +28,15 @@ export function Header({ isBgBlack }: HeaderProps) {
     if (
       pathname.startsWith('/resource') ||
       pathname.startsWith('/contact') ||
-      pathname.startsWith('/company')
+      pathname.startsWith('/company') ||
+      pathname.startsWith('/about')
     )
       return pageHeaderHeight.small;
-    if (pathname.startsWith('/interview') || pathname.startsWith('/partners'))
+    if (
+      pathname.startsWith('/interview') ||
+      pathname.startsWith('/partners') ||
+      pathname.startsWith('/applications')
+    )
       return pageHeaderHeight.smallMedium;
     if (pathname.startsWith('/products/service/')) return pageHeaderHeight.productService;
 

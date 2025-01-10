@@ -40,12 +40,12 @@ export function Footer() {
             </div>
           </Link>
         </div>
-        <Link href={''} className='flex text-[#222222] w-fit items-center'>
+        {/* <Link href={''} className='flex text-[#222222] w-fit items-center'>
           <div className='text-[12px] font-bold leading-[15.6px] underline underline-offset-2'>
             개인정보 처리방침
           </div>
           <ChevronRight width={16} height={16} className='text-[#222222]' />
-        </Link>
+        </Link> */}
         <div className='flex flex-col gap-0 text-[#999999] font-bold leading-[20.6px] text-[14px] lg:leading-[19.2px] lg:gap-2'>
           <div className='flex flex-col lg:flex-row'>
             <div>사업자등록번호 : 886-86-02158</div>

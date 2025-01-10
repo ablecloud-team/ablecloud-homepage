@@ -60,11 +60,7 @@ export const applicationHeaderData: HeaderData = {
     </>
   ),
   bgClassName: 'bg-application-header',
-  heightClassName: 'min-h-[450px] lg:min-h-[506px]',
-  buttonData: {
-    text: '개요 보러가기',
-    href: '/',
-  },
+  heightClassName: 'min-h-[350px] lg:min-h-[404px]',
 };
 
 export const applicationsType = ['infra', 'application', 'dev'] as const;

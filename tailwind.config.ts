@@ -62,6 +62,9 @@ const config: Config = {
       'company-about-card-3': "url('/images/company/about-card-bg-3.png')",
       //partners
       'partners-header': "url('/images/partners/header-partners.png')",
+      //about
+      'about-header-performance': "url('/images/about/header-about-performance.png')",
+      'about-header-effect': "url('/images/about/header-about-effect.png')",
     },
     extend: {
       scale: {

@@ -23,7 +23,7 @@ export default async function Home() {
     <>
       <SliderHeader sliderData={homeSliderData} />
       <ContentWrapper>
-        <HomeMainCards title='SDDC를 실현하는 HCI 플랫폼' cardsData={homeMainCardsData} />
+        <HomeMainCards title='SDDC를 실현하는 획기적인 플랫폼' cardsData={homeMainCardsData} />
         <HomeApplicationCards
           title='ABLESTACK을 선택해야 하는 이유'
           cardsData={homeApplicationCardsData}
