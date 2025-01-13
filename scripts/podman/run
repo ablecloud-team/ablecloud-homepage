@@ -1,0 +1,1 @@
+podman run --name ablecloud-homepage-new -p 8888:80 ablecloud-homepage-new:$(date "+%Y%m%d")
