@@ -33,7 +33,7 @@ export default async function Home() {
         <HomeInterview title='최고의 가상화 플랫폼, ABLESTACK을 선택한 기업들' />
       </ContentWrapper>
       <ContentWrapper>
-        <HomeBlogCards postsData={postsData.slice(0, 4)} />
+        <HomeBlogCards postsData={postsData.filter(v => !!v.metaData.mainImgSrc).slice(0, 4)} />
       </ContentWrapper>
       <ContentWrapper>
         <HomeFooterCards cardsData={homeFooterCardsData} />

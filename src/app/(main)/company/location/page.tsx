@@ -4,12 +4,12 @@ import Pin from '@/public/icons/common/pin.svg';
 export default function CompanyLocation() {
   return (
     <div className='flex flex-col items-center justify-center animate-fade-in gap-8 md:gap-12 pt-12'>
-      <div className='flex flex-col gap-4 max-w-[1200px] w-full'>
+      <div className='flex flex-col gap-4 max-w-[780px] w-full'>
         <iframe
           src='https://map.mommoss.com/?&lat=37.5268460691441&lng=126.9042119165590'
           loading='lazy'
           width='100%'
-          height='420'
+          height='280'
         />
         <div className='flex flex-col gap-4'>
           <div className='text-[24px] font-bold'>본사</div>
@@ -23,12 +23,12 @@ export default function CompanyLocation() {
           </div>
         </div>
       </div>
-      <div className='flex flex-col gap-4 max-w-[1200px] w-full'>
+      <div className='flex flex-col gap-4 max-w-[780px] w-full'>
         <iframe
           src='https://map.mommoss.com/?&lat=36.36950965624036&lng=127.40761276988948'
           loading='lazy'
           width='100%'
-          height='420'
+          height='280'
         />
         <div className='flex flex-col gap-4'>
           <div className='text-[24px] font-bold'>기술연구소</div>

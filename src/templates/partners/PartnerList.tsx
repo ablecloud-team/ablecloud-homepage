@@ -7,7 +7,7 @@ export function PartnerList() {
         제조사 파트너
       </div>
       <div>현재 에이블클라우드와 함께하고 있는 제조사 파트너 입니다.</div>
-      <div className='grid max-w-[1300px] w-full gap-2 grid-cols-[repeat(auto-fit,_minmax(240px,1fr))] justify-center py-8'>
+      <div className='grid max-w-[1300px] w-full gap-x-3 gap-y-4 grid-cols-[repeat(auto-fit,_minmax(240px,1fr))] justify-center py-8'>
         {partnerList.map((v, idx) => (
           <div
             key={idx}

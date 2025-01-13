@@ -55,7 +55,7 @@ export const ablestackHciHeaderData: HeaderData = {
         제품소개서 다운로드 <ArrowRight height={16} />
       </div>
     ),
-    href: '/pdf/ABLESTACK_Technical.pdf',
+    href: '/pdf/ABLESTACK_HCI_제품소개서.pdf',
     target: '_blank',
   },
 };
@@ -77,7 +77,7 @@ export const ablestackVmHeaderData: HeaderData = {
         제품소개서 다운로드 <ArrowRight height={16} />
       </div>
     ),
-    href: '/pdf/ABLESTACK_VMWare.pdf',
+    href: '/pdf/ABLESTACK_VM_제품소개서.pdf',
     target: '_blank',
   },
 };
@@ -339,7 +339,7 @@ export const AblestackVMCardsData: AblestackVMCardData[] = [
   {
     bgClassName: 'bg-products-vm-card-1',
     title: 'VMWare 완벽 대체',
-    description: '기존 사용 중인 데이터를 완벽하게 마이그레이션 할 수 있습니다.',
+    description: '기존 사용 중인 가상머신을 완벽하게 마이그레이션 할 수 있습니다. ',
   },
   {
     bgClassName: 'bg-products-vm-card-2',

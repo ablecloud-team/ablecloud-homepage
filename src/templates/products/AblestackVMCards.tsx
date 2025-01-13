@@ -10,7 +10,8 @@ export function AblestackVMCards({ cardsData }: AblestackVMCardsProps) {
   return (
     <div className='flex flex-col gap-[30px]'>
       <div className='flex flex-col justify-center gap-2 items-center xsm:flex-row xsm:gap-[10px] font-bold text-center text-[24px] leading-[32px] md:text-[32px] md:leading-[44.16px]'>
-        <AblestackVM className='max-w-[180px] xsm:max-w-[200px] md:max-w-[250px]' /> 이 필요한 이유
+        <AblestackVM className='max-w-[180px] xsm:max-w-[200px] md:max-w-[250px] w-full' /> 이
+        필요한 이유
       </div>
       <div className='grid grid-cols-1 md:grid-cols-3 justify-items-center gap-[10px] xl:gap-6'>
         {cardsData.map((cardData, idx) => {

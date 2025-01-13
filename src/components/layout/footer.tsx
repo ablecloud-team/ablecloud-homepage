@@ -1,10 +1,8 @@
 import Link from 'next/link';
 
 import Ablecloud from '@/public/icons/common/ablecloud.svg';
+import ArrowRight from '@/public/icons/common/arrow-right.svg';
 import Blog from '@/public/icons/common/blog.svg';
-import ChevronRight from '@/public/icons/common/chevron-right.svg';
-import Plus from '@/public/icons/common/plus.svg';
-import Setting from '@/public/icons/common/setting.svg';
 import Youtube from '@/public/icons/common/youtube.svg';
 
 export function Footer() {
@@ -25,9 +23,9 @@ export function Footer() {
               <Link href='https://www.youtube.com/@ablecloud_official' target='_blank'>
                 <Youtube />
               </Link>
-              <Link href='https://www.youtube.com/@ablecloud_official' target='_blank'>
+              {/* <Link href='https://www.youtube.com/@ablecloud_official' target='_blank'>
                 <Setting />
-              </Link>
+              </Link> */}
             </div>
           </div>
           <Link
@@ -35,8 +33,8 @@ export function Footer() {
             target='_blank'
             className='max-w-[342px] w-full h-fit'>
             <div className='flex gap-2 items-center text-sm py-[10px] bg-[#999999] text-[white] px-[14px] rounded-[5px]'>
-              <div className='flex-1'>에이블클라우드 기술 블로그 바로가기</div>
-              <Plus />
+              <div className='flex-1'>ABLESTACK DOCUMENT SITE</div>
+              <ArrowRight width={18} />
             </div>
           </Link>
         </div>

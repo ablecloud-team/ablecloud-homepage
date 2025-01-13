@@ -38,9 +38,7 @@ export function ContactForm() {
         className='max-w-[616px] w-full flex flex-col items-center gap-4'>
         <div className='flex gap-4 w-full flex-col md:flex-row'>
           <div className='flex-1'>
-            <div className='font-medium mb-[10px]'>
-              이름<span className='text-[#8F00FF]'>*</span>
-            </div>
+            <div className='font-medium mb-[10px]'>이름</div>
             <input
               type='text'
               className='w-full border border-[#EEEEEE] px-3 h-[40px] rounded-[10px]'
@@ -50,9 +48,7 @@ export function ContactForm() {
             />
           </div>
           <div className='flex-1'>
-            <div className='font-medium mb-[10px]'>
-              업체명<span className='text-[#8F00FF]'>*</span>
-            </div>
+            <div className='font-medium mb-[10px]'>업체명</div>
             <input
               type='text'
               className='w-full border border-[#EEEEEE] px-3 h-[40px] rounded-[10px]'
@@ -64,9 +60,7 @@ export function ContactForm() {
         </div>
         <div className='flex gap-4 w-full flex-col md:flex-row'>
           <div className='flex-1'>
-            <div className='font-medium mb-[10px]'>
-              직함<span className='text-[#8F00FF]'>*</span>
-            </div>
+            <div className='font-medium mb-[10px]'>직함</div>
             <input
               type='text'
               className='w-full border border-[#EEEEEE] px-3 h-[40px] rounded-[10px]'
@@ -76,9 +70,7 @@ export function ContactForm() {
             />
           </div>
           <div className='flex-1'>
-            <div className='font-medium mb-[10px]'>
-              이메일<span className='text-[#8F00FF]'>*</span>
-            </div>
+            <div className='font-medium mb-[10px]'>이메일</div>
             <input
               type='email'
               className='w-full border border-[#EEEEEE] px-3 h-[40px] rounded-[10px]'
@@ -96,9 +88,7 @@ export function ContactForm() {
         </div>
         <div className='flex gap-4 w-full flex-col md:flex-row'>
           <div className='flex-1'>
-            <div className='font-medium mb-[10px]'>
-              연락처<span className='text-[#8F00FF]'>*</span>
-            </div>
+            <div className='font-medium mb-[10px]'>연락처</div>
             <input
               type='tel'
               className='w-full border border-[#EEEEEE] px-3 h-[40px] rounded-[10px]'
@@ -108,9 +98,7 @@ export function ContactForm() {
             />
           </div>
           <div className='flex-1'>
-            <div className='font-medium mb-[10px]'>
-              문의유형<span className='text-[#8F00FF]'>*</span>
-            </div>
+            <div className='font-medium mb-[10px]'>문의유형</div>
             <select
               id='contactType'
               name='contactType'
@@ -123,9 +111,7 @@ export function ContactForm() {
           </div>
         </div>
         <div className=' w-full flex-1'>
-          <div className='font-medium mb-[10px]'>
-            문의내용<span className='text-[#8F00FF]'>*</span>
-          </div>
+          <div className='font-medium mb-[10px]'>문의내용</div>
           <textarea
             rows={8}
             id='message'
