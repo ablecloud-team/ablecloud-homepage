@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { partnerProgramHeaderData, partnersIntroduce } from '@/constants/partners';
+import { partnerProgramHeaderData } from '@/constants/partners';
 
 import { ContentWrapper, MainPageHeader } from '@/templates/common';
 

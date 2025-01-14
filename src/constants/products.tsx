@@ -339,7 +339,7 @@ export const AblestackVMCardsData: AblestackVMCardData[] = [
   {
     bgClassName: 'bg-products-vm-card-1',
     title: 'VMWare 완벽 대체',
-    description: '기존 사용 중인 가상머신을 완벽하게 마이그레이션 할 수 있습니다. ',
+    description: '기존 사용 중인 가상화 환경을 완벽하게 마이그레이션 할 수 있습니다.',
   },
   {
     bgClassName: 'bg-products-vm-card-2',
@@ -363,7 +363,7 @@ export const AblestackVMCardsData: AblestackVMCardData[] = [
 export const AblestackHCICardsData: AblestackHCICardData[] = [
   {
     title: '뛰어난 확장성',
-    description: '무중단, 무제한 노트 확장',
+    description: '무중단, 무제한 노드 확장',
   },
   {
     title: '단순한 구성',

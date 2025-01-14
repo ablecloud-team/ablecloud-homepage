@@ -85,7 +85,7 @@ export const applicationList: { [K in ApplicationType]: ApplicationListData[] } 
       path: 'private-cloud',
       title: '프라이빗 클라우드',
       description:
-        '필요에 따라 언제든지 확장할 수 있고 모든 앱을 실행할 수 있는 HCI 기반 클라우드로 비즈니스를 강화하십시오.',
+        '필요에 따라 언제든지 확장할 수 있고 모든 앱을 실행할 수 있는 가상화 기반 클라우드로 비즈니스를 강화하십시오.',
     },
     {
       imgSrc: hybridCloudSrc,
@@ -119,7 +119,7 @@ export const applicationList: { [K in ApplicationType]: ApplicationListData[] } 
       path: 'business-continuity',
       title: '비즈니스 연속성/재해복구',
       description:
-        '빅전체 데이터 백업 및 다양한 복구 옵션을 통해 연속성을 보장함함으로써 저비용으로 SLA를 충족하심시오.',
+        '전체 데이터 백업 및 다양한 복구 옵션을 통해 연속성을 보장함함으로써 저비용으로 SLA를 충족하심시오.',
     },
   ],
   application: [
@@ -128,7 +128,7 @@ export const applicationList: { [K in ApplicationType]: ApplicationListData[] } 
       path: 'big-data-analysis',
       title: '빅데이터 분석',
       description:
-        '빅 데이터 애플리케이션을 위한 클라우드 HCI의 민첩성과 온프레이스 관리 편리성을 활용하십시오.',
+        '빅데이터 애플리케이션을 위한 클라우드의 민첩성과 온프레이스 관리 편리성을 활용하십시오.',
     },
     {
       imgSrc: aiMlSrc,
@@ -185,7 +185,7 @@ export const applicationList: { [K in ApplicationType]: ApplicationListData[] } 
       path: 'ci-cd',
       title: 'CI/CD',
       description:
-        'HCI 기반의 클라우드 환경을 통해 빠르게 개발환경을 지원하고 통합하여 애플리케이션 생명주기를 단축합니다.',
+        '가상화 기반의 클라우드 환경을 통해 빠르게 개발환경을 지원하고 통합하여 애플리케이션 생명주기를 단축합니다.',
     },
   ],
 };
