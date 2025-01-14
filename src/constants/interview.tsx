@@ -17,6 +17,7 @@ import goryeongSrc from '@/public/images/common/goryeong.png';
 import gwangjuSrc from '@/public/images/common/gwangju.png';
 import gyeongnamSrc from '@/public/images/common/gyeongnam.png';
 import hcSrc from '@/public/images/common/hc.png';
+import hectoSrc from '@/public/images/common/hecto.png';
 import kacptaSrc from '@/public/images/common/kacpta.png';
 import kepcoSrc from '@/public/images/common/kepco.png';
 import kipoSrc from '@/public/images/common/kipo.png';
@@ -70,4 +71,5 @@ export const interviewList: InterviewListData[] = [
   { img: <Image src={gntelSrc} alt='' width={138} />, text: '지엔텔' },
   { img: <Image src={t3qSrc} alt='' width={148} />, text: '(주)티쓰리큐' },
   { img: <Image src={cooconSrc} alt='' width={120} />, text: '쿠콘' },
+  { img: <Image src={hectoSrc} alt='' width={153} />, text: 'hecto' },
 ];

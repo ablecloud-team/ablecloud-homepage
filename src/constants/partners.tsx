@@ -45,7 +45,8 @@ export const partnersHeaderData: HeaderData = {
     <>
       독자적인 기술력, 지속 가능한 수익창출.
       <br />
-      ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 HCI 시장의 공동 성장을 만들어갈 파트너를 찾습니다.
+      ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 가상화/클라우드 시장의 공동 성장을 만들어갈
+      파트너를 찾습니다.
     </>
   ),
   bgClassName: 'bg-partners-header',
@@ -59,39 +60,31 @@ export const partnerProgramHeaderData: HeaderData = {
   description: (
     <>
       독자적인 기술력, 지속 가능한 수익창출. <br />
-      에이블클라우드는 ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 HCI 시장의 공동 성장을 만들어갈
-      파트너를 찾습니다.
+      에이블클라우드는 ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 가상화/클라우드 시장의 공동
+      성장을 만들어갈 파트너를 찾습니다.
     </>
   ),
   bgClassName: 'bg-partners-header',
   heightClassName: 'min-h-[350px] lg:min-h-[404px]',
 };
 
-export const partnersIntroduce = [
+export const partnersTier = [
   {
-    title: '판매/기술지원 파트너',
-    description: (
-      <>
-        ABLESTACK을 고객에게 직접 소개하고 제공하며 종합적인 지원서비스를 제공하는 파트너입니다.{' '}
-        <br />
-        전담 영업 조직 및 기술지원 조직을 운영하며, 모든 분야에서 긴밀하게 협업하는 파트너입니다.
-      </>
-    ),
-  },
-  {
-    title: '솔루션 파트너',
-    description: (
-      <>
-        고객에게 필요한 어플리케이션을 제공하는 파트너로서 빅데이터, 가상데스크톱, 영상감시,
-        데이터베이스 등을 검증된 아키텍처를 통해 <br />
-        최적의 상태로 고객에게 통합하여 턴키로 제공합니다.
-      </>
-    ),
-  },
-  {
-    title: '판매/기술지원 파트너',
+    title: '플래티넘 파트너',
     description:
-      'ABLESTACK을 설치하고 운영하기 위한 x86 서버 제품 및 블록 및 백업 스토리지를 제공하는 파트너로, 철저한 검증을 거쳐 최적의 아키텍처를 제공하고, 안정적인 가상화 환경을 제공하기 위한 서버, 스토리지, 네트워크 파트너입니다.',
+      '전담 영업 조직 및 기술지원 조직을 운영하며, 모든 분야에서 긴밀하게 협업영업 및 POC, 구축, 유지보수 전담인력을 갖춘 파트너',
+  },
+  {
+    title: '골드 파트너',
+    description: '영업 및 구축, 유지보수 전담인력을 갖춘 파트너',
+  },
+  {
+    title: '실버 파트너',
+    description: '전담 영업을 갖춘 파트너',
+  },
+  {
+    title: 'VAR 파트너',
+    description: '양사 솔루션 또는 제품을 패키징 형태로 공급 가능 한 파트너',
   },
 ];
 

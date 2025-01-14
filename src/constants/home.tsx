@@ -135,7 +135,7 @@ export const homeMainCardsData: HomeMainCardData[] = [
   {
     title: (
       <>
-        단일 가상화/
+        서버 가상화/
         <br /> 클라우드 플랫폼
       </>
     ),
@@ -145,8 +145,8 @@ export const homeMainCardsData: HomeMainCardData[] = [
   {
     title: (
       <>
-        기업 IT혁신을 위한
-        <br /> 최고의 솔루션
+        모든 인프라가 통합된 HCI
+        <br /> 클라우드 플랫폼
       </>
     ),
     href: '/products/ablestack-hci',
@@ -181,7 +181,7 @@ export const homeApplicationCardsData: HomeApplicationCardData[] = [
     title: '빅데이터 분석',
     description: (
       <>
-        ABLESTACK HCI만의 전용
+        ABLESTACK만의 전용
         <br />
         아키텍처와 자동화 도구
       </>

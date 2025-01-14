@@ -1,4 +1,4 @@
-import { partnersHeaderData, partnersIntroduce } from '@/constants/partners';
+import { partnersHeaderData, partnersTier } from '@/constants/partners';
 
 import { ContentWrapper, MainPageHeader } from '@/templates/common';
 import { PartnerList } from '@/templates/partners';
@@ -16,8 +16,8 @@ export default function Partners() {
             독자적인 기술력, 지속 가능한 수익창출. <br /> ABLESTACK 플랫폼 설계 및 글로벌 성장을
             위해 HCI 시장의 공동 성장을 만들어갈 파트너를 찾습니다.
           </div>
-          <div className='max-w-[828px]'>
-            {partnersIntroduce.map((v, idx) => (
+          <div className='max-w-[828px] text-center'>
+            {partnersTier.map((v, idx) => (
               <div
                 key={idx}
                 className={`flex flex-col gap-2 py-4 ${idx === 0 ? 'border-y border-y-[#eeeeee14]' : 'border-b border-b-[#eeeeee14] '}`}>
