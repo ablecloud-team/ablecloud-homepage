@@ -59,9 +59,10 @@ export const partnerProgramHeaderData: HeaderData = {
   },
   description: (
     <>
-      독자적인 기술력, 지속 가능한 수익창출. <br />
-      에이블클라우드는 ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 가상화/클라우드 시장의 공동
-      성장을 만들어갈 파트너를 찾습니다.
+      독자적인 기술력, 지속 가능한 수익창출.
+      <br />
+      ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 가상화/클라우드 시장의 공동 성장을 만들어갈
+      파트너를 찾습니다.
     </>
   ),
   bgClassName: 'bg-partners-header',
