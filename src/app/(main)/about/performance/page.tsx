@@ -38,8 +38,8 @@ export default function AboutPerformance() {
             />
             <div className='flex flex-col gap-[10px]'>
               <div className='flex flex-col items-start gap-6 py-5'>
-                <div className='text-[#0085F2]'>상주시청</div>
-                <div>영상 감시 인프라 HCI 전환</div>
+                <div className='text-[#0085F2]'>경남정보대학</div>
+                <div>교육용 가상화 데스크톱(VDI) 구축</div>
               </div>
               <div className='flex flex-col xsm:flex-row gap-4'>
                 {aboutPerformanceUseCaseCardsData.map((v, idx) => (

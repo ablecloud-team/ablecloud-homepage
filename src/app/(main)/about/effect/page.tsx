@@ -18,7 +18,7 @@ export default function AboutEffect() {
       <ContentWrapper type='default' bgClassName='bg-[#161616]'>
         <AboutCards
           cardsData={aboutEffectCardsData}
-          title='영상감시 시스템을 위한 최적의 HCI 플랫폼'
+          title='영상감시 시스템을 위한 최적의 가상화 및 HCI 플랫폼'
           girdColsClassName={'grid-cols-1 xsm:grid-cols-[repeat(auto-fit,_minmax(345px,1fr))]'}
         />
       </ContentWrapper>
