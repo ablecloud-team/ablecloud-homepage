@@ -244,7 +244,7 @@ export const homeFooterCardsData: HomeFooterCardData[] = [
     bgColor: 'bg-[#117CE9]',
     text: (
       <>
-        글로벌 성장을 위해 HCI 시장의 공동
+        가상화/클라우드 시장의 공동
         <br /> 성장을 만들어갈 파트너를 찾습니다.
       </>
     ),
