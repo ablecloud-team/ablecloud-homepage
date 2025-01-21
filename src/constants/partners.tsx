@@ -3,11 +3,9 @@ import Image from 'next/image';
 import { HeaderData } from '@/types/header';
 import { PartnerListData } from '@/types/partners';
 
-import ssoftSrc from '@/public/images/partners/3ssoft.png';
 import ablestoreSrc from '@/public/images/partners/ablestor.png';
 import acornsoftSrc from '@/public/images/partners/acornsoft.png';
 import ajictSrc from '@/public/images/partners/ajict.png';
-import centecSrc from '@/public/images/partners/centec.png';
 import citrixSrc from '@/public/images/partners/citrix.png';
 import dellSrc from '@/public/images/partners/dell.png';
 import dwctsSrc from '@/public/images/partners/dwcts.png';
@@ -17,7 +15,6 @@ import gntelSrc from '@/public/images/partners/gntel.png';
 import hdnSrc from '@/public/images/partners/hdn.png';
 import hpSrc from '@/public/images/partners/hp.png';
 import hsSrc from '@/public/images/partners/hs.png';
-import infracubeSrc from '@/public/images/partners/infracube.png';
 import innodepSrc from '@/public/images/partners/innodep.png';
 import innogridSrc from '@/public/images/partners/innogrid.png';
 import innotiumSrc from '@/public/images/partners/innotium.png';
@@ -85,7 +82,7 @@ export const partnersTier = [
   },
   {
     title: 'VAR 파트너',
-    description: '양사 솔루션 또는 제품을 패키징 형태로 공급 가능 한 파트너',
+    description: '양사 솔루션 또는 제품을 패키징 형태로 공급 가능한 파트너',
   },
 ];
 
