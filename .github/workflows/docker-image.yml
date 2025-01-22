@@ -1,0 +1,10 @@
+name: Docker Image CI
+
+on:
+  release:
+    types:
+      - published
+
+env:
+  REGISTRY: docke.io
+  IMAGE_NAME: ${{github.repository}}
