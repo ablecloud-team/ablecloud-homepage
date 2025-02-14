@@ -54,7 +54,9 @@ export function Tabs({ tabs }: TabsProps) {
                 !bgStyle && activeIndex === idx ? 'bg-[#202020]' : ''
               }`}>
               <div
-                ref={el => (tabRefs.current[idx] = el)}
+                ref={el => {
+                  tabRefs.current[idx] = el;
+                }}
                 className={`relative py-[10px] text-sm transition-all font-bold duration-200 z-10 ${
                   activeIndex === idx ? 'text-white' : 'text-[#787878]'
                 }`}>
