@@ -48,7 +48,7 @@ export const interviewHeaderData: HeaderData = {
 export const interviewList: InterviewListData[] = [
   { img: <Image src={comwelSrc} alt='' width={94} />, text: '근로복지공단' },
   { img: <Image src={gyeongnamSrc} alt='' width={146} />, text: '경상남도청' },
-  { img: <Image src={kipoSrc} alt='' width={125} />, text: '특허청' },
+  // { img: <Image src={kipoSrc} alt='' width={125} />, text: '특허청' },
   { img: <Image src={hcSrc} alt='' width={120} />, text: '합천군청' },
   { img: <Image src={dapaSrc} alt='' width={96} />, text: '방위사업청' },
   { img: <Image src={spoSrc} alt='' width={78} />, text: '대검찰청' },
@@ -60,7 +60,7 @@ export const interviewList: InterviewListData[] = [
   { img: <Image src={pyeongtaekSrc} alt='' width={68} />, text: '평택시청' },
   { img: <Image src={uscSrc} alt='' width={161} />, text: '의성군청' },
   { img: <Image src={gwangjuSrc} alt='' width={176} />, text: '광주광역시' },
-  { img: <Image src={cnuhSrc} alt='' width={160} />, text: '충남대학교병원' },
+  // { img: <Image src={cnuhSrc} alt='' width={160} />, text: '충남대학교병원' },
   { img: <Image src={armySrc} alt='' width={210} />, text: '육군본부' },
   { img: <Image src={ekrSrc} alt='' width={198} />, text: '한국농어촌공사' },
   { img: <Image src={konyangSrc} alt='' width={168} />, text: '건영대학교' },
