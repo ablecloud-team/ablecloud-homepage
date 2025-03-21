@@ -7,6 +7,7 @@ import ebook_3_Src from '@/public/images/resource/ebook/ebook_3.png';
 import ebook_4_Src from '@/public/images/resource/ebook/ebook_4.png';
 import ebook_5_Src from '@/public/images/resource/ebook/ebook_5.png';
 import ebook_6_Src from '@/public/images/resource/ebook/ebook_6.png';
+import ebook_7_Src from '@/public/images/resource/ebook/ebook_7.png';
 
 export const resourceType = ['blog', 'video', 'ebook'] as const;
 
@@ -76,5 +77,12 @@ export const ebooksData: EbookData[] = [
     description: 'ABLESTACK와 VMWare 주요 라이선스 기능 비교표',
     href: 'ABLESTACK-VMWare_vSphere.pdf',
     imgSrc: ebook_6_Src,
+  },
+  {
+    type: 'ABLESTACK',
+    title: 'ABLESTACK Kubernetes Cluster 사용기초',
+    description: '내장된 Koral 기능을 이용한  쿠버네티스 클러스터 배포 방법',
+    href: 'ABLESTACK_Kubernetes_Cluster.pdf',
+    imgSrc: ebook_7_Src,
   },
 ];
