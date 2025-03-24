@@ -9,7 +9,7 @@ import { Pagination } from '@/components/ui';
 
 import { EbookData } from '@/types/resource';
 
-const LIMIT = 6;
+const LIMIT = 9;
 
 export function EbookList({ ebooksData }: { ebooksData: EbookData[] }) {
   const [page, setPage] = useState<number>(1);

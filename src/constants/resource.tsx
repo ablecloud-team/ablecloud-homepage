@@ -8,6 +8,7 @@ import ebook_4_Src from '@/public/images/resource/ebook/ebook_4.png';
 import ebook_5_Src from '@/public/images/resource/ebook/ebook_5.png';
 import ebook_6_Src from '@/public/images/resource/ebook/ebook_6.png';
 import ebook_7_Src from '@/public/images/resource/ebook/ebook_7.png';
+import ebook_8_Src from '@/public/images/resource/ebook/ebook_8.png';
 
 export const resourceType = ['blog', 'video', 'ebook'] as const;
 
@@ -84,5 +85,12 @@ export const ebooksData: EbookData[] = [
     description: '내장된 Koral 기능을 이용한  쿠버네티스 클러스터 배포 방법',
     href: 'ABLESTACK_Kubernetes_Cluster.pdf',
     imgSrc: ebook_7_Src,
+  },
+  {
+    type: 'ABLESTACK',
+    title: 'ABLESTACK Kubernetes Cluster와 Portainer 플랫폼 연동',
+    description: '애플리케이션 관리 플랫폼 Portainer와 연동하는 방법',
+    href: 'ABLESTACK_Kubernetes_Cluster_Portainer.pdf',
+    imgSrc: ebook_8_Src,
   },
 ];
