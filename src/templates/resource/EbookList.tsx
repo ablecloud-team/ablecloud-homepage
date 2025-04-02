@@ -34,7 +34,7 @@ export function EbookList({ ebooksData }: { ebooksData: EbookData[] }) {
               href={`/pdf/${v.href}`}
               target='_blank'
               className='flex flex-col rounded-[20px] border border-[#eee] max-w-[360px] transform transition duration-200 hover:scale-102 hover:shadow-sm'>
-              <Image src={v.imgSrc} alt='' />
+              <Image src={v.imgSrc} alt='' className='rounded-t-[20px]' />
               <div className='flex flex-col gap-[6px] px-6 py-4'>
                 <div className='text-[12px] text-[#919191]'>{v.type}</div>
                 <div className='font-bold'>{v.title}</div>
