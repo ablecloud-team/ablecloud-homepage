@@ -40,6 +40,7 @@ export const videosData: string[] = [
   'https://www.youtube.com/embed/ztn2Deth-yc',
   'https://www.youtube.com/embed/qyHcSTNEpAw',
   'https://www.youtube.com/embed/yjJnl-NMXiw',
+  'https://www.youtube.com/embed/YskCBg_ZpPE',
 ];
 
 export const ebooksData: EbookData[] = [
