@@ -10,6 +10,7 @@ import ebook_6_Src from '@/public/images/resource/ebook/ebook_6.png';
 import ebook_7_Src from '@/public/images/resource/ebook/ebook_7.png';
 import ebook_8_Src from '@/public/images/resource/ebook/ebook_8.png';
 import ebook_9_Src from '@/public/images/resource/ebook/ebook_9.png';
+import ebook_10_Src from '@/public/images/resource/ebook/ebook_10.png';
 
 export const resourceType = ['blog', 'video', 'ebook'] as const;
 
@@ -104,5 +105,12 @@ export const ebooksData: EbookData[] = [
     description: '내장된 기능으로 Active-Active 재해복구 환경 구성 가능',
     href: 'ABLESTACK_HCI_ACTIVE.pdf',
     imgSrc: ebook_9_Src,
+  },
+  {
+    type: 'ABLESTACK',
+    title: 'ABLESTACK Link를 통한 마이크로 세그먼테이션 보안관리',
+    description: '내장된 Link를 이용한 보안 관리 기능',
+    href: 'ABLESTACK_LINK.pdf',
+    imgSrc: ebook_10_Src,
   },
 ];
