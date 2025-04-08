@@ -89,7 +89,7 @@ export const partnersTier = [
 export const partnerList: PartnerListData[] = [
   { img: <Image src={ablestoreSrc} alt='' />, text: '에이블스토어' },
   { img: <Image src={dellSrc} alt='' />, text: '델 테크놀로지스' },
-  { img: <Image src={hpSrc} alt='' />, text: 'hp' },
+  { img: <Image src={hpSrc} alt='' />, text: 'HPE' },
   { img: <Image src={fujitsuSrc} alt='' />, text: '후지쯔' },
   { img: <Image src={lenovoSrc} alt='' />, text: '레노버' },
   { img: <Image src={supermicrSrc} alt='' />, text: '슈퍼마이크로컴퓨터' },
