@@ -5,6 +5,8 @@ import { InterviewListData } from '@/types/interview';
 
 import armySrc from '@/public/images/common/army.png';
 import buyeoSrc from '@/public/images/common/buyeo.png';
+import changwonSrc from '@/public/images/common/changwon.png';
+import ckSrc from '@/public/images/common/ck.png';
 import cnuhSrc from '@/public/images/common/cnuh.png';
 import comwelSrc from '@/public/images/common/comwel.png';
 import cooconSrc from '@/public/images/common/coocon.png';
@@ -25,6 +27,8 @@ import kacptaSrc from '@/public/images/common/kacpta.png';
 import kepcoSrc from '@/public/images/common/kepco.png';
 import kipoSrc from '@/public/images/common/kipo.png';
 import konyangSrc from '@/public/images/common/konyang.png';
+import koreaLocalSrc from '@/public/images/common/korea-local.png';
+import pocheonSrc from '@/public/images/common/pocheon.png';
 import policeSrc from '@/public/images/common/police.png';
 import pyeongtaekSrc from '@/public/images/common/pyeongtaek.png';
 import sangjuSrc from '@/public/images/common/sangju.png';
@@ -33,6 +37,7 @@ import t3qSrc from '@/public/images/common/t3q.png';
 import ulsanSrc from '@/public/images/common/ulsan.png';
 import uscSrc from '@/public/images/common/usc.png';
 import ycgSrc from '@/public/images/common/ycg.png';
+import yeojuSrc from '@/public/images/common/yeoju.png';
 import yitSrc from '@/public/images/common/yit.png';
 
 export const interviewHeaderData: HeaderData = {
@@ -63,27 +68,33 @@ export const interviewList: InterviewListData[] = [
   { img: <Image src={gwangjuSrc} alt='' width={176} />, text: '광주광역시' },
   { img: <Image src={comwelSrc} alt='' width={94} />, text: '근로복지공단' },
   { img: <Image src={hscitySrc} alt='' width={144} />, text: '화성특례시' },
+  { img: <Image src={changwonSrc} alt='' width={120} />, text: '창원시' },
   { img: <Image src={pyeongtaekSrc} alt='' width={68} />, text: '평택시청' },
   { img: <Image src={sangjuSrc} alt='' width={139} />, text: '상주시청' },
-  { img: <Image src={goryeongSrc} alt='' width={135} />, text: '고령군청' },
-  { img: <Image src={ycgSrc} alt='' width={111} />, text: '예천군청' },
+  { img: <Image src={yeojuSrc} alt='' width={138} />, text: '여주시' },
+  { img: <Image src={pocheonSrc} alt='' width={140} />, text: '포천시' },
+  { img: <Image src={ycgSrc} alt='' width={160} />, text: '예천군청' },
   { img: <Image src={uscSrc} alt='' width={161} />, text: '의성군청' },
   { img: <Image src={csSrc} alt='' width={140} />, text: '청손군' },
   { img: <Image src={buyeoSrc} alt='' width={162} />, text: '부여군' },
+  { img: <Image src={goryeongSrc} alt='' width={135} />, text: '고령군청' },
+  { img: <Image src={hcSrc} alt='' width={120} />, text: '합천군청' },
   { img: <Image src={ulsanSrc} alt='' width={193} />, text: '울산광역시중구' },
 
   // { img: <Image src={kipoSrc} alt='' width={125} />, text: '특허청' },
-  { img: <Image src={hcSrc} alt='' width={120} />, text: '합천군청' },
 
   // { img: <Image src={cnuhSrc} alt='' width={160} />, text: '충남대학교병원' },
 
   { img: <Image src={konyangSrc} alt='' width={168} />, text: '건영대학교' },
 
+  { img: <Image src={ckSrc} alt='' width={200} />, text: '청강문화산업대학교' },
+  { img: <Image src={koreaLocalSrc} alt='' width={170} />, text: '한국지역정보개발원' },
   { img: <Image src={kacptaSrc} alt='' width={148} />, text: '한국세무사회' },
-  { img: <Image src={datastreamsSrc} alt='' width={159} />, text: '데이타스트림즈' },
+
   { img: <Image src={yitSrc} alt='' width={136} />, text: '여주대학교' },
   { img: <Image src={gntelSrc} alt='' width={138} />, text: '지엔텔' },
   { img: <Image src={t3qSrc} alt='' width={148} />, text: '(주)티쓰리큐' },
   { img: <Image src={cooconSrc} alt='' width={120} />, text: '쿠콘' },
+  { img: <Image src={datastreamsSrc} alt='' width={159} />, text: '데이타스트림즈' },
   { img: <Image src={hectoSrc} alt='' width={153} />, text: 'hecto' },
 ];
