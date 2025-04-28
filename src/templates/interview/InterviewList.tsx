@@ -10,7 +10,7 @@ export function InterViewList({ interviewList }: { interviewList: InterviewListD
         {interviewList.map((v, idx) => (
           <div
             key={idx}
-            className='flex justify-center flex-col gap-2 min-h-[120px] items-center px-6 py-4 bg-white rounded-[10px] border border-[#EBEEF5]'>
+            className='flex justify-center flex-col gap-2 min-h-[150px] items-center px-6 py-4 bg-white rounded-[10px] border border-[#EBEEF5]'>
             {v.img}
           </div>
         ))}
