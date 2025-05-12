@@ -4,6 +4,7 @@ import { HeaderData } from '@/types/header';
 import { HomeApplicationCardData, HomeFooterCardData, HomeMainCardData } from '@/types/home';
 
 import armySrc from '@/public/images/common/army.png';
+import changwonSrc from '@/public/images/common/changwon.png';
 import cnuhSrc from '@/public/images/common/cnuh.png';
 import comwelSrc from '@/public/images/common/comwel.png';
 import cooconSrc from '@/public/images/common/coocon.png';
@@ -213,7 +214,7 @@ export const homeApplicationCardsData: HomeApplicationCardData[] = [
 ];
 
 export const homeInterviewIcons1 = [
-  <Image src={kipoSrc} alt='' width={96} />,
+  <Image src={changwonSrc} alt='' width={96} />,
   <Image src={spoSrc} alt='' width={80} />,
   <Image src={dapaSrc} alt='' width={96} />,
   <Image src={comwelSrc} alt='' width={86} />,
