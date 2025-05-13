@@ -11,6 +11,7 @@ import ebook_7_Src from '@/public/images/resource/ebook/ebook_7.png';
 import ebook_8_Src from '@/public/images/resource/ebook/ebook_8.png';
 import ebook_9_Src from '@/public/images/resource/ebook/ebook_9.png';
 import ebook_10_Src from '@/public/images/resource/ebook/ebook_10.png';
+import ebook_11_Src from '@/public/images/resource/ebook/ebook_11.png';
 
 export const resourceType = ['blog', 'video', 'ebook'] as const;
 
@@ -113,5 +114,12 @@ export const ebooksData: EbookData[] = [
     description: '내장된 Link를 이용한 보안 관리 기능',
     href: 'ABLESTACK_LINK.pdf',
     imgSrc: ebook_10_Src,
+  },
+  {
+    type: 'ABLESTACK Link',
+    title: 'ABLESTACK Link Load Balancer 어플라이언스 활용',
+    description: '내장된 Link를 이용한 Load Balancer 적용 시나리오',
+    href: 'ABLESTACK_LINK_LOAD_BALANCER.pdf',
+    imgSrc: ebook_11_Src,
   },
 ];
