@@ -256,12 +256,12 @@ export const productsContentData: { [K in AbleStackServices]: ProductContentData
   mold: {
     imgSrc: MoldSrc,
     description:
-      '모든 x86 서버에 하드웨어 의존성 없이 설치하여 사용가능하며, 최적화된 커널 및 IO 처리 모듈을 통해 고성능 환경을 제공합니다.',
+      '클릭 한 번으로 대부분의 작업 처리가 가능하고, 인프라 및 애플리케이션의 운영을 자동화할 수 있으며 효율적으로 인프라를 관리할 수 있습니다.',
     subDescriptions: [
-      '표준 Linux OS',
-      'ABLESTACK을 위한 모든 패키지가 포함',
-      '웹 브라우저만 있으면 어디서든 호스트의 디바이스, 서비스, 네트워킹 등을 관리 가능',
-      '클라우드 환경을 배포 마법사를 통해 배포 가능',
+      '직관적인 UI의 관리 콘솔을 통해 모든 가상화 자원을 관리 가능',
+      '셀프서비스를 통한 멀티 테넌트 클라우드 서비스를 제공',
+      '최소한의 작업으로 복잡한 IT 인프라를 관리',
+      'API를 통해 사용자 수준 워크플로우 자동화와 사전 정의 코드로 자동화된 프로비저닝을 생성',
     ],
   },
   track: {
@@ -291,10 +291,10 @@ export const productsContentData: { [K in AbleStackServices]: ProductContentData
     description:
       '클릭 한 번으로 대부분의 작업 처리가 가능하고, 인프라 및 애플리케이션의 운영을 자동화할 수 있어 효율적으로 인프라를 관리할 수 있습니다.',
     subDescriptions: [
-      '실시간 모니터링 정보 제공',
-      'DB, 웹 애플리케이션 등을 커스텀 모니터링 가능',
-      '임계치 설정값을 기반으로 알람 제공',
-      '사용량 통계를 통해 확장 시점 예측 정보 제공',
+      '원클릭 단순성',
+      'Persistent 스토리지 지원',
+      '온라인 확장 및 자동 스케일링',
+      '고가용성 제공',
     ],
   },
   genie: {

@@ -13,6 +13,7 @@ import datqSrc from '@/public/images/common/datq.png';
 import ekrSrc from '@/public/images/common/ekr.png';
 import gbSrc from '@/public/images/common/gb.png';
 import goryeongSrc from '@/public/images/common/goryeong.png';
+import gwangjuSrc from '@/public/images/common/gwangju.png';
 import gyeongnamSrc from '@/public/images/common/gyeongnam.png';
 import hcSrc from '@/public/images/common/hc.png';
 import kacptaSrc from '@/public/images/common/kacpta.png';
@@ -233,7 +234,7 @@ export const homeInterviewIcons2 = [
   <Image src={uscSrc} alt='' width={112} />,
   <Image src={gbSrc} alt='' width={110} />,
   <Image src={cooconSrc} alt='' width={120} />,
-  <Image src={cnuhSrc} alt='' width={120} />,
+  <Image src={gwangjuSrc} alt='' width={120} />,
   <Image src={armySrc} alt='' width={120} />,
   <Image src={t3qSrc} alt='' width={100} />,
   <Image src={kacptaSrc} alt='' width={115} />,
