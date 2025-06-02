@@ -24,6 +24,7 @@ export const headerMenu = [
       { title: '소식', href: '/resource/blog' },
       { title: '동영상', href: '/resource/video' },
       { title: '백서/ebook', href: '/resource/ebook' },
+      { title: '호환성', href: '/resource/compatibility' },
     ],
   },
   {
