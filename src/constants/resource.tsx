@@ -1,5 +1,5 @@
 import { HeaderData } from '@/types/header';
-import { EbookData } from '@/types/resource';
+import { CompatibilityData, CompatibilityType, EbookData } from '@/types/resource';
 
 import ebook_1_Src from '@/public/images/resource/ebook/ebook_1.png';
 import ebook_2_Src from '@/public/images/resource/ebook/ebook_2.png';
@@ -19,6 +19,7 @@ export const resourceTabs = [
   { text: '소식', href: '/resource/blog' },
   { text: '동영상', href: '/resource/video' },
   { text: '백서', href: '/resource/ebook' },
+  { text: '호환성', href: '/resource/compatibility' },
 ];
 
 export const resourceHeaderData: HeaderData = {
@@ -123,3 +124,173 @@ export const ebooksData: EbookData[] = [
     imgSrc: ebook_11_Src,
   },
 ];
+
+export const compatibilityList = [
+  {
+    title: '하이퍼바이저 버전',
+    description:
+      'Mold는 자체적으로 제공되는 Cell 하이버파이저 외에 다양한 하이퍼바이저를 지원합니다.',
+    path: 'hypervisor',
+  },
+  {
+    title: '서버',
+    description: 'ABLESTACK은 다양한 상용 x86서버에 설치가 가능합니다.',
+    path: 'server',
+  },
+  {
+    title: 'Guest OS',
+    description: 'ABLESTACK은 다양한 Guest OS를 지원합니다.',
+    path: 'guest-os',
+  },
+  {
+    title: '가상화 애플리케이션/플랫폼',
+    description: 'ABLESTACK은 다음의 가상화 응용 애플리케이션 또는 플랫폼과 호환됩니다.',
+    path: 'virtualization',
+  },
+  {
+    title: '외장 스토리지',
+    description:
+      'ABLESTACK Mold는 Glue SDS 외에 다양한 외장 스토리지를 연결할 수 있도록 지원하여 효과적으로 클라우드 환경을 운영할 수 있도록 합니다.',
+    path: 'external-storage',
+  },
+  {
+    title: 'Backup 솔루션',
+    description: 'ABLESTACK은 다양한 Backup 솔루션을 지원하며 다음과 같습니다.',
+    path: 'backup',
+  },
+];
+
+export const compatibilityType = [
+  'hypervisor',
+  'server',
+  'guest-os',
+  'virtualization',
+  'external-storage',
+  'backup',
+] as const;
+
+export const compatibilityData: { [K in CompatibilityType]: CompatibilityData } = {
+  hypervisor: {
+    title: '호환되는 하이퍼바이저 버전',
+    descriptionList: [
+      {
+        description:
+          'Mold는 자체적으로 제공되는 Cell 하이버파이저 외에 다양한 하이퍼바이저를 지원합니다. Mold에 의해 통합 관리될 수 있는 하이퍼바이저는 다음과 같습니다.',
+        list: [
+          'KVM : Ubuntu 18.04 LTS, 20.04 LTS, CentOS 7, 8, RHEL 7, 8, 9, Rocky Linux 8, 9, openSUSE Leap 15, SUSE Linux Enterprise Server 15',
+          'Citrix Hypervisor : 최신 핫픽스가 적용된 7.x, 8.x 버전',
+          'XCP-ng : 7.x, 8.x',
+          'VMWare : 6.x, 7.x, 8.x',
+        ],
+      },
+      {
+        description:
+          'Mold에 의해 통합 관리 되지는 않으나, Glue를 통한 SDS를 구성하여 비관리형 HCI를 제공할 수 있는 하이퍼바이저는 다음과 같습니다.',
+        list: [
+          '위의 Mold가 통합관리하는 모든 하이퍼바이저',
+          'Hyper-V : Windows 2016 이상, Hyper-V 2016 이상',
+        ],
+      },
+    ],
+  },
+  server: {
+    title: '호환되는 서버',
+    descriptionList: [
+      {
+        description: 'ABLESTACK은 다양한 상용 x86서버에 설치가 가능하며 다음과 같습니다.',
+        list: [
+          'DELL',
+          'HPE',
+          'Fujitsu',
+          'Lenovo',
+          '슈퍼마이크로',
+          '유니와이드',
+          'KTNF',
+          '이슬림',
+          'SNA',
+          '쓰리에스코어(AMD)',
+        ],
+      },
+    ],
+  },
+  'guest-os': {
+    title: '호환되는 Guest OS',
+    descriptionList: [
+      {
+        description: 'ABLESTACK은 다양한 Guest OS를 지원하며 다음과 같습니다.',
+        list: [
+          'Redhat Enterprise Linux : 6 이상',
+          'Oracle Linux : 6 이상',
+          'SUSE Enterprise Linux : 11 이상',
+          'Ubuntu : 16 이상',
+          'Rocky Linux : 8 이상',
+          'Cent OS : 7 이상',
+          'Windows Server : 2012 이상',
+        ],
+      },
+    ],
+  },
+  virtualization: {
+    title: '호환성이 검증된 가상화 애플리케이션/플랫폼',
+    descriptionList: [
+      {
+        description: 'ABLESTACK은 다음의 가상화 응용 애플리케이션 또는 플랫폼과 호환됩니다.',
+        list: [
+          'Tilon(틸론) : DStatsion(VDI)',
+          'Citrix : Virtual Apps & Desktops(VDI)',
+          '이노티움 :  InnoECM(문서중앙화)',
+          'Tmax : Webtob(WEB), Jeus(WAS), Tibero(DB)',
+          'Oracle : Oracle RAC(DB)',
+          'MS : MSSQL(DB)',
+        ],
+      },
+    ],
+  },
+  'external-storage': {
+    title: '호환되는 외장 스토리지',
+    descriptionList: [
+      {
+        description:
+          'ABLESTACK Mold는 Glue SDS 외에 다양한 외장 스토리지를 연결할 수 있도록 지원하여 효과적으로 클라우드 환경을 운영할 수 있도록 지원합니다. 블록 스토리지로 사용할 수 있도록 지원되는 외장스토리지는 다음과 같습니다.',
+        list: [
+          'VMWare',
+          '표준 iSCSI',
+          '표준 NFS',
+          'Citrix Hypervisor',
+          '표준 iSCSI',
+          '표준 NFS',
+          'SMB',
+          'Microsoft HyperV',
+          '표준 iSCSI',
+          'SMB',
+          'Cell, KVM',
+          '표준 iSCSI',
+          '표준 NFS/POSIX호환 스토리지',
+          'GluesterFS',
+          'SolidFire',
+          'Ceph RBD',
+          'Datera',
+          'Cloudbyte',
+          'Nexenta',
+          'Dell PowerFlex',
+          'LINSTOR',
+          'ABLESTACK Glue Block',
+          'ABLESTACK Glue Filesystem',
+        ],
+      },
+    ],
+  },
+  backup: {
+    title: '호환되는 Backup 솔루션',
+    descriptionList: [
+      {
+        description: 'ABLESTACK은 다양한 Backup 솔루션을 지원하며 다음과 같습니다.',
+        list: [
+          'Veeam, Dell Networker 백업 플랫폼 통합',
+          'Veritas, Commvault 백업과 연동 지원',
+          'Synology Active Backup for Business 백업 지원',
+        ],
+      },
+    ],
+  },
+};

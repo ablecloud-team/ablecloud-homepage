@@ -12,7 +12,7 @@ interface TabsProps {
 export function Tabs({ tabs }: TabsProps) {
   const pathname = usePathname();
 
-  const activeIndex = tabs.findIndex(tab => tab.href === pathname);
+  const activeIndex = tabs.findIndex(tab => pathname.startsWith(tab.href));
 
   const tabRefs = useRef<(HTMLDivElement | null)[]>([]);
 
