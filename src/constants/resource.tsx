@@ -225,6 +225,7 @@ export const compatibilityData: { [K in CompatibilityType]: CompatibilityData } 
           'Ubuntu : 16 이상',
           'Rocky Linux : 8 이상',
           'Cent OS : 7 이상',
+          'Windows : 8 이상',
           'Windows Server : 2012 이상',
         ],
       },
