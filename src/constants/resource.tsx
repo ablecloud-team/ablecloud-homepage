@@ -12,6 +12,7 @@ import ebook_8_Src from '@/public/images/resource/ebook/ebook_8.png';
 import ebook_9_Src from '@/public/images/resource/ebook/ebook_9.png';
 import ebook_10_Src from '@/public/images/resource/ebook/ebook_10.png';
 import ebook_11_Src from '@/public/images/resource/ebook/ebook_11.png';
+import ebook_12_Src from '@/public/images/resource/ebook/ebook_12.png';
 
 export const resourceType = ['blog', 'video', 'ebook'] as const;
 
@@ -122,6 +123,13 @@ export const ebooksData: EbookData[] = [
     description: '내장된 Link를 이용한 Load Balancer 적용 시나리오',
     href: 'ABLESTACK_LINK_LOAD_BALANCER.pdf',
     imgSrc: ebook_11_Src,
+  },
+  {
+    type: 'ABLESTACK  VS VMware',
+    title: 'ABLESTACK vs VMware 성능 비교',
+    description: 'ABLESTACK와 VMware 동일 환경에서의 성능 비교',
+    href: 'ABLESTACK_VS_VMware.pdf',
+    imgSrc: ebook_12_Src,
   },
 ];
 
