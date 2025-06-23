@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { HeaderData } from '@/types/header';
 import { InterviewListData } from '@/types/interview';
 
+import ansanSrc from '@/public/images/common/ansan.png';
 import armySrc from '@/public/images/common/army.png';
 import buyeoSrc from '@/public/images/common/buyeo.png';
 import changwonSrc from '@/public/images/common/changwon.png';
@@ -11,6 +12,7 @@ import cnuhSrc from '@/public/images/common/cnuh.png';
 import comwelSrc from '@/public/images/common/comwel.png';
 import cooconSrc from '@/public/images/common/coocon.png';
 import csSrc from '@/public/images/common/cs.png';
+import dangjinSrc from '@/public/images/common/dangjin.png';
 import dapaSrc from '@/public/images/common/dapa.png';
 import datastreamsSrc from '@/public/images/common/datastreams.png';
 import datqSrc from '@/public/images/common/datq.png';
@@ -28,6 +30,7 @@ import kepcoSrc from '@/public/images/common/kepco.png';
 import kipoSrc from '@/public/images/common/kipo.png';
 import konyangSrc from '@/public/images/common/konyang.png';
 import koreaLocalSrc from '@/public/images/common/korea-local.png';
+import osanSrc from '@/public/images/common/osan.png';
 import pocheonSrc from '@/public/images/common/pocheon.png';
 import policeSrc from '@/public/images/common/police.png';
 import pyeongtaekSrc from '@/public/images/common/pyeongtaek.png';
@@ -97,4 +100,7 @@ export const interviewList: InterviewListData[] = [
   { img: <Image src={cooconSrc} alt='' width={120} />, text: '쿠콘' },
   { img: <Image src={datastreamsSrc} alt='' width={159} />, text: '데이타스트림즈' },
   { img: <Image src={hectoSrc} alt='' width={153} />, text: 'hecto' },
+  { img: <Image src={dangjinSrc} alt='' width={170} />, text: '당진' },
+  { img: <Image src={osanSrc} alt='' width={192} />, text: '오산' },
+  { img: <Image src={ansanSrc} alt='' width={154} />, text: '안산시' },
 ];
