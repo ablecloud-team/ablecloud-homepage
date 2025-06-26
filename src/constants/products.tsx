@@ -236,7 +236,7 @@ export const productsContentData: { [K in AbleStackServices]: ProductContentData
   cell: {
     imgSrc: CellSrc,
     description:
-      'Cell은 CentOS KVM을 기반으로 ABLESTACK 운영에 최적화된 기능을 추가한 내장된 하이퍼바이저입니다. Cell 하이퍼바이저는 다음과 같은 주요 컴포넌트로 구성됩니다.',
+      'Cell은 Linux KVM을 기반으로 ABLESTACK 운영에 최적화된 기능을 추가한 내장된 하이퍼바이저입니다. Cell 하이퍼바이저는 다음과 같은 주요 컴포넌트로 구성됩니다.',
     subDescriptions: [
       'Cube OS에 이미 하이퍼바이저가 내장되어 있어 별도의 하이퍼바이저 라이선스 불필요',
       '베어메탈 하이퍼바이저 전환으로 최신 커널 적용을 통한 고성능 IO 구현',
