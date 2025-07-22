@@ -33,6 +33,7 @@ export const resourceHeaderData: HeaderData = {
 };
 
 export const videosData: string[] = [
+  'https://www.youtube.com/embed/nycSBkio2v4',
   'https://www.youtube.com/embed/6xLcY16LpgM',
   'https://www.youtube.com/embed/GHl3-2tg2b0',
   'https://www.youtube.com/embed/ury7M9NpBFE',
@@ -45,7 +46,6 @@ export const videosData: string[] = [
   'https://www.youtube.com/embed/yjJnl-NMXiw',
   'https://www.youtube.com/embed/YskCBg_ZpPE',
   'https://www.youtube.com/embed/H1Tv5-7Pv2E',
-  'https://www.youtube.com/embed/nycSBkio2v4',
 ];
 
 export const ebooksData: EbookData[] = [
