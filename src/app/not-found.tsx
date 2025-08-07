@@ -13,7 +13,7 @@ export default function NotFound() {
         <div className='flex flex-col items-center text-center pt-[100px] md:pt-[160px]'>
           <div className='flex flex-col gap-5'>
             <Image src={notFoundSrc} alt='' />
-            <div className='text-[#444] font-medium'>페이지를 찾을 수 없습니다.</div>
+            <div className='text-[#444444] font-medium'>페이지를 찾을 수 없습니다.</div>
           </div>
           <Button href='/' text=' 메인 페이지로 이동' className='mt-[35px]' />
         </div>
