@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import { Footer, Header } from '@/components/layout';
+import { Fab, Footer, Header } from '@/components/layout';
 import { MainWrapper } from '@/components/ui';
 
 import '../globals.css';
@@ -37,6 +37,7 @@ export default function RootLayout({
         {children}
       </MainWrapper>
       <Footer />
+      <Fab />
     </>
   );
 }
