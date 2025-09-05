@@ -3,7 +3,29 @@ import Link from 'next/link';
 import Ablecloud from '@/public/icons/common/ablecloud.svg';
 import ArrowRight from '@/public/icons/common/arrow-right.svg';
 import Blog from '@/public/icons/common/blog.svg';
+import Community from '@/public/icons/common/community.svg';
 import Youtube from '@/public/icons/common/youtube.svg';
+
+function TooltipWrapper({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div className='relative group flex items-center justify-center'>
+      {children}
+      <div
+        className='absolute -top-6 left-1/2 -translate-x-1/2 
+                   opacity-0 translate-y-2 
+                   group-hover:opacity-100 group-hover:translate-y-0
+                   transition-all duration-200 ease-out
+                   bg-black text-white text-sm rounded-md px-3 py-1 
+                   shadow-md whitespace-nowrap'>
+        {label}
+        <div
+          className='absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 
+                     border-l-6 border-r-6 border-t-6 border-transparent border-t-black'
+        />
+      </div>
+    </div>
+  );
+}
 
 export function Footer() {
   return (
@@ -18,14 +40,20 @@ export function Footer() {
             </div>
             <div className='flex gap-1'>
               <Link href='https://blog.naver.com/ablecloud_official' target='_blank'>
-                <Blog />
+                <TooltipWrapper label='블로그'>
+                  <Blog />
+                </TooltipWrapper>
               </Link>
               <Link href='https://www.youtube.com/@ablecloud_official' target='_blank'>
-                <Youtube />
+                <TooltipWrapper label='유튜브'>
+                  <Youtube />
+                </TooltipWrapper>
               </Link>
-              {/* <Link href='https://www.youtube.com/@ablecloud_official' target='_blank'>
-                <Setting />
-              </Link> */}
+              <Link href='https://community.ablecloud.io/' target='_blank'>
+                <TooltipWrapper label='커뮤니티'>
+                  <Community />
+                </TooltipWrapper>
+              </Link>
             </div>
           </div>
           <Link
