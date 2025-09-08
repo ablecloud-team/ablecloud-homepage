@@ -18,7 +18,7 @@ export default function CompanyLocation() {
               <Pin /> 서울특별시 영등포구 영신로 220 Knk디지털타워 1901호
             </div>
             <div className='flex items-center gap-[6px]'>
-              <Call /> 02-456-7667
+              <Call /> 1544-3696
             </div>
           </div>
         </div>
