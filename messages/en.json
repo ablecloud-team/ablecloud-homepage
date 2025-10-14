@@ -1,8 +1,62 @@
 {
   "home": {
     "mainCardTitle": "A next-generation platform that brings SDDC to life",
+    "card": {
+      "detail": "Learn more",
+      "main1": "Korea's Only<br></br>Virtualization<br></br>Specialist",
+      "main2": "Unified Virtualization<br></br>& Cloud Platform",
+      "main3": "An all-in-one<br></br>HCI cloud platform"
+    },
+
     "mainApplicationCard": "Your Trusted Platform for Sovereign Cloud",
+    "applicationCard": {
+      "detail": "See More Applications",
+      "application1": {
+        "title": "Virtualization",
+        "description": "Virtualization for All Enterprise<br></br>Infrastructure and Applications"
+      },
+      "application2": {
+        "title": "Surveillance",
+        "description": "Powering Intelligent Video Data<br></br>Processing"
+      },
+      "application3": {
+        "title": "Big Data & AI",
+        "description": "Enabling Big Data &<br></br>AI/ML Initiatives<br></br>with Scalable Infrastructure"
+      },
+      "application4": {
+        "title": "Private Cloud",
+        "description": "Scalable HCI-Based Cloud<br></br>for Any Application"
+      },
+      "application5": {
+        "title": "Cloud-Native",
+        "description": "Container-Based<br></br>Microservices on HCI Cloud"
+      }
+    },
+
     "mainInterviewTitle": "Why Leading Companies Choose ABLESTACK for Virtualization",
-    "mainBlogCardTitle": "Latest News from ABLECLOUD"
+    "interviewDetail": "See more",
+
+    "mainBlogCardTitle": "Latest News from ABLECLOUD",
+    "blogDetail": "See more News",
+
+    "footerCard": {
+      "partner": {
+        "description": "Partner with Us to Drive the<br></br>Future of Virtual and Cloud",
+        "buttonText": "Become a Partner"
+      },
+      "aboutUs": {
+        "description": "Driving Innovation, Creating<br></br>Opportunity",
+        "buttonText": "Learn More About Us"
+      },
+      "news": {
+        "description": "See What's New from<br></br>ABLECLOUD",
+        "buttonText": "View News"
+      },
+      "newsLetter": {
+        "title": "Newsletter",
+        "description": "Get ABLECLOUD News by<br></br>Email",
+        "buttonText": "Subscribe"
+      }
+    }
   }
 }

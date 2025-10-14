@@ -3,9 +3,9 @@ import { getTranslations } from 'next-intl/server';
 import { getPosts } from '@/util/getPost';
 
 import {
-  homeApplicationCardsData,
-  homeFooterCardsData,
-  homeMainCardsData,
+  getHomeApplicationCards,
+  getHomeFooterCards,
+  getHomeMainCardsData,
   homeSliderData,
 } from '@/constants/home';
 
@@ -27,23 +27,25 @@ export default async function Home() {
     <>
       <SliderHeader sliderData={homeSliderData} />
       <ContentWrapper>
-        <HomeMainCards title={t('mainCardTitle')} cardsData={homeMainCardsData} />
+        <HomeMainCards title={t('mainCardTitle')} cardsData={await getHomeMainCardsData()} />
         <HomeApplicationCards
           title={t('mainApplicationCard')}
-          cardsData={homeApplicationCardsData}
+          detailText={t('applicationCard.detail')}
+          cardsData={await getHomeApplicationCards()}
         />
       </ContentWrapper>
       <ContentWrapper bgClassName='bg-[#DDE8FF]'>
-        <HomeInterview title={t('mainInterviewTitle')} />
+        <HomeInterview title={t('mainInterviewTitle')} detailText={t('interviewDetail')} />
       </ContentWrapper>
       <ContentWrapper>
         <HomeBlogCards
           title={t('mainBlogCardTitle')}
+          detailText={t('blogDetail')}
           postsData={postsData.filter(v => !!v.metaData.mainImgSrc).slice(0, 4)}
         />
       </ContentWrapper>
       <ContentWrapper>
-        <HomeFooterCards cardsData={homeFooterCardsData} />
+        <HomeFooterCards cardsData={await getHomeFooterCards()} />
       </ContentWrapper>
     </>
   );

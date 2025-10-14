@@ -4,7 +4,15 @@ import { BlogData } from '@/types/resource';
 
 import { Link } from '@/i18n/routing';
 
-export function HomeBlogCards({ title, postsData }: { title: string; postsData: BlogData[] }) {
+export function HomeBlogCards({
+  title,
+  postsData,
+  detailText,
+}: {
+  title: string;
+  postsData: BlogData[];
+  detailText: string;
+}) {
   return (
     <div className='flex flex-col gap-[30px] items-center'>
       <div className='font-bold text-center text-[24px] leading-[32px] md:text-[32px] md:leading-[44.16px]'>
@@ -35,7 +43,7 @@ export function HomeBlogCards({ title, postsData }: { title: string; postsData: 
       </div>
       <Button
         className='border border-[#202020]'
-        text='새로운 소식 더보기'
+        text={detailText}
         href='/resource/blog'
         color='white'
       />

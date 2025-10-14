@@ -1,8 +1,62 @@
 {
   "home": {
-    "mainCardTitle": "SDDC를 실현하는 획기적인 플랫폼인",
+    "mainCardTitle": "SDDC를 실현하는 획기적인 플랫폼",
+    "card": {
+      "detail": "자세히 보기",
+      "main1": "국내 유일의<br></br>가상화 전문 기업",
+      "main2": "서버 가상화/<br></br>클라우드 플랫폼",
+      "main3": "모든 인프라가 통합된 HCI<br></br>클라우드 플랫폼"
+    },
+
     "mainApplicationCard": "ABLESTACK을 선택해야 하는 이유",
+    "applicationCard": {
+      "detail": "적용분야 더보기",
+      "application1": {
+        "title": "서버가상화",
+        "description": "기업에서 실행하는 모든 인프라와<br></br>어플리케이션을 가상화"
+      },
+      "application2": {
+        "title": "영상 감시",
+        "description": "고성능 환경 제공을 통해 효과적으로<br></br>영상 데이터 수집, 분석"
+      },
+      "application3": {
+        "title": "빅데이터 분석",
+        "description": "ABLESTACK만의 전용<br></br>아키텍처와 자동화 도구"
+      },
+      "application4": {
+        "title": "연속성/데이터 백업",
+        "description": "전체 데이터 백업 및 다양한 복구<br></br>옵션을 통해 연속성 보장"
+      },
+      "application5": {
+        "title": "보안 인프라",
+        "description": "제로 트러스트 정책을 적용하여<br></br>효과적으로 사이버 공격 방지"
+      }
+    },
+
     "mainInterviewTitle": "최고의 가상화 플랫폼, ABLESTACK을 선택한 기업들",
-    "mainBlogCardTitle": "에이블클라우드의 새로운 소식"
+    "interviewDetail": "고객사 더보기",
+
+    "mainBlogCardTitle": "에이블클라우드의 새로운 소식",
+    "blogDetail": "새로운 소식 더보기",
+
+    "footerCard": {
+      "partner": {
+        "description": "가상화/클라우드 시장의 공동<br></br>성장을 만들어갈 파트너를 찾습니다.",
+        "buttonText": "파트너 신청하기"
+      },
+      "aboutUs": {
+        "description": "새로운 기회, 혁신적인 솔루션을<br></br>알리기 위한 에이블클라우드의 목표",
+        "buttonText": "회사소개 자세히보기"
+      },
+      "news": {
+        "description": "에이블클라우드의<br></br>대외적인 소식을 확인해보세요.",
+        "buttonText": "뉴스 확인하기"
+      },
+      "newsLetter": {
+        "title": "뉴스레터",
+        "description": "에이블클라우드의<br></br>최신 소식을 메일로 전송해드립니다.",
+        "buttonText": "뉴스레터 구독하기"
+      }
+    }
   }
 }

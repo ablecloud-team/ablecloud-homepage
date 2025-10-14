@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 import { HeaderData } from '@/types/header';
@@ -5,7 +6,6 @@ import { HomeApplicationCardData, HomeFooterCardData, HomeMainCardData } from '@
 
 import armySrc from '@/public/images/common/army.png';
 import changwonSrc from '@/public/images/common/changwon.png';
-import cnuhSrc from '@/public/images/common/cnuh.png';
 import comwelSrc from '@/public/images/common/comwel.png';
 import cooconSrc from '@/public/images/common/coocon.png';
 import dapaSrc from '@/public/images/common/dapa.png';
@@ -18,7 +18,6 @@ import gyeongnamSrc from '@/public/images/common/gyeongnam.png';
 import hcSrc from '@/public/images/common/hc.png';
 import kacptaSrc from '@/public/images/common/kacpta.png';
 import kepcoSrc from '@/public/images/common/kepco.png';
-import kipoSrc from '@/public/images/common/kipo.png';
 import pyeongtaekSrc from '@/public/images/common/pyeongtaek.png';
 import sangjuSrc from '@/public/images/common/sangju.png';
 import spoSrc from '@/public/images/common/spo.png';
@@ -123,96 +122,77 @@ export const homeSliderData: HeaderData[] = [
   },
 ];
 
-export const homeMainCardsData: HomeMainCardData[] = [
-  {
-    title: (
-      <>
-        국내 유일의
-        <br /> 가상화 전문 기업
-      </>
-    ),
-    href: '/company/about',
-    bgClassName: 'bg-home-main-card-1',
-  },
-  {
-    title: (
-      <>
-        서버 가상화/
-        <br /> 클라우드 플랫폼
-      </>
-    ),
-    href: '/products/ablestack-vm',
-    bgClassName: 'bg-home-main-card-2',
-  },
-  {
-    title: (
-      <>
-        모든 인프라가 통합된 HCI
-        <br /> 클라우드 플랫폼
-      </>
-    ),
-    href: '/products/ablestack-hci',
-    bgClassName: 'bg-home-main-card-3',
-  },
-];
+export const getHomeMainCardsData = async (): Promise<HomeMainCardData[]> => {
+  const t = await getTranslations('home');
 
-export const homeApplicationCardsData: HomeApplicationCardData[] = [
-  {
-    title: '서버가상화',
-    description: (
-      <>
-        기업에서 실행하는 모든 인프라와
-        <br />
-        어플리케이션을 가상화
-      </>
-    ),
-    bgClassName: 'bg-home-application-1',
-  },
-  {
-    title: '영상 감시',
-    description: (
-      <>
-        고성능 환경 제공을 통해 효과적으로
-        <br />
-        영상 데이터 수집, 분석
-      </>
-    ),
-    bgClassName: 'bg-home-application-2',
-  },
-  {
-    title: '빅데이터 분석',
-    description: (
-      <>
-        ABLESTACK만의 전용
-        <br />
-        아키텍처와 자동화 도구
-      </>
-    ),
-    bgClassName: 'bg-home-application-3',
-  },
-  {
-    title: '연속성/데이터 백업',
-    description: (
-      <>
-        전체 데이터 백업 및 다양한 복구
-        <br />
-        옵션을 통해 연속성 보장
-      </>
-    ),
-    bgClassName: 'bg-home-application-4',
-  },
-  {
-    title: '보안 인프라',
-    description: (
-      <>
-        제로 트러스트 정책을 적용하여
-        <br />
-        효과적으로 사이버 공격 방지
-      </>
-    ),
-    bgClassName: 'bg-home-application-5',
-  },
-];
+  return [
+    {
+      title: (
+        <>
+          {t.rich('card.main1', {
+            br: () => <br />,
+          })}
+        </>
+      ),
+      href: '/company/about',
+      bgClassName: 'bg-home-main-card-1',
+    },
+    {
+      title: (
+        <>
+          {t.rich('card.main2', {
+            br: () => <br />,
+          })}
+        </>
+      ),
+      href: '/products/ablestack-vm',
+      bgClassName: 'bg-home-main-card-2',
+    },
+    {
+      title: (
+        <>
+          {t.rich('card.main3', {
+            br: () => <br />,
+          })}
+        </>
+      ),
+      href: '/products/ablestack-hci',
+      bgClassName: 'bg-home-main-card-3',
+    },
+  ];
+};
+
+export const getHomeApplicationCards = async (): Promise<HomeApplicationCardData[]> => {
+  const t = await getTranslations('home.applicationCard');
+
+  return [
+    {
+      title: t('application1.title'),
+      description: <>{t.rich('application1.description', { br: () => <br /> })}</>,
+      bgClassName: 'bg-home-application-1',
+    },
+    {
+      title: t('application2.title'),
+      description: <>{t.rich('application2.description', { br: () => <br /> })}</>,
+      bgClassName: 'bg-home-application-2',
+    },
+    {
+      title: t('application3.title'),
+      description: <>{t.rich('application3.description', { br: () => <br /> })}</>,
+      bgClassName: 'bg-home-application-3',
+    },
+    {
+      title: t('application4.title'),
+      description: <>{t.rich('application4.description', { br: () => <br /> })}</>,
+      bgClassName: 'bg-home-application-4',
+    },
+    {
+      title: t('application5.title'),
+      description: <>{t.rich('application5.description', { br: () => <br /> })}</>,
+      bgClassName: 'bg-home-application-5',
+    },
+  ];
+};
 
 export const homeInterviewIcons1 = [
   <Image src={changwonSrc} alt='' width={96} />,
@@ -240,49 +220,37 @@ export const homeInterviewIcons2 = [
   <Image src={kacptaSrc} alt='' width={115} />,
 ];
 
-export const homeFooterCardsData: HomeFooterCardData[] = [
-  {
-    category: 'Partner',
-    bgColor: 'bg-[#117CE9]',
-    text: (
-      <>
-        가상화/클라우드 시장의 공동
-        <br /> 성장을 만들어갈 파트너를 찾습니다.
-      </>
-    ),
-    buttonData: { text: '파트너 신청하기', href: '/contact' },
-  },
-  {
-    category: 'About us',
-    bgColor: 'bg-[#07B4EB]',
-    text: (
-      <>
-        새로운 기회, 혁신적인 솔루션을
-        <br /> 알리기 위한 에이블클라우드의 목표
-      </>
-    ),
-    buttonData: { text: '회사소개 자세히보기', href: '/company/about' },
-  },
-  {
-    category: 'News',
-    bgColor: 'bg-[#007BA1]',
-    text: (
-      <>
-        에이블클라우드의
-        <br /> 대외적인 소식을 확인해보세요.
-      </>
-    ),
-    buttonData: { text: '뉴스 확인하기', href: '/resource/blog' },
-  },
-  {
-    category: '뉴스레터',
-    bgColor: 'bg-[#4B86FF]',
-    text: (
-      <>
-        에이블클라우드의 최신 소식을
-        <br /> 메일로 전송해드립니다.
-      </>
-    ),
-    buttonData: { text: '뉴스레터 구독하기', href: 'https://naver.me/Gn006R6Y', target: '_blank' },
-  },
-];
+export const getHomeFooterCards = async (): Promise<HomeFooterCardData[]> => {
+  const t = await getTranslations('home.footerCard');
+
+  return [
+    {
+      category: 'Partner',
+      bgColor: 'bg-[#117CE9]',
+      text: <>{t.rich('partner.description', { br: () => <br /> })}</>,
+      buttonData: { text: t('partner.buttonText'), href: '/contact' },
+    },
+    {
+      category: 'About us',
+      bgColor: 'bg-[#07B4EB]',
+      text: <>{t.rich('aboutUs.description', { br: () => <br /> })}</>,
+      buttonData: { text: t('aboutUs.buttonText'), href: '/company/about' },
+    },
+    {
+      category: 'News',
+      bgColor: 'bg-[#007BA1]',
+      text: <>{t.rich('news.description', { br: () => <br /> })}</>,
+      buttonData: { text: t('news.buttonText'), href: '/resource/blog' },
+    },
+    {
+      category: t('newsLetter.title'),
+      bgColor: 'bg-[#4B86FF]',
+      text: <>{t.rich('newsLetter.description', { br: () => <br /> })}</>,
+      buttonData: {
+        text: t('newsLetter.buttonText'),
+        href: 'https://naver.me/Gn006R6Y',
+        target: '_blank',
+      },
+    },
+  ];
+};
