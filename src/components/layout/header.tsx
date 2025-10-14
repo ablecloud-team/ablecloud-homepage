@@ -1,8 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-
 import { useEffect, useMemo, useState } from 'react';
 
 import { headerMenu, pageHeaderHeight, withoutHeaderPage } from '@/constants/common';
@@ -10,6 +7,8 @@ import { headerMenu, pageHeaderHeight, withoutHeaderPage } from '@/constants/com
 import Ablestack from '@/public/icons/common/ablestack.svg';
 import Close from '@/public/icons/common/close.svg';
 import Hamburger from '@/public/icons/common/hamburger.svg';
+
+import { Link, usePathname } from '@/i18n/routing';
 
 interface HeaderProps {
   isBgBlack?: boolean;
@@ -117,6 +116,9 @@ export function Header({ isBgBlack }: HeaderProps) {
           className='cursor-pointer h-[30px] items-center select-none border px-[17px] text-[13px] rounded-md hidden md:flex transition duration-300 hover:brightness-90'>
           문의하기
         </Link>
+
+        <div className='hidden md:flex'>{/* 언어변경 */}</div>
+
         <div
           className='cursor-pointer flex md:hidden'
           onClick={() => {

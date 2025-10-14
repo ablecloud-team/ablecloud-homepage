@@ -1,11 +1,11 @@
 'use client';
 
-import Link from 'next/link';
-
 import { useRef, useState } from 'react';
 
 import FabCloseIcon from '@/public/icons/common/fab-close.svg';
 import FabIcon from '@/public/icons/common/fab.svg';
+
+import { Link } from '@/i18n/routing';
 
 const items = [
   { label: '딜 등록 신청', href: 'https://forms.gle/fPuCZv559yc7JGgt6' },

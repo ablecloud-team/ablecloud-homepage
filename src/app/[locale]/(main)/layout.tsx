@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { Fab, Footer, Header } from '@/components/layout';
 import { MainWrapper } from '@/components/ui';
 
-import '../globals.css';
+import '../../globals.css';
 
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;

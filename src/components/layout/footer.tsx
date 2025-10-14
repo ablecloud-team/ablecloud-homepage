@@ -1,10 +1,10 @@
-import Link from 'next/link';
-
 import Ablecloud from '@/public/icons/common/ablecloud.svg';
 import ArrowRight from '@/public/icons/common/arrow-right.svg';
 import Blog from '@/public/icons/common/blog.svg';
 import Community from '@/public/icons/common/community.svg';
 import Youtube from '@/public/icons/common/youtube.svg';
+
+import { Link } from '@/i18n/routing';
 
 function TooltipWrapper({ label, children }: { label: string; children: React.ReactNode }) {
   return (
