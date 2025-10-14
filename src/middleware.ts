@@ -9,5 +9,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/(ko|en)/:path*', '/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  matcher: ['/', '/(ko|en)/:path*', '/((?!_next|.*\\..*).*)'],
 };
