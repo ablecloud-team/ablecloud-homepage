@@ -1,5 +1,8 @@
 'use client';
 
+import { useLocale } from 'next-intl';
+import Image from 'next/image';
+
 import { useEffect, useMemo, useState } from 'react';
 
 import { headerMenu, pageHeaderHeight, withoutHeaderPage } from '@/constants/common';
@@ -7,15 +10,27 @@ import { headerMenu, pageHeaderHeight, withoutHeaderPage } from '@/constants/com
 import Ablestack from '@/public/icons/common/ablestack.svg';
 import Close from '@/public/icons/common/close.svg';
 import Hamburger from '@/public/icons/common/hamburger.svg';
+import englishSrc from '@/public/images/language/english.png';
+import koreaSrc from '@/public/images/language/korea.png';
 
-import { Link, usePathname } from '@/i18n/routing';
+import { Link, usePathname, useRouter } from '@/i18n/routing';
 
 interface HeaderProps {
   isBgBlack?: boolean;
 }
 
 export function Header({ isBgBlack }: HeaderProps) {
+  const router = useRouter();
   const pathname = usePathname();
+  const locale = useLocale();
+  console.log(locale);
+  const [currentLang, setCurrentLang] = useState<'ko' | 'en'>(locale as 'ko' | 'en');
+
+  const toggleLanguage = () => {
+    const newLang = currentLang === 'en' ? 'ko' : 'en';
+    setCurrentLang(newLang);
+    router.replace(pathname, { locale: newLang });
+  };
 
   const [scrollPosition, setScrollPosition] = useState<'top' | 'middle' | 'bottom'>('top');
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -111,13 +126,19 @@ export function Header({ isBgBlack }: HeaderProps) {
             </div>
           ))}
         </div>
-        <Link
-          href={'/contact'}
-          className='cursor-pointer h-[30px] items-center select-none border px-[17px] text-[13px] rounded-md hidden md:flex transition duration-300 hover:brightness-90'>
-          문의하기
-        </Link>
-
-        <div className='hidden md:flex'>{/* 언어변경 */}</div>
+        <div className='cursor-pointer flex flex-row items-center gap-4'>
+          <Image
+            src={currentLang === 'ko' ? koreaSrc : englishSrc}
+            alt=''
+            className='w-[30px] h-[30px]'
+            onClick={toggleLanguage}
+          />
+          <Link
+            href={'/contact'}
+            className='cursor-pointer h-[30px] items-center select-none border px-[17px] text-[13px] rounded-md hidden md:flex transition duration-300 hover:brightness-90'>
+            문의하기
+          </Link>
+        </div>
 
         <div
           className='cursor-pointer flex md:hidden'

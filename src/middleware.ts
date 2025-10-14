@@ -9,5 +9,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/(de|en)/:path*'],
+  matcher: ['/', '/(ko|en)/:path*'],
 };
