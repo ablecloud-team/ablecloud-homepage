@@ -1,14 +1,14 @@
-import Link from 'next/link';
-
 import { Button } from '@/components/ui';
 
 import { BlogData } from '@/types/resource';
 
-export function HomeBlogCards({ postsData }: { postsData: BlogData[] }) {
+import { Link } from '@/i18n/routing';
+
+export function HomeBlogCards({ title, postsData }: { title: string; postsData: BlogData[] }) {
   return (
     <div className='flex flex-col gap-[30px] items-center'>
       <div className='font-bold text-center text-[24px] leading-[32px] md:text-[32px] md:leading-[44.16px]'>
-        에이블클라우드의 새로운 소식
+        {title}
       </div>
       <div className='w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 sm:gap-6'>
         {postsData.map((v, idx) => {

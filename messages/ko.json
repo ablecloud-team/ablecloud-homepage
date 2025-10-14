@@ -1,6 +1,8 @@
 {
-  "MainPage": {
-    "title": "메인페이지에 어서오세요",
-    "description": "하이"
+  "home": {
+    "mainCardTitle": "SDDC를 실현하는 획기적인 플랫폼인",
+    "mainApplicationCard": "ABLESTACK을 선택해야 하는 이유",
+    "mainInterviewTitle": "최고의 가상화 플랫폼, ABLESTACK을 선택한 기업들",
+    "mainBlogCardTitle": "에이블클라우드의 새로운 소식"
   }
 }

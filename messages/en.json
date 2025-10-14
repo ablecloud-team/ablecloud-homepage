@@ -1,6 +1,8 @@
 {
-  "MainPage": {
-    "title": "Welcome to the Main Page",
-    "description": "Welcome!"
+  "home": {
+    "mainCardTitle": "A next-generation platform that brings SDDC to life",
+    "mainApplicationCard": "Your Trusted Platform for Sovereign Cloud",
+    "mainInterviewTitle": "Why Leading Companies Choose ABLESTACK for Virtualization",
+    "mainBlogCardTitle": "Latest News from ABLECLOUD"
   }
 }
