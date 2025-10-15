@@ -81,5 +81,41 @@
         "buttonText": "Subscribe"
       }
     }
+  },
+
+  "header": {
+    "menu1": {
+      "title": "PRODUCTS",
+      "subMenu": [{ "title": "ABLESTACK VM" }, { "title": "ABLESTACK HCI" }]
+    },
+    "menu2": {
+      "title": "SOLUTION"
+    },
+    "menu3": {
+      "title": "CLIENTS"
+    },
+    "menu4": {
+      "title": "PARTNER",
+      "subMenu": [{ "title": "Partnership Program" }, { "title": "Partners" }]
+    },
+    "menu5": {
+      "title": "RESOURCES",
+      "subMenu": [
+        { "title": "News" },
+        { "title": "Videos" },
+        { "title": "Whitepapers" },
+        { "title": "Compatibility" }
+      ]
+    },
+    "menu6": {
+      "title": "ABOUT US",
+      "subMenu": [
+        { "title": "Company Overview" },
+        { "title": "History" },
+        { "title": "Certifications & Patents" },
+        { "title": "Location" }
+      ]
+    },
+    "contact": "CONTACT"
   }
 }

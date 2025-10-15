@@ -81,5 +81,40 @@
         "buttonText": "뉴스레터 구독하기"
       }
     }
+  },
+  "header": {
+    "menu1": {
+      "title": "제품",
+      "subMenu": [{ "title": "ABLESTACK VM" }, { "title": "ABLESTACK HCI" }]
+    },
+    "menu2": {
+      "title": "적용분야"
+    },
+    "menu3": {
+      "title": "고객사"
+    },
+    "menu4": {
+      "title": "파트너",
+      "subMenu": [{ "title": "프로그램 소개" }, { "title": "파트너 현황" }]
+    },
+    "menu5": {
+      "title": "리소스",
+      "subMenu": [
+        { "title": "소식" },
+        { "title": "동영상" },
+        { "title": "백서/ebook" },
+        { "title": "호환성" }
+      ]
+    },
+    "menu6": {
+      "title": "회사소개",
+      "subMenu": [
+        { "title": "회사소개 및 비전" },
+        { "title": "연혁" },
+        { "title": "인증 및 특허" },
+        { "title": "찾아오시는 길" }
+      ]
+    },
+    "contact": "문의하기"
   }
 }

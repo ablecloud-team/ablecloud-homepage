@@ -1,11 +1,11 @@
 'use client';
 
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import { useEffect, useMemo, useState } from 'react';
 
-import { headerMenu, pageHeaderHeight, withoutHeaderPage } from '@/constants/common';
+import { pageHeaderHeight, useHeaderMenuData, withoutHeaderPage } from '@/constants/common';
 
 import Ablestack from '@/public/icons/common/ablestack.svg';
 import Close from '@/public/icons/common/close.svg';
@@ -20,10 +20,12 @@ interface HeaderProps {
 }
 
 export function Header({ isBgBlack }: HeaderProps) {
+  const t = useTranslations('header');
+
   const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
-  console.log(locale);
+
   const [currentLang, setCurrentLang] = useState<'ko' | 'en'>(locale as 'ko' | 'en');
 
   const toggleLanguage = () => {
@@ -31,6 +33,7 @@ export function Header({ isBgBlack }: HeaderProps) {
     setCurrentLang(newLang);
     router.replace(pathname, { locale: newLang });
   };
+  const headerMenu = useHeaderMenuData();
 
   const [scrollPosition, setScrollPosition] = useState<'top' | 'middle' | 'bottom'>('top');
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -127,16 +130,20 @@ export function Header({ isBgBlack }: HeaderProps) {
           ))}
         </div>
         <div className='cursor-pointer flex flex-row items-center gap-4'>
-          <Image
-            src={currentLang === 'ko' ? koreaSrc : englishSrc}
-            alt=''
-            className='w-[30px] h-[30px]'
-            onClick={toggleLanguage}
-          />
+          {!isMenuOpen ? (
+            <Image
+              src={currentLang === 'ko' ? koreaSrc : englishSrc}
+              alt=''
+              className='w-[30px] h-[30px] hidden md:flex '
+              onClick={toggleLanguage}
+            />
+          ) : (
+            <></>
+          )}
           <Link
             href={'/contact'}
             className='cursor-pointer h-[30px] items-center select-none border px-[17px] text-[13px] rounded-md hidden md:flex transition duration-300 hover:brightness-90'>
-            문의하기
+            {t('contact')}
           </Link>
         </div>
 
@@ -194,12 +201,18 @@ export function Header({ isBgBlack }: HeaderProps) {
             ))}
           </div>
 
-          <div className='flex justify-end my-4'>
+          <div className='flex justify-end my-4 gap-4'>
+            <Image
+              src={currentLang === 'ko' ? koreaSrc : englishSrc}
+              alt=''
+              className='w-[30px] h-[30px] '
+              onClick={toggleLanguage}
+            />
             <Link
               href={'/contact'}
               onClick={() => setIsMenuOpen(false)}
               className='flex cursor-pointer h-[30px] text-black items-center select-none border px-[17px] text-[13px] rounded-md transition duration-300 hover:brightness-90'>
-              문의하기
+              {t('contact')}
             </Link>
           </div>
         </div>
