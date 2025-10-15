@@ -143,19 +143,15 @@ export function Header({ isBgBlack }: HeaderProps) {
           ))}
         </div>
         <div className='cursor-pointer flex flex-row items-center gap-4'>
-          {!isMenuOpen ? (
-            <Image
-              src={locale === 'ko' ? koreaSrc : englishSrc}
-              alt=''
-              className='w-[30px] h-[30px] hidden md:flex '
-              onClick={toggleLanguage}
-            />
-          ) : (
-            <></>
-          )}
+          <Image
+            src={locale === 'ko' ? koreaSrc : englishSrc}
+            alt=''
+            className='w-[30px] h-[30px] hidden md:flex '
+            onClick={toggleLanguage}
+          />
           <Link
             href={'/contact'}
-            className='cursor-pointer h-[30px] items-center select-none border px-[17px] text-[13px] rounded-md hidden md:flex transition duration-300 hover:brightness-90'>
+            className='cursor-pointer h-[30px] w-[96px] items-center justify-center select-none border px-[17px] text-[13px] rounded-md hidden md:flex transition duration-300 hover:brightness-90'>
             {t('contact')}
           </Link>
         </div>
