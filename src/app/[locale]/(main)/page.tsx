@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 import { getPosts } from '@/util/getPost';
 
@@ -20,6 +20,7 @@ import {
 
 export default async function Home() {
   const { postsData } = await getPosts();
+  const locale = await getLocale();
 
   const t = await getTranslations('home');
 
@@ -37,13 +38,19 @@ export default async function Home() {
       <ContentWrapper bgClassName='bg-[#DDE8FF]'>
         <HomeInterview title={t('mainInterviewTitle')} detailText={t('interviewDetail')} />
       </ContentWrapper>
-      <ContentWrapper>
-        <HomeBlogCards
-          title={t('mainBlogCardTitle')}
-          detailText={t('blogDetail')}
-          postsData={postsData.filter(v => !!v.metaData.mainImgSrc).slice(0, 4)}
-        />
-      </ContentWrapper>
+      {locale === 'ko' ? (
+        <>
+          <ContentWrapper>
+            <HomeBlogCards
+              title={t('mainBlogCardTitle')}
+              detailText={t('blogDetail')}
+              postsData={postsData.filter(v => !!v.metaData.mainImgSrc).slice(0, 4)}
+            />
+          </ContentWrapper>
+        </>
+      ) : (
+        <></>
+      )}
       <ContentWrapper>
         <HomeFooterCards cardsData={await getHomeFooterCards()} />
       </ContentWrapper>
