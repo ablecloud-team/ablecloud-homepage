@@ -137,5 +137,50 @@
       "label": "Tel",
       "value": "1544-3696"
     }
+  },
+
+  "company": {
+    "header": {
+      "title": "ABOUT US",
+      "description": ""
+    },
+    "tab": [
+      {
+        "text": "Company Overview"
+      },
+      {
+        "text": "History"
+      },
+      {
+        "text": "Certifications & Patents"
+      },
+      {
+        "text": "Location"
+      }
+    ],
+    "about": {
+      "description": [
+        "ABLECLOUD drives innovation through integration,<br></br>simplicity, and autonomy.",
+        "At ABLECLOUD,<br></br>we see endless possibilities through new platforms."
+      ],
+      "content": "Welcome to ABLECLOUD Inc.<br></br>As Korea’s only company specializing exclusively in virtualization platforms, ABLECLOUD leverages its deep expertise in virtualization<br></br>technology, proven cloud infrastructure solutions, and strategic partnerships with leading industry players to support data center operations<br></br>and drive IT innovation for our clients.<br></br>With proprietary capabilities in cutting-edge virtualization technologies — as well as emerging innovations like artificial intelligence and big<br></br>data — we deliver high-value platforms and solutions across public, enterprise, and service sectors. Our offerings include cloud data center<br></br>infrastructure, server virtualization, and virtual desktop environments.<br></br>We are committed to building lasting trust with our clients through continued growth and technological excellence.<br></br>Thank you for visiting us.",
+
+      "dear": "Co-CEOs\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Mingil Kwon & Donghyuk Park",
+
+      "card": [
+        {
+          "title": "Cloud Experts",
+          "description": "Engineer-led with 10+ years of virtualization and HCI expertise"
+        },
+        {
+          "title": "Continuous R&D",
+          "description": "Customer-Centered R&D in<br></br>Virtualization & Enterprise HCI"
+        },
+        {
+          "title": "Smart Cloud Solutions",
+          "description": "Product-Driven Technical Support for Customers and Partners"
+        }
+      ]
+    }
   }
 }

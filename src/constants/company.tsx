@@ -1,3 +1,5 @@
+import { getTranslations } from 'next-intl/server';
+
 import { HeaderData } from '@/types/header';
 
 import aboutCard1Src from '@/public/images/company/about-card-1.png';
@@ -9,21 +11,29 @@ import certificates3Src from '@/public/images/company/certificates-3.png';
 import certificates4Src from '@/public/images/company/certificates-4.png';
 import certificates5Src from '@/public/images/company/certificates-5.png';
 
-export const companyHeaderData: HeaderData = {
-  title: {
-    mainText: '회사소개',
-  },
-  description: '에이블클라우드의 소식을 만나보세요.',
-  bgClassName: 'bg-company-header',
-  heightClassName: 'min-h-[350px] lg:min-h-[374px]',
+export const getCompanyHeaderData = async (): Promise<HeaderData> => {
+  const t = await getTranslations('company.header');
+
+  return {
+    title: {
+      mainText: t('title'),
+    },
+    description: t('description'),
+    bgClassName: 'bg-company-header',
+    heightClassName: 'min-h-[350px] lg:min-h-[374px]',
+  };
 };
 
-export const companyTabs = [
-  { text: '회사소개', href: '/company/about' },
-  { text: '연혁', href: '/company/history' },
-  { text: '인증/특허', href: '/company/certifications' },
-  { text: '위치', href: '/company/location' },
-];
+export const getCompanyTabs = async () => {
+  const t = await getTranslations('company');
+
+  return [
+    { text: t('tab.0.text'), href: '/company/about' },
+    { text: t('tab.1.text'), href: '/company/history' },
+    { text: t('tab.2.text'), href: '/company/certifications' },
+    { text: t('tab.3.text'), href: '/company/location' },
+  ];
+};
 
 export const companyHistory = [
   {
@@ -120,23 +130,27 @@ export const companyCertifications = [
   { imgSrc: certificates5Src, description: '기업부설연구소 인정서' },
 ];
 
-export const companyAboutCardsData = [
-  {
-    title: '클라우드 전문가',
-    description: '가상화 및 클라우드(HCI) 분야 10년 이상의 경력을 가진 엔지니어/개발자 중심기업',
-    bgClassName: 'bg-company-about-card-1',
-    imgSrc: aboutCard1Src,
-  },
-  {
-    title: '끊임없는 R&D',
-    description: '고객 요구사항에 가장 적합한 가상화 및 엔터프라이즈 HCI 연구개발을 수행하는 기업',
-    bgClassName: 'bg-company-about-card-2',
-    imgSrc: aboutCard2Src,
-  },
-  {
-    title: '스마트한 클라우드 제품',
-    description: '제품 개발을 통해 고객과 파트너들에게 체계적인 기술 지원을 하는 기업',
-    bgClassName: 'bg-company-about-card-3',
-    imgSrc: aboutCard3Src,
-  },
-];
+export const getCompanyAboutCardsData = async () => {
+  const t = await getTranslations('company.about');
+
+  return [
+    {
+      title: t('card.0.title'),
+      description: t('card.0.description'),
+      bgClassName: 'bg-company-about-card-1',
+      imgSrc: aboutCard1Src,
+    },
+    {
+      title: t('card.1.title'),
+      description: t.rich('card.1.description', { br: () => <br /> }),
+      bgClassName: 'bg-company-about-card-2',
+      imgSrc: aboutCard2Src,
+    },
+    {
+      title: t('card.2.title'),
+      description: t('card.2.description'),
+      bgClassName: 'bg-company-about-card-3',
+      imgSrc: aboutCard3Src,
+    },
+  ];
+};

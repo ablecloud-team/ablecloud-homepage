@@ -1,11 +1,11 @@
-import { companyHeaderData, companyTabs } from '@/constants/company';
+import { getCompanyHeaderData, getCompanyTabs } from '@/constants/company';
 
 import { ContentWrapper, MainPageHeader } from '@/templates/common';
 
 import { ScrollTop } from '@/components/layout';
 import { Tabs } from '@/components/ui';
 
-export default function CompanyLayout({
+export default async function CompanyLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -13,9 +13,9 @@ export default function CompanyLayout({
   return (
     <>
       <ScrollTop />
-      <MainPageHeader headerData={companyHeaderData} />
+      <MainPageHeader headerData={await getCompanyHeaderData()} />
       <ContentWrapper type='company'>
-        <Tabs tabs={companyTabs} />
+        <Tabs tabs={await getCompanyTabs()} />
         {children}
       </ContentWrapper>
     </>
