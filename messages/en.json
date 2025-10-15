@@ -141,8 +141,8 @@
 
   "company": {
     "header": {
-      "title": "ABOUT US",
-      "description": ""
+      "title": "Company Overview",
+      "description": "Stay up to data with AbleCloud News"
     },
     "tab": [
       {
@@ -181,6 +181,89 @@
           "description": "Product-Driven Technical Support for Customers and Partners"
         }
       ]
+    },
+    "history": {
+      "2021": {
+        "year": "2021",
+        "history": [
+          "AbleStack registered for copyright protection",
+          "GS Grade 1 software quality certification obtained",
+          "Launched AbleStack V1.0",
+          "Certified as an enterprise-affiliated research institute",
+          "Established AbleCloud’s R&D center"
+        ]
+      },
+      "2022": {
+        "year": "2022",
+        "history": [
+          "Registered AbleStack V1.0 for trademark",
+          "Hosted Cloud Innovation 2023",
+          "Signed partnership agreement with ‘GEOMEXSOFT’",
+          "Signed partnership agreement with ‘GNTEL’",
+          "Signed agreement with ‘KACPTA’ for cloud-based data storage",
+          "Developing an HCI-powered DevOps R&D environment for ‘DATASTREMS’",
+          "Deploying an integrated HCI platform for the ‘Hapcheon County Government’",
+          "Deploying an HCI-powered system for document security and centralization at the ‘DTaQ’"
+        ]
+      },
+      "2023": {
+        "year": "2023",
+        "history": [
+          "Signed business agreements with ‘Supersolution’",
+          "Signed business agreements with ‘Xenosolution’",
+          "Signed partnership agreement with ‘XSLAB’",
+          "Hosted Cloud Infinity Conference(CIC) 2023",
+          "Acquired Citrix Ready compatibility certification",
+          "Signed business agreement with ‘Tilon’",
+          "Signed partner contracts with ‘Pharos System’",
+          "Signed partner contracts with ‘INNOGRID’",
+          "Signed partner contracts with ‘SNA’",
+          "Upgrading the ICT network at the ‘Supreme Prosecutors' Office’",
+          "Signed business agreements with ‘INOTIUM’, ‘T3Q’",
+          "‘ROKA HQ’ Intelligent Smart Unit (Phase 3) Pilot Construction Project",
+          "The second project to enhance the Defense Cost Management System (DIDC) for the ‘DAPA’."
+        ]
+      },
+      "2024": {
+        "year": "2024",
+        "history": [
+          "Signed business agreement with ‘ZUNGWON’",
+          "Opened ABLECLOUD Seoul office",
+          "Patent granted for ‘System and Method for Provisioning HCI’",
+          "Business Partnership between ‘Gwangju Metropolitan City’ and Leading AI Firms",
+          "Deployment of HCI-based server virtualization for ‘COOCON’ (Nutanix win-back project)",
+          "Implementation of a cloud-based integrated server system for the ‘DTaQ’",
+          "Deployment of VMS and integrated HCI platform for ‘Yecheon County Office’",
+          "Obtained the ‘National Intelligence Service’ Security Function Certification",
+          "Citrix-based virtual desktop infrastructure (VDI) deployment for ‘KEPCO’",
+          "Hosted Cloud Infinity Conference(CIC) 2024",
+          "Released AbleStack V4.0",
+          "Signed business agreement with ‘HanDreamNet’",
+          "Signed business agreement with ‘AJICT’",
+          "Signed business agreement with ‘INNOGRID’",
+          "Obtained GS Grade 1 Software Quality Certification(v4.0)",
+          ""
+        ]
+      },
+      "2025": {
+        "year": "2025",
+        "history": [
+          "Registered AbleStack V4.0 on Korea Public Procurement Service (3-Party Price Contract)",
+          "Signed Business Agreement with ‘Arconsoft’(PaaS)",
+          "Completed Legacy Server Replacement Project for ‘HectoData’",
+          "Hosting a national roadshow with ‘ZUNGWON’",
+          "Signed Business Agreement with ‘STRATO’",
+          "Deployed Citrix VDI Infrastructure for the ‘Korean National Police Agency’",
+          "Implemented VMS and Server Virtualization for ‘Changwon City Government’",
+          "Implementation of ‘KLID’ records management system (6 systems)",
+          "Deployed Server Virtualization for ‘Busan Regional Office of Oceans and Fisheries’",
+          "Development of an AI-based HCI platform for ‘Gyeonggi Provincial Government’",
+          "Built Autonomous Driving Infrastructure through Open Innovation Project in‘Hwaseong City’",
+          "Upgraded Groupware System for ‘Korea Rural Community Corporation’",
+          "Built Groupware Infrastructure for ‘NOVAREX’",
+          "Deployed Server Virtualization for ‘Korea Institute of Maritime and Fisheries ‘Technology"
+        ]
+      }
     }
   }
 }

@@ -35,6 +35,93 @@ export const getCompanyTabs = async () => {
   ];
 };
 
+export const getCompanyHistory = async () => {
+  const t = await getTranslations('company.history');
+
+  return [
+    {
+      year: t('2025.year'),
+      history: [
+        { text: t('2025.history.0') },
+        { text: t('2025.history.1') },
+        { text: t('2025.history.2') },
+        { text: t('2025.history.3') },
+        { text: t('2025.history.4') },
+        { text: t('2025.history.5') },
+        { text: t('2025.history.6') },
+        { text: t('2025.history.7') },
+        { text: t('2025.history.8') },
+        { text: t('2025.history.9') },
+        { text: t('2025.history.10') },
+        { text: t('2025.history.11') },
+        { text: t('2025.history.12') },
+        { text: t('2025.history.13') },
+      ],
+    },
+    {
+      year: t('2024.year'),
+      history: [
+        { text: t('2024.history.0') },
+        { text: t('2024.history.1') },
+        { text: t('2024.history.2'), isHighlight: true },
+        { text: t('2024.history.3') },
+        { text: t('2024.history.4') },
+        { text: t('2024.history.5') },
+        { text: t('2024.history.6') },
+        { text: t('2024.history.7') },
+        { text: t('2024.history.8') },
+        { text: t('2024.history.9') },
+        { text: t('2024.history.10') },
+        { text: t('2024.history.11') },
+        { text: t('2024.history.12') },
+        { text: t('2024.history.13') },
+        { text: t('2024.history.14') },
+        { text: t('2024.history.15') },
+      ],
+    },
+    {
+      year: t('2023.year'),
+      history: [
+        { text: t('2023.history.0') },
+        { text: t('2023.history.1') },
+        { text: t('2023.history.2'), isHighlight: true },
+        { text: t('2023.history.3') },
+        { text: t('2023.history.4') },
+        { text: t('2023.history.5') },
+        { text: t('2023.history.6') },
+        { text: t('2023.history.7') },
+        { text: t('2023.history.8') },
+        { text: t('2023.history.9') },
+        { text: t('2023.history.10') },
+        { text: t('2023.history.11') },
+        { text: t('2023.history.12') },
+      ],
+    },
+    {
+      year: t('2022.year'),
+      history: [
+        { text: t('2022.history.0') },
+        { text: t('2022.history.1') },
+        { text: t('2022.history.2') },
+        { text: t('2022.history.3') },
+        { text: t('2022.history.4') },
+        { text: t('2022.history.5') },
+        { text: t('2022.history.6') },
+        { text: t('2022.history.7') },
+      ],
+    },
+    {
+      year: t('2021.year'),
+      history: [
+        { text: t('2021.history.0') },
+        { text: t('2021.history.1') },
+        { text: t('2021.history.2') },
+        { text: t('2021.history.3') },
+        { text: t('2021.history.4') },
+      ],
+    },
+  ];
+};
 export const companyHistory = [
   {
     year: '2024',
