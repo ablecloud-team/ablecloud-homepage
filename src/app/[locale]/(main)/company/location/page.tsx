@@ -1,7 +1,11 @@
+import { getTranslations } from 'next-intl/server';
+
 import Call from '@/public/icons/common/call.svg';
 import Pin from '@/public/icons/common/pin.svg';
 
-export default function CompanyLocation() {
+export default async function CompanyLocation() {
+  const t = await getTranslations('company.location');
+
   return (
     <div className='flex flex-col items-center justify-center animate-fade-in gap-8 md:gap-12 pt-12'>
       <div className='flex flex-col gap-4 max-w-[780px] w-full'>
@@ -12,13 +16,13 @@ export default function CompanyLocation() {
           height='280'
         />
         <div className='flex flex-col gap-4'>
-          <div className='text-[24px] font-bold'>본사</div>
+          <div className='text-[24px] font-bold'>{t('headOffice.label')}</div>
           <div className='flex flex-col gap-[6px]'>
             <div className='flex items-center gap-[6px]'>
-              <Pin /> 서울특별시 영등포구 영신로 220 Knk디지털타워 1901호
+              <Pin /> {t('headOffice.value')}
             </div>
             <div className='flex items-center gap-[6px]'>
-              <Call /> 1544-3696
+              <Call /> {t('headOffice.call')}
             </div>
           </div>
         </div>
@@ -31,10 +35,10 @@ export default function CompanyLocation() {
           height='280'
         />
         <div className='flex flex-col gap-4'>
-          <div className='text-[24px] font-bold'>기술연구소</div>
+          <div className='text-[24px] font-bold'>{t('rndCenter.label')}</div>
           <div className='flex flex-col gap-[6px]'>
             <div className='flex items-center gap-[6px]'>
-              <Pin /> 대전광역시 대덕구 대화로106번길 66 펜타플렉스 810~812호
+              <Pin /> {t('rndCenter.value')}
             </div>
           </div>
         </div>
