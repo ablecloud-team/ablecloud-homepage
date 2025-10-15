@@ -117,5 +117,25 @@
       ]
     },
     "contact": "CONTACT"
+  },
+
+  "footer": {
+    "bizLicense": "Business Registration Number",
+    "name": {
+      "label": "Company Name",
+      "value": "ABLECLOUD Inc."
+    },
+    "headOfficeAddress": {
+      "label": "Head Office",
+      "value": "1901, KNK Digital Tower, 220, Yeongsin-ro, Yeongdeungpo-gu, Seoul, 07228, Republic of Korea"
+    },
+    "rndCenterAddress": {
+      "label": "R&D Center",
+      "value": "Unit 810-2, Pentaplex, 66, Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, 34365, Republic of Korea"
+    },
+    "contact": {
+      "label": "Tel",
+      "value": "1544-3696"
+    }
   }
 }

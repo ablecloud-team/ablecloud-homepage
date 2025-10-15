@@ -82,6 +82,7 @@
       }
     }
   },
+
   "header": {
     "menu1": {
       "title": "제품",
@@ -116,5 +117,25 @@
       ]
     },
     "contact": "문의하기"
+  },
+
+  "footer": {
+    "bizLicense": "사업자등록번호",
+    "name": {
+      "label": "회사명",
+      "value": "에이블클라우드"
+    },
+    "headOfficeAddress": {
+      "label": "본사",
+      "value": "서울특별시 영등포구 영신로 220 Knk디지털타워 1901호"
+    },
+    "rndCenterAddress": {
+      "label": "기술연구소",
+      "value": "대전광역시 대덕구 대화로106번길 66 펜타플렉스 810~812호"
+    },
+    "contact": {
+      "label": "전화",
+      "value": "1544-3696"
+    }
   }
 }
