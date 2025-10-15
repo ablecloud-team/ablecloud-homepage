@@ -1,5 +1,28 @@
 {
   "home": {
+    "sliderHeaderDetail": "Learn more",
+    "sliderHeader1": {
+      "mainText": "ABLESTACK",
+      "subText": "v4.0",
+      "description": "ABLESTACK has obtained the Security<br></br>Function Certification."
+    },
+    "sliderHeader2": {
+      "mainText": "A Perfect Alternative to<br></br>Vendor V",
+      "description": "ABLESTACK seamlessly replaces costly<br></br>subscription-based virtual machines."
+    },
+    "sliderHeader3": {
+      "mainText": "Simplify Complex<br></br>Infrastructure",
+      "description": "Consolidate servers, storage, and network<br></br>infrastructure into a single platform —<br></br>reducing costs by up to 80%."
+    },
+    "sliderHeader4": {
+      "mainText": "Solve Virtual Desktop<br></br>Challenges at Once",
+      "description": "Deliver a high-performance virtual<br></br>desktop environment on a unified platform,<br></br>eliminating both complexity and<br></br>performance issues."
+    },
+    "sliderHeader5": {
+      "mainText": "Revolutionary Vide<br></br>Surveillance<br></br>Infrastructure",
+      "description": "Leverage your existing equipment while<br></br>dramatically reducing costs with<br></br>ABLESTACK’s all-in-one platform."
+    },
+
     "mainCardTitle": "A next-generation platform that brings SDDC to life",
     "card": {
       "detail": "Learn more",

@@ -6,7 +6,7 @@ import {
   getHomeApplicationCards,
   getHomeFooterCards,
   getHomeMainCardsData,
-  homeSliderData,
+  getHomeSliderData,
 } from '@/constants/home';
 
 import { ContentWrapper, SliderHeader } from '@/templates/common';
@@ -26,7 +26,7 @@ export default async function Home() {
 
   return (
     <>
-      <SliderHeader sliderData={homeSliderData} />
+      <SliderHeader sliderData={await getHomeSliderData()} />
       <ContentWrapper>
         <HomeMainCards title={t('mainCardTitle')} cardsData={await getHomeMainCardsData()} />
         <HomeApplicationCards
