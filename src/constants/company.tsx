@@ -187,35 +187,29 @@ export const companyHistory = [
   },
 ];
 
-export const companyCertifications = [
-  { imgSrc: certificates1Src, description: '소프트웨어품질인증서' },
-  { imgSrc: certificates2Src, description: '저작권 등록증' },
-  {
-    imgSrc: certificates3Src,
-    description: (
-      <>
-        HCI 부문 국내 기업 최초
-        <br />
-        가상화 관리
-        <br />
-        보안기능확인서
-      </>
-    ),
-  },
-  {
-    imgSrc: certificates4Src,
-    description: (
-      <>
-        HCI를 프로비저닝 하기 위한
-        <br />
-        시스템 및 방법
-        <br />
-        특허 획득
-      </>
-    ),
-  },
-  { imgSrc: certificates5Src, description: '기업부설연구소 인정서' },
-];
+export const getCompanyCertifications = async () => {
+  const t = await getTranslations('company');
+
+  return [
+    {
+      imgSrc: certificates1Src,
+      description: t.rich('certification.0', { br: () => <br /> }),
+    },
+    {
+      imgSrc: certificates2Src,
+      description: t.rich('certification.1', { br: () => <br /> }),
+    },
+    {
+      imgSrc: certificates3Src,
+      description: <>{t.rich('certification.2', { br: () => <br /> })}</>,
+    },
+    {
+      imgSrc: certificates4Src,
+      description: <>{t.rich('certification.3', { br: () => <br /> })}</>,
+    },
+    { imgSrc: certificates5Src, description: t.rich('certification.4', { br: () => <br /> }) },
+  ];
+};
 
 export const getCompanyAboutCardsData = async () => {
   const t = await getTranslations('company.about');
