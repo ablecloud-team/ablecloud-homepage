@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
 
 import { useEffect, useMemo, useState } from 'react';
 
@@ -26,17 +27,29 @@ export function Header({ isBgBlack }: HeaderProps) {
   const pathname = usePathname();
   const locale = useLocale();
 
-  const [currentLang, setCurrentLang] = useState<'ko' | 'en'>(locale as 'ko' | 'en');
+  const searchParams = useSearchParams();
+  const isMenuOpen = searchParams.get('menu') === 'open';
+
+  const toggleMenu = () => {
+    const newParams = new URLSearchParams(searchParams.toString());
+    if (isMenuOpen) {
+      newParams.delete('menu');
+    } else {
+      newParams.set('menu', 'open');
+    }
+    router.push(`${pathname}?${newParams.toString()}`);
+  };
 
   const toggleLanguage = () => {
-    const newLang = currentLang === 'en' ? 'ko' : 'en';
-    setCurrentLang(newLang);
-    router.replace(pathname, { locale: newLang });
+    const newLang = locale === 'en' ? 'ko' : 'en';
+    const newParams = new URLSearchParams(searchParams.toString());
+
+    router.replace(`${pathname}?${newParams.toString()}`, { locale: newLang });
   };
+
   const headerMenu = useHeaderMenuData();
 
   const [scrollPosition, setScrollPosition] = useState<'top' | 'middle' | 'bottom'>('top');
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [openMenus, setOpenMenus] = useState<number[]>([]);
 
   const isWithoutHeaderPage = withoutHeaderPage.findIndex(v => pathname.startsWith(v)) > -1;
@@ -132,7 +145,7 @@ export function Header({ isBgBlack }: HeaderProps) {
         <div className='cursor-pointer flex flex-row items-center gap-4'>
           {!isMenuOpen ? (
             <Image
-              src={currentLang === 'ko' ? koreaSrc : englishSrc}
+              src={locale === 'ko' ? koreaSrc : englishSrc}
               alt=''
               className='w-[30px] h-[30px] hidden md:flex '
               onClick={toggleLanguage}
@@ -147,11 +160,7 @@ export function Header({ isBgBlack }: HeaderProps) {
           </Link>
         </div>
 
-        <div
-          className='cursor-pointer flex md:hidden'
-          onClick={() => {
-            setIsMenuOpen(prev => !prev);
-          }}>
+        <div className='cursor-pointer flex md:hidden' onClick={toggleMenu}>
           {isMenuOpen ? <Close className='w-[28px] md:w-[32px]' /> : <Hamburger />}
         </div>
       </div>
@@ -163,10 +172,7 @@ export function Header({ isBgBlack }: HeaderProps) {
                 key={index}
                 className={`flex flex-col w-full ${index === 0 ? 'border-y border-y-[#EEEEEE]' : 'border-b border-b-[#EEEEEE]'}`}>
                 <div className='flex items-center font-bold w-full'>
-                  <Link
-                    href={v.href}
-                    className='flex-1 py-[18px]'
-                    onClick={() => setIsMenuOpen(false)}>
+                  <Link href={v.href} className='flex-1 py-[18px]' onClick={toggleMenu}>
                     {v.title}
                   </Link>
                   {v.subMenu && (
@@ -191,7 +197,7 @@ export function Header({ isBgBlack }: HeaderProps) {
                         key={subIndex}
                         className='py-2'
                         href={subItem.href}
-                        onClick={() => setIsMenuOpen(false)}>
+                        onClick={() => toggleMenu}>
                         {subItem.title}
                       </Link>
                     ))}
@@ -203,14 +209,14 @@ export function Header({ isBgBlack }: HeaderProps) {
 
           <div className='flex justify-end my-4 gap-4'>
             <Image
-              src={currentLang === 'ko' ? koreaSrc : englishSrc}
+              src={locale === 'ko' ? koreaSrc : englishSrc}
               alt=''
               className='w-[30px] h-[30px] '
               onClick={toggleLanguage}
             />
             <Link
               href={'/contact'}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => toggleMenu}
               className='flex cursor-pointer h-[30px] text-black items-center select-none border px-[17px] text-[13px] rounded-md transition duration-300 hover:brightness-90'>
               {t('contact')}
             </Link>
