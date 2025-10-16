@@ -1,4 +1,8 @@
-import { AblestackVMCardsData, ablestackList, ablestackVmHeaderData } from '@/constants/products';
+import {
+  getAblestackList,
+  getAblestackVMCardsData,
+  getAblestackVmHeaderData,
+} from '@/constants/products';
 
 import { ContentWrapper, MainPageHeader } from '@/templates/common';
 import {
@@ -8,12 +12,12 @@ import {
   AblestackVMDetail,
 } from '@/templates/products';
 
-export default function AbleVM() {
+export default async function AbleVM() {
   return (
     <>
-      <MainPageHeader headerData={ablestackVmHeaderData} />
+      <MainPageHeader headerData={await getAblestackVmHeaderData()} />
       <ContentWrapper>
-        <AblestackVMCards cardsData={AblestackVMCardsData} />
+        <AblestackVMCards cardsData={await getAblestackVMCardsData()} />
       </ContentWrapper>
       <ContentWrapper bgClassName='bg-[#292929]'>
         <AbleStackVMMigration />
@@ -22,7 +26,12 @@ export default function AbleVM() {
         <AblestackVMDetail />
       </ContentWrapper>
       <ContentWrapper isNonePaddingTop={true}>
-        <AblestackList ablestackList={ablestackList.filter(v => v.path !== 'glue')} type='vm' />
+        <AblestackList
+          ablestackList={(await getAblestackList()).filter(
+            v => v.path !== 'glue' && v.path !== 'over' && v.path !== 'silo',
+          )}
+          type='vm'
+        />
       </ContentWrapper>
     </>
   );

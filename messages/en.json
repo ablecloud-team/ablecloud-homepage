@@ -139,6 +139,95 @@
     }
   },
 
+  "product": {
+    "vm": {
+      "header": {
+        "description": "Best Solution for Server Virtualization",
+        "download": "Download Product Brochure"
+      },
+
+      "cards": {
+        "title": "Why You Need ",
+        "card": [
+          {
+            "title": "Complete VMWare Replacement",
+            "description": "Seamlessly migrate your existing virtual machines<br></br> without any disruption."
+          },
+          {
+            "title": "Perpetual License, Single Platform",
+            "description": "Minimize costs with a single license, offering server virtualization, cloud management, storage, networking, and more—all on one platform."
+          },
+          {
+            "title": "Use Your Existing Infrastructure",
+            "description": "If you already have existing infrastructure, you can install the solution and start using it immediately, reducing the need for costly additional hardware."
+          }
+        ]
+      },
+
+      "migration": {
+        "title": "Easy VM Migration (P2V and V2V)",
+        "description": "ABLESTACK comes with built-in tools for virtual machine migration.<br></br> Using the web-based migration tool, you can easily move your desired virtual machines with just a few clicks.",
+        "imageText1": "Unified Monitoring Platform at a Glance",
+        "imageText2": "Seamless Data Migration"
+      },
+
+      "detail": {
+        "title": "Innovative Virtualization Platform for Cloud Transformation",
+        "description": "ABLESTACK virtualizes enterprise and data center infrastructure, providing an innovative platform to transition to the cloud.<br></br>With a simple licensing model, it offers a wide range of virtualization and cloud functionalities."
+      },
+
+      "ablestack": {
+        "title": "Components",
+        "service": [
+          {
+            "title": "Cube : OS",
+            "description": "A server OS that includes all ABLESTACK packages"
+          },
+          {
+            "title": "Cell : Virtualization",
+            "description": "Kernel-based hypervisor providing high performance "
+          },
+          {
+            "title": "Glue : Storage",
+            "description": "Software-defined storage based on virtual machines"
+          },
+          {
+            "title": "Mold : Cloud Platform",
+            "description": "A cloud platform for integrated management of virtual machines"
+          },
+          {
+            "title": "Track : Network",
+            "description": "Software-Defined Networking for Virtual Machines and Containers"
+          },
+          {
+            "title": "Wall : Monitoring",
+            "description": "Integrated monitoring platform for all ABLESTACK infrastructure"
+          },
+          {
+            "title": "Koral : K8S Container",
+            "description": "Kubernetes Platform for Cluster Deployment and Management"
+          },
+          {
+            "title": "Genie : Configuration and Deployment Automation",
+            "description": "IaC Platform for Automated Application Deployment and Monitoring"
+          },
+          {
+            "title": "Silo : 스토리지 서비스",
+            "description": "다양한 스토리지 서비스를 제공하는 플랫폼"
+          },
+          {
+            "title": "Over : 장애 및 재해 관리",
+            "description": "안정성을 높이기 위한 이중화/재해복구 지원"
+          },
+          {
+            "title": "Link : Secure network",
+            "description": "VPC, Micro Segmentation"
+          }
+        ]
+      }
+    }
+  },
+
   "company": {
     "header": {
       "title": "Company Overview",

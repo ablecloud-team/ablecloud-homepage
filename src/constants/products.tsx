@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 import { HeaderData, ProductHeaderData } from '@/types/header';
@@ -5,7 +6,6 @@ import {
   AbleStackServices,
   AblestackHCICardData,
   AblestackService,
-  AblestackVMCardData,
   ProductContentData,
 } from '@/types/products';
 
@@ -60,6 +60,31 @@ export const ablestackHciHeaderData: HeaderData = {
   },
 };
 
+export const getAblestackVmHeaderData = async (): Promise<HeaderData> => {
+  const t = await getTranslations('product.vm.header');
+
+  return {
+    title: {
+      mainText: (
+        <div className='w-full px-2 max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]'>
+          <Image src={AblestackVM} alt='' />
+        </div>
+      ),
+    },
+    description: <div className='mt-3'>{t('description')}</div>,
+    bgClassName: 'bg-products-header-ablestack-vm',
+    heightClassName: 'min-h-[450px] lg:min-h-[506px]',
+    buttonData: {
+      text: (
+        <div className='flex items-center gap-[6px]'>
+          {t('download')} <ArrowRight height={16} />
+        </div>
+      ),
+      href: '/pdf/ABLESTACK_VM_제품소개서.pdf',
+      target: '_blank',
+    },
+  };
+};
 export const ablestackVmHeaderData: HeaderData = {
   title: {
     mainText: (
@@ -80,6 +105,68 @@ export const ablestackVmHeaderData: HeaderData = {
     href: '/pdf/ABLESTACK_VM_제품소개서.pdf',
     target: '_blank',
   },
+};
+
+export const getAblestackList = async (): Promise<AblestackService[]> => {
+  const t = await getTranslations('product.vm.ablestack');
+
+  return [
+    {
+      path: 'cube',
+      title: t('service.0.title'),
+      description: t('service.0.description'),
+    },
+    {
+      path: 'cell',
+      title: t('service.1.title'),
+      description: t('service.1.description'),
+    },
+    {
+      path: 'glue',
+      title: t('service.2.title'),
+      description: t('service.2.description'),
+    },
+    {
+      path: 'mold',
+      title: t('service.3.title'),
+      description: t('service.3.description'),
+    },
+    {
+      path: 'track',
+      title: t('service.4.title'),
+      description: t('service.4.description'),
+    },
+    {
+      path: 'wall',
+      title: t('service.5.title'),
+      description: t('service.5.description'),
+    },
+    {
+      path: 'koral',
+      title: t('service.6.title'),
+      description: t('service.6.description'),
+    },
+    {
+      path: 'genie',
+      title: t('service.7.title'),
+      description: t('service.7.description'),
+    },
+    {
+      path: 'silo',
+      title: t('service.8.title'),
+      description: t('service.8.description'),
+    },
+    {
+      path: 'over',
+      title: t('service.9.title'),
+      description: t('service.9.description'),
+    },
+    {
+      path: 'link',
+      title: t('service.10.title'),
+      description: t('service.10.description'),
+    },
+  ];
 };
 
 export const ablestackList: AblestackService[] = [
@@ -335,30 +422,31 @@ export const productsContentData: { [K in AbleStackServices]: ProductContentData
   },
 };
 
-export const AblestackVMCardsData: AblestackVMCardData[] = [
-  {
-    bgClassName: 'bg-products-vm-card-1',
-    title: 'VMWare 완벽 대체',
-    description: '기존 사용 중인 가상화 환경을 완벽하게 마이그레이션 할 수 있습니다.',
-  },
-  {
-    bgClassName: 'bg-products-vm-card-2',
-    title: '단일 라이센스, 단일 플랫폼',
-    description:
-      '단일 라이센스로 비용 부담을 최소화하고, 서버가상화, 클라우드 관리, 스토리지, 네트워크 등 모든 기능을 단일 플랫폼으로 제공합니다.',
-  },
-  {
-    bgClassName: 'bg-products-vm-card-3',
-    title: '기존 사용중인 인프라 그대로',
-    description: (
-      <>
-        기존에 사용중인 인프라가 있다면, 솔루션을 설치하고 바로 사용할 수 있습니다.
-        <br />
-        부담되는 인프라 구입 비용이 절감됩니다.
-      </>
-    ),
-  },
-];
+export const getAblestackVMCardsData = async () => {
+  const t = await getTranslations('product.vm.cards.card');
+
+  return [
+    {
+      bgClassName: 'bg-products-vm-card-1',
+      title: t('0.title'),
+      description: t.rich('0.description', {
+        br: () => <br />,
+      }),
+    },
+    {
+      bgClassName: 'bg-products-vm-card-2',
+      title: t('1.title'),
+      description: t('1.description'),
+    },
+    {
+      bgClassName: 'bg-products-vm-card-3',
+      title: t('2.title'),
+      description: t.rich('2.description', {
+        br: () => <br />,
+      }),
+    },
+  ];
+};
 
 export const AblestackHCICardsData: AblestackHCICardData[] = [
   {
