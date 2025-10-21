@@ -415,5 +415,85 @@
         "value": "Unit 810-2, Pentaplex, 66, Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, 34365, Republic of Korea"
       }
     }
+  },
+
+  "solution": {
+    "header": {
+      "title": "Use Cases",
+      "description": "ABLESTACK delivers solutions for any type of application and any business workload — without compromise.<br></br>It is an essential platform for driving both business and IT innovation across the enterprise."
+    },
+
+    "infra": [
+      {
+        "title": "Server Virtualization",
+        "description": "Virtualize all your enterprise infrastructure and applications to maximize agility and efficiency."
+      },
+      {
+        "title": "Private Cloud",
+        "description": "Strengthen your business with an HCI-based cloud that runs any application and scales effortlessly as needed."
+      },
+      {
+        "title": "Hybrid Cloud",
+        "description": "With ABLESTACK, you can seamlessly expand your on-premises infrastructure to the public cloud."
+      },
+      {
+        "title": "Edge Computing",
+        "description": "Support edge site infrastructure with compact hyper-converged technology, reducing the need for specialized personnel."
+      },
+      {
+        "title": "Secure Infrastructure",
+        "description": "Implement zero-trust policies to effectively prevent cyberattacks and data loss."
+      },
+      {
+        "title": "Backup & Recovery",
+        "description": "Provide integrated backup and recovery for both virtual and legacy environments."
+      },
+      {
+        "title": "Business Continuity & Disaster Recovery",
+        "description": "Ensure continuity with full data backup and multiple recovery options, meeting SLAs at minimal cost."
+      }
+    ],
+
+    "application": [
+      {
+        "title": "Big Data Analytics",
+        "description": "Leverage the agility of cloud HCI and the convenience of on-premises management for your big data applications."
+      },
+      {
+        "title": "AI / Machine Learning",
+        "description": "Accelerate your AI/ML initiatives with fast, easily scalable AI-ready infrastructure."
+      },
+      {
+        "title": "Virtual Desktop / DaaS",
+        "description": "Provide digital workspaces for employees, offering greater flexibility and boosting productivity."
+      },
+      {
+        "title": "Databases",
+        "description": "Ensure stable operations and actionable insights with ABLESTACK solutions for deploying a variety of commercial databases."
+      },
+      {
+        "title": "Electronic Document Distribution & Management",
+        "description": "Support secure distribution, management, and centralization of critical internal documents with strong fault tolerance and data integrity."
+      },
+      {
+        "title": "Call Center Systems",
+        "description": "Build call center systems that can be accessed anytime, anywhere, on any device."
+      }
+    ],
+
+    "dev": [
+      {
+        "title": "Development & Testing",
+        "description": "Boost productivity and revenue with efficient, agile development and testing environments that shorten release cycles."
+      },
+      {
+        "title": "DevOps / IT Operations",
+        "description": "Reduce cloud costs and accelerate IT services through best practices in IT automation and DevOps."
+      },
+      {
+        "title": "CI/CD",
+        "description": "Support rapid development and integration in an HCI-based cloud environment, shortening the application lifecycle."
+      }
+    ]
   }
 }

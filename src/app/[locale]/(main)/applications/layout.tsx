@@ -1,11 +1,11 @@
-import { applicationHeaderData, applicationsTabs } from '@/constants/applications';
+import { applicationsTabs, getApplicationHeaderData } from '@/constants/applications';
 
 import { ContentWrapper, MainPageHeader } from '@/templates/common';
 
 import { ScrollTop } from '@/components/layout';
 import { Tabs } from '@/components/ui';
 
-export default function ApplicationLayout({
+export default async function ApplicationLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -13,7 +13,7 @@ export default function ApplicationLayout({
   return (
     <>
       <ScrollTop />
-      <MainPageHeader headerData={applicationHeaderData} />
+      <MainPageHeader headerData={await getApplicationHeaderData()} />
       <ContentWrapper type='applications'>
         <Tabs tabs={applicationsTabs} />
         {children}

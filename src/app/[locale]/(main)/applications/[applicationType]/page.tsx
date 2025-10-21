@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 
-import { applicationList, applicationsType } from '@/constants/applications';
+import { applicationsType, getApplicationList } from '@/constants/applications';
 
 import { ApplicationList } from '@/templates/applications';
 
@@ -14,6 +14,8 @@ export default async function Applications({
   const { applicationType } = await params;
 
   if (!applicationsType.includes(applicationType)) return notFound();
+
+  const applicationList = await getApplicationList();
 
   return (
     <div className='flex justify-center animate-fade-in mt-12'>
