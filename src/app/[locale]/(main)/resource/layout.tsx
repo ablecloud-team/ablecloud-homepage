@@ -1,13 +1,13 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
-
-import { resourceHeaderData, resourceTabs } from '@/constants/resource';
+import { useResourceHeaderData, useResourceTabs } from '@/constants/resource';
 
 import { ContentWrapper, MainPageHeader } from '@/templates/common';
 
 import { ScrollTop } from '@/components/layout';
 import { Tabs } from '@/components/ui';
+
+import { usePathname } from '@/i18n/routing';
 
 export default function ResourceLayout({
   children,
@@ -21,9 +21,9 @@ export default function ResourceLayout({
   return (
     <>
       <ScrollTop />
-      <MainPageHeader headerData={resourceHeaderData} />
+      <MainPageHeader headerData={useResourceHeaderData()} />
       <ContentWrapper type='resource'>
-        <Tabs tabs={resourceTabs} />
+        <Tabs tabs={useResourceTabs()} />
         {children}
       </ContentWrapper>
     </>

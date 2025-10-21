@@ -495,5 +495,150 @@
         "description": "Support rapid development and integration in an HCI-based cloud environment, shortening the application lifecycle."
       }
     ]
+  },
+
+  "resources": {
+    "header": {
+      "title": "Resources",
+      "description": "Stay Updated with ABLECLOUD"
+    },
+    "tabs": {
+      "blog": "News",
+      "video": "Videos",
+      "ebook": "Whitepapers",
+      "compatibility": "Compatibility"
+    },
+    "compatibility": [
+      {
+        "title": "Hypervisor Versions",
+        "description": "In addition to the proprietary Cell Hypervisor, Mold supports a variety of hypervisors."
+      },
+      {
+        "title": "Servers",
+        "description": "ABLESTACK can be installed on a wide range of commercial x86 servers."
+      },
+      {
+        "title": "Guest OS",
+        "description": "ABLESTACK supports multiple guest operating systems."
+      },
+      {
+        "title": "Virtualization Applications / Platforms",
+        "description": "ABLESTACK is compatible with the following virtualization applications and platforms."
+      },
+      {
+        "title": "External Storage",
+        "description": "ABLESTACK Mold supports connecting various external storage options beyond Glue SDS, enabling efficient cloud operations."
+      },
+      {
+        "title": "Backup Solutions",
+        "description": "ABLESTACK supports a variety of backup solutions, including the following:"
+      }
+    ],
+    "compatibilityData": {
+      "hypervisor": {
+        "title": "Compatible Hypervisor Versions",
+        "descriptionList": [
+          {
+            "description": "Mold supports a variety of hypervisors in addition to its proprietary Cell Hypervisor.<br></br>The hypervisors that can be centrally managed by Mold include :",
+            "list": [
+              "KVM : Ubuntu 18.04 LTS, 20.04 LTS, CentOS 7, 8, RHEL 7, 8, 9, Rocky Linux 8, 9, openSUSE Leap 15, SUSE Linux Enterprise Server 15",
+              "Citrix Hypervisor : Versions 7.x, 8.x with the latest hotfixes",
+              "XCP-ng : 7.x, 8.x",
+              "VMWare : 6.x, 7.x, 8.x"
+            ]
+          },
+          {
+            "description": "Hypervisors that cannot be centrally managed by Mold but can provide unmanaged HCI through Glue SDS include :",
+            "list": [
+              "All hypervisors listed above that Mold can manage",
+              "Hyper-V : Windows Server 2016 or later, Hyper-V 2016 or later"
+            ]
+          }
+        ]
+      },
+      "server": {
+        "title": "Compatible Servers",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK can be installed on a wide range of commercial x86 servers, including :",
+            "list": [
+              "DELL",
+              "HPE",
+              "Fujitsu",
+              "Lenovo",
+              "Supermicro",
+              "Uniwide",
+              "KTNF",
+              "iSlim",
+              "SNA",
+              "ThreeScore (AMD)"
+            ]
+          }
+        ]
+      },
+      "guest-os": {
+        "title": "Compatible Guest OS",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK supports a wide range of guest operating systems, including :",
+            "list": [
+              "Redhat Enterprise Linux : 6 and above",
+              "Oracle Linux : 6 and above",
+              "SUSE Enterprise Linux : 11 and above",
+              "Ubuntu : 16 and above",
+              "Rocky Linux : 8 and above",
+              "Cent OS : 7 and above",
+              "Windows : 8 and above",
+              "Windows Server : 2012 and above"
+            ]
+          }
+        ]
+      },
+      "virtualization": {
+        "title": "Verified Compatible Virtualization Applications / Platforms",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK is compatible with the following virtualization applications and platforms :",
+            "list": [
+              "Tilon : DStatsion(VDI)",
+              "Citrix : Virtual Apps & Desktops(VDI)",
+              "Innotium : InnoECM(Document Centralization)",
+              "Tmax : Webtob(WEB), Jeus(WAS), Tibero(DB)",
+              "Oracle : Oracle RAC(DB)",
+              "MS : MSSQL(DB)"
+            ]
+          }
+        ]
+      },
+      "external-storage": {
+        "title": "Compatible External Storage",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK Mold supports connecting a variety of external storage options beyond Glue SDS, enabling efficient cloud operations. The following external storage solutions are supported for use as block storage :",
+            "list": [
+              "VMWare : Standard iSCSI, Standard NFS",
+              "Citrix Hypervisor : Standard iSCSI, Standard NFS, SMB",
+              "Microsoft Hyper-V : Standard iSCSI, SMB",
+              "Cell, KVM : Standard iSCSI, Standard NFS / POSIX-compatible storage",
+              "Others : GlusterFS, SolidFire, Ceph RBD, Datera, Cloudbyte, Nexenta, Dell PowerFlex, LINSTOR",
+              "ABLESTACK Proprietary : Glue Block, Glue Filesystem"
+            ]
+          }
+        ]
+      },
+      "backup": {
+        "title": "Compatible Backup Solutions",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK supports a variety of backup solutions, including :",
+            "list": [
+              "Veeam and Dell Networker backup platform integration",
+              "Integration with Veritas and Commvault backup solutions",
+              "Support for Synology Active Backup for Business"
+            ]
+          }
+        ]
+      }
+    }
   }
 }

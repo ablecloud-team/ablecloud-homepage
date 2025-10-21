@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 
-import { compatibilityData, compatibilityType } from '@/constants/resource';
+import { compatibilityType, getCompatibilityData } from '@/constants/resource';
 
 import { CompatibilityType } from '@/types/resource';
 
@@ -13,7 +13,7 @@ export default async function CompatibilityDetail({
 
   if (!compatibilityType.includes(type)) return notFound();
 
-  const { title, descriptionList } = compatibilityData[type];
+  const { title, descriptionList } = (await getCompatibilityData())[type];
 
   return (
     <div className='flex justify-center'>

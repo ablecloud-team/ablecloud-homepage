@@ -1,12 +1,12 @@
-import Link from 'next/link';
+import { useCompatibilityList } from '@/constants/resource';
 
-import { compatibilityList } from '@/constants/resource';
+import { Link } from '@/i18n/routing';
 
-export default async function Compatibility() {
+export default function Compatibility() {
   return (
     <div className='flex justify-center animate-fade-in mt-6'>
       <div className='max-w-[1200px] grid gap-6 grid-cols- lg:grid-cols-2 max:grid-cols-3'>
-        {compatibilityList.map((compatibility, idx) => {
+        {useCompatibilityList().map((compatibility, idx) => {
           return (
             <Link
               key={idx}
