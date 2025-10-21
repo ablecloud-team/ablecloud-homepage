@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import HCICard1Src from '@/public/images/products/hci-card-1.png';
@@ -52,6 +53,39 @@ const cardsData = [
 ];
 
 export function AblestackHCIContentCards() {
+  const t = useTranslations('product.hci.contentCards');
+
+  const cardsData = [
+    {
+      title: t('0.title'),
+      description: t.rich('0.description', {
+        br: () => <br />,
+      }),
+      imgSrc: HCICard1Src,
+    },
+    {
+      title: t('1.title'),
+      description: t.rich('1.description', {
+        br: () => <br />,
+      }),
+      imgSrc: HCICard2Src,
+    },
+    {
+      title: t('2.title'),
+      description: t.rich('2.description', {
+        br: () => <br />,
+      }),
+      imgSrc: HCICard3Src,
+    },
+    {
+      title: t('3.title'),
+      description: t.rich('3.description', {
+        br: () => <br />,
+      }),
+      imgSrc: HCICard4Src,
+    },
+  ];
+
   return (
     <div className='flex justify-center'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8'>

@@ -212,12 +212,12 @@
             "description": "IaC Platform for Automated Application Deployment and Monitoring"
           },
           {
-            "title": "Silo : 스토리지 서비스",
-            "description": "다양한 스토리지 서비스를 제공하는 플랫폼"
+            "title": "Silo : Storage service",
+            "description": "A Platform Offering Diverse Storage Services"
           },
           {
-            "title": "Over : 장애 및 재해 관리",
-            "description": "안정성을 높이기 위한 이중화/재해복구 지원"
+            "title": "Over : Fault and Disaster Management",
+            "description": "Redundancy and Disaster Recovery Support for Enhanced Reliability"
           },
           {
             "title": "Link : Secure network",
@@ -225,6 +225,49 @@
           }
         ]
       }
+    },
+    "hci": {
+      "header": {
+        "description": "A Unified HCI Platform for Cloud Data Center Infrastructure",
+        "buttonText": "Download Product Brochure"
+      },
+      "title": "Why is HCI Different?",
+      "cards": [
+        {
+          "title": "Excellent scalability",
+          "description": "Non-disruptive, unlimited node expansion"
+        },
+        {
+          "title": "Simple configuration",
+          "description": "Infrastructure consists of only x86 servers, solving data  center fabric complexity issues"
+        },
+        {
+          "title": "Save power and costs",
+          "description": "Reduce TCO by 70% and reduce power costs  by up to 80%"
+        },
+        {
+          "title": "Simple and quick deployment",
+          "description": "Quick cloud infrastructure deployment within  hours through wizard"
+        }
+      ],
+      "contentCards": [
+        {
+          "title": "Cloud Management Platform",
+          "description": "Centralized infrastructure management through a web-based console.<br></br>Provides multi-hypervisor support, and features such as virtual machines, network, storage, automation, backup, and recovery."
+        },
+        {
+          "title": "Integrated Monitoring Platform",
+          "description": "Real-time performance monitoring for visibility of system health and resource needs.<br></br>Preemptive fault detection and alerts for servers, networks, and storage through service-level monitoring."
+        },
+        {
+          "title": "Easy Deployment via Installation Wizard",
+          "description": "Quick and simple installation of all HCI components using ABLESTACK's deployment wizard.<br></br>Single-platform installation on x86 servers, delivering everything needed for a cloud environment."
+        },
+        {
+          "title": "External Storage Integration",
+          "description": "Supports integration with external storage (SAN/iSCSI), enabling reuse of existing infrastructure.<br></br>Offers multiple storage gateways (block, file, object storage) for flexible use cases."
+        }
+      ]
     }
   },
 

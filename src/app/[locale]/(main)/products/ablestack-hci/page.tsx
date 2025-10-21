@@ -1,20 +1,24 @@
-import { AblestackHCICardsData, ablestackHciHeaderData, ablestackList } from '@/constants/products';
+import {
+  getAblestackHCICardsData,
+  getAblestackHciHeaderData,
+  getAblestackList,
+} from '@/constants/products';
 
 import { ContentWrapper, MainPageHeader } from '@/templates/common';
 import { AblestackHCICards, AblestackHCIContentCards, AblestackList } from '@/templates/products';
 
-export default function Ablestack() {
+export default async function Ablestack() {
   return (
     <>
-      <MainPageHeader headerData={ablestackHciHeaderData} />
+      <MainPageHeader headerData={await getAblestackHciHeaderData()} />
       <ContentWrapper>
-        <AblestackHCICards cardsData={AblestackHCICardsData} />
+        <AblestackHCICards cardsData={await getAblestackHCICardsData()} />
       </ContentWrapper>
       <ContentWrapper bgClassName='bg-products-hci-content-wrapper bg-cover bg-no-repeat bg-center'>
         <AblestackHCIContentCards />
       </ContentWrapper>
       <ContentWrapper>
-        <AblestackList ablestackList={ablestackList} type='hci' />
+        <AblestackList ablestackList={await getAblestackList()} type='hci' />
       </ContentWrapper>
     </>
   );

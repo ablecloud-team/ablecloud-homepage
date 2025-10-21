@@ -2,12 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 import { HeaderData, ProductHeaderData } from '@/types/header';
-import {
-  AbleStackServices,
-  AblestackHCICardData,
-  AblestackService,
-  ProductContentData,
-} from '@/types/products';
+import { AbleStackServices, AblestackService, ProductContentData } from '@/types/products';
 
 import ArrowRight from '@/public/icons/common/arrow-right.svg';
 import AblestackHCI from '@/public/images/products/ablestack-hci-logo.png';
@@ -38,26 +33,30 @@ export const ablestackServices = [
   'link',
 ] as const;
 
-export const ablestackHciHeaderData: HeaderData = {
-  title: {
-    mainText: (
-      <div className='w-full px-2 max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]'>
-        <Image src={AblestackHCI} alt='' />
-      </div>
-    ),
-  },
-  description: <div className='mt-3'>클라우드 데이터센터 인프라를 위한 단일 HCI 플랫폼</div>,
-  bgClassName: 'bg-products-header-ablestack-hci',
-  heightClassName: 'min-h-[450px] lg:min-h-[506px]',
-  buttonData: {
-    text: (
-      <div className='flex items-center gap-[6px]'>
-        제품소개서 다운로드 <ArrowRight height={16} />
-      </div>
-    ),
-    href: '/pdf/ABLESTACK_HCI_제품소개서.pdf',
-    target: '_blank',
-  },
+export const getAblestackHciHeaderData = async (): Promise<HeaderData> => {
+  const t = await getTranslations('product.hci.header');
+
+  return {
+    title: {
+      mainText: (
+        <div className='w-full px-2 max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]'>
+          <Image src={AblestackHCI} alt='' />
+        </div>
+      ),
+    },
+    description: <div className='mt-3'>{t('description')} </div>,
+    bgClassName: 'bg-products-header-ablestack-hci',
+    heightClassName: 'min-h-[450px] lg:min-h-[506px]',
+    buttonData: {
+      text: (
+        <div className='flex items-center gap-[6px]'>
+          {t('buttonText')} <ArrowRight height={16} />
+        </div>
+      ),
+      href: '/pdf/ABLESTACK_HCI_제품소개서.pdf',
+      target: '_blank',
+    },
+  };
 };
 
 export const getAblestackVmHeaderData = async (): Promise<HeaderData> => {
@@ -448,37 +447,33 @@ export const getAblestackVMCardsData = async () => {
   ];
 };
 
-export const AblestackHCICardsData: AblestackHCICardData[] = [
-  {
-    title: '뛰어난 확장성',
-    description: '무중단, 무제한 노드 확장',
-  },
-  {
-    title: '단순한 구성',
-    description: (
-      <>
-        x86 서버로만 인프라가 구성되어
-        <br />
-        데이터센터의 복잡성 문제 해결
-      </>
-    ),
-  },
-  {
-    title: '전력 및 비용 절감',
-    description: (
-      <>
-        TCO 70% 절감,
-        <br /> 전력 비용 최대 80% 절감
-      </>
-    ),
-  },
-  {
-    title: '간편하고 빠른 배포',
-    description: (
-      <>
-        마법사를 통해 수 시간 내<br />
-        빠른 클라우드 인프라 배포 가능
-      </>
-    ),
-  },
-];
+export const getAblestackHCICardsData = async () => {
+  const t = await getTranslations('product.hci.cards');
+
+  return [
+    {
+      title: t('0.title'),
+      description: t.rich('0.description', {
+        br: () => <br />,
+      }),
+    },
+    {
+      title: t('1.title'),
+      description: t.rich('1.description', {
+        br: () => <br />,
+      }),
+    },
+    {
+      title: t('2.title'),
+      description: t.rich('2.description', {
+        br: () => <br />,
+      }),
+    },
+    {
+      title: t('3.title'),
+      description: t.rich('3.description', {
+        br: () => <br />,
+      }),
+    },
+  ];
+};
