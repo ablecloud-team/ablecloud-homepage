@@ -1,10 +1,21 @@
+import { getLocale } from 'next-intl/server';
+
 import { getPosts } from '@/util/getPost';
 
-import { ContentWrapper } from '@/templates/common';
 import { BlogList } from '@/templates/resource';
+
+import { redirect } from '@/i18n/routing';
 
 export default async function Blog() {
   const { postsData } = await getPosts();
+  const locale = await getLocale();
+
+  if (locale === 'en') {
+    redirect({
+      href: '/resource/video',
+      locale: locale,
+    });
+  }
 
   // <div className=''>
   return (

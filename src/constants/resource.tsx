@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
 import { HeaderData } from '@/types/header';
@@ -21,9 +21,10 @@ export const resourceType = ['blog', 'video', 'ebook'] as const;
 
 export const useResourceTabs = () => {
   const t = useTranslations('resources.tabs');
+  const locale = useLocale();
 
   return [
-    { text: t('blog'), href: '/resource/blog' },
+    ...(locale === 'ko' ? [{ text: t('blog'), href: '/resource/blog' }] : []),
     { text: t('video'), href: '/resource/video' },
     { text: t('ebook'), href: '/resource/ebook' },
     { text: t('compatibility'), href: '/resource/compatibility' },

@@ -1,7 +1,8 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 export const useHeaderMenuData = () => {
   const t = useTranslations('header');
+  const locale = useLocale();
 
   return [
     {
@@ -26,7 +27,7 @@ export const useHeaderMenuData = () => {
       title: t('menu5.title'),
       href: '/resource/blog',
       subMenu: [
-        { title: t('menu5.subMenu.0.title'), href: '/resource/blog' },
+        ...(locale === 'ko' ? [{ title: t('menu5.subMenu.0.title'), href: '/resource/blog' }] : []),
         { title: t('menu5.subMenu.1.title'), href: '/resource/video' },
         { title: t('menu5.subMenu.2.title'), href: '/resource/ebook' },
         { title: t('menu5.subMenu.3.title'), href: '/resource/compatibility' },
