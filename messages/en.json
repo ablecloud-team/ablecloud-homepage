@@ -640,5 +640,13 @@
         ]
       }
     }
+  },
+
+  "interview": {
+    "header": {
+      "title": "Customers",
+      "description": "ABLESTACK can handle any application regardless of user environment or industry, providing the flexibility, predictability, and reliability needed to deploy and operate even the latest emerging workloads smoothly."
+    },
+    "title": "Customers who transformed their business with ABLESTACK "
   }
 }

@@ -1,6 +1,6 @@
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
-import { HeaderData } from '@/types/header';
 import { InterviewListData } from '@/types/interview';
 
 import addSrc from '@/public/images/common/add.png';
@@ -11,7 +11,6 @@ import buyeoSrc from '@/public/images/common/buyeo.png';
 import changwonSrc from '@/public/images/common/changwon.png';
 import cheongyangSrc from '@/public/images/common/cheongyang.png';
 import ckSrc from '@/public/images/common/ck.png';
-import cnuhSrc from '@/public/images/common/cnuh.png';
 import comwelSrc from '@/public/images/common/comwel.png';
 import cooconSrc from '@/public/images/common/coocon.png';
 import csSrc from '@/public/images/common/cs.png';
@@ -37,7 +36,6 @@ import injeSrc from '@/public/images/common/inje.png';
 import jecheonSrc from '@/public/images/common/jecheon.png';
 import kacptaSrc from '@/public/images/common/kacpta.png';
 import kepcoSrc from '@/public/images/common/kepco.png';
-import kipoSrc from '@/public/images/common/kipo.png';
 import konyangSrc from '@/public/images/common/konyang.png';
 import koreaLocalSrc from '@/public/images/common/korea-local.png';
 import mohwSrc from '@/public/images/common/mohw.png';
@@ -57,19 +55,17 @@ import ycgSrc from '@/public/images/common/ycg.png';
 import yeojuSrc from '@/public/images/common/yeoju.png';
 import yitSrc from '@/public/images/common/yit.png';
 
-export const interviewHeaderData: HeaderData = {
-  title: {
-    mainText: '고객사',
-  },
-  description: (
-    <div className='max-w-[699px]'>
-      ABESTACK은 어떠한 애플리케이션이든 사용 환경이나 산업 환경과 상관없이 모두 처리할 수 있으며
-      최신의 이머징 워크로드도 원활하게 배포하여 운영할 수 있는 유연성과 확정성, 안정성을
-      제공합니다.
-    </div>
-  ),
-  bgClassName: 'bg-interview-header',
-  heightClassName: 'min-h-[350px] lg:min-h-[404px]',
+export const getInterviewHeaderData = async () => {
+  const t = await getTranslations('interview.header');
+
+  return {
+    title: {
+      mainText: t('title'),
+    },
+    description: <div className='max-w-[699px]'>{t('description')}</div>,
+    bgClassName: 'bg-interview-header',
+    heightClassName: 'min-h-[350px] lg:min-h-[404px]',
+  };
 };
 
 export const interviewList: InterviewListData[] = [
