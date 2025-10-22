@@ -65,6 +65,21 @@ export const partnersHeaderData: HeaderData = {
   heightClassName: 'min-h-[350px] lg:min-h-[404px]',
 };
 
+export const usePartnerProgramHeaderData = () => {
+  const t = useTranslations('partner.program.header');
+
+  return {
+    title: {
+      mainText: t('title'),
+    },
+    description: t.rich('description', {
+      br: () => <br />,
+    }),
+    bgClassName: 'bg-partners-header',
+    heightClassName: 'min-h-[350px] lg:min-h-[404px]',
+  };
+};
+
 export const partnerProgramHeaderData: HeaderData = {
   title: {
     mainText: 'Partnership Program',

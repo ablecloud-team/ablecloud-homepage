@@ -713,6 +713,36 @@
         { "text": "Daewon CTS" },
         { "text": "Geomax Soft" }
       ]
+    },
+
+    "program": {
+      "header": {
+        "title": "Partnership Program",
+        "description": "Innovative technology, sustainable revenue.<br></br> We are seeking partners to drive the design of the ABLESTACK platform and foster joint growth<br></br>in the server virtualization and HCI markets worldwide."
+      },
+      "title": "Introduction to the Partnership Program",
+      "description": "We offer a flexible and innovative program to collaborate effectively with our partners.",
+
+      "data": [
+        {
+          "title": "ABLECLOUD Seminar Participation",
+          "description": "Attend conferences and seminars<br></br>Online and offline training and technical support"
+        },
+        {
+          "title": "Customized Partner Training (Monthly)",
+          "description": "Basic Course: 1-Day Program<br></br>Advanced Course : A two-part course covering<br></br>installation and PoC practice"
+        },
+        {
+          "title": "Marketing and Sales Support",
+          "description": "Sales support<br></br>Marketing program support"
+        },
+        {
+          "title": "Partner Day",
+          "description": "Annual event for business partners"
+        }
+      ],
+
+      "contact": "Contact Us"
     }
   }
 }

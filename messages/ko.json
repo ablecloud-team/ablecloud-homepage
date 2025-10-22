@@ -697,6 +697,34 @@
         { "text": "대원 CTS" },
         { "text": "지오멕스소프트" }
       ]
+    },
+
+    "program": {
+      "header": {
+        "title": "Partnership Program",
+        "description": "독자적인 기술력, 지속 가능한 수익창출.<br></br> ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 가상화/클라우드 시장의 공동 성장을 만들어갈 파트너를 찾습니다."
+      },
+      "title": "파트너쉽 프로그램 소개",
+      "description": "파트너사와 협력하기 위해 보다 유연하고 혁신적인 프로그램을 제안합니다",
+
+      "data": [
+        {
+          "title": "에이블클라우드 세미나 참석",
+          "description": "컨퍼런스, 세미나 참여<br></br>온/오프라인 교육 및 기술지원"
+        },
+        {
+          "title": "파트너 맞춤형 교육 지원(매 월)",
+          "description": "기본 과정 (1 Day Program)<br></br>심화 과정 (2 Part 과정으로 설치부터 PoC 실습까지)"
+        },
+        {
+          "title": "마케팅 및 영업 활동 지원",
+          "description": "영업 활동 지원<br></br>마케팅 프로그램 지원"
+        },
+        {
+          "title": "Partner Day 개최/운영",
+          "description": "비즈니스 파트너 대상으로 매 년 1회 실시"
+        }
+      ]
     }
   }
 }
