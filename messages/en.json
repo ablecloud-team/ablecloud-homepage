@@ -648,5 +648,71 @@
       "description": "ABLESTACK can handle any application regardless of user environment or industry, providing the flexibility, predictability, and reliability needed to deploy and operate even the latest emerging workloads smoothly."
     },
     "title": "Customers who transformed their business with ABLESTACK "
+  },
+
+  "partner": {
+    "header": {
+      "title": "Partners",
+      "description": "Innovative technology, sustainable revenue.<br></br>We are looking for partners to drive the design of the ABLESTACK platform and<br></br>foster joint growth in the server virtualization and HCI markets worldwide."
+    },
+    "title": "A Future of Shared Success",
+    "description": "Innovative technology, sustainable revenue. <br></br> Join us in shaping the HCI market and driving global growth through collaborative success.",
+
+    "tier": [
+      {
+        "title": "Platinum Partner",
+        "description": "Partners with dedicated sales and technical support teams, capable of close collaboration across all areas, including POCs, deployment, and maintenance."
+      },
+      {
+        "title": "Gold Partner",
+        "description": "Partners with dedicated teams for sales, deployment, and maintenance."
+      },
+      {
+        "title": "Silver Partner",
+        "description": "Partners with dedicated sales teams."
+      },
+      {
+        "title": "VAR Partner",
+        "description": "Partners capable of supplying joint solutions or products in a packaged form."
+      }
+    ],
+
+    "partnerList": {
+      "title": "Manufacturer Partner",
+      "description": "Current manufacturing partners collaborating with ABLECLOUD.",
+
+      "list": [
+        { "text": "ABLESTOR" },
+        { "text": "DELL Technologies" },
+        { "text": "HPE" },
+        { "text": "FUJITSU" },
+        { "text": "Lenovo" },
+        { "text": "Super Micro Computer" },
+        { "text": "SUPER SOLUTION" },
+        { "text": "KTNF" },
+        { "text": "UNIWIDE" },
+        { "text": "Ocean Technology" },
+        { "text": "Citrix" },
+        { "text": "Tilon" },
+        { "text": "XENO SOLUTION" },
+        { "text": "NHN CROSSENT" },
+        { "text": "HANDREAMNET" },
+        { "text": "INNOGRID" },
+        { "text": "Acornsoft" },
+        { "text": "INNOTIUM" },
+        { "text": "T3Q" },
+        { "text": "Innodep" },
+        { "text": "XSLAB" },
+        { "text": "Hyosung Information Systems" },
+        { "text": "Zungwon EN-SYS" },
+        { "text": "AJ  ICT" },
+        { "text": "SK shieldus" },
+        { "text": "GNTEL" },
+        { "text": "ITCEN CLOIT" },
+        { "text": "SNA" },
+        { "text": "Daewon CTS" },
+        { "text": "Geomax Soft" }
+      ]
+    }
   }
 }
