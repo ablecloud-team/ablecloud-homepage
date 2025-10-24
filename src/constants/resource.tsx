@@ -1,7 +1,6 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
-import { HeaderData } from '@/types/header';
 import { EbookData } from '@/types/resource';
 
 import ebook_1_Src from '@/public/images/resource/ebook/ebook_1.png';
@@ -42,14 +41,6 @@ export const useResourceHeaderData = () => {
     bgClassName: 'bg-resource-header',
     heightClassName: 'min-h-[350px] lg:min-h-[374px]',
   };
-};
-export const resourceHeaderData: HeaderData = {
-  title: {
-    mainText: '리소스',
-  },
-  description: '에이블클라우드의 소식을 만나보세요.',
-  bgClassName: 'bg-resource-header',
-  heightClassName: 'min-h-[350px] lg:min-h-[374px]',
 };
 
 export const videosData: string[] = [

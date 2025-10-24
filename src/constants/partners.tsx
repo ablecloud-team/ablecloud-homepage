@@ -2,8 +2,6 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
-import { HeaderData } from '@/types/header';
-
 import ablestoreSrc from '@/public/images/partners/ablestor.png';
 import acornsoftSrc from '@/public/images/partners/acornsoft.png';
 import ajictSrc from '@/public/images/partners/ajict.png';
@@ -49,21 +47,6 @@ export const getPartnerHeaderData = async () => {
     heightClassName: 'min-h-[350px] lg:min-h-[404px]',
   };
 };
-export const partnersHeaderData: HeaderData = {
-  title: {
-    mainText: '파트너',
-  },
-  description: (
-    <>
-      독자적인 기술력, 지속 가능한 수익창출.
-      <br />
-      ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 가상화/클라우드 시장의 공동 성장을 만들어갈
-      파트너를 찾습니다.
-    </>
-  ),
-  bgClassName: 'bg-partners-header',
-  heightClassName: 'min-h-[350px] lg:min-h-[404px]',
-};
 
 export const usePartnerProgramHeaderData = () => {
   const t = useTranslations('partner.program.header');
@@ -78,22 +61,6 @@ export const usePartnerProgramHeaderData = () => {
     bgClassName: 'bg-partners-header',
     heightClassName: 'min-h-[350px] lg:min-h-[404px]',
   };
-};
-
-export const partnerProgramHeaderData: HeaderData = {
-  title: {
-    mainText: 'Partnership Program',
-  },
-  description: (
-    <>
-      독자적인 기술력, 지속 가능한 수익창출.
-      <br />
-      ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 가상화/클라우드 시장의 공동 성장을 만들어갈
-      파트너를 찾습니다.
-    </>
-  ),
-  bgClassName: 'bg-partners-header',
-  heightClassName: 'min-h-[350px] lg:min-h-[404px]',
 };
 
 export const getPartnerTier = async () => {

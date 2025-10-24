@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 
 import { ApplicationListData, ApplicationType } from '@/types/applications';
-import { HeaderData } from '@/types/header';
 
 import aiMlSrc from '@/public/images/applications/ai-ml.png';
 import backupRecoverySrc from '@/public/images/applications/backup-recovery.png';
@@ -57,22 +56,6 @@ export const getApplicationHeaderData = async () => {
     bgClassName: 'bg-application-header',
     heightClassName: 'min-h-[350px] lg:min-h-[404px]',
   };
-};
-
-export const applicationHeaderData: HeaderData = {
-  title: {
-    mainText: '적용분야',
-  },
-  description: (
-    <>
-      어떤 형태의 애플리케이션, 어떠한 비즈니스 워크로드 등에 상관없이 ABLESTACK이 솔루션을
-      제공합니다.
-      <br />
-      ABLESTACK은 기업의 비즈니스 및 IT혁신을 위한 필수적인 솔루션입니다.
-    </>
-  ),
-  bgClassName: 'bg-application-header',
-  heightClassName: 'min-h-[350px] lg:min-h-[404px]',
 };
 
 export const applicationsType = ['infra', 'application', 'dev'] as const;

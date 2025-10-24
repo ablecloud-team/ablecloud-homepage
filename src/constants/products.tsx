@@ -84,27 +84,6 @@ export const getAblestackVmHeaderData = async (): Promise<HeaderData> => {
     },
   };
 };
-export const ablestackVmHeaderData: HeaderData = {
-  title: {
-    mainText: (
-      <div className='w-full px-2 max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]'>
-        <Image src={AblestackVM} alt='' />
-      </div>
-    ),
-  },
-  description: <div className='mt-3'>서버 가상화를 위한 최적의 솔루션</div>,
-  bgClassName: 'bg-products-header-ablestack-vm',
-  heightClassName: 'min-h-[450px] lg:min-h-[506px]',
-  buttonData: {
-    text: (
-      <div className='flex items-center gap-[6px]'>
-        제품소개서 다운로드 <ArrowRight height={16} />
-      </div>
-    ),
-    href: '/pdf/ABLESTACK_VM_제품소개서.pdf',
-    target: '_blank',
-  },
-};
 
 export const getAblestackList = async (): Promise<AblestackService[]> => {
   const t = await getTranslations('product.vm.ablestack');
@@ -167,64 +146,6 @@ export const getAblestackList = async (): Promise<AblestackService[]> => {
     },
   ];
 };
-
-export const ablestackList: AblestackService[] = [
-  {
-    path: 'cube',
-    title: 'Cube : 운영체제',
-    description: 'ABLESTACK의 모든 패키지가 포함된 Server OS',
-  },
-  {
-    path: 'cell',
-    title: 'Cell : 가상화',
-    description: '고성능을 제공하는 내장된 커널 기반 하이퍼바이저',
-  },
-  {
-    path: 'glue',
-    title: 'Glue : 스토리지',
-    description: '가상머신 기반 소프트웨어 정의 스토리지',
-  },
-  {
-    path: 'mold',
-    title: 'Mold : 관리',
-    description: '통합관리를 제공하는 클라우드 플랫폼',
-  },
-  {
-    path: 'track',
-    title: 'Track : 네트워크',
-    description: '가상머신 및 컨테이너를 위한 소프트웨어 정의 네트워크',
-  },
-  {
-    path: 'wall',
-    title: 'Wall : 모니터링',
-    description: '인프라 전체 및 애플리케이션 통합 모니터링 플랫폼',
-  },
-  {
-    path: 'koral',
-    title: 'Koral : K8S 컨테이너',
-    description: 'Kubernetes Cluster 배포 및 운영을 위한 K8S 플랫폼',
-  },
-  {
-    path: 'genie',
-    title: 'Genie : 구성 및 배포 자동화',
-    description: '애플리케이션 배포 및 모니터링 자동화를 위한 laC플랫폼',
-  },
-  {
-    path: 'silo',
-    title: 'Silo : 스토리지 서비스',
-    description: '다양한 스토리지 서비스를 제공하는 플랫폼',
-  },
-  {
-    path: 'over',
-    title: 'Over : 장애 및 재해 관리',
-    description: '안정성을 높이기 위한 이중화/재해복구 지원',
-  },
-  {
-    path: 'link',
-    title: 'Link : 보안 네트워크',
-    description: 'VPC, Micro Segmentation',
-  },
-];
 
 export const productsHeaderData: { [K in AbleStackServices]: ProductHeaderData } = {
   cube: {
