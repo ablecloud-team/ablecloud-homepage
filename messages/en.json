@@ -744,5 +744,39 @@
 
       "contact": "Contact Us"
     }
+  },
+
+  "contact": {
+    "header": {
+      "title": "Contact Us",
+      "description": "For inquiries regarding ABLECLOUD products and solutions, including purchases or general questions,<br></br>please leave your details and we will respond promptly."
+    },
+    "form": {
+      "name": "Name",
+      "companyName": "Company",
+      "position": "Title",
+      "email": "Email",
+      "phone": "Phone",
+      "type": "Category",
+      "message": "Message",
+      "button": "Submit Inquiry",
+
+      "sales": "sales",
+      "techSupport": "techSupport",
+      "estimation": "estimation",
+
+      "submit": {
+        "title": "Thank you for submitting your inquiry.",
+        "description": "We will review your message and get back to you shortly.<br></br>If you have any further questions, please feel free to contact us at the email address below",
+        "button": "Home"
+      }
+    },
+    "footer": {
+      "title": "Sales / Technical Support Email",
+      "contact": [
+        "Sales / Marketing : sales@ablestack.co.kr",
+        "Technical Support : support@ablecloud.io"
+      ]
+    }
   }
 }
