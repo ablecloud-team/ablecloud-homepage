@@ -1,6 +1,10 @@
 import { notFound } from 'next/navigation';
 
-import { ablestackServices, productsContentData, productsHeaderData } from '@/constants/products';
+import {
+  ablestackServices,
+  getProductsContentData,
+  getProductsHeaderData,
+} from '@/constants/products';
 
 import { ContentWrapper } from '@/templates/common';
 import { ProductContent, ProductHeader } from '@/templates/products';
@@ -15,6 +19,9 @@ export default async function AblestackService({
   const { serviceName } = await params;
 
   if (!ablestackServices.includes(serviceName)) return notFound();
+
+  const productsHeaderData = await getProductsHeaderData();
+  const productsContentData = await getProductsContentData();
 
   return (
     <>

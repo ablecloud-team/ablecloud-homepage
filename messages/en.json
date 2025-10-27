@@ -778,5 +778,148 @@
         "Technical Support : support@ablecloud.io"
       ]
     }
+  },
+
+  "products": {
+    "header": {
+      "cube": {
+        "title": "Cube os",
+        "description": "Cube is a Linux-based server OS that includes all ABLESTACK software packages, configuration wizards, and a web-based host management platform."
+      },
+      "cell": {
+        "title": "Cell Virtualization",
+        "description": "Cell is a hypervisor designed to run virtual machines or containers by allocating specific zones within a host. It provides a platform environment that divides a host's resources into smaller units—like individual “cells” or “rooms”—to execute virtual machines dedicated to different roles."
+      },
+      "glue": {
+        "title": "Glue Storage",
+        "description": "Glue is the name of ABLESTACK’s storage platform. It leverages the disks within the host to provide a unified storage space and deliver various types of storage services, perfectly embodying the characteristics of HCI storage. The name “Glue” signifies integrated storage, representing its role in connecting and managing data seamlessly."
+      },
+      "mold": {
+        "title": "Mold Management",
+        "description": "Mold is a platform that enables the creation and operation of virtual machines while providing a wide range of cloud and virtualization-related features — including networking, storage services, automation, backup, and disaster recovery — all accessible through an intuitive web-based UI."
+      },
+      "track": {
+        "title": "Track Network",
+        "description": "Track is the platform within ABLESTACK that builds the virtualized networking layer, deploying a software-defined network (SDN) across the virtualization environment. It enables rapid deployment and utilization of user-isolated networks."
+      },
+      "wall": {
+        "title": "Wall Monitoring",
+        "description": "Wall is an integrated monitoring platform for ABLESTACK, designed to monitor all infrastructure components, user virtual machines, and applications within the environment."
+      },
+      "koral": {
+        "title": "Koral K8S Container",
+        "description": "Koral is a Kubernetes cluster automatically deployed through Mold, simplifying application provisioning, lifecycle management, cluster scaling, and container-based operations."
+      },
+      "genie": {
+        "title": "Genie IaC Platform",
+        "description": "Genie is a multi-cloud IT automation platform that enables automatic deployment of virtual machines, applications, and state monitoring across multi-cloud environments based on user-defined workflows."
+      },
+      "silo": {
+        "title": "Silo Storage Service",
+        "description": "Silo is a platform within ABLESTACK that provides a wide range of storage functionalities required for enterprise IT operations. It enhances storage scalability and maximizes the versatility of Glue in various deployment scenarios."
+      },
+      "over": {
+        "title": "Over Fault and Disaster Management",
+        "description": "Over is a recovery platform within ABLESTACK designed to handle various failures and disaster scenarios in virtual infrastructure and applications, effectively protecting an enterprise’s mission-critical applications."
+      },
+      "link": {
+        "title": "Link Secure Network",
+        "description": "Link provides a highly visible and secure environment to fully protect virtual machines and applications from attacks, while supporting connectivity with multiple public clouds."
+      }
+    },
+    "content": {
+      "cube": {
+        "description": "It can be installed on any x86 server without hardware dependency and delivers high performance through an optimized kernel and I/O processing modules.",
+        "subDescriptions": [
+          "Standard Linux OS",
+          "Includes all packages required for ABLESTACK",
+          "Manage devices, services, and networking from anywhere with just a web browser",
+          "Deploy cloud environments easily using the built-in deployment wizard"
+        ]
+      },
+      "cell": {
+        "description": "Cell is a built-in hypervisor based on Linux KVM, enhanced with optimized features for seamless ABLESTACK operations. The Cell hypervisor consists of the following key components.",
+        "subDescriptions": [
+          "Integrated hypervisor within Cube OS — no separate hypervisor license required",
+          "Bare-metal hypervisor capabilities with the latest kernel support for high-performance I/O",
+          "Compatible not only with Cell but also with other hypervisors such as VMware, Hyper-V, and Xen"
+        ]
+      },
+      "glue": {
+        "description": "Glue is a core component of ABLESTACK HCI, serving as the platform that powers its storage capabilities. The diagram below illustrates Glue’s functions within the overall ABLESTACK HCI Components:",
+        "subDescriptions": [
+          "Provides large-scale storage using only the disks built into the server, with self-diagnosis and self-healing capabilities in case of failures",
+          "Ensures high efficiency by reducing storage usage by up to 80% through deduplication and compression",
+          "Supports unlimited capacity expansion during operation, enabling endless use cases"
+        ]
+      },
+      "mold": {
+        "description": "With just a single click, most tasks can be completed, and both infrastructure and application operations can be automated for efficient management.",
+        "subDescriptions": [
+          "Manage all virtualization resources through an intuitive management consoles",
+          "Provide multi-tenant cloud services through self-service capabilities",
+          "Manage complex IT infrastructure with minimal effort",
+          "Automate user-level workflows and enable automated provisioning via APIs and predefined scripts"
+        ]
+      },
+      "track": {
+        "description": "Track provides an overlay software-defined network based on virtual routers, allowing you to configure and manage a variety of network functions quickly and efficiently.",
+        "subDescriptions": [
+          "No need for separate appliance installation",
+          "Supports a wide range of network functions (L2, L3, DNS, etc.)",
+          "Ensures high security by blocking unauthorized external access",
+          "Full control over all network resources through an intuitive web-based UI"
+        ]
+      },
+      "wall": {
+        "description": "As an enterprise-grade monitoring platform, Wall enables you to query and visualize metrics for all hosts, virtual machines, and infrastructure components within the ABLESTACK HCI environment. It also provides threshold-based alerts to ensure proactive issue detection.",
+        "subDescriptions": [
+          "Provides real-time monitoring data",
+          "Supports custom monitoring for databases, web applications, and more",
+          "Sends alerts based on predefined threshold settings",
+          "Offers usage statistics to help predict capacity expansion needs"
+        ]
+      },
+      "koral": {
+        "description": "With just a single click, most tasks can be executed, and infrastructure and application operations can be automated for efficient management.",
+        "subDescriptions": [
+          "One-click simplicity",
+          "Supports persistent storage",
+          "Online scaling and automatic scaling",
+          "Provides high availability"
+        ]
+      },
+      "genie": {
+        "description": "Genie is an automation tool built on a general-purpose language. Using pre-created playbooks, it allows users to perform complex, repetitive tasks across the organization with a single button—deploying virtual machines, containers, networks, applications, and more—without requiring any agents.",
+        "subDescriptions": [
+          "Workflow-based automation",
+          "Automation across multiple cloud services, including AWS, GCP, and Azure",
+          "Predefined workflows simplify deployment and usage of various open-source platforms",
+          "Automatically monitors deployed resources and their status"
+        ]
+      },
+      "silo": {
+        "subDescriptions": [
+          "Connects to various commercial SDS solutions for flexible storage expansion",
+          "Provides an object storage gateway and browser interface for big data and AI data management",
+          "Supports connections to bare-metal servers and hypervisors",
+          "Enables diverse storage usage through a web browser, including object storage browser and web-based NAS"
+        ]
+      },
+      "over": {
+        "subDescriptions": [
+          "Active-Active DR",
+          "Supports DR (Disaster Recovery) settings at the virtual machine level through an intuitive UI, enabling efficient DR management, provides state monitoring for individual virtual machines",
+          "Supports server redundancy to ensure uninterrupted operation of mission-critical applications"
+        ]
+      },
+      "link": {
+        "subDescriptions": [
+          "High security based on Zero Trust principles with multi-cloud connectivity",
+          "Supports isolation of virtual machines, containers, and applications to protect critical applications and shared services",
+          "Software-defined security policy management for centralized control"
+        ]
+      }
+    }
   }
 }
