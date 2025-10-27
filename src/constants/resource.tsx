@@ -69,11 +69,11 @@ export const ebooksData: EbookData[] = [
     imgSrc: ebook_1_Src,
   },
   {
-    type: 'ABLESTACK V2V',
-    title: 'V사를 완벽하게 대체할 수 있는 플랫폼',
-    description: '영구 라이센스를 제공하는 ABLESTACK HCI 플랫폼',
-    href: 'ABLESTACK_VMWare.pdf',
-    imgSrc: ebook_2_Src,
+    type: 'ABLESTACK VS VMware',
+    title: 'ABLESTACK-VMware vSphere 제품 비교',
+    description: 'ABLESTACK와 VMWare 주요 라이선스 기능 비교표',
+    href: 'ABLESTACK-VMWare_vSphere.pdf',
+    imgSrc: ebook_6_Src,
   },
   {
     type: 'ABLESTACK with Oracle',
@@ -97,11 +97,11 @@ export const ebooksData: EbookData[] = [
     imgSrc: ebook_5_Src,
   },
   {
-    type: 'ABLESTACK VS VMware',
-    title: 'ABLESTACK-VMware vSphere 제품 비교',
-    description: 'ABLESTACK와 VMWare 주요 라이선스 기능 비교표',
-    href: 'ABLESTACK-VMWare_vSphere.pdf',
-    imgSrc: ebook_6_Src,
+    type: 'ABLESTACK V2V',
+    title: 'V사를 완벽하게 대체할 수 있는 플랫폼',
+    description: '영구 라이센스를 제공하는 ABLESTACK HCI 플랫폼',
+    href: 'ABLESTACK_VMWare.pdf',
+    imgSrc: ebook_2_Src,
   },
   {
     type: 'ABLESTACK Koral',

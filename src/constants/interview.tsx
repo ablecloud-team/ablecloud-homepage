@@ -28,6 +28,7 @@ import gntelSrc from '@/public/images/common/gntel.png';
 import goryeongSrc from '@/public/images/common/goryeong.png';
 import grtcSrc from '@/public/images/common/grtc.png';
 import gwangjuSrc from '@/public/images/common/gwangju.png';
+import gyeonggiSrc from '@/public/images/common/gyeonggi.png';
 import gyeongnamSrc from '@/public/images/common/gyeongnam.png';
 import hcSrc from '@/public/images/common/hc.png';
 import hectoSrc from '@/public/images/common/hecto.png';
@@ -80,6 +81,7 @@ export const interviewList: InterviewListData[] = [
   { img: <Image src={kepcoSrc} alt='' width={154} />, text: '한국전력공사' },
   { img: <Image src={addSrc} alt='' width={190} />, text: '국방과학' },
   { img: <Image src={army2Src} alt='' width={72} />, text: '' },
+  { img: <Image src={gyeonggiSrc} alt='' width={200} />, text: '경기도' },
   { img: <Image src={gyeongnamSrc} alt='' width={146} />, text: '경상남도청' },
   { img: <Image src={gbSrc} alt='' width={146} />, text: '경상북도청' },
   { img: <Image src={gwangjuSrc} alt='' width={176} />, text: '광주광역시' },
