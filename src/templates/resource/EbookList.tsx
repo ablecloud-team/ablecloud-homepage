@@ -1,13 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { useMemo, useState } from 'react';
 
 import { Pagination } from '@/components/ui';
 
 import { EbookData } from '@/types/resource';
+
+import { Link } from '@/i18n/routing';
 
 const LIMIT = 12;
 

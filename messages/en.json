@@ -639,6 +639,58 @@
           }
         ]
       }
+    },
+    "ebook": {
+      "data": [
+        {
+          "title": "Blade Server? Now, It's Time for HCI",
+          "description": "Which is the better choice for your business — Blade Servers or HCI?"
+        },
+        {
+          "title": "A Platform That Perfectly Replaces Vendor V",
+          "description": "ABLESTACK HCI offers perpetual licensing for long-term value."
+        },
+        {
+          "title": "Configuring Oracle RAC on ABLESTACK",
+          "description": "Learn how to set up Oracle RAC in the ABLESTACK virtualization environment."
+        },
+        {
+          "title": "ABLTESTACK VMware virtual machine migration",
+          "description": "Virtual machines can be migrated V2V using the built-in migration tool."
+        },
+        {
+          "title": "Migrate an ABLESTACK physical server to a virtual machine",
+          "description": "Methods for converting a physical server into a virtual machine."
+        },
+        {
+          "title": "Comparison table of key licensing features between ABLESTACK and VMware.",
+          "description": "Comparison table of key licensing features between ABLESTACK and VMware."
+        },
+        {
+          "title": "Getting Started with ABLESTACK Kubernetes Clusters",
+          "description": "Deploy Kubernetes clusters using the built-in Koral feature."
+        },
+        {
+          "title": "Integrating ABLESTACK Kubernetes Clusters with the Portainer Platform",
+          "description": "Step-by-step guide to integrating Portainer for seamless application management."
+        },
+        {
+          "title": "Ensuring Business Continuity with ABLESTACK HCI Disaster Recovery",
+          "description": "Build an Active-Active disaster recovery environment using built-in features."
+        },
+        {
+          "title": "Security Management Through ABLESTACK Link Micro-Segmentation",
+          "description": "Manage security more effectively using the built-in Link feature."
+        },
+        {
+          "title": "ABLESTACK Link Load Balancer Appliance Utilization",
+          "description": "Scenarios for applying load balancing with the built-in Link appliance."
+        },
+        {
+          "title": "ABLESTACK vs VMware Performance Comparison",
+          "description": "A detailed performance benchmark under identical environments."
+        }
+      ]
     }
   },
 

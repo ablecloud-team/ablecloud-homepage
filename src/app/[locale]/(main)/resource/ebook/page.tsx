@@ -1,11 +1,11 @@
-import { ebooksData } from '@/constants/resource';
+import { getEbookData } from '@/constants/resource';
 
 import { EbookList } from '@/templates/resource';
 
-export default function Ebook() {
+export default async function Ebook() {
   return (
     <div className='flex justify-center animate-fade-in mt-6'>
-      <EbookList ebooksData={ebooksData} />
+      <EbookList ebooksData={await getEbookData()} />
     </div>
   );
 }

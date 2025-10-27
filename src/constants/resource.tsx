@@ -60,6 +60,97 @@ export const videosData: string[] = [
   'https://www.youtube.com/embed/_i0oxkf_ReY',
 ];
 
+export const getEbookData = async () => {
+  const t = await getTranslations('resources.ebook');
+
+  return [
+    {
+      type: 'ABLESTACK Technical White Paper',
+      title: t('data.0.title'),
+      description: t('data.0.description'),
+      href: 'ABLESTACK_Technical.pdf',
+      imgSrc: ebook_1_Src,
+    },
+    {
+      type: 'ABLESTACK VS VMware',
+      title: t('data.5.title'),
+      description: t('data.5.description'),
+      href: 'ABLESTACK-VMWare_vSphere.pdf',
+      imgSrc: ebook_6_Src,
+    },
+    {
+      type: 'ABLESTACK with Oracle',
+      title: t('data.2.title'),
+      description: t('data.2.description'),
+      href: 'ABLESTACK_for_Oracle_RAC.pdf',
+      imgSrc: ebook_3_Src,
+    },
+    {
+      type: 'ABLESTACK V2V',
+      title: t('data.3.title'),
+      description: t('data.3.description'),
+      href: 'ABLESTACK_VMWare_Migration.pdf',
+      imgSrc: ebook_4_Src,
+    },
+    {
+      type: 'ABLESTACK P2V',
+      title: t('data.4.title'),
+      description: t('data.4.description'),
+      href: 'ABLESTACK_P2V_Migration.pdf',
+      imgSrc: ebook_5_Src,
+    },
+    {
+      type: 'ABLESTACK V2V',
+      title: t('data.1.title'),
+      description: t('data.1.description'),
+      href: 'ABLESTACK_VMWare.pdf',
+      imgSrc: ebook_2_Src,
+    },
+    {
+      type: 'ABLESTACK Koral',
+      title: t('data.6.title'),
+      description: t('data.6.description'),
+      href: 'ABLESTACK_Kubernetes_Cluster.pdf',
+      imgSrc: ebook_7_Src,
+    },
+    {
+      type: 'ABLESTACK Koral',
+      title: t('data.7.title'),
+      description: t('data.7.description'),
+      href: 'ABLESTACK_Kubernetes_Cluster_Portainer.pdf',
+      imgSrc: ebook_8_Src,
+    },
+    {
+      type: 'ABLESTACK Over',
+      title: t('data.8.title'),
+      description: t('data.8.description'),
+      href: 'ABLESTACK_HCI_ACTIVE.pdf',
+      imgSrc: ebook_9_Src,
+    },
+    {
+      type: 'ABLESTACK Link',
+      title: t('data.9.title'),
+      description: t('data.9.description'),
+      href: 'ABLESTACK_LINK.pdf',
+      imgSrc: ebook_10_Src,
+    },
+    {
+      type: 'ABLESTACK Link',
+      title: t('data.10.title'),
+      description: t('data.10.description'),
+      href: 'ABLESTACK_LINK_LOAD_BALANCER.pdf',
+      imgSrc: ebook_11_Src,
+    },
+    {
+      type: 'ABLESTACK  VS VMware',
+      title: t('data.11.title'),
+      description: t('data.11.description'),
+      href: 'ABLESTACK_VS_VMware.pdf',
+      imgSrc: ebook_12_Src,
+    },
+  ];
+};
+
 export const ebooksData: EbookData[] = [
   {
     type: 'ABLESTACK Technical White Paper',
