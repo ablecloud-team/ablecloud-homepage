@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 import { HeaderData } from '@/types/header';
@@ -7,13 +7,16 @@ import { AblestackService } from '@/types/products';
 import ArrowRight from '@/public/icons/common/arrow-right.svg';
 import AblestackHCI from '@/public/images/products/ablestack-hci-logo.png';
 import AblestackVM from '@/public/images/products/ablestack-vm-logo.png';
+import CellEnSrc from '@/public/images/products/cell-en.png';
 import CellSrc from '@/public/images/products/cell.png';
+import CubeEnSrc from '@/public/images/products/cube-en.png';
 import CubeSrc from '@/public/images/products/cube.png';
 import GenieSrc from '@/public/images/products/genie.png';
 import GlueSrc from '@/public/images/products/glue.png';
 import KoralSrc from '@/public/images/products/koral.png';
 import LinkSrc from '@/public/images/products/link.png';
 import MoldSrc from '@/public/images/products/mold.png';
+import OverEnSrc from '@/public/images/products/over-en.png';
 import OverSrc from '@/public/images/products/over.png';
 import SiloSrc from '@/public/images/products/silo.png';
 import TrackSrc from '@/public/images/products/track.png';
@@ -223,10 +226,11 @@ export const getProductsHeaderData = async () => {
 
 export const getProductsContentData = async () => {
   const t = await getTranslations('products.content');
+  const locale = await getLocale();
 
   return {
     cube: {
-      imgSrc: CubeSrc,
+      imgSrc: locale === 'en' ? CubeEnSrc : CubeSrc,
       description: t('cube.description'),
       subDescriptions: [
         t('cube.subDescriptions.0'),
@@ -236,7 +240,7 @@ export const getProductsContentData = async () => {
       ],
     },
     cell: {
-      imgSrc: CellSrc,
+      imgSrc: locale === 'en' ? CellEnSrc : CellSrc,
       description: t('cell.description'),
       subDescriptions: [
         t('cell.subDescriptions.0'),
@@ -313,7 +317,7 @@ export const getProductsContentData = async () => {
       ],
     },
     over: {
-      imgSrc: OverSrc,
+      imgSrc: locale === 'en' ? OverEnSrc : OverSrc,
       subDescriptions: [
         t('over.subDescriptions.0'),
         t('over.subDescriptions.1'),

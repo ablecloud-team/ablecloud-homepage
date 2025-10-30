@@ -1,9 +1,11 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import HCICard1Src from '@/public/images/products/hci-card-1.png';
 import HCICard2Src from '@/public/images/products/hci-card-2.png';
+import HCICard3EnSrc from '@/public/images/products/hci-card-3-en.png';
 import HCICard3Src from '@/public/images/products/hci-card-3.png';
+import HCICard4EnSrc from '@/public/images/products/hci-card-4-en.png';
 import HCICard4Src from '@/public/images/products/hci-card-4.png';
 
 const cardsData = [
@@ -54,6 +56,7 @@ const cardsData = [
 
 export function AblestackHCIContentCards() {
   const t = useTranslations('product.hci.contentCards');
+  const locale = useLocale();
 
   const cardsData = [
     {
@@ -75,14 +78,14 @@ export function AblestackHCIContentCards() {
       description: t.rich('2.description', {
         br: () => <br />,
       }),
-      imgSrc: HCICard3Src,
+      imgSrc: locale === 'en' ? HCICard3EnSrc : HCICard3Src,
     },
     {
       title: t('3.title'),
       description: t.rich('3.description', {
         br: () => <br />,
       }),
-      imgSrc: HCICard4Src,
+      imgSrc: locale === 'en' ? HCICard4EnSrc : HCICard4Src,
     },
   ];
 
