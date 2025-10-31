@@ -19,7 +19,7 @@ export function ContactForm() {
       <div className='flex flex-col items-center gap-6 text-center'>
         <Image src={CheckSrc} alt='' />
         <div className='font-bold text-[24px] lg:text-[32px]'>{t('submit.title')}</div>
-        <div className='font-medium'>{t.rich('description', { br: () => <br /> })}</div>
+        <div className='font-medium'>{t.rich('submit.description', { br: () => <br /> })}</div>
         <div className='font-medium text-[18px] lg:text-[20px] break-all'>
           sales@ablestack.co.kr
         </div>
