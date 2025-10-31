@@ -1,9 +1,20 @@
+import { useLocale } from 'next-intl';
+
 import { Button } from '@/components/ui';
 
 import { HeaderData } from '@/types/header';
 
+const HIDE_BUTTON_PATHS = ['/resource/blog/21', '/about/performance', '/about/effect'];
+
 export function MainPageHeader({ headerData }: { headerData: HeaderData }) {
+  const locale = useLocale();
+
   const { title, description, bgClassName, heightClassName, buttonData } = headerData;
+
+  const isHidden =
+    locale === 'en' && buttonData && HIDE_BUTTON_PATHS.includes(buttonData.href as string);
+
+  const shouldShowButton = buttonData && !isHidden;
 
   return (
     <div
@@ -20,7 +31,9 @@ export function MainPageHeader({ headerData }: { headerData: HeaderData }) {
         <div className='mt-[12px] font-medium text-[16px] leading-[20px] lg:text-[18px] lg:leading-[24px] '>
           {description}
         </div>
-        {buttonData && <Button className={`mt-4 ${buttonData.className ?? ''}`} {...buttonData} />}
+        {shouldShowButton && (
+          <Button className={`mt-4 ${buttonData.className ?? ''}`} {...buttonData} />
+        )}
       </div>
     </div>
   );
