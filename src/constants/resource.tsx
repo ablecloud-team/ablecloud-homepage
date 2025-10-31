@@ -1,5 +1,7 @@
-import { HeaderData } from '@/types/header';
-import { CompatibilityData, CompatibilityType, EbookData } from '@/types/resource';
+import { useLocale, useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+
+import { EbookData } from '@/types/resource';
 
 import ebook_1_Src from '@/public/images/resource/ebook/ebook_1.png';
 import ebook_2_Src from '@/public/images/resource/ebook/ebook_2.png';
@@ -16,20 +18,29 @@ import ebook_12_Src from '@/public/images/resource/ebook/ebook_12.png';
 
 export const resourceType = ['blog', 'video', 'ebook'] as const;
 
-export const resourceTabs = [
-  { text: '소식', href: '/resource/blog' },
-  { text: '동영상', href: '/resource/video' },
-  { text: '백서', href: '/resource/ebook' },
-  { text: '호환성', href: '/resource/compatibility' },
-];
+export const useResourceTabs = () => {
+  const t = useTranslations('resources.tabs');
+  const locale = useLocale();
 
-export const resourceHeaderData: HeaderData = {
-  title: {
-    mainText: '리소스',
-  },
-  description: '에이블클라우드의 소식을 만나보세요.',
-  bgClassName: 'bg-resource-header',
-  heightClassName: 'min-h-[350px] lg:min-h-[374px]',
+  return [
+    ...(locale === 'ko' ? [{ text: t('blog'), href: '/resource/blog' }] : []),
+    { text: t('video'), href: '/resource/video' },
+    { text: t('ebook'), href: '/resource/ebook' },
+    { text: t('compatibility'), href: '/resource/compatibility' },
+  ];
+};
+
+export const useResourceHeaderData = () => {
+  const t = useTranslations('resources.header');
+
+  return {
+    title: {
+      mainText: t('title'),
+    },
+    description: t('description'),
+    bgClassName: 'bg-resource-header',
+    heightClassName: 'min-h-[350px] lg:min-h-[374px]',
+  };
 };
 
 export const videosData: string[] = [
@@ -48,6 +59,97 @@ export const videosData: string[] = [
   'https://www.youtube.com/embed/H1Tv5-7Pv2E',
   'https://www.youtube.com/embed/_i0oxkf_ReY',
 ];
+
+export const getEbookData = async () => {
+  const t = await getTranslations('resources.ebook');
+
+  return [
+    {
+      type: 'ABLESTACK Technical White Paper',
+      title: t('data.0.title'),
+      description: t('data.0.description'),
+      href: 'ABLESTACK_Technical.pdf',
+      imgSrc: ebook_1_Src,
+    },
+    {
+      type: 'ABLESTACK VS VMware',
+      title: t('data.5.title'),
+      description: t('data.5.description'),
+      href: 'ABLESTACK-VMWare_vSphere.pdf',
+      imgSrc: ebook_6_Src,
+    },
+    {
+      type: 'ABLESTACK with Oracle',
+      title: t('data.2.title'),
+      description: t('data.2.description'),
+      href: 'ABLESTACK_for_Oracle_RAC.pdf',
+      imgSrc: ebook_3_Src,
+    },
+    {
+      type: 'ABLESTACK V2V',
+      title: t('data.3.title'),
+      description: t('data.3.description'),
+      href: 'ABLESTACK_VMWare_Migration.pdf',
+      imgSrc: ebook_4_Src,
+    },
+    {
+      type: 'ABLESTACK P2V',
+      title: t('data.4.title'),
+      description: t('data.4.description'),
+      href: 'ABLESTACK_P2V_Migration.pdf',
+      imgSrc: ebook_5_Src,
+    },
+    {
+      type: 'ABLESTACK V2V',
+      title: t('data.1.title'),
+      description: t('data.1.description'),
+      href: 'ABLESTACK_VMWare.pdf',
+      imgSrc: ebook_2_Src,
+    },
+    {
+      type: 'ABLESTACK Koral',
+      title: t('data.6.title'),
+      description: t('data.6.description'),
+      href: 'ABLESTACK_Kubernetes_Cluster.pdf',
+      imgSrc: ebook_7_Src,
+    },
+    {
+      type: 'ABLESTACK Koral',
+      title: t('data.7.title'),
+      description: t('data.7.description'),
+      href: 'ABLESTACK_Kubernetes_Cluster_Portainer.pdf',
+      imgSrc: ebook_8_Src,
+    },
+    {
+      type: 'ABLESTACK Over',
+      title: t('data.8.title'),
+      description: t('data.8.description'),
+      href: 'ABLESTACK_HCI_ACTIVE.pdf',
+      imgSrc: ebook_9_Src,
+    },
+    {
+      type: 'ABLESTACK Link',
+      title: t('data.9.title'),
+      description: t('data.9.description'),
+      href: 'ABLESTACK_LINK.pdf',
+      imgSrc: ebook_10_Src,
+    },
+    {
+      type: 'ABLESTACK Link',
+      title: t('data.10.title'),
+      description: t('data.10.description'),
+      href: 'ABLESTACK_LINK_LOAD_BALANCER.pdf',
+      imgSrc: ebook_11_Src,
+    },
+    {
+      type: 'ABLESTACK  VS VMware',
+      title: t('data.11.title'),
+      description: t('data.11.description'),
+      href: 'ABLESTACK_VS_VMware.pdf',
+      imgSrc: ebook_12_Src,
+    },
+  ];
+};
 
 export const ebooksData: EbookData[] = [
   {
@@ -136,40 +238,42 @@ export const ebooksData: EbookData[] = [
   },
 ];
 
-export const compatibilityList = [
-  {
-    title: '하이퍼바이저 버전',
-    description:
-      'Mold는 자체적으로 제공되는 Cell 하이버파이저 외에 다양한 하이퍼바이저를 지원합니다.',
-    path: 'hypervisor',
-  },
-  {
-    title: '서버',
-    description: 'ABLESTACK은 다양한 상용 x86서버에 설치가 가능합니다.',
-    path: 'server',
-  },
-  {
-    title: 'Guest OS',
-    description: 'ABLESTACK은 다양한 Guest OS를 지원합니다.',
-    path: 'guest-os',
-  },
-  {
-    title: '가상화 애플리케이션/플랫폼',
-    description: 'ABLESTACK은 다음의 가상화 응용 애플리케이션 또는 플랫폼과 호환됩니다.',
-    path: 'virtualization',
-  },
-  {
-    title: '외장 스토리지',
-    description:
-      'ABLESTACK Mold는 Glue SDS 외에 다양한 외장 스토리지를 연결할 수 있도록 지원하여 효과적으로 클라우드 환경을 운영할 수 있도록 합니다.',
-    path: 'external-storage',
-  },
-  {
-    title: 'Backup 솔루션',
-    description: 'ABLESTACK은 다양한 Backup 솔루션을 지원하며 다음과 같습니다.',
-    path: 'backup',
-  },
-];
+export const useCompatibilityList = () => {
+  const t = useTranslations('resources.compatibility');
+
+  return [
+    {
+      title: t('0.title'),
+      description: t('0.description'),
+      path: 'hypervisor',
+    },
+    {
+      title: t('1.title'),
+      description: t('1.description'),
+      path: 'server',
+    },
+    {
+      title: t('2.title'),
+      description: t('2.description'),
+      path: 'guest-os',
+    },
+    {
+      title: t('3.title'),
+      description: t('3.description'),
+      path: 'virtualization',
+    },
+    {
+      title: t('4.title'),
+      description: t('4.description'),
+      path: 'external-storage',
+    },
+    {
+      title: t('5.title'),
+      description: t('5.description'),
+      path: 'backup',
+    },
+  ];
+};
 
 export const compatibilityType = [
   'hypervisor',
@@ -180,129 +284,117 @@ export const compatibilityType = [
   'backup',
 ] as const;
 
-export const compatibilityData: { [K in CompatibilityType]: CompatibilityData } = {
-  hypervisor: {
-    title: '호환되는 하이퍼바이저 버전',
-    descriptionList: [
-      {
-        description:
-          'Mold는 자체적으로 제공되는 Cell 하이버파이저 외에 다양한 하이퍼바이저를 지원합니다. Mold에 의해 통합 관리될 수 있는 하이퍼바이저는 다음과 같습니다.',
-        list: [
-          'KVM : Ubuntu 18.04 LTS, 20.04 LTS, CentOS 7, 8, RHEL 7, 8, 9, Rocky Linux 8, 9, openSUSE Leap 15, SUSE Linux Enterprise Server 15',
-          'Citrix Hypervisor : 최신 핫픽스가 적용된 7.x, 8.x 버전',
-          'XCP-ng : 7.x, 8.x',
-          'VMWare : 6.x, 7.x, 8.x',
-        ],
-      },
-      {
-        description:
-          'Mold에 의해 통합 관리 되지는 않으나, Glue를 통한 SDS를 구성하여 비관리형 HCI를 제공할 수 있는 하이퍼바이저는 다음과 같습니다.',
-        list: [
-          '위의 Mold가 통합관리하는 모든 하이퍼바이저',
-          'Hyper-V : Windows 2016 이상, Hyper-V 2016 이상',
-        ],
-      },
-    ],
-  },
-  server: {
-    title: '호환되는 서버',
-    descriptionList: [
-      {
-        description: 'ABLESTACK은 다양한 상용 x86서버에 설치가 가능하며 다음과 같습니다.',
-        list: [
-          'DELL',
-          'HPE',
-          'Fujitsu',
-          'Lenovo',
-          '슈퍼마이크로',
-          '유니와이드',
-          'KTNF',
-          '이슬림',
-          'SNA',
-          '쓰리에스코어(AMD)',
-        ],
-      },
-    ],
-  },
-  'guest-os': {
-    title: '호환되는 Guest OS',
-    descriptionList: [
-      {
-        description: 'ABLESTACK은 다양한 Guest OS를 지원하며 다음과 같습니다.',
-        list: [
-          'Redhat Enterprise Linux : 6 이상',
-          'Oracle Linux : 6 이상',
-          'SUSE Enterprise Linux : 11 이상',
-          'Ubuntu : 16 이상',
-          'Rocky Linux : 8 이상',
-          'Cent OS : 7 이상',
-          'Windows : 8 이상',
-          'Windows Server : 2012 이상',
-        ],
-      },
-    ],
-  },
-  virtualization: {
-    title: '호환성이 검증된 가상화 애플리케이션/플랫폼',
-    descriptionList: [
-      {
-        description: 'ABLESTACK은 다음의 가상화 응용 애플리케이션 또는 플랫폼과 호환됩니다.',
-        list: [
-          'Tilon(틸론) : DStatsion(VDI)',
-          'Citrix : Virtual Apps & Desktops(VDI)',
-          '이노티움 :  InnoECM(문서중앙화)',
-          'Tmax : Webtob(WEB), Jeus(WAS), Tibero(DB)',
-          'Oracle : Oracle RAC(DB)',
-          'MS : MSSQL(DB)',
-        ],
-      },
-    ],
-  },
-  'external-storage': {
-    title: '호환되는 외장 스토리지',
-    descriptionList: [
-      {
-        description:
-          'ABLESTACK Mold는 Glue SDS 외에 다양한 외장 스토리지를 연결할 수 있도록 지원하여 효과적으로 클라우드 환경을 운영할 수 있도록 지원합니다. 블록 스토리지로 사용할 수 있도록 지원되는 외장스토리지는 다음과 같습니다.',
-        list: [
-          'VMWare',
-          '표준 iSCSI',
-          '표준 NFS',
-          'Citrix Hypervisor',
-          '표준 iSCSI',
-          '표준 NFS',
-          'SMB',
-          'Microsoft HyperV',
-          '표준 iSCSI',
-          'SMB',
-          'Cell, KVM',
-          '표준 iSCSI',
-          '표준 NFS/POSIX호환 스토리지',
-          'GluesterFS',
-          'SolidFire',
-          'Ceph RBD',
-          'Datera',
-          'Cloudbyte',
-          'Nexenta',
-          'Dell PowerFlex',
-          'LINSTOR',
-          'ABLESTACK Glue Block',
-          'ABLESTACK Glue Filesystem',
-        ],
-      },
-    ],
-  },
-  backup: {
-    title: '호환되는 Backup 솔루션',
-    descriptionList: [
-      {
-        description: 'ABLESTACK은 다양한 Backup 솔루션을 지원하며 다음과 같습니다.',
-        list: [
-          'Veeam, Dell Networker 백업 플랫폼 통합',
-          'Veritas, Commvault 백업과 연동 지원',
-          'Synology Active Backup for Business 백업 지원',
-        ],
-      },
-    ],
-  },
+export const getCompatibilityData = async () => {
+  const t = await getTranslations('resources.compatibilityData');
+
+  return {
+    hypervisor: {
+      title: t.rich('hypervisor.title', {
+        br: () => <br />,
+      }),
+      descriptionList: [
+        {
+          description: t.rich('hypervisor.descriptionList.0.description', {
+            br: () => <br />,
+          }),
+          list: [
+            t('hypervisor.descriptionList.0.list.0'),
+            t('hypervisor.descriptionList.0.list.1'),
+            t('hypervisor.descriptionList.0.list.2'),
+            t('hypervisor.descriptionList.0.list.3'),
+          ],
+        },
+        {
+          description: t('hypervisor.descriptionList.1.description'),
+          list: [
+            t('hypervisor.descriptionList.1.list.0'),
+            t('hypervisor.descriptionList.1.list.1'),
+          ],
+        },
+      ],
+    },
+    server: {
+      title: t('server.title'),
+      descriptionList: [
+        {
+          description: t('server.descriptionList.0.description'),
+          list: [
+            t('server.descriptionList.0.list.0'),
+            t('server.descriptionList.0.list.1'),
+            t('server.descriptionList.0.list.2'),
+            t('server.descriptionList.0.list.3'),
+            t('server.descriptionList.0.list.4'),
+            t('server.descriptionList.0.list.5'),
+            t('server.descriptionList.0.list.6'),
+            t('server.descriptionList.0.list.7'),
+            t('server.descriptionList.0.list.8'),
+            t('server.descriptionList.0.list.9'),
+          ],
+        },
+      ],
+    },
+    'guest-os': {
+      title: t('guest-os.title'),
+      descriptionList: [
+        {
+          description: t('guest-os.descriptionList.0.description'),
+          list: [
+            t('guest-os.descriptionList.0.list.0'),
+            t('guest-os.descriptionList.0.list.1'),
+            t('guest-os.descriptionList.0.list.2'),
+            t('guest-os.descriptionList.0.list.3'),
+            t('guest-os.descriptionList.0.list.4'),
+            t('guest-os.descriptionList.0.list.5'),
+            t('guest-os.descriptionList.0.list.6'),
+            t('guest-os.descriptionList.0.list.7'),
+          ],
+        },
+      ],
+    },
+    virtualization: {
+      title: t('virtualization.title'),
+      descriptionList: [
+        {
+          description: t('virtualization.descriptionList.0.description'),
+          list: [
+            t('virtualization.descriptionList.0.list.0'),
+            t('virtualization.descriptionList.0.list.1'),
+            t('virtualization.descriptionList.0.list.2'),
+            t('virtualization.descriptionList.0.list.3'),
+            t('virtualization.descriptionList.0.list.4'),
+            t('virtualization.descriptionList.0.list.5'),
+          ],
+        },
+      ],
+    },
+    'external-storage': {
+      title: t('external-storage.title'),
+      descriptionList: [
+        {
+          description: t('external-storage.descriptionList.0.description'),
+          list: [
+            t('external-storage.descriptionList.0.list.0'),
+            t('external-storage.descriptionList.0.list.1'),
+            t('external-storage.descriptionList.0.list.2'),
+            t('external-storage.descriptionList.0.list.3'),
+            t('external-storage.descriptionList.0.list.4'),
+            t('external-storage.descriptionList.0.list.5'),
+          ],
+        },
+      ],
+    },
+    backup: {
+      title: t('backup.title'),
+      descriptionList: [
+        {
+          description: t('backup.descriptionList.0.description'),
+          list: [
+            t('backup.descriptionList.0.list.0'),
+            t('backup.descriptionList.0.list.1'),
+            t('backup.descriptionList.0.list.2'),
+          ],
+        },
+      ],
+    },
+  };
 };

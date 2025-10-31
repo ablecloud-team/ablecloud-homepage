@@ -1,6 +1,6 @@
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
-import { HeaderData } from '@/types/header';
 import { InterviewListData } from '@/types/interview';
 
 import addSrc from '@/public/images/common/add.png';
@@ -56,19 +56,17 @@ import ycgSrc from '@/public/images/common/ycg.png';
 import yeojuSrc from '@/public/images/common/yeoju.png';
 import yitSrc from '@/public/images/common/yit.png';
 
-export const interviewHeaderData: HeaderData = {
-  title: {
-    mainText: '고객사',
-  },
-  description: (
-    <div className='max-w-[699px]'>
-      ABESTACK은 어떠한 애플리케이션이든 사용 환경이나 산업 환경과 상관없이 모두 처리할 수 있으며
-      최신의 이머징 워크로드도 원활하게 배포하여 운영할 수 있는 유연성과 확정성, 안정성을
-      제공합니다.
-    </div>
-  ),
-  bgClassName: 'bg-interview-header',
-  heightClassName: 'min-h-[350px] lg:min-h-[404px]',
+export const getInterviewHeaderData = async () => {
+  const t = await getTranslations('interview.header');
+
+  return {
+    title: {
+      mainText: t('title'),
+    },
+    description: <div className='max-w-[699px]'>{t('description')}</div>,
+    bgClassName: 'bg-interview-header',
+    heightClassName: 'min-h-[350px] lg:min-h-[404px]',
+  };
 };
 
 export const interviewList: InterviewListData[] = [

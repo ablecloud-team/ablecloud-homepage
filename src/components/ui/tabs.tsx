@@ -1,9 +1,8 @@
 'use client';
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-
 import { useEffect, useRef, useState } from 'react';
+
+import { Link, usePathname } from '@/i18n/routing';
 
 interface TabsProps {
   tabs: { text: string; href: string }[];

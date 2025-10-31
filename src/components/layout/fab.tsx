@@ -1,11 +1,13 @@
 'use client';
 
-import Link from 'next/link';
+import { useLocale } from 'next-intl';
 
 import { useRef, useState } from 'react';
 
 import FabCloseIcon from '@/public/icons/common/fab-close.svg';
 import FabIcon from '@/public/icons/common/fab.svg';
+
+import { Link } from '@/i18n/routing';
 
 const items = [
   { label: '딜 등록 신청', href: 'https://forms.gle/fPuCZv559yc7JGgt6' },
@@ -20,7 +22,9 @@ export function Fab() {
   const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
 
-  return (
+  const locale = useLocale();
+
+  return locale === 'ko' ? (
     <div className='fixed bottom-8 right-6 z-[100]'>
       <div
         className={`fixed inset-0 ${open ? 'pointer-events-auto' : 'pointer-events-none'}`}
@@ -54,5 +58,7 @@ export function Fab() {
         {open ? <FabCloseIcon /> : <FabIcon />}
       </div>
     </div>
+  ) : (
+    <></>
   );
 }
