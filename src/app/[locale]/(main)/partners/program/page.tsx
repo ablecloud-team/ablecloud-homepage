@@ -8,6 +8,9 @@ import { ContentWrapper, MainPageHeader } from '@/templates/common';
 import { Button } from '@/components/ui';
 
 import program1Src from '@/public/images/partners/program-1.png';
+import program2Src from '@/public/images/partners/program-2.png';
+import program3Src from '@/public/images/partners/program-3.png';
+import program4Src from '@/public/images/partners/program-4.png';
 
 export default function PartnerProgram() {
   const t = useTranslations('partner.program');
@@ -21,21 +24,21 @@ export default function PartnerProgram() {
       }),
     },
     {
-      imgSrc: program1Src,
+      imgSrc: program2Src,
       title: t('data.1.title'),
       description: t.rich('data.1.description', {
         br: () => <br />,
       }),
     },
     {
-      imgSrc: program1Src,
+      imgSrc: program3Src,
       title: t('data.2.title'),
       description: t.rich('data.2.description', {
         br: () => <br />,
       }),
     },
     {
-      imgSrc: program1Src,
+      imgSrc: program4Src,
       title: t('data.3.title'),
       description: t.rich('data.3.description', {
         br: () => <br />,
