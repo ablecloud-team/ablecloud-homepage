@@ -1,4 +1,5 @@
 import { getLocale, getTranslations } from 'next-intl/server';
+import { headers } from 'next/headers';
 import Image from 'next/image';
 
 import { HeaderData } from '@/types/header';
@@ -38,6 +39,12 @@ export const ablestackServices = [
 
 export const getAblestackHciHeaderData = async (): Promise<HeaderData> => {
   const t = await getTranslations('product.hci.header');
+  const locale = await getLocale();
+
+  const headersList = await headers();
+  const host = headersList.get('host') || 'localhost:3000';
+  const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
+  const origin = `${protocol}://${host}`;
 
   return {
     title: {
@@ -56,7 +63,10 @@ export const getAblestackHciHeaderData = async (): Promise<HeaderData> => {
           {t('buttonText')} <ArrowRight height={16} />
         </div>
       ),
-      href: '/pdf/ABLESTACK_HCI_제품소개서.pdf',
+      href:
+        locale === 'ko'
+          ? `${origin}/pdf/ABLESTACK_HCI_제품소개서.pdf`
+          : `${origin}/pdf/ABLESTACK_HCI_Product_introduction.pdf`,
       target: '_blank',
     },
   };
@@ -64,6 +74,13 @@ export const getAblestackHciHeaderData = async (): Promise<HeaderData> => {
 
 export const getAblestackVmHeaderData = async (): Promise<HeaderData> => {
   const t = await getTranslations('product.vm.header');
+
+  const locale = await getLocale();
+
+  const headersList = await headers();
+  const host = headersList.get('host') || 'localhost:3000';
+  const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
+  const origin = `${protocol}://${host}`;
 
   return {
     title: {
@@ -82,7 +99,10 @@ export const getAblestackVmHeaderData = async (): Promise<HeaderData> => {
           {t('download')} <ArrowRight height={16} />
         </div>
       ),
-      href: '/pdf/ABLESTACK_VM_제품소개서.pdf',
+      href:
+        locale === 'ko'
+          ? `${origin}/pdf/ABLESTACK_VM_제품소개서.pdf`
+          : `${origin}/pdf/ABLESTACK_VM_Product_introduction.pdf`,
       target: '_blank',
     },
   };

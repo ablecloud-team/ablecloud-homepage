@@ -12,7 +12,7 @@ import { Link } from '@/i18n/routing';
 
 const LIMIT = 12;
 
-export function EbookList({ ebooksData }: { ebooksData: EbookData[] }) {
+export function EbookList({ ebooksData, origin }: { ebooksData: EbookData[]; origin: string }) {
   const [page, setPage] = useState<number>(1);
 
   const ebookList = useMemo(() => {
@@ -32,7 +32,7 @@ export function EbookList({ ebooksData }: { ebooksData: EbookData[] }) {
           return (
             <Link
               key={idx}
-              href={`/pdf/${v.href}`}
+              href={`${origin}/pdf/${v.href}`}
               target='_blank'
               className='flex flex-col rounded-[20px] border border-[#eee] max-w-[360px] transform transition duration-200 hover:scale-102 hover:shadow-sm'>
               <Image src={v.imgSrc} alt='' className='rounded-t-[20px]' />
