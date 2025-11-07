@@ -696,6 +696,14 @@
         {
           "title": "ABLESTACK vs VMware Performance Comparison",
           "description": "A detailed performance benchmark under identical environments."
+        },
+        {
+          "title": "ABLESTACK for Commvault Backup Solution",
+          "description": "Commvault Backup Solution Integration Function"
+        },
+        {
+          "title": "Virtualization Platform for CCTV Video Surveillance Systems, ABLESTACK",
+          "description": "Video Surveillance Infrastructure and Control Center Construction"
         }
       ]
     }
