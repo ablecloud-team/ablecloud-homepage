@@ -159,8 +159,8 @@ export const getEbookData = async () => {
     },
     {
       type: 'ABLESTACK Solution',
-      title: t('data.12.title'),
-      description: t('data.12.description'),
+      title: t('data.13.title'),
+      description: t('data.13.description'),
       href: 'ABLESTACK_관제 CCTV.pdf',
       imgSrc: ebook_14_Src,
     },
