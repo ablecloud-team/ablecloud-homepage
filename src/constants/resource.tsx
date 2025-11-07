@@ -15,6 +15,8 @@ import ebook_9_Src from '@/public/images/resource/ebook/ebook_9.png';
 import ebook_10_Src from '@/public/images/resource/ebook/ebook_10.png';
 import ebook_11_Src from '@/public/images/resource/ebook/ebook_11.png';
 import ebook_12_Src from '@/public/images/resource/ebook/ebook_12.png';
+import ebook_13_Src from '@/public/images/resource/ebook/ebook_13.png';
+import ebook_14_Src from '@/public/images/resource/ebook/ebook_14.png';
 
 export const resourceType = ['blog', 'video', 'ebook'] as const;
 
@@ -147,6 +149,20 @@ export const getEbookData = async () => {
       description: t('data.11.description'),
       href: 'ABLESTACK_VS_VMware.pdf',
       imgSrc: ebook_12_Src,
+    },
+    {
+      type: 'ABLESTACK Solution',
+      title: t('data.12.title'),
+      description: t('data.12.description'),
+      href: 'ABLESTACK_Commvault_백업 솔루션.pdf',
+      imgSrc: ebook_13_Src,
+    },
+    {
+      type: 'ABLESTACK Solution',
+      title: t('data.13.title'),
+      description: t('data.13.description'),
+      href: 'ABLESTACK_관제 CCTV.pdf',
+      imgSrc: ebook_14_Src,
     },
   ];
 };

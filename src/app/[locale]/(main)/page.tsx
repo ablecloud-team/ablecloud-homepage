@@ -18,6 +18,8 @@ import {
   HomeMainCards,
 } from '@/templates/home';
 
+import Popup from '@/components/ui/popup';
+
 export default async function Home() {
   const { postsData } = await getPosts();
   const locale = await getLocale();
@@ -26,6 +28,8 @@ export default async function Home() {
 
   return (
     <>
+      {locale === 'ko' ? <Popup /> : <></>}
+
       <SliderHeader sliderData={await getHomeSliderData()} />
       <ContentWrapper>
         <HomeMainCards title={t('mainCardTitle')} cardsData={await getHomeMainCardsData()} />

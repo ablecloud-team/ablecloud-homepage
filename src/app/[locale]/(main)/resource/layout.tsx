@@ -15,15 +15,19 @@ export default function ResourceLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
+  const headerData = useResourceHeaderData();
+  const tabsData = useResourceTabs();
 
-  if (pathname.startsWith('/resource/blog/')) return children;
+  if (pathname.startsWith('/resource/blog/')) {
+    return children;
+  }
 
   return (
     <>
       <ScrollTop />
-      <MainPageHeader headerData={useResourceHeaderData()} />
+      <MainPageHeader headerData={headerData} />
       <ContentWrapper type='resource'>
-        <Tabs tabs={useResourceTabs()} />
+        <Tabs tabs={tabsData} />
         {children}
       </ContentWrapper>
     </>

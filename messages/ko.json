@@ -695,6 +695,14 @@
         {
           "title": "ABLESTACK vs VMware 성능 비교",
           "description": "ABLESTACK와 VMware 동일 환경에서의 성능 비교"
+        },
+        {
+          "title": "ABLESTACK for Commvault 백업 솔루션",
+          "description": "Commvault 백업 솔루션 연동 기능"
+        },
+        {
+          "title": "CCTV 영상감시 시스템을 위한 가상화 플랫폼, ABLESTACK",
+          "description": "영상감시 인프라 및 관제센터 구축"
         }
       ]
     }
