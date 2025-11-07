@@ -28,7 +28,7 @@ export default async function Home() {
 
   return (
     <>
-      {locale === 'ko' ? <Popup imageSrc='/images/home/header-1.png' /> : <></>}
+      {locale === 'ko' ? <Popup /> : <></>}
 
       <SliderHeader sliderData={await getHomeSliderData()} />
       <ContentWrapper>

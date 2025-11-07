@@ -10,7 +10,6 @@ import noticePopupSrc from '@/public/images/home/notice-popup.jpg';
 import { useRouter } from '@/i18n/routing';
 
 interface PopupProps {
-  imageSrc: string;
   alt?: string;
   storageKey?: string;
   onClose?: () => void;
