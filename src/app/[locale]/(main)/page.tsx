@@ -28,9 +28,8 @@ export default async function Home() {
 
   return (
     <>
-      {/* 이미지 팝업: 우측 상단 닫기 버튼만 표시 */}
-      <Popup imageSrc='/images/home/header-1.png' />
-      {/* 나머지 홈 콘텐츠 */}
+      {locale === 'ko' ? <Popup imageSrc='/images/home/header-1.png' /> : <></>}
+
       <SliderHeader sliderData={await getHomeSliderData()} />
       <ContentWrapper>
         <HomeMainCards title={t('mainCardTitle')} cardsData={await getHomeMainCardsData()} />

@@ -18,7 +18,6 @@ interface PopupProps {
 }
 
 export default function Popup({
-  imageSrc, // 현재는 noticePopupSrc로 고정되어 사용되므로, 이 prop은 사용되지 않습니다.
   alt = 'Popup',
   storageKey = 'hasSeenWelcomePopup',
   onClose,
@@ -36,18 +35,16 @@ export default function Popup({
 
   const handleClose = () => {
     setVisible(false);
-    // 세션 스토리지에 저장 - 탭을 닫으면 자동으로 사라짐
+
     sessionStorage.setItem(storageKey, 'true');
     onClose?.();
   };
 
-  // Function to reset popup state (for testing/admin purposes)
   const resetPopup = () => {
     sessionStorage.removeItem(storageKey);
     setVisible(true);
   };
 
-  // Listen for Ctrl+Shift+R to reset popup
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'R') {
@@ -75,13 +72,10 @@ export default function Popup({
     <div
       className='fixed inset-0 bg-gray-900 bg-opacity-30 flex items-center justify-center z-50'
       onClick={handleOverlayClick}>
-      {/* 팝업 컨테이너를 relative로 만들고, close 버튼을 이 컨테이너 기준으로 absolute로 배치 */}
       <div className='relative'>
         {showCloseButton && (
           <button
             onClick={handleClose}
-            // right-[-1.5rem]와 top-[-1.5rem]으로 팝업 이미지 밖 오른쪽 위에 배치
-            // 필요에 따라 `right-2`, `top-2` 등으로 이미지 위에 배치 가능
             className='absolute -top-4 -right-4 z-10 text-gray-400 hover:text-gray-600 transition-colors bg-white rounded-full p-1 shadow-md'>
             <Close className='w-6 h-6' />
           </button>
