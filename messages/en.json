@@ -22,7 +22,6 @@
       "mainText": "Revolutionary Video<br></br>Surveillance<br></br>Infrastructure",
       "description": "Leverage your existing equipment while<br></br>dramatically reducing costs with<br></br>ABLESTACK’s all-in-one platform."
     },
-
     "mainCardTitle": "A next-generation platform that brings SDDC to life",
     "card": {
       "detail": "Learn more",
@@ -30,7 +29,6 @@
       "main2": "Unified Virtualization<br></br>& Cloud Platform",
       "main3": "An all-in-one<br></br>HCI cloud platform"
     },
-
     "mainApplicationCard": "Your Trusted Platform for Sovereign Cloud",
     "applicationCard": {
       "detail": "See More Applications",
@@ -55,13 +53,10 @@
         "description": "Container-Based<br></br>Microservices on HCI Cloud"
       }
     },
-
     "mainInterviewTitle": "Why Leading Companies Choose ABLESTACK for Virtualization",
     "interviewDetail": "See more",
-
     "mainBlogCardTitle": "Latest News from ABLECLOUD",
     "blogDetail": "See more News",
-
     "footerCard": {
       "partner": {
         "description": "Partner with Us to Drive the<br></br>Future of Virtual and Cloud",
@@ -82,11 +77,17 @@
       }
     }
   },
-
   "header": {
     "menu1": {
       "title": "PRODUCTS",
-      "subMenu": [{ "title": "ABLESTACK VM" }, { "title": "ABLESTACK HCI" }]
+      "subMenu": [
+        {
+          "title": "ABLESTACK VM"
+        },
+        {
+          "title": "ABLESTACK HCI"
+        }
+      ]
     },
     "menu2": {
       "title": "SOLUTION"
@@ -96,29 +97,51 @@
     },
     "menu4": {
       "title": "PARTNER",
-      "subMenu": [{ "title": "Partnership Program" }, { "title": "Partners" }]
+      "subMenu": [
+        {
+          "title": "Partnership Program"
+        },
+        {
+          "title": "Partners"
+        }
+      ]
     },
     "menu5": {
       "title": "RESOURCES",
       "subMenu": [
-        { "title": "News" },
-        { "title": "Videos" },
-        { "title": "Whitepapers" },
-        { "title": "Compatibility" }
+        {
+          "title": "News"
+        },
+        {
+          "title": "Videos"
+        },
+        {
+          "title": "Whitepapers"
+        },
+        {
+          "title": "Compatibility"
+        }
       ]
     },
     "menu6": {
       "title": "ABOUT US",
       "subMenu": [
-        { "title": "Company Overview" },
-        { "title": "History" },
-        { "title": "Certifications & Patents" },
-        { "title": "Location" }
+        {
+          "title": "Company Overview"
+        },
+        {
+          "title": "History"
+        },
+        {
+          "title": "Certifications & Patents"
+        },
+        {
+          "title": "Location"
+        }
       ]
     },
     "contact": "CONTACT"
   },
-
   "footer": {
     "bizLicense": "Business Registration Number",
     "name": {
@@ -138,14 +161,12 @@
       "value": "1544-3696"
     }
   },
-
   "product": {
     "vm": {
       "header": {
         "description": "Best Solution for Server Virtualization",
         "download": "Download Product Brochure"
       },
-
       "cards": {
         "title": "Why You Need ",
         "card": [
@@ -163,19 +184,16 @@
           }
         ]
       },
-
       "migration": {
         "title": "Easy VM Migration (P2V and V2V)",
         "description": "ABLESTACK comes with built-in tools for virtual machine migration.<br></br> Using the web-based migration tool, you can easily move your desired virtual machines with just a few clicks.",
         "imageText1": "Unified Monitoring Platform at a Glance",
         "imageText2": "Seamless Data Migration"
       },
-
       "detail": {
         "title": "Innovative Virtualization Platform for Cloud Transformation",
         "description": "ABLESTACK virtualizes enterprise and data center infrastructure, providing an innovative platform to transition to the cloud.<br></br>With a simple licensing model, it offers a wide range of virtualization and cloud functionalities."
       },
-
       "ablestack": {
         "title": "Components",
         "service": [
@@ -270,7 +288,6 @@
       ]
     }
   },
-
   "company": {
     "header": {
       "title": "Company Overview",
@@ -296,9 +313,7 @@
         "At ABLECLOUD,<br></br>we see endless possibilities through new platforms."
       ],
       "content": "Welcome to ABLECLOUD Inc.<br></br>As Korea’s only company specializing exclusively in virtualization platforms, ABLECLOUD leverages its deep expertise in virtualization<br></br>technology, proven cloud infrastructure solutions, and strategic partnerships with leading industry players to support data center operations<br></br>and drive IT innovation for our clients.<br></br>With proprietary capabilities in cutting-edge virtualization technologies — as well as emerging innovations like artificial intelligence and big<br></br>data — we deliver high-value platforms and solutions across public, enterprise, and service sectors. Our offerings include cloud data center<br></br>infrastructure, server virtualization, and virtual desktop environments.<br></br>We are committed to building lasting trust with our clients through continued growth and technological excellence.<br></br>Thank you for visiting us.",
-
       "dear": "Co-CEOs\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Mingil Kwon & Donghyuk Park",
-
       "card": [
         {
           "title": "Cloud Experts",
@@ -423,13 +438,11 @@
       }
     }
   },
-
   "solution": {
     "header": {
       "title": "Use Cases",
       "description": "ABLESTACK delivers solutions for any type of application and any business workload — without compromise.<br></br>It is an essential platform for driving both business and IT innovation across the enterprise."
     },
-
     "infra": [
       {
         "title": "Server Virtualization",
@@ -460,7 +473,6 @@
         "description": "Ensure continuity with full data backup and multiple recovery options, meeting SLAs at minimal cost."
       }
     ],
-
     "application": [
       {
         "title": "Big Data Analytics",
@@ -487,7 +499,6 @@
         "description": "Build call center systems that can be accessed anytime, anywhere, on any device."
       }
     ],
-
     "dev": [
       {
         "title": "Development & Testing",
@@ -503,7 +514,6 @@
       }
     ]
   },
-
   "resources": {
     "header": {
       "title": "Resources",
@@ -639,9 +649,8 @@
           {
             "description": "ABLESTACK supports a variety of backup solutions, including :",
             "list": [
-              "Veeam and Dell Networker backup platform integration",
-              "Integration with Veritas and Commvault backup solutions",
-              "Support for Synology Active Backup for Business"
+              "Integration with Commvault and Dell Networker backup platforms",
+              "Support for Veeam, Veritas NetBackup, Synology ABB, Acronis, Arcserve, and Unitrends backup solutions"
             ]
           }
         ]
@@ -708,7 +717,6 @@
       ]
     }
   },
-
   "interview": {
     "header": {
       "title": "Customers",
@@ -716,7 +724,6 @@
     },
     "title": "Customers who transformed their business with ABLESTACK "
   },
-
   "partner": {
     "header": {
       "title": "Partners",
@@ -724,7 +731,6 @@
     },
     "title": "A Future of Shared Success",
     "description": "Innovative technology, sustainable revenue. <br></br> Join us in shaping the HCI market and driving global growth through collaborative success.",
-
     "tier": [
       {
         "title": "Platinum Partner",
@@ -743,45 +749,102 @@
         "description": "Partners capable of supplying joint solutions or products in a packaged form."
       }
     ],
-
     "partnerList": {
       "title": "Manufacturer Partner",
       "description": "Current manufacturing partners collaborating with ABLECLOUD.",
-
       "list": [
-        { "text": "ABLESTOR" },
-        { "text": "DELL Technologies" },
-        { "text": "HPE" },
-        { "text": "FUJITSU" },
-        { "text": "Lenovo" },
-        { "text": "Super Micro Computer" },
-        { "text": "SUPER SOLUTION" },
-        { "text": "KTNF" },
-        { "text": "UNIWIDE" },
-        { "text": "Ocean Technology" },
-        { "text": "Citrix" },
-        { "text": "Tilon" },
-        { "text": "XENO SOLUTION" },
-        { "text": "NHN CROSSENT" },
-        { "text": "HANDREAMNET" },
-        { "text": "INNOGRID" },
-        { "text": "Acornsoft" },
-        { "text": "INNOTIUM" },
-        { "text": "T3Q" },
-        { "text": "Innodep" },
-        { "text": "XSLAB" },
-        { "text": "Hyosung Information Systems" },
-        { "text": "Zungwon EN-SYS" },
-        { "text": "AJ  ICT" },
-        { "text": "SK shieldus" },
-        { "text": "GNTEL" },
-        { "text": "ITCEN CLOIT" },
-        { "text": "SNA" },
-        { "text": "Daewon CTS" },
-        { "text": "Geomax Soft" }
+        {
+          "text": "ABLESTOR"
+        },
+        {
+          "text": "DELL Technologies"
+        },
+        {
+          "text": "HPE"
+        },
+        {
+          "text": "FUJITSU"
+        },
+        {
+          "text": "Lenovo"
+        },
+        {
+          "text": "Super Micro Computer"
+        },
+        {
+          "text": "SUPER SOLUTION"
+        },
+        {
+          "text": "KTNF"
+        },
+        {
+          "text": "UNIWIDE"
+        },
+        {
+          "text": "Ocean Technology"
+        },
+        {
+          "text": "Citrix"
+        },
+        {
+          "text": "Tilon"
+        },
+        {
+          "text": "XENO SOLUTION"
+        },
+        {
+          "text": "NHN CROSSENT"
+        },
+        {
+          "text": "HANDREAMNET"
+        },
+        {
+          "text": "INNOGRID"
+        },
+        {
+          "text": "Acornsoft"
+        },
+        {
+          "text": "INNOTIUM"
+        },
+        {
+          "text": "T3Q"
+        },
+        {
+          "text": "Innodep"
+        },
+        {
+          "text": "XSLAB"
+        },
+        {
+          "text": "Hyosung Information Systems"
+        },
+        {
+          "text": "Zungwon EN-SYS"
+        },
+        {
+          "text": "AJ  ICT"
+        },
+        {
+          "text": "SK shieldus"
+        },
+        {
+          "text": "GNTEL"
+        },
+        {
+          "text": "ITCEN CLOIT"
+        },
+        {
+          "text": "SNA"
+        },
+        {
+          "text": "Daewon CTS"
+        },
+        {
+          "text": "Geomax Soft"
+        }
       ]
     },
-
     "program": {
       "header": {
         "title": "Partnership Program",
@@ -789,7 +852,6 @@
       },
       "title": "Introduction to the Partnership Program",
       "description": "We offer a flexible and innovative program to collaborate effectively with our partners.",
-
       "data": [
         {
           "title": "ABLECLOUD Seminar Participation",
@@ -808,11 +870,9 @@
           "description": "Annual event for business partners"
         }
       ],
-
       "contact": "Contact Us"
     }
   },
-
   "contact": {
     "header": {
       "title": "Contact Us",
@@ -827,11 +887,9 @@
       "type": "Category",
       "message": "Message",
       "button": "Submit Inquiry",
-
       "sales": "sales",
       "techSupport": "techSupport",
       "estimation": "estimation",
-
       "submit": {
         "title": "Thank you for submitting your inquiry.",
         "description": "We will review your message and get back to you shortly.<br></br>If you have any further questions, please feel free to contact us at the email address below",
@@ -846,7 +904,6 @@
       ]
     }
   },
-
   "products": {
     "header": {
       "cube": {
