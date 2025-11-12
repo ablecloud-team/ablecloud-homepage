@@ -404,11 +404,7 @@ export const getCompatibilityData = async () => {
       descriptionList: [
         {
           description: t('backup.descriptionList.0.description'),
-          list: [
-            t('backup.descriptionList.0.list.0'),
-            t('backup.descriptionList.0.list.1'),
-            t('backup.descriptionList.0.list.2'),
-          ],
+          list: [t('backup.descriptionList.0.list.0'), t('backup.descriptionList.0.list.1')],
         },
       ],
     },
