@@ -56,3 +56,5 @@ jobs:
             --restart unless-stopped \
             -p 8888:80 \
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.event.release.tag_name }}
+          sleep 1
+          dcoker start ablecloud-homepage || true
