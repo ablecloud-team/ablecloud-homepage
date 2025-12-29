@@ -28,8 +28,6 @@ export default async function Home() {
 
   return (
     <>
-      {locale === 'ko' ? <Popup /> : <></>}
-
       <SliderHeader sliderData={await getHomeSliderData()} />
       <ContentWrapper>
         <HomeMainCards title={t('mainCardTitle')} cardsData={await getHomeMainCardsData()} />
