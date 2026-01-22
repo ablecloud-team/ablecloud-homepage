@@ -588,7 +588,8 @@
               "KTNF",
               "이슬림",
               "SNA",
-              "쓰리에스코어(AMD)"
+              "쓰리에스코어(AMD)",
+              "UCP UV"
             ]
           }
         ]
@@ -622,7 +623,10 @@
               "이노티움 :  InnoECM(문서중앙화)",
               "Tmax : Webtob(WEB), Jeus(WAS), Tibero(DB)",
               "Oracle : Oracle RAC(DB)",
-              "MS : MSSQL(DB)"
+              "MS : MSSQL(DB)",
+              "VMS : 이노뎁, 리얼허브, 다누시스, 엠스톤, 인콘, 마일스톤 시스템즈",
+              "에스엠인포메이션 : ClusterPlex(이중화)",
+              "맨텍솔루션 : MCCS(이중화)"
             ]
           }
         ]
