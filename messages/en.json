@@ -175,8 +175,8 @@
             "description": "Seamlessly migrate your existing virtual machines<br></br> without any disruption."
           },
           {
-            "title": "Perpetual License, Single Platform",
-            "description": "Minimize costs with a single license, offering server virtualization, cloud management, storage, networking, and more—all on one platform."
+            "title": "Perpetual License, Virtualization Platform",
+            "description": "Minimize cost burden with a perpetual license, and provide all capabilities—such as server virtualization, cloud management, storage, and networking—through a unified virtualization platform."
           },
           {
             "title": "Use Your Existing Infrastructure",
@@ -588,7 +588,8 @@
               "KTNF",
               "iSlim",
               "SNA",
-              "ThreeScore (AMD)"
+              "ThreeScore (AMD)",
+              "UCP UV"
             ]
           }
         ]
@@ -622,7 +623,9 @@
               "Innotium : InnoECM(Document Centralization)",
               "Tmax : Webtob(WEB), Jeus(WAS), Tibero(DB)",
               "Oracle : Oracle RAC(DB)",
-              "MS : MSSQL(DB)"
+              "MS : MSSQL(DB)",
+              "SM Information: ClusterPlex (HA)",
+              "Mantech Solution: MCCS (HA)"
             ]
           }
         ]
@@ -799,10 +802,10 @@
           "text": "HANDREAMNET"
         },
         {
-          "text": "NAMU TECH"
+          "text": "Namu tech"
         },
         {
-          "text": "Cocktail AIo"
+          "text": "cocktail io"
         },
         {
           "text": "INNOTIUM"
@@ -823,7 +826,7 @@
           "text": "Zungwon EN-SYS"
         },
         {
-          "text": "Bos Tech"
+          "text": "BOS TECH"
         },
         {
           "text": "SK shieldus"
