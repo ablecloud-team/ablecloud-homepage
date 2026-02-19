@@ -156,6 +156,10 @@
       "label": "R&D Center",
       "value": "Unit 810-2, Pentaplex, 66, Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, 34365, Republic of Korea"
     },
+    "yeongnamAddress": {
+      "label": "Yeongnam Branch",
+      "value": "128 Namdongcheon-ro, Suite 1325, Nam-gu, Busan Metropolitan City (Munhyeon-dong, Busan International Finance Centre BIFC II)"
+    },
     "contact": {
       "label": "Tel",
       "value": "1544-3696"
@@ -435,6 +439,11 @@
       "rndCenter": {
         "label": "R&D Center",
         "value": "Unit 810-2, Pentaplex, 66, Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, 34365, Republic of Korea"
+      },
+      "yeongnam": {
+        "label": "Yeongnam Branch Office",
+        "value": "128 Namdongcheon-ro, Suite 1325, Nam-gu, Busan Metropolitan City (Munhyeon-dong, Busan International Finance Centre BIFC II)",
+        "call": ""
       }
     }
   },
