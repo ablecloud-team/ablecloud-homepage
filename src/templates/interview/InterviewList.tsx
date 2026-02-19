@@ -14,7 +14,7 @@ export function InterViewList({ interviewList }: { interviewList: InterviewHisto
         {interviewList.map(({ category, data }, catIdx) => (
           <section key={catIdx} className='flex flex-col gap-4'>
             <h2 className='text-lg font-semibold text-[#222]'>{category}</h2>
-            <div className='grid gap-x-3 gap-y-2 grid-cols-[repeat(auto-fit,_minmax(220px,1fr))] justify-center'>
+            <div className='grid gap-x-3 gap-y-2 grid-cols-[repeat(auto-fit,_minmax(200px,1fr))] justify-center'>
               {data.map((item, idx) => (
                 <div
                   key={idx}
