@@ -107,8 +107,8 @@ export const getInterviewlist = async () => {
         { img: <Image src={ekrSrc} alt='' width={115} />, text: '한국농어촌공사' },
         { img: <Image src={mohwSrc} alt='' width={149} />, text: '보건복지부' },
         { img: <Image src={kepcoSrc} alt='' width={128} />, text: '한국전력공사' },
-        { img: <Image src={busanoceanSrc} alt='' width={83} />, text: '부산방해양수산청' },
-        { img: <Image src={comwelSrc} alt='' width={65} />, text: '근로복지공단' },
+        { img: <Image src={busanoceanSrc} alt='' width={120} />, text: '부산방해양수산청' },
+        { img: <Image src={comwelSrc} alt='' width={130} />, text: '근로복지공단' },
         { img: <Image src={gyeonggiSrc} alt='' width={167} />, text: '경기도' },
         { img: <Image src={gyeongnamSrc} alt='' width={122} />, text: '경상남도청' },
         { img: <Image src={gbSrc} alt='' width={122} />, text: '경상북도청' },
@@ -169,8 +169,8 @@ export const getInterviewlist = async () => {
     {
       category: t('category.2'),
       data: [
-        { img: <Image src={hanaInvestSrc} alt='' width={83} />, text: '하나투자증권' },
-        { img: <Image src={cooconSrc} alt='' width={83} />, text: '쿠콘' },
+        { img: <Image src={hanaInvestSrc} alt='' width={120} />, text: '하나투자증권' },
+        { img: <Image src={cooconSrc} alt='' width={120} />, text: '쿠콘' },
         { img: <Image src={hectoSrc} alt='' width={128} />, text: 'hecto' },
         { img: <Image src={hanpassSrc} alt='' width={142} />, text: '한패스' },
         { img: <Image src={ezlSrc} alt='' width={142} />, text: 'EZL' },
