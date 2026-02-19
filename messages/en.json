@@ -158,7 +158,7 @@
     },
     "yeongnamAddress": {
       "label": "Yeongnam Branch",
-      "value": "128 Namdongcheon-ro, Suite 1325, Nam-gu, Busan Metropolitan City (Munhyeon-dong, Busan International Finance Centre BIFC II)"
+      "value": "Room 1325, 128 Namdongcheon-ro, Nam-gu, Busan, Republic of Korea (Busan International Finance Center BIFC II)"
     },
     "contact": {
       "label": "Tel",
@@ -464,7 +464,7 @@
       },
       "yeongnam": {
         "label": "Yeongnam Branch Office",
-        "value": "128 Namdongcheon-ro, Suite 1325, Nam-gu, Busan Metropolitan City (Munhyeon-dong, Busan International Finance Centre BIFC II)",
+        "value": "Room 1325, 128 Namdongcheon-ro, Nam-gu, Busan, Republic of Korea (Busan International Finance Center BIFC II)",
         "call": ""
       }
     }
@@ -655,6 +655,7 @@
               "Tmax : Webtob(WEB), Jeus(WAS), Tibero(DB)",
               "Oracle : Oracle RAC(DB)",
               "MS : MSSQL(DB)",
+              "VMS: InnoDep, RealHub, Danusys, M-Stone, Incon, Milestone Systems",
               "SM Information: ClusterPlex (HA)",
               "Mantech Solution: MCCS (HA)"
             ]

@@ -181,7 +181,6 @@ export const getEbookData = async () => {
   ];
 };
 
-
 export const useCompatibilityList = () => {
   const t = useTranslations('resources.compatibility');
 
@@ -273,6 +272,7 @@ export const getCompatibilityData = async () => {
             t('server.descriptionList.0.list.7'),
             t('server.descriptionList.0.list.8'),
             t('server.descriptionList.0.list.9'),
+            t('server.descriptionList.0.list.10'),
           ],
         },
       ],
