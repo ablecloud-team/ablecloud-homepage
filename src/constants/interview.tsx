@@ -69,6 +69,7 @@ import pyeongtaekSrc from '@/public/images/common/pyeongtaek.png';
 import rokTrainSrc from '@/public/images/common/rok-train.png';
 import rokafSrc from '@/public/images/common/rokaf.png';
 import sachanSrc from '@/public/images/common/sacheon.png';
+import samchuckSrc from '@/public/images/common/samchuck.png';
 import sangjuSrc from '@/public/images/common/sangju.png';
 import spoSrc from '@/public/images/common/spo.png';
 import t3qSrc from '@/public/images/common/t3q.png';
@@ -133,7 +134,7 @@ export const getInterviewlist = async () => {
         { img: <Image src={sachanSrc} alt='' width={142} />, text: '사천' },
         { img: <Image src={billyangSrc} alt='' width={142} />, text: '밀양' },
         { img: <Image src={dangjinSrc} alt='' width={142} />, text: '당진' },
-        { img: <Image src={goryeongSrc} alt='' width={113} />, text: '고령군청' },
+        { img: <Image src={samchuckSrc} alt='' width={113} />, text: '삼척' },
         { img: <Image src={hcSrc} alt='' width={83} />, text: '합천군청' },
         { img: <Image src={ycgSrc} alt='' width={133} />, text: '예천군청' },
         { img: <Image src={uscSrc} alt='' width={60} />, text: '의성군청' },
