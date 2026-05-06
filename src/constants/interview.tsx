@@ -200,7 +200,6 @@ export const getInterviewlist = async () => {
         { img: <Image src={t3qSrc} alt='' width={123} />, text: '(주)티쓰리큐' },
         { img: <Image src={datastreamsSrc} alt='' width={133} />, text: '데이타스트림즈' },
         { img: <Image src={dongwonSrc} alt='' width={142} />, text: '동원금속주식회사' },
-        { img: <Image src={kacptaSrc} alt='' width={123} />, text: '한국세무사회' },
       ],
     },
   ];
