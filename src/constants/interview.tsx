@@ -164,7 +164,7 @@ export const getInterviewlist = async () => {
         { img: <Image src={datqSrc} alt='' width={145} />, text: '국방기술품질원' },
         { img: <Image src={army2Src} alt='' width={60} />, text: '' },
         { img: <Image src={addSrc} alt='' width={158} />, text: '국방과학' },
-        { img: <Image src={rokTrainSrc} alt='' width={142} />, text: 'ROK-TRAIN' },
+        { img: <Image src={rokTrainSrc} alt='' width={100} />, text: 'ROK-TRAIN' },
       ],
     },
     {
