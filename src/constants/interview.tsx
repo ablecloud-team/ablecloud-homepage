@@ -6,11 +6,11 @@ import { InterviewHistoryData } from '@/types/interview';
 import addSrc from '@/public/images/common/add.png';
 import andongSrc from '@/public/images/common/andong.png';
 import ansanSrc from '@/public/images/common/ansan.png';
-import armySrc from '@/public/images/common/army.png';
 import armyTrainingSrc from '@/public/images/common/army-training.png';
+import armySrc from '@/public/images/common/army.png';
 import bonghwaSrc from '@/public/images/common/bonghwa.png';
-import busanCentralSrc from '@/public/images/common/busan-middle.png';
 import busanCitySrc from '@/public/images/common/busan-city.png';
+import busanCentralSrc from '@/public/images/common/busan-middle.png';
 import busanUniversitySrc from '@/public/images/common/busan-uni.png';
 import busanoceanSrc from '@/public/images/common/busanocean.png';
 import buyeoSrc from '@/public/images/common/buyeo.png';
@@ -37,15 +37,15 @@ import ezlSrc from '@/public/images/common/ezl.png';
 import gbSrc from '@/public/images/common/gb.png';
 import genSrc from '@/public/images/common/gen.png';
 import geojeSrc from '@/public/images/common/geoje.png';
-import gongyoungHomeSrc from '@/public/images/common/gongyoung-home.png';
 import gongjuSrc from '@/public/images/common/gongju.png';
+import gongyoungHomeSrc from '@/public/images/common/gongyoung-home.png';
 import grtcSrc from '@/public/images/common/grtc.png';
 import gwangjuSrc from '@/public/images/common/gwangju.png';
 import gyeonggiBusSrc from '@/public/images/common/gyeonggi-bus.png';
 import gyeonggiSrc from '@/public/images/common/gyeonggi.png';
 import gyeongnamSrc from '@/public/images/common/gyeongnam.png';
-import hanaInvestSrc from '@/public/images/common/hana-invest.png';
 import hamanSrc from '@/public/images/common/haman.png';
+import hanaInvestSrc from '@/public/images/common/hana-invest.png';
 import hanpassSrc from '@/public/images/common/hanpass.png';
 import hcSrc from '@/public/images/common/hc.png';
 import hectoSrc from '@/public/images/common/hecto.png';
@@ -111,7 +111,7 @@ export const getInterviewlist = async (): Promise<InterviewHistoryData[]> => {
       data: [
         { img: <Image src={spoSrc} alt='' width={65} />, text: '대검찰청' },
         { img: <Image src={policeSrc} alt='' width={118} />, text: '경찰청' },
-        { img: <Image src={ekrSrc} alt='' width={115} />, text: '한국농어촌공사' },
+        { img: <Image src={ekrSrc} alt='' width={180} />, text: '한국농어촌공사' },
         { img: <Image src={mohwSrc} alt='' width={149} />, text: '보건복지부' },
         { img: <Image src={kepcoSrc} alt='' width={128} />, text: '한국전력공사' },
         { img: <Image src={busanoceanSrc} alt='' width={130} />, text: '부산지방해양수산청' },
