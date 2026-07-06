@@ -10,7 +10,7 @@ import FabIcon from '@/public/icons/common/fab.svg';
 import { Link } from '@/i18n/routing';
 
 const items = [
-  { label: '딜 등록 신청', href: 'https://forms.gle/8Pf78qMunpjsmkt88' },
+  { label: '딜 신청', href: 'https://forms.gle/8Pf78qMunpjsmkt88' },
   { label: '견적 문의', href: 'https://forms.gle/cCXhjx9gdgBYKM7Y9' },
   {
     label: '파트너 교육 신청',

@@ -16,7 +16,7 @@ export function AblestackVMDetail() {
       <div>{t.rich('description', { br: () => <br /> })}</div>
       <div
         className={`flex justify-center bg-[#F9F9F9] py-[38px] px-2 ${locale === 'en' ? 'max-w-[911px]' : ''}`}>
-        <Image src={locale === 'ko' ? VMDetailSrc : EN_VMDetailSrc} alt='' />
+        <Image src={locale === 'ko' ? VMDetailSrc : EN_VMDetailSrc} alt='' priority unoptimized />
       </div>
     </div>
   );
