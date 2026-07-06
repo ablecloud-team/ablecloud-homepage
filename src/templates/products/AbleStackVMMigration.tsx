@@ -17,20 +17,20 @@ export function AbleStackVMMigration() {
       <div className='flex gap-6 items-center justify-center flex-col-reverse lg:flex-row'>
         <div className='flex gap-6'>
           <div className='flex flex-col gap-[34px] items-center'>
-            <Image src={VMMonitorSrc} alt='' />
+            <Image src={VMMonitorSrc} alt='' unoptimized />
             <div className='text-base md:text-lg xl:text-[22px] bg-black px-2 py-1'>
               {t('imageText1')}
             </div>
           </div>
           <div className='flex flex-col gap-[34px] items-center'>
-            <Image src={VMMigrationSrc} alt='' />
+            <Image src={VMMigrationSrc} alt='' unoptimized />
             <div className='text-base md:text-lg xl:text-[22px] bg-black px-2 py-1'>
               {t('imageText2')}
             </div>
           </div>
         </div>
         <div>
-          <Image src={VMMigrationMainSrc} alt='' />
+          <Image src={VMMigrationMainSrc} alt='' unoptimized />
         </div>
       </div>
     </div>

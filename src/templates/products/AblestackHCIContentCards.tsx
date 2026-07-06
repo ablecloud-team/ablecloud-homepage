@@ -57,7 +57,7 @@ export function AblestackHCIContentCards() {
               </div>
               <div className='flex flex-1 items-end mt-6'>
                 <div className='w-full flex items-center justify-center bg-[#F5F5F5]  p-4'>
-                  <Image src={v.imgSrc} alt='' />
+                  <Image src={v.imgSrc} alt='' unoptimized />
                 </div>
               </div>
             </div>
