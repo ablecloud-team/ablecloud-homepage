@@ -1,7 +1,12 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
-import { EbookData } from '@/types/resource';
+import {
+  CompatibilityCatalogLabels,
+  CompatibilityCatalogRow,
+  CompatibilityCatalogSection,
+  EbookData,
+} from '@/types/resource';
 
 import ebook_1_Src from '@/public/images/resource/ebook/ebook_1.png';
 import ebook_2_Src from '@/public/images/resource/ebook/ebook_2.png';
@@ -340,4 +345,279 @@ export const getCompatibilityData = async () => {
       ],
     },
   };
+};
+
+const compatibilityImage = (id: number) => `/images/resource/compatibility/image-${id}.png`;
+
+const row = (
+  id: string,
+  name: string,
+  imageId: number | string | null,
+  support: string | string[],
+  notes?: string | string[],
+): CompatibilityCatalogRow => ({
+  id,
+  name,
+  imageLabel: name,
+  imageSrc:
+    typeof imageId === 'number'
+      ? compatibilityImage(imageId)
+      : imageId
+        ? `/images/resource/compatibility/${imageId}.png`
+        : undefined,
+  support: Array.isArray(support) ? support : [support],
+  notes: notes ? (Array.isArray(notes) ? notes : [notes]) : undefined,
+});
+
+const createCompatibilityCatalogSections = (
+  t: (key: string) => string,
+): CompatibilityCatalogSection[] => {
+  const productHeader = {
+    name: t('table.productName'),
+    image: t('table.image'),
+    support: t('table.support'),
+    note: t('table.note'),
+  };
+  const makerHeader = {
+    name: t('table.manufacturer'),
+    image: t('table.image'),
+    support: t('table.product'),
+    note: t('table.note'),
+  };
+
+  return [
+  {
+    key: 'hypervisor',
+    categoryLabel: t('categories.hypervisor'),
+    title: t('sections.hypervisor'),
+    headerLabels: productHeader,
+    rows: [
+      row('hypervisor-vmware', 'VMware', 1347, [
+        'ESXi 8.0 U3',
+        'ESXi 8.0 U2',
+        'ESXi 8.0 U1',
+        'ESXi 8.0',
+        'ESXi 7.0 U3',
+        'ESXi 7.0 U2',
+        'ESXi 7.0 U1',
+        'ESXi 7.0',
+        'ESXi 6.0',
+      ]),
+      row('hypervisor-citrix', 'Citrix Hypervisor', 1345, ['8.2 CU1', '8.4']),
+      row('hypervisor-kvm', 'KVM', 1344, [
+        'Ubuntu 18.04 LTS',
+        '20.04 LTS',
+        'CentOS 7, 8',
+        'RHEL 7, 8, 9',
+        'Rocky Linux 8, 9',
+        'openSUSE Leap 15',
+        'SUSE Linux Enterprise Server 15',
+      ]),
+      row('hypervisor-xcp-ng', 'XCP-ng', 1346, ['8.2 CU1', '8.4']),
+      row('hypervisor-hyper-v', 'Hyper-V', 1401, [
+        t('products.windows2016OrLater'),
+        t('products.hyperV2016OrLater'),
+      ]),
+    ],
+  },
+  {
+    key: 'server',
+    categoryLabel: t('categories.server'),
+    title: t('sections.server'),
+    headerLabels: makerHeader,
+    rows: [
+      row('server-hpe-dl560', 'HPE', 1348, 'ProLiant DL560 Gen11'),
+      row('server-hpe-dl380', 'HPE', 1348, 'ProLiant DL380 Gen11'),
+      row('server-dell-r770', 'Dell', 1359, 'PowerEdge R770'),
+      row('server-dell-r760', 'Dell', 1359, 'PowerEdge R760'),
+      row('server-dell-r750', 'Dell', 1359, 'PowerEdge R750'),
+      row('server-dell-r730', 'Dell', 1359, 'PowerEdge R730'),
+      row('server-dell-r650', 'Dell', 1359, 'PowerEdge R650'),
+      row('server-ais-pr', 'AIS', 1360, ['AIS PR750', 'AIS PR760']),
+      row('server-taejin-tr2260-1', t('manufacturers.taejin'), 1361, 'TNS TR2260 H4'),
+      row('server-taejin-tr2260-2', t('manufacturers.taejin'), 1362, 'TNS TR2260 H4'),
+      row('server-taejin-tr2220', t('manufacturers.taejin'), 1363, 'TNS TR2220 H4'),
+      row('server-ucp-ha810', 'UCP', 1378, 'HC HA810 Gen3'),
+      row('server-ucp-ha820', 'UCP', 1379, 'HC HA820 Gen3'),
+      row('server-uniwide-rc228p', 'UNIWIDE', 1364, 'RC228P'),
+      row('server-uniwide-re2200', 'UNIWIDE', 1365, 'RE2200'),
+      row('server-ktnf-kr587s4-1', 'KTNF', 1366, 'CoreRidge KR587S4'),
+      row('server-ktnf-kr587s4-2', 'KTNF', 1367, 'CoreRidge KR587S4'),
+      row('server-ktnf-k2641a', 'KTNF', 1368, 'K2641A'),
+      row('server-lenovo-sr660', 'Lenovo', 1369, 'ThinkSystem SR660'),
+      row('server-lenovo-sr650', 'Lenovo', 1370, 'ThinkSystem SR650'),
+      row('server-lenovo-sr590', 'Lenovo', 1371, 'ThinkSystem SR590'),
+      row('server-lenovo-sr550', 'Lenovo', 1372, 'ThinkSystem SR550'),
+      row('server-fujitsu-rx2540', 'FUJITSU', 1373, 'RX2540 M7'),
+      row('server-3score-sr226a', t('manufacturers.threeSCore'), 1374, 'SR226A K4'),
+      row('server-3score-sr285a', t('manufacturers.threeSCore'), 1375, 'SR285A C2'),
+      row('server-3score-sr226s4', t('manufacturers.threeSCore'), 1376, 'SR226 S4'),
+      row('server-3score-sr226k3', t('manufacturers.threeSCore'), 1377, 'SR226 K3'),
+    ],
+  },
+  {
+    key: 'san-switch',
+    categoryLabel: t('sections.sanSwitch'),
+    title: t('sections.sanSwitch'),
+    headerLabels: makerHeader,
+    rows: [
+      row('san-brocade-g720', 'Brocade', 1380, 'Brocade G720'),
+      row('san-brocade-g610', 'Brocade', 1381, 'Brocade G610'),
+      row('san-dell-connectrix', 'Dell', 1384, 'Connectrix DS-6610B-L'),
+    ],
+  },
+  {
+    key: 'storage',
+    categoryLabel: t('categories.storage'),
+    title: t('sections.storage'),
+    headerLabels: makerHeader,
+    rows: [
+      row('storage-fujitsu-dx600', 'Fujitsu', 1385, 'ETERNUS DX600 S6', 'SAN'),
+      row('storage-hpe-msa2060', 'HPE', 1386, 'MSA 2060 Storage', 'SAN'),
+      row('storage-hpe-primera600', 'HPE', 1387, 'Primera 600 Storage', 'SAN'),
+      row('storage-dell-me5084', 'Dell', 1388, 'PowerVault ME5084', 'SAN'),
+      row('storage-pure-x70r2', t('manufacturers.pureStorage'), 1389, 'X70R2', 'SAN'),
+      row('storage-ibm-5035', 'IBM', 1390, 'FlashSystem 5035', 'SAN'),
+      ...[
+        ['PAS7700', 'synology-pas7700'],
+        ['FS6420', 'synology-fs6420'],
+        ['FS6400', 'synology-fs6400'],
+        ['FS3420', 'synology-fs3420'],
+        ['FS2500', 'synology-fs2500'],
+        ['HD6500', 'synology-hd6500'],
+        ['SA6400', 'synology-sa6400'],
+        ['SA3610', 'synology-sa3610'],
+        ['SA3410', 'synology-sa3410'],
+        ['SA3400D', 'synology-sa3400d'],
+        ['SA3200D', 'synology-sa3200d'],
+        ['UC3400', 'synology-uc3400'],
+        ['UC3200', 'synology-uc3200'],
+        ['RS6426xs+', 'synology-rs6426xs-plus'],
+        ['RS4826xs+', 'synology-rs4826xs-plus'],
+        ['RS3626xs', 'synology-rs3626xs'],
+        ['RS3621RPxs', 'synology-rs3621rpxs'],
+        ['RS3618xs', 'synology-rs3618xs'],
+        ['RS1626xs+', 'synology-rs1626xs-plus'],
+        ['DP7400', 'synology-dp7400'],
+        ['DP7200', 'synology-dp7200'],
+        ['DP340', 'synology-dp340-a'],
+        ['DP320', 'synology-dp320'],
+        ['DP340', 'synology-dp340-b'],
+      ].map(([product, image], index) =>
+        row(`storage-synology-${index}`, 'Synology', image, product, 'NAS'),
+      ),
+    ],
+  },
+  {
+    key: 'l3-switch',
+    categoryLabel: 'L3 SWITCH',
+    title: 'L3 SWITCH',
+    headerLabels: makerHeader,
+    rows: [
+      row('l3-cisco-9500', 'Cisco', 1393, 'Catalyst 9500 Series Switch'),
+      row('l3-cisco-9400', 'Cisco', 1392, 'Catalyst 9400 Series Switch'),
+      row('l3-cisco-9200l', 'Cisco', 1394, 'Catalyst 9200L'),
+      row('l3-hpe-12900e', 'HPE', 1396, 'FlexFabric 12900E'),
+      row('l3-hpe-aruba', 'HPE', 1395, 'ARUBA 1430-24G'),
+      row('l3-juniper-ex4400', 'Juniper', 1397, 'Networks EX4400-48T'),
+      row('l3-juniper-ex4600', 'Juniper', 1398, 'Networks EX4600 Switch'),
+      row('l3-handreamnet-sg9500', t('manufacturers.handreamnet'), 1399, 'SG9500'),
+      row('l3-handreamnet-sg9300', t('manufacturers.handreamnet'), 1400, 'SG9300'),
+    ],
+  },
+  {
+    key: 'guest-os',
+    categoryLabel: 'Guest OS',
+    title: 'GuestOS',
+    headerLabels: productHeader,
+    rows: [
+      row('guest-redhat', 'Redhat Enterprise Linux', 1349, [
+        'RHEL 10.X',
+        'RHEL 9.X',
+        'RHEL 8.X',
+        'RHEL 7.X',
+        'RHEL 6.X',
+      ]),
+      row('guest-oracle', 'Oracle Linux', 1350, [
+        'Oracle Linux 10.X',
+        'Oracle Linux 9.X',
+        'Oracle Linux 8.X',
+        'Oracle Linux 7.X',
+        'Oracle Linux 6.X',
+      ]),
+      row('guest-suse', 'SUSE Enterprise Linux', 1351, 'SLES 16.0'),
+      row('guest-ubuntu', 'Ubuntu', 1352, [
+        'Oracle Linux 10.X',
+        'Oracle Linux 9.X',
+        'Oracle Linux 8.X',
+        'Oracle Linux 7.X',
+        'Oracle Linux 6.X',
+      ]),
+    ],
+  },
+  {
+    key: 'application',
+    categoryLabel: t('categories.application'),
+    title: t('sections.application'),
+    headerLabels: productHeader,
+    rows: [
+      row('application-tilon', 'Tilon', 1353, 'DSatition', 'VDI'),
+      row('application-citrix', 'Citrix', 1345, 'InnoECM', t('notes.documentCentralization')),
+      row('application-innotium', t('manufacturers.innotium'), 1354, 'Virtual Apps & Dsektops', 'VDI'),
+      row('application-tmax-soft', 'Tmax Soft', 1355, ['Webtob (WEB)', 'Jeus (WAS)']),
+      row('application-tmax-tibero', 'Tmax Tibero', 1356, 'Tibero (DB)'),
+      row('application-oracle', 'Oracle', 1350, 'Oracle RAC (DB)'),
+      row('application-microsoft', 'MicroSoft', 1357, 'MSSQL (DB)'),
+    ],
+  },
+  {
+    key: 'backup',
+    categoryLabel: t('categories.backup'),
+    title: t('sections.backup'),
+    headerLabels: productHeader,
+    rows: [
+      row('backup-commvault', 'Commvault', 1402, 'DSatition', 'VDI'),
+      row('backup-dell-networker', 'Dell Networker', 1403, 'InnoECM', t('notes.documentCentralization')),
+      row('backup-veeam', 'Veeam', 1404, 'DSatition', 'VDI'),
+      row('backup-veritas', 'Veritas NetBackup', 1405, 'InnoECM', t('notes.documentCentralization')),
+      row('backup-synology-abb', 'Synology ABB', 1406, 'DSatition', 'VDI'),
+      row('backup-acronics', 'Acronics', 1407, 'InnoECM', t('notes.documentCentralization')),
+      row('backup-arcserve', 'Arcserve', 1408, 'DSatition', 'VDI'),
+      row('backup-unitrends', 'Unitrends', 1409, 'InnoECM', t('notes.documentCentralization')),
+    ],
+  },
+  ];
+};
+
+export const getCompatibilityCatalogData = async (): Promise<{
+  categories: { key: string; label: string }[];
+  labels: CompatibilityCatalogLabels;
+  sections: CompatibilityCatalogSection[];
+}> => {
+  const t = await getTranslations('resources.compatibilityCatalog');
+  const labels: CompatibilityCatalogLabels = {
+    category: t('filters.category'),
+    search: t('filters.search'),
+    all: t('categories.all'),
+    placeholder: t('filters.placeholder'),
+    searchButton: t('filters.searchButton'),
+    noResultsTitle: t('noResults.title'),
+    noResultsDescription: t('noResults.description'),
+    productColumn: t('table.productName'),
+    imageColumn: t('table.image'),
+    supportColumn: t('table.support'),
+    noteColumn: t('table.note'),
+  };
+
+  const categories = [
+    { key: 'all', label: labels.all },
+    { key: 'hypervisor', label: t('categories.hypervisor') },
+    { key: 'server', label: t('categories.server') },
+    { key: 'guest-os', label: 'Guest OS' },
+    { key: 'application', label: t('categories.application') },
+    { key: 'storage', label: t('categories.storage') },
+    { key: 'backup', label: t('categories.backup') },
+  ];
+
+  return { categories, labels, sections: createCompatibilityCatalogSections(t) };
 };
