@@ -189,7 +189,7 @@ export const getInterviewlist = async (): Promise<InterviewHistoryData[]> => {
         { img: <Image src={cooconSrc} alt='' width={156} />, text: '쿠콘' },
         { img: <Image src={hectoSrc} alt='' width={150} />, text: '헥토데이터' },
         { img: <Image src={hanpassSrc} alt='' width={164} />, text: '한패스' },
-        { img: <Image src={ezlSrc} alt='' width={165} />, text: 'EZL' },
+        { img: <Image src={ezlSrc} alt='' width={100} />, text: 'EZL' },
       ],
     },
     {
