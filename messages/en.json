@@ -582,6 +582,56 @@
         "description": "ABLESTACK supports a variety of backup solutions, including the following:"
       }
     ],
+    "compatibilityCatalog": {
+      "filters": {
+        "category": "Category",
+        "search": "Search",
+        "placeholder": "Enter a search term.",
+        "searchButton": "Search"
+      },
+      "categories": {
+        "all": "All",
+        "hypervisor": "Hypervisor",
+        "server": "Server",
+        "application": "Virtualization Applications / Platforms",
+        "storage": "Storage",
+        "backup": "Backup Solutions"
+      },
+      "sections": {
+        "hypervisor": "Hypervisor",
+        "server": "Server",
+        "sanSwitch": "SAN Switch",
+        "storage": "Storage",
+        "application": "Application",
+        "backup": "Backup Solutions"
+      },
+      "table": {
+        "productName": "Product Name",
+        "manufacturer": "Manufacturer",
+        "image": "Image",
+        "support": "Supported Versions",
+        "product": "Product",
+        "note": "Notes"
+      },
+      "noResults": {
+        "title": "No results found.",
+        "description": "Try a different category or search term."
+      },
+      "products": {
+        "windows2016OrLater": "Windows Server 2016 or later",
+        "hyperV2016OrLater": "Hyper-V 2016 or later"
+      },
+      "manufacturers": {
+        "taejin": "Taejin",
+        "threeSCore": "3SCORE",
+        "pureStorage": "Pure Storage",
+        "handreamnet": "Handreamnet",
+        "innotium": "Innotium"
+      },
+      "notes": {
+        "documentCentralization": "Document Centralization"
+      }
+    },
     "compatibilityData": {
       "hypervisor": {
         "title": "Compatible Hypervisor Versions",

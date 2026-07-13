@@ -36,3 +36,40 @@ export interface CompatibilityData {
     list: string[];
   }[];
 }
+
+export interface CompatibilityCatalogRow {
+  id: string;
+  name: string;
+  imageLabel?: string;
+  imageSrc?: string;
+  support: string[];
+  notes?: string[];
+}
+
+export interface CompatibilityCatalogSection {
+  key: string;
+  categoryLabel: string;
+  title: string;
+  description?: string;
+  headerLabels?: {
+    name: string;
+    image: string;
+    support: string;
+    note: string;
+  };
+  rows: CompatibilityCatalogRow[];
+}
+
+export interface CompatibilityCatalogLabels {
+  category: string;
+  search: string;
+  all: string;
+  placeholder: string;
+  searchButton: string;
+  noResultsTitle: string;
+  noResultsDescription: string;
+  productColumn: string;
+  imageColumn: string;
+  supportColumn: string;
+  noteColumn: string;
+}

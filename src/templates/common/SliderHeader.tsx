@@ -13,6 +13,8 @@ import Start from '@/public/icons/common/start.svg';
 
 import Slider from 'react-slick';
 
+const SlickSlider = Slider as unknown as React.ComponentType<any>;
+
 const settings = {
   infinite: true,
   speed: 500,
@@ -28,7 +30,7 @@ interface SliderHeaderProps {
 }
 
 export function SliderHeader({ sliderData }: SliderHeaderProps) {
-  const sliderRef = useRef<Slider>(null);
+  const sliderRef = useRef<Slider | null>(null);
   const [isPause, setIsPause] = useState<boolean>(false);
 
   const sliderPrev = () => {
@@ -66,11 +68,11 @@ export function SliderHeader({ sliderData }: SliderHeaderProps) {
           <Pause onClick={sliderPlayControl} />
         )}
       </div>
-      <Slider ref={sliderRef} {...settings}>
+      <SlickSlider ref={sliderRef} {...settings}>
         {sliderData.map((v, idx) => {
           return <MainPageHeader key={idx} headerData={v} />;
         })}
-      </Slider>
+      </SlickSlider>
     </div>
   );
 }
