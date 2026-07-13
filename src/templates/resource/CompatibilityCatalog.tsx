@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { HTMLAttributes, useEffect, useMemo, useRef, useState } from 'react';
 
 import { CompatibilityCatalogLabels, CompatibilityCatalogSection } from '@/types/resource';
 
@@ -14,6 +14,50 @@ interface CompatibilityCatalogProps {
 }
 
 const tableGridClass = 'grid grid-cols-[261.333px_261.333px_400px_277.334px]';
+
+interface ScrollRevealProps extends HTMLAttributes<HTMLDivElement> {
+  delay?: number;
+}
+
+function ScrollReveal({ children, className = '', delay = 0, ...props }: ScrollRevealProps) {
+  const elementRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setIsVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+
+        setIsVisible(true);
+        observer.unobserve(entry.target);
+      },
+      { rootMargin: '0px 0px -8% 0px', threshold: 0.08 },
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={elementRef}
+      className={`${className} motion-reduce:translate-y-0 motion-reduce:opacity-100 ${
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'
+      } transition-[opacity,transform] duration-500 ease-out`}
+      style={{ transitionDelay: `${delay}ms` }}
+      {...props}>
+      {children}
+    </div>
+  );
+}
 
 export function CompatibilityCatalog({
   categories,
@@ -52,7 +96,7 @@ export function CompatibilityCatalog({
   }, [activeCategory, query, sections]);
 
   return (
-    <div className='flex justify-center animate-fade-in pt-[30px] md:pt-[48px]'>
+    <div className='compatibility-catalog flex justify-center animate-fade-in pt-[30px] md:pt-[48px]'>
       <div className='w-full max-w-[1200px] px-4 md:px-0'>
         <section className='grid gap-x-6 gap-y-4 border-y border-[#E5E5E5] py-4 md:grid-cols-[136px_1fr] md:grid-rows-[79px_88px] md:gap-y-0 md:py-0'>
           <div className='flex items-start justify-start md:justify-center md:pt-6'>
@@ -122,11 +166,13 @@ export function CompatibilityCatalog({
 
               return (
                 <section key={section.key} className='mb-12 last:mb-0'>
-                  <h2 className='mb-6 text-[30px] font-bold leading-[42px] text-[#111111]'>
-                    {section.title}
-                  </h2>
+                  <ScrollReveal className='mb-6'>
+                    <h2 className='text-[30px] font-bold leading-[42px] text-[#111111]'>
+                      {section.title}
+                    </h2>
+                  </ScrollReveal>
 
-                  <div className='overflow-x-auto'>
+                  <div className='overflow-x-auto overflow-y-hidden'>
                     <div className='min-w-[1200px] border-t border-[#111111]'>
                       <div
                         className={`${tableGridClass} h-11 border-b border-[#D9D9D9] bg-[#F7F7F7] text-[16px] font-semibold leading-7 text-[#111111]`}>
@@ -136,9 +182,10 @@ export function CompatibilityCatalog({
                         <div className='flex items-center px-2'>{headerLabels.note}</div>
                       </div>
 
-                      {section.rows.map(row => (
-                        <div
+                      {section.rows.map((row, index) => (
+                        <ScrollReveal
                           key={row.id}
+                          delay={(index % 4) * 45}
                           className={`${tableGridClass} min-h-32 border-b border-[#D9D9D9] bg-white`}>
                           <div className='flex items-center px-2 py-6 text-[16px] font-medium leading-7 text-[#111111]'>
                             {row.name}
@@ -163,7 +210,7 @@ export function CompatibilityCatalog({
                               <span key={`${row.id}-note-${index}`}>{item}</span>
                             ))}
                           </div>
-                        </div>
+                        </ScrollReveal>
                       ))}
                     </div>
                   </div>
