@@ -631,6 +631,56 @@
         "innotium": "이노티움",
         "mantechSolution": "맨텍솔루션"
       },
+      "backupSolutions": {
+        "commvault": {
+          "support": {
+            "agentless": "Agentless VM 백업 지원",
+            "kvmHost": "KVM 호스트 기반으로 가상머신 디스크 백업 수행",
+            "fullIncremental": "Full / Incremental 백업 지원"
+          },
+          "notes": {
+            "executedBy": "백업 실행 제어 주체 : Mold",
+            "managedBy": "백업 저장/관리 주체 : Commvault",
+            "version": "지원 버전 : Commvault 11.32.89"
+          }
+        },
+        "networker": {
+          "support": {
+            "agentless": "Agentless VM 백업 지원",
+            "externalDiskSnapshot": "KVM 호스트에서 외부 디스크 스냅샷 기반 가상머신 디스크 백업 수행",
+            "full": "Full 백업 지원"
+          },
+          "notes": {
+            "executedBy": "백업 실행 제어 주체 : Mold",
+            "managedBy": "백업 저장/관리 주체 : NetWorker",
+            "version": "지원 버전 : NetWorker REST API v3 지원 버전"
+          }
+        },
+        "veeam": {
+          "support": {
+            "agentless": "Agentless VM 백업 지원",
+            "kvmHost": "KVM 호스트 기반으로 가상머신 디스크 백업 수행",
+            "fullIncremental": "Full / Incremental 백업 지원"
+          },
+          "notes": {
+            "executedBy": "백업 실행 제어 주체 : Veeam",
+            "managedBy": "백업 저장/관리 주체 : Veeam",
+            "version": "지원 버전 : Veeam Backup & Replication 13.0.1"
+          }
+        },
+        "netbackup": {
+          "support": {
+            "agentless": "Agentless VM 백업 지원",
+            "kvmHost": "KVM 호스트 기반으로 가상머신 디스크 백업 수행",
+            "fullIncremental": "Full / Incremental 백업 지원"
+          },
+          "notes": {
+            "executedBy": "백업 실행 제어 주체 : NetBackup",
+            "managedBy": "백업 저장/관리 주체 : NetBackup",
+            "version": "지원 버전 : NetBackup 10.5, 11.1"
+          }
+        }
+      },
       "notes": {
         "documentCentralization": "문서 중앙화"
       }
