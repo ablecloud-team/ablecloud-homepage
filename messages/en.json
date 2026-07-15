@@ -631,6 +631,56 @@
         "innotium": "Innotium",
         "mantechSolution": "Mantech Solution"
       },
+      "backupSolutions": {
+        "commvault": {
+          "support": {
+            "agentless": "Support for Agentless VM backup",
+            "kvmHost": "Perform virtual machine disk backup based on KVM host",
+            "fullIncremental": "Support for Full / Incremental backup"
+          },
+          "notes": {
+            "executedBy": "Backup executed by Mold",
+            "managedBy": "Backup stored/managed by Commvault",
+            "version": "Supported version : Commvault 11.32.89"
+          }
+        },
+        "networker": {
+          "support": {
+            "agentless": "Support for Agentless VM backup",
+            "externalDiskSnapshot": "Perform virtual machine disk backup based on external disk snapshots from KVM host",
+            "full": "Support for Full backup"
+          },
+          "notes": {
+            "executedBy": "Backup executed by Mold",
+            "managedBy": "Backup stored/managed by NetWorker",
+            "version": "Supported version : NetWorker REST API v3"
+          }
+        },
+        "veeam": {
+          "support": {
+            "agentless": "Support for Agentless VM backup",
+            "kvmHost": "Perform virtual machine disk backup based on KVM host",
+            "fullIncremental": "Support for Full / Incremental backup"
+          },
+          "notes": {
+            "executedBy": "Backup executed by Veeam",
+            "managedBy": "Backup stored/managed by Veeam",
+            "version": "Supported version : Veeam Backup & Replication 13.0.1"
+          }
+        },
+        "netbackup": {
+          "support": {
+            "agentless": "Support for Agentless VM backup",
+            "kvmHost": "Perform virtual machine disk backup based on KVM host",
+            "fullIncremental": "Support for Full / Incremental backup"
+          },
+          "notes": {
+            "executedBy": "Backup executed by NetBackup",
+            "managedBy": "Backup stored/managed by NetBackup",
+            "version": "Supported version : NetBackup 10.5, 11.1"
+          }
+        }
+      },
       "notes": {
         "documentCentralization": "Document Centralization"
       }
