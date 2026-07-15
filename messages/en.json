@@ -593,7 +593,9 @@
         "all": "All",
         "hypervisor": "Hypervisor",
         "server": "Server",
-        "application": "Virtualization Applications / Platforms",
+        "application": "Application",
+        "sanSwitch": "SAN Switch",
+        "l3Switch": "L3 Switch",
         "storage": "Storage",
         "backup": "Backup Solutions"
       },

@@ -593,7 +593,9 @@
         "all": "전체",
         "hypervisor": "하이퍼바이저",
         "server": "서버",
-        "application": "가상화 애플리케이션/플랫폼",
+        "application": "Application",
+        "sanSwitch": "SAN 스위치",
+        "l3Switch": "L3 스위치",
         "storage": "스토리지",
         "backup": "Backup 솔루션"
       },
