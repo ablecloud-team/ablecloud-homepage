@@ -96,16 +96,16 @@ export function CompatibilityCatalog({
   }, [activeCategory, query, sections]);
 
   return (
-    <div className='compatibility-catalog flex justify-center animate-fade-in pt-[30px] md:pt-[48px]'>
+    <div className='compatibility-catalog flex justify-center animate-fade-in pt-[30px]'>
       <div className='w-full max-w-[1200px] px-4 md:px-0'>
-        <section className='grid gap-x-6 gap-y-4 border-y border-[#E5E5E5] py-4 md:grid-cols-[136px_1fr] md:grid-rows-[79px_88px] md:gap-y-0 md:py-0'>
-          <div className='flex items-start justify-start md:justify-center md:pt-6'>
-            <span className='inline-flex h-[39px] items-center rounded-full border border-[#D9D9D9] px-6 text-[14px] font-semibold leading-[19px] text-[#111111]'>
+        <section className='grid gap-x-6 gap-y-4 overflow-hidden rounded-[20px] border border-[#E0E5E6] py-4 md:grid-cols-[136px_1fr] md:grid-rows-[79px_88px] md:gap-y-0 md:py-0'>
+          <div className='flex items-start justify-start bg-[#F6F7F8] md:justify-center md:pt-6'>
+            <span className='inline-flex h-[39px] items-center px-6 text-[16px] font-bold leading-[19px] tracking-[-0.05em] text-[#202020]'>
               {labels.category}
             </span>
           </div>
 
-          <div className='flex flex-wrap items-start gap-[10px] md:pt-6'>
+          <div className='flex min-w-0 items-start gap-[10px] overflow-x-auto scrollbar-hide md:pt-6'>
             {categories.map(category => {
               const isActive = activeCategory === category.key;
 
@@ -114,10 +114,12 @@ export function CompatibilityCatalog({
                   key={category.key}
                   type='button'
                   onClick={() => setActiveCategory(category.key)}
-                  className={`h-[39px] rounded-full border px-6 text-[14px] font-semibold leading-[19px] transition ${
+                  className={`h-[39px] shrink-0 rounded-full border text-[15px] font-semibold leading-[19px] tracking-[-0.05em] transition ${
+                    category.key === 'server' ? 'w-10 px-0' : 'px-4'
+                  } ${
                     isActive
-                      ? 'border-[#111111] bg-[#111111] text-white'
-                      : 'border-[#D9D9D9] bg-white text-[#111111] hover:border-[#111111]'
+                      ? 'border-[#202020] bg-white text-[#444444]'
+                      : 'border-transparent bg-white text-[#444444] hover:border-[#202020]'
                   }`}>
                   {category.label}
                 </button>
@@ -125,30 +127,30 @@ export function CompatibilityCatalog({
             })}
           </div>
 
-          <div className='flex items-start justify-start md:justify-center md:pt-4'>
-            <span className='inline-flex h-[39px] items-center rounded-full border border-[#D9D9D9] px-6 text-[14px] font-semibold leading-[19px] text-[#111111]'>
+          <div className='flex items-start justify-start bg-[#F6F7F8] md:justify-center md:pt-4'>
+            <span className='inline-flex h-[39px] items-center px-6 text-[16px] font-bold leading-[19px] tracking-[-0.05em] text-[#202020]'>
               {labels.search}
             </span>
           </div>
 
           <form
-            className='flex w-full flex-col gap-3 md:flex-row md:items-start md:pt-4'
+            className='flex w-full flex-col gap-3 md:flex-row md:items-start md:gap-0 md:pt-4'
             onSubmit={event => {
               event.preventDefault();
               setQuery(draftQuery);
             }}>
-            <div className='flex h-12 flex-1 items-center border border-[#D9D9D9] bg-white px-5 md:max-w-[938px]'>
+            <div className='flex h-12 flex-1 items-center rounded-[10px] border border-[#EEEEEE] bg-white px-5 md:max-w-[938px]'>
               <span className='mr-3 h-4 w-4 rounded-full border-2 border-[#BDBDBD]' aria-hidden='true' />
               <input
                 value={draftQuery}
                 onChange={event => setDraftQuery(event.target.value)}
                 placeholder={labels.placeholder}
-                className='h-full min-w-0 flex-1 bg-transparent text-[14px] font-medium leading-[19px] text-[#111111] outline-none placeholder:text-[#8B8B8B]'
+                className='h-full min-w-0 flex-1 bg-transparent text-[16px] font-normal leading-[19px] text-[#202020] outline-none placeholder:text-[#758185]'
               />
             </div>
             <button
               type='submit'
-              className='h-12 bg-[#111111] px-6 text-[14px] font-semibold leading-4 text-white transition hover:bg-[#2A2A2A] md:w-[77px] md:px-0'>
+              className='h-12 rounded-[10px] bg-[#202020] px-6 text-[16px] font-semibold leading-4 text-white transition hover:bg-[#2A2A2A] md:w-[77px] md:px-0'>
               {labels.searchButton}
             </button>
           </form>
@@ -167,7 +169,7 @@ export function CompatibilityCatalog({
               return (
                 <section key={section.key} className='mb-12 last:mb-0'>
                   <ScrollReveal className='mb-6'>
-                    <h2 className='text-[30px] font-bold leading-[42px] text-[#111111]'>
+                    <h2 className='text-[30px] font-bold leading-[42px] text-[#202020]'>
                       {section.title}
                     </h2>
                   </ScrollReveal>
@@ -175,43 +177,64 @@ export function CompatibilityCatalog({
                   <div className='overflow-x-auto overflow-y-hidden'>
                     <div className='min-w-[1200px] border-t border-[#111111]'>
                       <div
-                        className={`${tableGridClass} h-11 border-b border-[#D9D9D9] bg-[#F7F7F7] text-[16px] font-semibold leading-7 text-[#111111]`}>
+                        className={`${tableGridClass} h-11 border-b border-[#D9D9D9] bg-[#F6F7F8] text-[16px] font-semibold leading-7 text-[#202020]`}>
                         <div className='flex items-center px-2'>{headerLabels.name}</div>
                         <div className='flex items-center px-2'>{headerLabels.image}</div>
                         <div className='flex items-center px-2'>{headerLabels.support}</div>
                         <div className='flex items-center px-2'>{headerLabels.note}</div>
                       </div>
 
-                      {section.rows.map((row, index) => (
-                        <ScrollReveal
-                          key={row.id}
-                          delay={(index % 4) * 45}
-                          className={`${tableGridClass} min-h-32 border-b border-[#D9D9D9] bg-white`}>
-                          <div className='flex items-center px-2 py-6 text-[16px] font-medium leading-7 text-[#111111]'>
-                            {row.name}
-                          </div>
-                          <div className='flex items-center px-2 py-6'>
-                            {row.imageSrc && (
-                              <img
-                                src={row.imageSrc}
-                                alt={row.imageLabel ?? row.name}
-                                className='max-h-20 max-w-[180px] object-contain'
-                                loading='lazy'
-                              />
-                            )}
-                          </div>
-                          <div className='flex flex-col justify-center px-2 py-6 text-[16px] font-medium leading-7 text-[#111111]'>
-                            {row.support.map((item, index) => (
-                              <span key={`${row.id}-support-${index}`}>{item}</span>
-                            ))}
-                          </div>
-                          <div className='flex flex-col justify-center px-2 py-6 text-[16px] font-medium leading-7 text-[#111111]'>
-                            {row.notes?.map((item, index) => (
-                              <span key={`${row.id}-note-${index}`}>{item}</span>
-                            ))}
-                          </div>
-                        </ScrollReveal>
-                      ))}
+                      {section.rows.map((row, index) => {
+                        const isDp5200 = row.id === 'backup-synology-dp5200';
+
+                        return (
+                          <ScrollReveal
+                            key={row.id}
+                            delay={(index % 4) * 45}
+                            className={`${tableGridClass} min-h-32 border-b border-[#D9D9D9] ${
+                              index % 2 === 0 ? 'bg-white' : 'bg-[#F6F7F8]'
+                            }`}>
+                            <div className='flex items-center px-2 py-6 text-[18px] font-medium leading-7 text-[#202020]'>
+                              {row.name}
+                            </div>
+                            <div
+                              className={`flex items-center px-2 ${
+                                isDp5200 ? 'overflow-hidden py-3' : 'py-6'
+                              }`}>
+                              {row.imageSrc && (
+                                <img
+                                  src={row.imageSrc}
+                                  alt={row.imageLabel ?? row.name}
+                                  className={
+                                    isDp5200
+                                      ? 'h-40 w-40 -translate-y-[29px] object-contain'
+                                      : 'max-h-20 max-w-[180px] object-contain'
+                                  }
+                                  loading='lazy'
+                                />
+                              )}
+                            </div>
+                            <div className='flex flex-col justify-center px-2 py-6 text-[16px] font-medium leading-7 text-[#202020]'>
+                              {row.support.length > 0 && (
+                                <ul className='list-disc pl-6'>
+                                  {row.support.map((item, index) => (
+                                    <li key={`${row.id}-support-${index}`}>{item}</li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                            <div className='flex flex-col justify-center px-2 py-6 text-[16px] font-medium leading-7 text-[#202020]'>
+                              {row.notes && row.notes.length > 0 && (
+                                <ul className='list-disc pl-6'>
+                                  {row.notes.map((item, index) => (
+                                    <li key={`${row.id}-note-${index}`}>{item}</li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          </ScrollReveal>
+                        );
+                      })}
                     </div>
                   </div>
                 </section>
