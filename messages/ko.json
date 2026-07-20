@@ -679,6 +679,13 @@
             "managedBy": "백업 저장/관리 주체 : NetBackup",
             "version": "지원 버전 : NetBackup 10.5, 11.1"
           }
+        },
+        "synologyABB": {
+          "support": {
+            "agentless": "포괄적인 플랫폼 백업지원(File Server, Endpoints, Hipervisors)",
+            "kvmHost": "암호화된 백업(AES-256)",
+            "fullIncremental": "통합 대시보드 제공"
+          }
         }
       },
       "notes": {
