@@ -72,22 +72,6 @@ export const getEbookData = async () => {
 
   return [
     {
-      type: 'ABLESTACK Solution',
-      title: t('data.12.title'),
-      description: t('data.12.description'),
-      href: 'ABLESTACK_Commvault_백업 솔루션.pdf',
-      date: '2025.11.03',
-      imgSrc: ebook_13_Src,
-    },
-    {
-      type: 'ABLESTACK Solution',
-      title: t('data.13.title'),
-      description: t('data.13.description'),
-      href: 'ABLESTACK_관제 CCTV.pdf',
-      date: '2025.10.16',
-      imgSrc: ebook_14_Src,
-    },
-    {
       type: 'ABLESTACK Technical White Paper',
       title: t('data.0.title'),
       description: t('data.0.description'),
@@ -104,14 +88,6 @@ export const getEbookData = async () => {
       date: '2025.08.26',
     },
     {
-      type: 'ABLESTACK with Oracle',
-      title: t('data.2.title'),
-      description: t('data.2.description'),
-      href: 'ABLESTACK_for_Oracle_RAC.pdf',
-      imgSrc: ebook_3_Src,
-      date: '2025.07.24',
-    },
-    {
       type: 'ABLESTACK V2V',
       title: t('data.3.title'),
       description: t('data.3.description'),
@@ -126,6 +102,22 @@ export const getEbookData = async () => {
       href: 'ABLESTACK_P2V_Migration.pdf',
       imgSrc: ebook_5_Src,
       date: '2025.05.10',
+    },
+    {
+      type: 'ABLESTACK with Oracle',
+      title: t('data.2.title'),
+      description: t('data.2.description'),
+      href: 'ABLESTACK_for_Oracle_RAC.pdf',
+      imgSrc: ebook_3_Src,
+      date: '2025.07.24',
+    },
+    {
+      type: 'ABLESTACK  VS VMware',
+      title: t('data.11.title'),
+      description: t('data.11.description'),
+      href: 'ABLESTACK_VS_VMware.pdf',
+      imgSrc: ebook_12_Src,
+      date: '2025.02.16',
     },
     {
       type: 'ABLESTACK V2V',
@@ -175,13 +167,22 @@ export const getEbookData = async () => {
       imgSrc: ebook_11_Src,
       date: '2025.02.23',
     },
+
     {
-      type: 'ABLESTACK  VS VMware',
-      title: t('data.11.title'),
-      description: t('data.11.description'),
-      href: 'ABLESTACK_VS_VMware.pdf',
-      imgSrc: ebook_12_Src,
-      date: '2025.02.16',
+      type: 'ABLESTACK Solution',
+      title: t('data.12.title'),
+      description: t('data.12.description'),
+      href: 'ABLESTACK_Commvault_백업 솔루션.pdf',
+      date: '2025.11.03',
+      imgSrc: ebook_13_Src,
+    },
+    {
+      type: 'ABLESTACK Solution',
+      title: t('data.13.title'),
+      description: t('data.13.description'),
+      href: 'ABLESTACK_관제 CCTV.pdf',
+      date: '2025.10.16',
+      imgSrc: ebook_14_Src,
     },
   ];
 };
