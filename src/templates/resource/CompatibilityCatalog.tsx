@@ -134,7 +134,7 @@ export function CompatibilityCatalog({
           </div>
 
           <form
-            className='flex h-[72px] w-full items-start gap-3 pt-2 md:h-auto md:gap-0 md:pt-4'
+            className='grid h-[72px] w-full grid-cols-[minmax(0,1fr)_57px] items-start gap-3 pt-2 md:flex md:h-auto md:gap-0 md:pt-4'
             onSubmit={event => {
               event.preventDefault();
               setQuery(draftQuery);
@@ -150,7 +150,7 @@ export function CompatibilityCatalog({
             </div>
             <button
               type='submit'
-              className='h-12 w-[57px] shrink-0 rounded-[10px] bg-[#202020] px-0 text-[14px] font-semibold leading-4 text-white transition hover:bg-[#2A2A2A] md:w-[77px] md:text-[16px]'>
+              className='h-12 w-[57px] min-w-[57px] rounded-[10px] bg-[#202020] px-0 text-[14px] font-semibold leading-4 text-white transition hover:bg-[#2A2A2A] md:w-[77px] md:min-w-[77px] md:text-[16px]'>
               {labels.searchButton}
             </button>
           </form>
