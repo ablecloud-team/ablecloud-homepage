@@ -216,7 +216,7 @@ export function CompatibilityCatalog({
                             </div>
                             <div className='flex flex-col justify-center px-2 py-4 text-[14px] font-medium leading-5 text-[#202020] md:py-6 md:text-[16px] md:leading-7'>
                               {row.support.length > 0 && (
-                                <ul className='space-y-1 md:list-disc md:space-y-0 md:pl-6'>
+                                <ul className='list-disc space-y-1 pl-4 md:space-y-0 md:pl-6'>
                                   {row.support.map((item, index) => (
                                     <li key={`${row.id}-support-${index}`}>{item}</li>
                                   ))}
@@ -225,7 +225,7 @@ export function CompatibilityCatalog({
                             </div>
                             <div className='flex flex-col justify-center px-2 py-4 text-[14px] font-medium leading-5 text-[#202020] md:py-6 md:text-[16px] md:leading-7'>
                               {row.notes && row.notes.length > 0 && (
-                                <ul className='space-y-1 md:list-disc md:space-y-0 md:pl-6'>
+                                <ul className='list-disc space-y-1 pl-4 md:space-y-0 md:pl-6'>
                                   {row.notes.map((item, index) => (
                                     <li key={`${row.id}-note-${index}`}>{item}</li>
                                   ))}
