@@ -98,7 +98,7 @@ export function CompatibilityCatalog({
   return (
     <div className='compatibility-catalog flex justify-center animate-fade-in pt-[30px]'>
       <div className='w-full max-w-[1200px] px-4 md:px-0'>
-        <section className='grid gap-x-6 gap-y-2 md:overflow-hidden md:rounded-[20px] md:border md:border-[#E0E5E6] md:grid-cols-[136px_1fr] md:grid-rows-[79px_88px] md:gap-y-0'>
+        <section className='grid w-full min-w-0 max-w-full gap-x-6 gap-y-2 md:overflow-hidden md:rounded-[20px] md:border md:border-[#E0E5E6] md:grid-cols-[136px_1fr] md:grid-rows-[79px_88px] md:gap-y-0'>
           <div className='hidden items-start justify-start bg-[#F6F7F8] md:flex md:justify-center md:pt-6'>
             <span className='inline-flex h-[39px] items-center px-6 text-[16px] font-bold leading-[19px] tracking-[-0.05em] text-[#202020]'>
               {labels.category}
@@ -134,7 +134,7 @@ export function CompatibilityCatalog({
           </div>
 
           <form
-            className='grid h-[72px] w-full grid-cols-[minmax(0,1fr)_57px] items-start gap-3 pt-2 md:flex md:h-auto md:gap-0 md:pt-4'
+            className='grid h-[72px] w-full min-w-0 max-w-[calc(100vw-64px)] grid-cols-[minmax(0,1fr)_57px] items-start gap-3 pt-2 md:max-w-none md:flex md:h-auto md:gap-0 md:pt-4'
             onSubmit={event => {
               event.preventDefault();
               setQuery(draftQuery);
