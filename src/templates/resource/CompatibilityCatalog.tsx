@@ -13,7 +13,7 @@ interface CompatibilityCatalogProps {
   sections: CompatibilityCatalogSection[];
 }
 
-const tableGridClass = 'grid grid-cols-[261.333px_261.333px_400px_277.334px]';
+const tableGridClass = 'grid grid-cols-3 md:grid-cols-[261.333px_261.333px_400px_277.334px]';
 
 interface ScrollRevealProps extends HTMLAttributes<HTMLDivElement> {
   delay?: number;
@@ -98,14 +98,14 @@ export function CompatibilityCatalog({
   return (
     <div className='compatibility-catalog flex justify-center animate-fade-in pt-[30px]'>
       <div className='w-full max-w-[1200px] px-4 md:px-0'>
-        <section className='grid gap-x-6 gap-y-4 overflow-hidden rounded-[20px] border border-[#E0E5E6] py-4 md:grid-cols-[136px_1fr] md:grid-rows-[79px_88px] md:gap-y-0 md:py-0'>
-          <div className='flex items-start justify-start bg-[#F6F7F8] md:justify-center md:pt-6'>
+        <section className='grid gap-x-6 gap-y-2 md:overflow-hidden md:rounded-[20px] md:border md:border-[#E0E5E6] md:grid-cols-[136px_1fr] md:grid-rows-[79px_88px] md:gap-y-0'>
+          <div className='hidden items-start justify-start bg-[#F6F7F8] md:flex md:justify-center md:pt-6'>
             <span className='inline-flex h-[39px] items-center px-6 text-[16px] font-bold leading-[19px] tracking-[-0.05em] text-[#202020]'>
               {labels.category}
             </span>
           </div>
 
-          <div className='flex min-w-0 items-start gap-[10px] overflow-x-auto scrollbar-hide md:pt-6'>
+          <div className='flex h-[69px] min-w-0 snap-x snap-mandatory items-start gap-[10px] overflow-x-auto scroll-smooth pt-4 scrollbar-hide md:h-auto md:pt-6'>
             {categories.map(category => {
               const isActive = activeCategory === category.key;
 
@@ -114,8 +114,8 @@ export function CompatibilityCatalog({
                   key={category.key}
                   type='button'
                   onClick={() => setActiveCategory(category.key)}
-                  className={`h-[39px] shrink-0 rounded-full border text-[15px] font-semibold leading-[19px] tracking-[-0.05em] transition ${
-                    category.key === 'server' ? 'w-10 px-0' : 'px-4'
+                  className={`h-[37px] shrink-0 snap-start rounded-full border px-[10px] text-[14px] font-semibold leading-[17px] tracking-[-0.05em] transition md:h-[39px] md:text-[15px] md:leading-[19px] ${
+                    category.key === 'server' ? 'w-11 px-0 md:w-10' : 'md:px-4'
                   } ${
                     isActive
                       ? 'border-[#202020] bg-white text-[#444444]'
@@ -127,19 +127,19 @@ export function CompatibilityCatalog({
             })}
           </div>
 
-          <div className='flex items-start justify-start bg-[#F6F7F8] md:justify-center md:pt-4'>
+          <div className='hidden items-start justify-start bg-[#F6F7F8] md:flex md:justify-center md:pt-4'>
             <span className='inline-flex h-[39px] items-center px-6 text-[16px] font-bold leading-[19px] tracking-[-0.05em] text-[#202020]'>
               {labels.search}
             </span>
           </div>
 
           <form
-            className='flex w-full flex-col gap-3 md:flex-row md:items-start md:gap-0 md:pt-4'
+            className='flex h-[72px] w-full items-start gap-3 pt-2 md:h-auto md:gap-0 md:pt-4'
             onSubmit={event => {
               event.preventDefault();
               setQuery(draftQuery);
             }}>
-            <div className='flex h-12 flex-1 items-center rounded-[10px] border border-[#EEEEEE] bg-white px-5 md:max-w-[938px]'>
+            <div className='flex h-12 min-w-0 flex-1 items-center rounded-[10px] border border-[#EEEEEE] bg-white px-5 md:max-w-[938px]'>
               <span className='mr-3 h-4 w-4 rounded-full border-2 border-[#BDBDBD]' aria-hidden='true' />
               <input
                 value={draftQuery}
@@ -150,14 +150,14 @@ export function CompatibilityCatalog({
             </div>
             <button
               type='submit'
-              className='h-12 rounded-[10px] bg-[#202020] px-6 text-[16px] font-semibold leading-4 text-white transition hover:bg-[#2A2A2A] md:w-[77px] md:px-0'>
+              className='h-12 w-[57px] shrink-0 rounded-[10px] bg-[#202020] px-0 text-[14px] font-semibold leading-4 text-white transition hover:bg-[#2A2A2A] md:w-[77px] md:text-[16px]'>
               {labels.searchButton}
             </button>
           </form>
         </section>
 
         {filteredSections.length > 0 ? (
-          <div className='pt-12'>
+          <div className='pt-6 md:pt-12'>
             {filteredSections.map(section => {
               const headerLabels = section.headerLabels ?? {
                 name: labels.productColumn,
@@ -167,19 +167,19 @@ export function CompatibilityCatalog({
               };
 
               return (
-                <section key={section.key} className='mb-12 last:mb-0'>
+                <section key={section.key} className='mb-6 md:mb-12 last:mb-0'>
                   <ScrollReveal className='mb-6'>
-                    <h2 className='text-[30px] font-bold leading-[42px] text-[#202020]'>
+                    <h2 className='text-[20px] font-bold leading-6 text-[#202020] md:text-[30px] md:leading-[42px]'>
                       {section.title}
                     </h2>
                   </ScrollReveal>
 
-                  <div className='overflow-x-auto overflow-y-hidden'>
-                    <div className='min-w-[1200px] border-t border-[#111111]'>
+                  <div className='overflow-visible md:overflow-x-auto md:overflow-y-hidden'>
+                    <div className='min-w-0 border-t border-[#111111] md:min-w-[1200px]'>
                       <div
-                        className={`${tableGridClass} h-11 border-b border-[#D9D9D9] bg-[#F6F7F8] text-[16px] font-semibold leading-7 text-[#202020]`}>
+                        className={`${tableGridClass} h-11 border-b border-[#D9D9D9] bg-[#F6F7F8] text-[14px] font-semibold leading-7 text-[#202020] md:text-[16px]`}>
                         <div className='flex items-center px-2'>{headerLabels.name}</div>
-                        <div className='flex items-center px-2'>{headerLabels.image}</div>
+                        <div className='hidden items-center px-2 md:flex'>{headerLabels.image}</div>
                         <div className='flex items-center px-2'>{headerLabels.support}</div>
                         <div className='flex items-center px-2'>{headerLabels.note}</div>
                       </div>
@@ -191,14 +191,14 @@ export function CompatibilityCatalog({
                           <ScrollReveal
                             key={row.id}
                             delay={(index % 4) * 45}
-                            className={`${tableGridClass} min-h-32 border-b border-[#D9D9D9] ${
+                            className={`${tableGridClass} min-h-0 border-b border-[#D9D9D9] md:min-h-32 ${
                               index % 2 === 0 ? 'bg-white' : 'bg-[#F6F7F8]'
                             }`}>
-                            <div className='flex items-center px-2 py-6 text-[18px] font-medium leading-7 text-[#202020]'>
+                            <div className='flex items-center px-2 py-4 text-[14px] font-medium leading-5 text-[#202020] md:py-6 md:text-[18px] md:leading-7'>
                               {row.name}
                             </div>
                             <div
-                              className={`flex items-center px-2 ${
+                              className={`hidden items-center px-2 md:flex ${
                                 isDp5200 ? 'overflow-hidden py-3' : 'py-6'
                               }`}>
                               {row.imageSrc && (
@@ -214,18 +214,18 @@ export function CompatibilityCatalog({
                                 />
                               )}
                             </div>
-                            <div className='flex flex-col justify-center px-2 py-6 text-[16px] font-medium leading-7 text-[#202020]'>
+                            <div className='flex flex-col justify-center px-2 py-4 text-[14px] font-medium leading-5 text-[#202020] md:py-6 md:text-[16px] md:leading-7'>
                               {row.support.length > 0 && (
-                                <ul className='list-disc pl-6'>
+                                <ul className='space-y-1 md:list-disc md:space-y-0 md:pl-6'>
                                   {row.support.map((item, index) => (
                                     <li key={`${row.id}-support-${index}`}>{item}</li>
                                   ))}
                                 </ul>
                               )}
                             </div>
-                            <div className='flex flex-col justify-center px-2 py-6 text-[16px] font-medium leading-7 text-[#202020]'>
+                            <div className='flex flex-col justify-center px-2 py-4 text-[14px] font-medium leading-5 text-[#202020] md:py-6 md:text-[16px] md:leading-7'>
                               {row.notes && row.notes.length > 0 && (
-                                <ul className='list-disc pl-6'>
+                                <ul className='space-y-1 md:list-disc md:space-y-0 md:pl-6'>
                                   {row.notes.map((item, index) => (
                                     <li key={`${row.id}-note-${index}`}>{item}</li>
                                   ))}
