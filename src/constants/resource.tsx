@@ -575,6 +575,12 @@ const createCompatibilityCatalogSections = (
         row('application-veritas', 'Veritas', 1413, 'Veritas InfoScale (HA)'),
         row('application-mantech', t('manufacturers.mantechSolution'), 1414, 'MCCS (HA)'),
         row('application-itplex', 'Itplex', 'image-itplex', 'ClusterPlex (HA)'),
+        row('application-innodep', t('manufacturers.innodep'), 1156, 'VURIX (VMS)'),
+        row('application-realhub', t('manufacturers.realhub'), 1157, 'XIDE-NVR (VMS)'),
+        row('application-danusys', t('manufacturers.danusys'), 1158, 'Guardian Enterprise (VMS)'),
+        row('application-emstone', t('manufacturers.emstone'), 'logo-4', 'REDBACK VMS (VMS)'),
+        row('application-incon', t('manufacturers.incon'), 1159, 'Trium-I (VMS)'),
+        row('application-milestone', t('manufacturers.milestoneSystems'), 1160, 'BriefCam (VMS)'),
       ],
     },
     {
