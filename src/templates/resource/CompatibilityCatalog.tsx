@@ -186,6 +186,7 @@ export function CompatibilityCatalog({
 
                       {section.rows.map((row, index) => {
                         const isDp5200 = row.id === 'backup-synology-dp5200';
+                        const isInnodep = row.id === 'application-innodep';
 
                         return (
                           <ScrollReveal
@@ -202,16 +203,27 @@ export function CompatibilityCatalog({
                                 isDp5200 ? 'overflow-hidden py-3' : 'py-6'
                               }`}>
                               {row.imageSrc && (
-                                <img
-                                  src={row.imageSrc}
-                                  alt={row.imageLabel ?? row.name}
-                                  className={
-                                    isDp5200
-                                      ? 'h-40 w-40 -translate-y-[29px] object-contain'
-                                      : 'max-h-20 max-w-[180px] object-contain'
-                                  }
-                                  loading='lazy'
-                                />
+                                isInnodep ? (
+                                  <div className='relative h-[55px] w-[150px] overflow-hidden'>
+                                    <img
+                                      src={row.imageSrc}
+                                      alt={row.imageLabel ?? row.name}
+                                      className='absolute -left-[17.06%] -top-[61.29%] h-[235.15%] w-[132.94%] max-w-none'
+                                      loading='lazy'
+                                    />
+                                  </div>
+                                ) : (
+                                  <img
+                                    src={row.imageSrc}
+                                    alt={row.imageLabel ?? row.name}
+                                    className={
+                                      isDp5200
+                                        ? 'h-40 w-40 -translate-y-[29px] object-contain'
+                                        : 'max-h-20 max-w-[180px] object-contain'
+                                    }
+                                    loading='lazy'
+                                  />
+                                )
                               )}
                             </div>
                             <div className='flex flex-col justify-center px-2 py-4 text-[14px] font-medium leading-5 text-[#202020] md:py-6 md:text-[16px] md:leading-7'>
