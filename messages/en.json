@@ -629,7 +629,13 @@
         "pureStorage": "Pure Storage",
         "handreamnet": "Handreamnet",
         "innotium": "Innotium",
-        "mantechSolution": "Mantech Solution"
+        "mantechSolution": "Mantech Solution",
+        "innodep": "Innodep",
+        "realhub": "Realhub",
+        "danusys": "Danusys",
+        "emstone": "EMSTONE",
+        "incon": "Incon",
+        "milestoneSystems": "Milestone Systems"
       },
       "backupSolutions": {
         "commvault": {
