@@ -543,7 +543,7 @@ const createCompatibilityCatalogSections = (
         ]),
         row('guest-suse', 'SUSE Enterprise Linux', 1351, 'SLES 16.0'),
         row('guest-rocky-linux', 'Rocky Linux', 1418, ['Rocky Linux 10', 'Rocky Linux 9']),
-        row('guest-centos', 'CentOS', 1419, ['CentOS 8.5', 'CentOS 7.X', '* EOL : 2021-11-16']),
+        row('guest-centos', 'CentOS', 1419, ['CentOS 8.5', 'CentOS 7.X', '*   EOL : 2021-11-16']),
         row('guest-ubuntu', 'Ubuntu', 1352, [
           'Ubuntu 26.X LTS',
           'Ubuntu 24.X LTS',
