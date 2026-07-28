@@ -188,6 +188,7 @@ export function CompatibilityCatalog({
                         const isDp5200 = row.id === 'backup-synology-dp5200';
                         const isInnodep = row.id === 'application-innodep';
                         const isCentos = row.id === 'guest-centos';
+                        const isWindows = row.id === 'guest-windows-server' || row.id === 'guest-windows-desktop';
 
                         return (
                           <ScrollReveal
@@ -222,6 +223,15 @@ export function CompatibilityCatalog({
                                       loading='lazy'
                                     />
                                   </div>
+                                ) : isWindows ? (
+                                  <div className='relative h-20 w-[63px] overflow-hidden'>
+                                    <img
+                                      src={row.imageSrc}
+                                      alt={row.imageLabel ?? row.name}
+                                      className='absolute -left-[58.79%] -top-[29.82%] h-[158.81%] w-[218.18%] max-w-none'
+                                      loading='lazy'
+                                    />
+                                  </div>
                                 ) : (
                                   <img
                                     src={row.imageSrc}
@@ -238,19 +248,18 @@ export function CompatibilityCatalog({
                             </div>
                             <div className='flex flex-col justify-center px-2 py-4 text-[14px] font-medium leading-5 text-[#202020] md:py-6 md:text-[16px] md:leading-7'>
                               {row.support.length > 0 && (
-                                <ul className='list-disc space-y-1 pl-4 md:space-y-0 md:pl-6'>
-                                  {row.support.map((item, index) => (
-                                    <li
-                                      key={`${row.id}-support-${index}`}
-                                      className={
-                                        isCentos && index === row.support.length - 1
-                                          ? 'ml-0 list-none'
-                                          : undefined
-                                      }>
-                                      {item}
-                                    </li>
-                                  ))}
-                                </ul>
+                                <div>
+                                  <ul className='list-disc space-y-1 pl-4 md:space-y-0 md:pl-6'>
+                                    {(isCentos ? row.support.slice(0, -1) : row.support).map((item, index) => (
+                                      <li key={`${row.id}-support-${index}`}>{item}</li>
+                                    ))}
+                                  </ul>
+                                  {isCentos && (
+                                    <p className='ml-1 mt-1 whitespace-pre-wrap font-medium leading-5 text-[#202020] md:ml-[6px] md:leading-7'>
+                                      {row.support.at(-1)}
+                                    </p>
+                                  )}
+                                </div>
                               )}
                             </div>
                             <div className='flex flex-col justify-center px-2 py-4 text-[14px] font-medium leading-5 text-[#202020] md:py-6 md:text-[16px] md:leading-7'>
