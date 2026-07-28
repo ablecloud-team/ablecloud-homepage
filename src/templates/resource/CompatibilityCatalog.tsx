@@ -228,7 +228,7 @@ export function CompatibilityCatalog({
                                     <img
                                       src={row.imageSrc}
                                       alt={row.imageLabel ?? row.name}
-                                      className='absolute -left-[58.79%] -top-[29.82%] h-[158.81%] w-[218.18%] max-w-none'
+                                      className='absolute -left-[58.79%] -top-[14.5%] h-auto w-[218.18%] max-w-none'
                                       loading='lazy'
                                     />
                                   </div>
