@@ -187,6 +187,7 @@ export function CompatibilityCatalog({
                       {section.rows.map((row, index) => {
                         const isDp5200 = row.id === 'backup-synology-dp5200';
                         const isInnodep = row.id === 'application-innodep';
+                        const isCentos = row.id === 'guest-centos';
 
                         return (
                           <ScrollReveal
@@ -212,6 +213,15 @@ export function CompatibilityCatalog({
                                       loading='lazy'
                                     />
                                   </div>
+                                ) : isCentos ? (
+                                  <div className='relative h-10 w-32 overflow-hidden'>
+                                    <img
+                                      src={row.imageSrc}
+                                      alt={row.imageLabel ?? row.name}
+                                      className='absolute -left-[7.92%] -top-[56.52%] h-[213.03%] w-[116.12%] max-w-none'
+                                      loading='lazy'
+                                    />
+                                  </div>
                                 ) : (
                                   <img
                                     src={row.imageSrc}
@@ -230,7 +240,15 @@ export function CompatibilityCatalog({
                               {row.support.length > 0 && (
                                 <ul className='list-disc space-y-1 pl-4 md:space-y-0 md:pl-6'>
                                   {row.support.map((item, index) => (
-                                    <li key={`${row.id}-support-${index}`}>{item}</li>
+                                    <li
+                                      key={`${row.id}-support-${index}`}
+                                      className={
+                                        isCentos && index === row.support.length - 1
+                                          ? 'ml-0 list-none'
+                                          : undefined
+                                      }>
+                                      {item}
+                                    </li>
                                   ))}
                                 </ul>
                               )}
