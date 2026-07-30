@@ -114,9 +114,7 @@ export function CompatibilityCatalog({
                   key={category.key}
                   type='button'
                   onClick={() => setActiveCategory(category.key)}
-                  className={`inline-flex h-[37px] shrink-0 snap-start items-center justify-center rounded-full border px-[10px] text-[14px] font-semibold leading-none tracking-[-0.05em] transition md:h-[39px] md:text-[15px] ${
-                    category.key === 'server' ? 'w-[37px] px-0 md:w-[39px]' : 'md:px-4'
-                  } ${
+                  className={`inline-flex h-[37px] shrink-0 snap-start items-center justify-center rounded-full border px-[10px] text-[14px] font-semibold leading-none tracking-[-0.05em] transition md:h-[39px] md:px-4 md:text-[15px] ${
                     isActive
                       ? 'border-[#202020] bg-white text-[#444444]'
                       : 'border-transparent bg-white text-[#444444] hover:border-[#202020]'
