@@ -114,8 +114,8 @@ export function CompatibilityCatalog({
                   key={category.key}
                   type='button'
                   onClick={() => setActiveCategory(category.key)}
-                  className={`h-[37px] shrink-0 snap-start rounded-full border px-[10px] text-[14px] font-semibold leading-[17px] tracking-[-0.05em] transition md:h-[39px] md:text-[15px] md:leading-[19px] ${
-                    category.key === 'server' ? 'w-11 px-0 md:w-10' : 'md:px-4'
+                  className={`inline-flex h-[37px] shrink-0 snap-start items-center justify-center rounded-full border px-[10px] text-[14px] font-semibold leading-none tracking-[-0.05em] transition md:h-[39px] md:text-[15px] ${
+                    category.key === 'server' ? 'w-[37px] px-0 md:w-[39px]' : 'md:px-4'
                   } ${
                     isActive
                       ? 'border-[#202020] bg-white text-[#444444]'
@@ -238,7 +238,7 @@ export function CompatibilityCatalog({
                                     alt={row.imageLabel ?? row.name}
                                     className={
                                       isDp5200
-                                        ? 'h-40 w-40 -translate-y-[29px] object-contain'
+                                        ? 'h-40 w-40 object-contain'
                                         : 'max-h-20 max-w-[180px] object-contain'
                                     }
                                     loading='lazy'
