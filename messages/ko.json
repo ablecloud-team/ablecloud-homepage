@@ -864,6 +864,18 @@
         {
           "title": "CCTV 영상감시 시스템을 위한 가상화 플랫폼, ABLESTACK",
           "description": "영상감시 인프라 및 관제센터 구축"
+        },
+        {
+          "title": "ABLESTACK for Commvault 백업 솔루션",
+          "description": "Commvault와 연동하여 가상머신을 백업·복원해보세요."
+        },
+        {
+          "title": "ABLESTACK for NetBackup 백업 솔루션",
+          "description": "NetBackup과 연동하여 가상머신 백업을 간편하게 조회·복원해보세요."
+        },
+        {
+          "title": "ABLESTACK for NAS 백업 솔루션",
+          "description": "NAS와 연동하여 가상머신 백업·복원을 Mold UI에서 통합 관리해보세요."
         }
       ]
     }
