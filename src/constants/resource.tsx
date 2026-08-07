@@ -20,7 +20,6 @@ import ebook_9_Src from '@/public/images/resource/ebook/ebook_9.png';
 import ebook_10_Src from '@/public/images/resource/ebook/ebook_10.png';
 import ebook_11_Src from '@/public/images/resource/ebook/ebook_11.png';
 import ebook_12_Src from '@/public/images/resource/ebook/ebook_12.png';
-import ebook_13_Src from '@/public/images/resource/ebook/ebook_13.png';
 import ebook_14_Src from '@/public/images/resource/ebook/ebook_14.png';
 import ebook_15_Src from '@/public/images/resource/ebook/ebook_15.png';
 import ebook_16_Src from '@/public/images/resource/ebook/ebook_16.png';
@@ -175,14 +174,6 @@ export const getEbookData = async () => {
       date: '2025.02.23',
     },
 
-    {
-      type: 'ABLESTACK Solution',
-      title: t('data.12.title'),
-      description: t('data.12.description'),
-      href: 'ABLESTACK_Commvault_백업 솔루션.pdf',
-      date: '2025.11.03',
-      imgSrc: ebook_13_Src,
-    },
     {
       type: 'ABLESTACK Solution',
       title: t('data.13.title'),
