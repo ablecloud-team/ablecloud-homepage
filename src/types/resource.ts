@@ -24,7 +24,7 @@ export interface EbookData {
   type: string;
   title: string;
   description: string;
-  href: string;
+  href?: string;
   imgSrc: StaticImageData;
   date: string;
 }

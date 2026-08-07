@@ -1,5 +1,5 @@
 import { useLocale, useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 import {
   CompatibilityCatalogLabels,
@@ -22,6 +22,12 @@ import ebook_11_Src from '@/public/images/resource/ebook/ebook_11.png';
 import ebook_12_Src from '@/public/images/resource/ebook/ebook_12.png';
 import ebook_13_Src from '@/public/images/resource/ebook/ebook_13.png';
 import ebook_14_Src from '@/public/images/resource/ebook/ebook_14.png';
+import ebook_15_Src from '@/public/images/resource/ebook/ebook_15.png';
+import ebook_16_Src from '@/public/images/resource/ebook/ebook_16.png';
+import ebook_17_Src from '@/public/images/resource/ebook/ebook_17.png';
+import ebook_18_Src from '@/public/images/resource/ebook/ebook_18.png';
+import ebook_19_Src from '@/public/images/resource/ebook/ebook_19.png';
+import ebook_20_Src from '@/public/images/resource/ebook/ebook_20.png';
 
 export const resourceType = ['blog', 'video', 'ebook'] as const;
 
@@ -69,6 +75,7 @@ export const videosData: string[] = [
 
 export const getEbookData = async () => {
   const t = await getTranslations('resources.ebook');
+  const locale = await getLocale();
 
   return [
     {
@@ -183,6 +190,30 @@ export const getEbookData = async () => {
       href: 'ABLESTACK_관제 CCTV.pdf',
       date: '2025.10.16',
       imgSrc: ebook_14_Src,
+    },
+    {
+      type: 'ABLESTACK Technical White Paper',
+      title: t('data.14.title'),
+      description: t('data.14.description'),
+      href: 'ABLESTACK_Commvault_Backup_Solution.pdf',
+      date: '2026.08.07',
+      imgSrc: locale === 'ko' ? ebook_15_Src : ebook_17_Src,
+    },
+    {
+      type: 'ABLESTACK Technical White Paper',
+      title: t('data.15.title'),
+      description: t('data.15.description'),
+      href: 'ABLESTACK_NetBackup_Backup_Solution.pdf',
+      date: '2026.08.07',
+      imgSrc: locale === 'ko' ? ebook_16_Src : ebook_18_Src,
+    },
+    {
+      type: 'ABLESTACK Technical White Paper',
+      title: t('data.16.title'),
+      description: t('data.16.description'),
+      href: 'ABLESTACK_NAS_Backup_Solution.pdf',
+      date: '2026.08.07',
+      imgSrc: locale === 'ko' ? ebook_19_Src : ebook_20_Src,
     },
   ];
 };
