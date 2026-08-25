@@ -880,6 +880,10 @@
         {
           "title": "ABLESTACK for Veeam 백업 솔루션",
           "description": "Veeam 백업에서 수행한 가상머신 백업을 Mold UI에서 조회하고, 복원할 수 있는 기능을 제공합니다."
+        },
+        {
+          "title": "ABLESTACK AI",
+          "description": "인공지능 기반 사용자 커뮤니티 이용 안내"
         }
       ]
     }
