@@ -880,6 +880,10 @@
         {
           "title": "ABLESTACK for Veeam Backup Solution",
           "description": "Mold UI allows users to view and restore VM backups created with Veeam."
+        },
+        {
+          "title": "ABLESTACK AI",
+          "description": "Guide to using the AI-powered user community."
         }
       ]
     }
