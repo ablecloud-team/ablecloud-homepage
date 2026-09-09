@@ -69,15 +69,20 @@ export function Footer() {
               )}
             </div>
           </div>
-          <Link
-            href={'https://docs.ablecloud.io/'}
-            target='_blank'
-            className='max-w-[342px] w-full h-fit'>
-            <div className='flex gap-2 items-center text-sm py-[10px] bg-[#999999] text-[white] px-[14px] rounded-[5px]'>
-              <div className='flex-1'>ABLESTACK DOCUMENT SITE</div>
-              <ArrowRight width={18} />
-            </div>
-          </Link>
+          <div className='flex max-w-[342px] w-full flex-col gap-2'>
+            <Link href={'https://docs.ablecloud.io/'} target='_blank' className='w-full h-fit'>
+              <div className='flex gap-2 items-center text-sm py-[10px] bg-[#999999] text-[white] px-[14px] rounded-[5px]'>
+                <div className='flex-1'>ABLESTACK DOCUMENT SITE</div>
+                <ArrowRight width={18} />
+              </div>
+            </Link>
+            <Link href={'https://partner.ablecloud.io/'} target='_blank' className='w-full h-fit'>
+              <div className='flex gap-2 items-center text-sm py-[10px] bg-[#999999] text-[white] px-[14px] rounded-[5px]'>
+                <div className='flex-1'>ABLECLOUD PARTNER PORTAL</div>
+                <ArrowRight width={18} />
+              </div>
+            </Link>
+          </div>
         </div>
         {/* <Link href={''} className='flex text-[#222222] w-fit items-center'>
           <div className='text-[12px] font-bold leading-[15.6px] underline underline-offset-2'>
