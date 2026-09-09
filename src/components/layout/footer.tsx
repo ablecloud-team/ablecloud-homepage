@@ -1,9 +1,13 @@
+'use client';
+
 import { useLocale, useTranslations } from 'next-intl';
 
+import { useState } from 'react';
+
 import Ablecloud from '@/public/icons/common/ablecloud.svg';
-import ArrowRight from '@/public/icons/common/arrow-right.svg';
 import Blog from '@/public/icons/common/blog.svg';
 import Community from '@/public/icons/common/community.svg';
+import RelatedSitesArrow from '@/public/icons/common/related-sites-arrow.svg';
 import Youtube from '@/public/icons/common/youtube.svg';
 
 import { Link } from '@/i18n/routing';
@@ -33,6 +37,7 @@ export function Footer() {
   const t = useTranslations('footer');
 
   const locale = useLocale();
+  const [isRelatedSitesOpen, setIsRelatedSitesOpen] = useState(false);
 
   return (
     <div className='flex justify-center w-full bg-[#F9F9F9]'>
@@ -69,19 +74,30 @@ export function Footer() {
               )}
             </div>
           </div>
-          <div className='flex max-w-[342px] w-full flex-col gap-2'>
-            <Link href={'https://docs.ablecloud.io/'} target='_blank' className='w-full h-fit'>
-              <div className='flex gap-2 items-center text-sm py-[10px] bg-[#999999] text-[white] px-[14px] rounded-[5px]'>
-                <div className='flex-1'>ABLESTACK DOCUMENT SITE</div>
-                <ArrowRight width={18} />
+          <div className={`relative max-w-[342px] w-full self-start ${isRelatedSitesOpen ? 'z-20' : ''}`}>
+            <button
+              type='button'
+              aria-expanded={isRelatedSitesOpen}
+              onClick={() => setIsRelatedSitesOpen(isOpen => !isOpen)}
+              className='flex h-[40px] w-full items-center justify-between rounded-[5px] bg-[#999999] px-[14px] text-left text-sm font-bold tracking-[-0.3px] text-white'>
+              <span>ABLESTACK RELATED SITES</span>
+              <RelatedSitesArrow
+                className={`h-6 w-6 transition-transform ${isRelatedSitesOpen ? 'rotate-180' : ''}`}
+                aria-hidden='true'
+              />
+            </button>
+            {isRelatedSitesOpen && (
+              <div
+                id='related-sites-menu'
+                className='absolute right-0 top-full z-10 mt-2 flex w-full flex-col rounded-[5px] bg-[#D6D6D6] px-[14px] text-sm font-bold tracking-[-0.3px] text-white'>
+                <Link href='https://docs.ablecloud.io/' target='_blank' className='leading-[40px]'>
+                  ABLESTACK DOCUMENT SITE
+                </Link>
+                <Link href='https://partner.ablecloud.io/' target='_blank' className='leading-[40px]'>
+                  ABLECLOUD PARTNER PORTAL
+                </Link>
               </div>
-            </Link>
-            <Link href={'https://partner.ablecloud.io/'} target='_blank' className='w-full h-fit'>
-              <div className='flex gap-2 items-center text-sm py-[10px] bg-[#999999] text-[white] px-[14px] rounded-[5px]'>
-                <div className='flex-1'>ABLECLOUD PARTNER PORTAL</div>
-                <ArrowRight width={18} />
-              </div>
-            </Link>
+            )}
           </div>
         </div>
         {/* <Link href={''} className='flex text-[#222222] w-fit items-center'>
