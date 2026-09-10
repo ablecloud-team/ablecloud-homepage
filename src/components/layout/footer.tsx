@@ -90,10 +90,16 @@ export function Footer() {
               <div
                 id='related-sites-menu'
                 className='absolute right-0 top-full z-10 mt-2 flex w-full flex-col rounded-[5px] bg-[#D6D6D6] px-[14px] text-sm font-bold tracking-[-0.3px] text-white'>
-                <Link href='https://docs.ablecloud.io/' target='_blank' className='leading-[40px]'>
+                <Link
+                  href='https://docs.ablecloud.io/'
+                  target='_blank'
+                  className='-mx-[14px] px-[14px] leading-[40px] transition-colors hover:bg-[#AFAFAF]'>
                   ABLESTACK DOCUMENT SITE
                 </Link>
-                <Link href='https://partner.ablecloud.io/' target='_blank' className='leading-[40px]'>
+                <Link
+                  href='https://partner.ablecloud.io/'
+                  target='_blank'
+                  className='-mx-[14px] px-[14px] leading-[40px] transition-colors hover:bg-[#AFAFAF]'>
                   ABLECLOUD PARTNER PORTAL
                 </Link>
               </div>
