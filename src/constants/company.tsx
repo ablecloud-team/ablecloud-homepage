@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 import { HeaderData } from '@/types/header';
 
@@ -37,21 +37,58 @@ export const getCompanyTabs = async () => {
 
 export const getCompanyHistory = async () => {
   const t = await getTranslations('company.history');
+  const locale = await getLocale();
+  const history2026 =
+    locale === 'ko'
+      ? [
+          { text: t('2026.history.0') },
+          { text: t('2026.history.1') },
+          { text: t('2026.history.2') },
+          { text: t('2026.history.3') },
+          { text: t('2026.history.4') },
+          { text: t('2026.history.5') },
+          { text: t('2026.history.6') },
+          { text: t('2026.history.7') },
+          { text: t('2026.history.8') },
+          { text: t('2026.history.9') },
+          { text: t('2026.history.10') },
+          { text: t('2026.history.11') },
+          { text: t('2026.history.12') },
+          { text: t('2026.history.13') },
+          { text: t('2026.history.14') },
+          { text: t('2026.history.15') },
+          { text: t('2026.history.16') },
+          { text: t('2026.history.17') },
+          { text: t('2026.history.18') },
+          { text: t('2026.history.19') },
+          { text: t('2026.history.20') },
+        ]
+      : [
+          { text: t('2026.history.0') },
+          { text: t('2026.history.1') },
+          { text: t('2026.history.2') },
+          { text: t('2026.history.3') },
+          { text: t('2026.history.4') },
+          { text: t('2026.history.5') },
+          { text: t('2026.history.6') },
+          { text: t('2026.history.7') },
+          { text: t('2026.history.8') },
+          { text: t('2026.history.9') },
+          { text: t('2026.history.10') },
+          { text: t('2026.history.11') },
+          { text: t('2026.history.12') },
+          { text: t('2026.history.13') },
+          { text: t('2026.history.14') },
+          { text: t('2026.history.15') },
+          { text: t('2026.history.16') },
+          { text: t('2026.history.17') },
+          { text: t('2026.history.18') },
+        ];
 
   return [
     {
       year: t('2026.year'),
-      history: [
-        { text: t('2026.history.0') },
-        { text: t('2026.history.1') },
-        { text: t('2026.history.2') },
-        { text: t('2026.history.3') },
-        { text: t('2026.history.4') },
-        { text: t('2026.history.5') },
-        { text: t('2026.history.6') },
-        { text: t('2026.history.7') },
-        { text: t('2026.history.8') },
-      ],
+      history: history2026,
     },
     {
       year: t('2025.year'),
