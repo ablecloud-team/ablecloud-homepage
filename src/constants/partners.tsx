@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
+import aisSrc from '@/public/images/partners/ais.png';
 import ablestoreSrc from '@/public/images/partners/ablestor.png';
 import bostechSrc from '@/public/images/partners/bostech.png';
 import citrixSrc from '@/public/images/partners/citrix.png';
@@ -122,5 +123,6 @@ export const usePartnerList = () => {
     { img: <Image src={dwctsSrc} alt='' />, text: t('list.28.text') },
     { img: <Image src={geomexSrc} alt='' />, text: t('list.29.text') },
     { img: <Image src={sminfoSrc} alt='' width={164} />, text: t('list.30.text') },
+    { img: <Image src={aisSrc} alt='' width={180} height={30} />, text: t('list.31.text') },
   ];
 };
