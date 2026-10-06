@@ -121,12 +121,12 @@ export const getInterviewlist = async (): Promise<InterviewHistoryData[]> => {
     {
       category: t('category.0'),
       data: [
-        { img: <Image src={spoSrc} alt='' width={65} />, text: '대검찰청' },
-        { img: <Image src={policeSrc} alt='' width={118} />, text: '경찰청' },
-        { img: <Image src={ekrSrc} alt='' width={180} />, text: '한국농어촌공사' },
         { img: <Image src={mohwSrc} alt='' width={149} />, text: '보건복지부' },
         { img: <Image src={governmentComplexSrc} alt='' width={171} />, text: '행정안전부 정부청사관리본부' },
         { img: <Image src={busanoceanSrc} alt='' width={130} />, text: '부산지방해양수산청' },
+        { img: <Image src={spoSrc} alt='' width={65} />, text: '대검찰청' },
+        { img: <Image src={policeSrc} alt='' width={118} />, text: '경찰청' },
+        { img: <Image src={ekrSrc} alt='' width={180} />, text: '한국농어촌공사' },
         { img: <Image src={kepcoSrc} alt='' width={128} />, text: '한국전력공사' },
         { img: <Image src={comwelSrc} alt='' width={100} />, text: '근로복지공단' },
         { img: <Image src={gyeonggiSrc} alt='' width={167} />, text: '경기도' },
