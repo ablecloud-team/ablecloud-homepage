@@ -42,7 +42,7 @@ import datastreamsSrc from '@/public/images/common/datastreams.png';
 import datqSrc from '@/public/images/common/datq.png';
 import dipSrc from '@/public/images/common/dip.png';
 import donghaeSrc from '@/public/images/common/donghae.png';
-import dongwonSrc from '@/public/images/common/dongwon.png';
+import DongwonMobilityLogo from '@/public/images/common/dongwon-mobility.svg';
 import ekrSrc from '@/public/images/common/ekr.png';
 import ezlSrc from '@/public/images/common/ezl.png';
 import gbSrc from '@/public/images/common/gb.png';
@@ -242,7 +242,7 @@ export const getInterviewlist = async (): Promise<InterviewHistoryData[]> => {
         { img: <Image src={poscoSrc} alt='' width={141} />, text: '포스코' },
         { img: <Image src={novarexSrc} alt='' width={160} />, text: 'NOVAREX' },
         { img: <Image src={daewoongSrc} alt='' width={160} />, text: '대웅제약' },
-        { img: <Image src={dongwonSrc} alt='' width={170} />, text: '동원금속' },
+        { img: <DongwonMobilityLogo role='img' aria-label='동원모빌리티 주식회사' />, text: '동원모빌리티 주식회사' },
         { img: <Image src={gongyoungHomeSrc} alt='' width={165} />, text: '공영홈쇼핑' },
         { img: <Image src={gyeonggiBusSrc} alt='' width={161} />, text: '경기도버스운송사업조합' },
         { img: <Image src={t3qSrc} alt='' width={129} />, text: 'T3Q' },
