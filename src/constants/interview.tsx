@@ -1,6 +1,14 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
+import MapoLogo from '@/public/images/common/mapo.svg';
+import KisaLogo from '@/public/images/common/kisa.svg';
+import KoreaLocalLogo from '@/public/images/common/korea-local.svg';
+import DongEuiLogo from '@/public/images/common/dong-eui.svg';
+import DaeguBusanExpresswayLogo from '@/public/images/common/daegu-busan-expressway.svg';
+import PyunghwaHoldingsLogo from '@/public/images/common/pyunghwa-holdings.svg';
+import niaSrc from '@/public/images/common/nia.png';
+
 import { InterviewHistoryData } from '@/types/interview';
 
 import addSrc from '@/public/images/common/add.png';
@@ -65,7 +73,6 @@ import kepcoKdnSrc from '@/public/images/common/kepco-kdn.png';
 import kepcoSrc from '@/public/images/common/kepco.png';
 import kiboSrc from '@/public/images/common/kibo.png';
 import konyangSrc from '@/public/images/common/konyang.png';
-import koreaLocalSrc from '@/public/images/common/korea-local.png';
 import koreaOceanSrc from '@/public/images/common/korea-ocean.png';
 import billyangSrc from '@/public/images/common/milyang.png';
 import mohwSrc from '@/public/images/common/mohw.png';
@@ -161,32 +168,35 @@ export const getInterviewlist = async (): Promise<InterviewHistoryData[]> => {
         { img: <Image src={samchuckSrc} alt='' width={113} />, text: '삼척시' },
         { img: <Image src={yeongjuSrc} alt='' width={127} />, text: '영주시' },
         { img: <Image src={yangcheonSrc} alt='' width={133} />, text: '양천구' },
-        { img: <Image src={hcSrc} alt='' width={100} />, text: '합천군' },
-        { img: <Image src={ycgSrc} alt='' width={133} />, text: '예천군' },
+        { img: <MapoLogo role='img' aria-label='마포구' />, text: '마포구' },
+        { img: <Image src={geomdanSrc} alt='' width={154} />, text: '검단구' },
         { img: <Image src={uscSrc} alt='' width={75} />, text: '의성군' },
+        { img: <Image src={ycgSrc} alt='' width={133} />, text: '예천군' },
         { img: <Image src={csSrc} alt='' width={117} />, text: '청송군' },
         { img: <Image src={buyeoSrc} alt='' width={113} />, text: '부여군' },
         { img: <Image src={cheongyangSrc} alt='' width={156} />, text: '청양군' },
-        { img: <Image src={yangguSrc} alt='' width={142} />, text: '양구군' },
-        { img: <Image src={hamanSrc} alt='' width={158} />, text: '함안군' },
+        { img: <Image src={hcSrc} alt='' width={100} />, text: '합천군' },
         { img: <Image src={taeanSrc} alt='' width={125} />, text: '태안군' },
+        { img: <Image src={hamanSrc} alt='' width={158} />, text: '함안군' },
         { img: <Image src={injeSrc} alt='' width={115} />, text: '인제군' },
         { img: <Image src={hongseongSrc} alt='' width={145} />, text: '홍성군' },
         { img: <Image src={bonghwaSrc} alt='' width={143} />, text: '봉화군' },
-        { img: <Image src={ulsanJungguSrc} alt='' width={170} />, text: '울산광역시 중구' },
-        { img: <Image src={geomdanSrc} alt='' width={154} />, text: '검단구' },
+        { img: <Image src={yangguSrc} alt='' width={142} />, text: '양구군' },
         { img: <Image src={busanCentralSrc} alt='' width={142} />, text: '부산광역시 중구' },
+        { img: <Image src={ulsanJungguSrc} alt='' width={170} />, text: '울산광역시 중구' },
         { img: <Image src={dipSrc} alt='' width={158} />, text: '대구디지털혁신진흥원' },
         { img: <Image src={chungnamContentSrc} alt='' width={142} />, text: '충남콘텐츠진흥원' },
         { img: <Image src={koreaOceanSrc} alt='' width={142} />, text: '한국해양수산연수원' },
         { img: <Image src={kepcoKdnSrc} alt='' width={165} />, text: '한전KDN' },
-        { img: <Image src={koreaLocalSrc} alt='' width={142} />, text: '한국지역정보개발원' },
         { img: <Image src={yeosuGwangyangSrc} alt='' width={142} />, text: '여수광양항만공사' },
         { img: <Image src={pohangTechSrc} alt='' width={142} />, text: '포항테크노파크' },
         { img: <Image src={ulsanTechSrc} alt='' width={160} />, text: '울산테크노파크' },
         { img: <Image src={changwonReparkSrc} alt='' width={99} />, text: '창원리포츠파크' },
         { img: <Image src={jeonnamFireSrc} alt='' width={180} />, text: '전남소방본부' },
         { img: <Image src={gyeonggiArchivesSrc} alt='' width={170} />, text: '경기도기록원' },
+        { img: <KisaLogo role='img' aria-label='한국인터넷진흥원' />, text: '한국인터넷진흥원' },
+        { img: <KoreaLocalLogo role='img' aria-label='한국지역정보개발원' />, text: '한국지역정보개발원' },
+        { img: <Image src={niaSrc} alt='한국지능정보사회진흥원' width={176} />, text: '한국지능정보사회진흥원' },
       ],
     },
     {
@@ -223,6 +233,7 @@ export const getInterviewlist = async (): Promise<InterviewHistoryData[]> => {
         { img: <Image src={konyangSrc} alt='' width={165} />, text: '건양대학교' },
         { img: <Image src={deaguHanwiSrc} alt='' width={170} />, text: '대구한의대학교' },
         { img: <Image src={ckSrc} alt='' width={170} />, text: '청강문화산업대학교' },
+        { img: <DongEuiLogo role='img' aria-label='동의대학교' />, text: '동의대학교' },
       ],
     },
     {
@@ -237,7 +248,9 @@ export const getInterviewlist = async (): Promise<InterviewHistoryData[]> => {
         { img: <Image src={t3qSrc} alt='' width={129} />, text: 'T3Q' },
         { img: <Image src={datastreamsSrc} alt='' width={160} />, text: 'DataStreams' },
         { img: <Image src={seollokHaemulwonSrc} alt='' width={100} />, text: '설록해물원' },
-        { img: <Image src={powerlogicsSrc} alt='' width={150} />, text: '파워로직스' },
+        { img: <Image src={powerlogicsSrc} alt='' width={170} />, text: '파워로직스' },
+        { img: <DaeguBusanExpresswayLogo role='img' aria-label='신대구부산고속도로' />, text: '신대구부산고속도로' },
+        { img: <PyunghwaHoldingsLogo role='img' aria-label='평화홀딩스' />, text: '평화홀딩스' },
       ],
     },
   ];

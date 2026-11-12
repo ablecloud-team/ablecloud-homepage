@@ -18,7 +18,7 @@ export function InterViewList({ interviewList }: { interviewList: InterviewHisto
               {data.map((item, idx) => (
                 <div
                   key={idx}
-                  className='flex h-[140px] items-center justify-center rounded-[10px] border border-[#EBEEF5] bg-white px-6 py-4'>
+                  className='flex h-[140px] min-w-0 items-center justify-center rounded-[10px] border border-[#EBEEF5] bg-white px-3 py-4 [&>svg]:h-auto [&>svg]:max-w-full'>
                   {item.img}
                 </div>
               ))}
