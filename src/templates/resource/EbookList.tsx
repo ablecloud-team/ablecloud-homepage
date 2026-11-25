@@ -26,19 +26,19 @@ export function EbookList({ ebooksData, origin }: { ebooksData: EbookData[]; ori
   }, [ebooksData, page]);
 
   return (
-    <div className='flex flex-col items-center'>
-      <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
+    <div className='flex w-full flex-col items-center'>
+      <div className='grid w-full max-w-[1185px] grid-cols-1 justify-items-center gap-6 md:grid-cols-2 lg:grid-cols-3'>
         {ebookList.map((v, idx) => {
           const cardClassName =
-            'flex max-w-[360px] flex-col rounded-[20px] border border-[#eee] transition duration-200 hover:scale-102 hover:shadow-sm';
+            'flex w-full min-w-0 max-w-[379px] flex-col rounded-[20px] border border-[#eee] transition duration-200 hover:scale-102 hover:shadow-sm';
           const card = (
             <>
               <Image src={v.imgSrc} alt='' className='h-[220px] w-full rounded-t-[20px] object-cover' />
-              <div className='flex flex-col gap-[6px] px-6 py-4'>
-                <div className='text-[12px] text-[#919191]'>{v.type}</div>
-                <div className='font-bold'>{v.title}</div>
-                <div className='text-[14px]'>{v.description}</div>
-                <div className='text-[12px] text-[#9B9B9B] '>({v.date})</div>
+              <div className='flex flex-col gap-[10px] p-6'>
+                <div className='text-[12px] leading-[1.3] text-[#919191]'>{v.type}</div>
+                <div className='text-[16px] font-bold leading-[1.3]'>{v.title}</div>
+                <div className='text-[14px] leading-[22px]'>{v.description}</div>
+                <div className='text-[12px] leading-[1.3] text-[#9B9B9B]'>({v.date})</div>
               </div>
             </>
           );

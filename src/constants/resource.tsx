@@ -30,6 +30,7 @@ import ebook_20_Src from '@/public/images/resource/ebook/ebook_20.png';
 import ebook_21_Src from '@/public/images/resource/ebook/ebook_21.png';
 import ebook_22_Src from '@/public/images/resource/ebook/ebook_22.png';
 import ebook_23_Src from '@/public/images/resource/ebook/ebook_23.png';
+import ebook_24_Src from '@/public/images/resource/ebook/ebook_24.png';
 
 export const resourceType = ['blog', 'video', 'ebook'] as const;
 
@@ -80,6 +81,14 @@ export const getEbookData = async (): Promise<EbookData[]> => {
   const locale = await getLocale();
 
   return [
+    {
+      type: 'ABLESTACK Technical White Paper',
+      title: t('data.19.title'),
+      description: t('data.19.description'),
+      href: 'ABLESTACK_Mold_Getting_Started_v1.2.pdf',
+      date: '2026.11.25',
+      imgSrc: ebook_24_Src,
+    },
     {
       type: 'ABLESTACK Technical White Paper',
       title: t('data.0.title'),
