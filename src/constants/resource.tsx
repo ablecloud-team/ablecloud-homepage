@@ -83,14 +83,6 @@ export const getEbookData = async (): Promise<EbookData[]> => {
   return [
     {
       type: 'ABLESTACK Technical White Paper',
-      title: t('data.19.title'),
-      description: t('data.19.description'),
-      href: 'ABLESTACK_Mold_Getting_Started_v1.2.pdf',
-      date: '2026.11.25',
-      imgSrc: ebook_24_Src,
-    },
-    {
-      type: 'ABLESTACK Technical White Paper',
       title: t('data.0.title'),
       description: t('data.0.description'),
       href: 'ABLESTACK_Technical.pdf',
@@ -233,6 +225,14 @@ export const getEbookData = async (): Promise<EbookData[]> => {
       href: 'ABLESTACK_AI_User_Community_Guide.pdf',
       date: '2026.08.20',
       imgSrc: ebook_23_Src,
+    },
+    {
+      type: 'ABLESTACK Technical White Paper',
+      title: t('data.19.title'),
+      description: t('data.19.description'),
+      href: 'ABLESTACK_Mold_Getting_Started_v1.2.pdf',
+      date: '2026.11.25',
+      imgSrc: ebook_24_Src,
     },
   ];
 };
