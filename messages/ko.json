@@ -896,6 +896,10 @@
         {
           "title": "ABLESTACK AI",
           "description": "인공지능 기반 사용자 커뮤니티 이용 안내"
+        },
+        {
+          "title": "ABLESTACK Mold 시작하기",
+          "description": "엔터프라이즈 가상머신 프로비저닝 및 운영 가이드 입니다."
         }
       ]
     }
